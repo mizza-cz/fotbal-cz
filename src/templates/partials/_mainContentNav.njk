@@ -1,0 +1,42 @@
+<!-- Main content nav -->
+{% macro render(data, activeItemIndex) %}
+  <nav class="MainContentNav u-mt-24 u-sm-mt-16">
+    {% if data %}
+      <ul class="MainContentNav-menu">
+        {% for item in data %}
+          <li class="MainContentNav-item">
+            <a href="#" class="MainContentNav-link {% if activeItemIndex === loop.index  %} is-active {% endif %}">{{ item }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul class="MainContentNav-menu">
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <!-- Menu item - active state -->
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link is-active">Aktivní položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+        <li class="MainContentNav-item">
+          <a href="#" class="MainContentNav-link">Položka menu hl. obsahu</a>
+        </li>
+      </ul>
+    {% endif %}
+  </nav>
+{% endmacro %}

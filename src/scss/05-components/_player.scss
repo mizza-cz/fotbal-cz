@@ -1,0 +1,103 @@
+// Also used for Committee member and Coach
+.Player,
+.Member,
+.Coach {
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-img {
+    width: rem(162px);
+    height: rem(162px);
+    object-fit: cover;
+    object-position: top;
+    border: $borderPrimary;
+    border-radius: $borderRadiusBig;
+
+    @include respondFrom(sm) {
+      width: rem(324px);
+      height: rem(324px);
+    }
+  }
+
+  &-stats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding: 1.125rem 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+
+    li {
+      flex-basis: 100%;
+      position: relative;
+      padding: 0 0.5rem;
+
+      @include respondFrom(sm) {
+        padding: 0 1rem;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          @include roundedBorderVer();
+        }
+      }
+
+      p {
+        @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+        text-transform: uppercase;
+      }
+
+      strong.H3 {
+        @include respondTo(xs) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.Member,
+.Coach {
+  &-header,
+  &-body {
+    position: relative;
+    padding-bottom: rem(26px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+  }
+
+  &-body {
+    hr {
+      margin: 1.5rem 0 !important;
+    }
+  }
+}

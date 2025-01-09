@@ -1,0 +1,70 @@
+/**
+ * Fotbal.cz - mixins
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+// List reset
+.m-reset-list() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		margin: 0;
+		padding: 0;
+		&:before {
+			display: none;
+		}
+	}
+}
+
+// Size of element
+.m-size( @size ) {
+	width: @size;
+	height: @size;
+}
+.m-size( @width, @height ) {
+	width: @width;
+	height: @height;
+}
+
+// Clearfix
+.m-clearfix() {
+ 	&:before,
+ 	&:after {
+	    content: " "; // 1
+	    display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// display
+.m-block {
+	display: block;
+}
+.m-inline() {
+	display: inline;
+}
+.m-inline-block() {
+	display: inline-block;
+}
+
+// Input placeholder color
+.m-placeholder( @color ) {
+	&::-webkit-input-placeholder { /* WebKit browsers */
+    	color: @color;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color: @color;
+	   opacity:  1;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color: @color;
+	   opacity:  1;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   color: @color;
+	}
+}

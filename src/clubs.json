@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "AC Sparta Praha",
+    "url": "/url-detailu-klubu-1",
+    "competition": "FORTUNA:LIGA"
+  },
+  {
+    "id": "2",
+    "name": "FC Spartak Bojkovice",
+    "url": "/url-detailu-klubu-2",
+    "competition": "OFS Zlín"
+  },
+  {
+    "id": "3",
+    "name": "TJ Spartak Uherský Brod",
+    "url": "/url-detailu-klubu-3",
+    "competition": "Zlínský kraj"
+  },
+  {
+    "id": "4",
+    "name": "SK Kladno",
+    "url": "/url-detailu-klubu-4",
+    "competition": "Středočeský kraj"
+  },
+  {
+    "id": "11",
+    "name": "Bohemians Praha 1905",
+    "url": "/url-detailu-klubu-11",
+    "competition": "FORTUNA:LIGA"
+  }
+]

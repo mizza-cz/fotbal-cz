@@ -1,0 +1,34 @@
+.ArticleBox {
+  position: relative;
+
+  &-imgContainer {
+    @include responsiveMediumContainer(3, 2);
+    overflow: visible;
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-textContainer {
+    padding: 0 1rem;
+    margin-top: rem(28px);
+  }
+
+  .Date {
+    margin-top: 0.5rem;
+  }
+
+  .Badge {
+    position: absolute;
+    left: 1rem;
+    bottom: -0.125rem;
+    transform: translateY(50%);
+  }
+}

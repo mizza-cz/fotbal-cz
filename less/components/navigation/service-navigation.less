@@ -1,0 +1,95 @@
+/**
+ * Fotbal.cz - service navigation
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+**/
+
+
+.service-navigation {
+	.m-reset-list;
+	.f-base;
+	.f-14;
+	float: left;
+	margin: 12px 0 0 25px;
+
+	.nav-item {
+		float: left;
+		margin: 0 0 0 15px;
+		color: @service-nav-color;
+		&:first-child {
+			margin: 0;
+		}
+
+		@media @medium {
+			margin: 0 0 0 20px;	
+		}
+
+		i {
+			display: none;
+			@media @medium {
+				display: inline-block;
+			}
+		}
+
+		&.mod-highlighted {
+			font-weight: bold;
+			color: @anchorColor;
+			a {
+				color: @anchorColor;
+			}
+		}
+
+		&.mod-highlighted-ext {
+			color: @red;
+			a {
+				color: @red;
+			}
+		}
+	}
+
+	.nav-item-link {
+		color: @service-nav-color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color: lighten(@service-nav-color, 20%);
+		}
+	}
+}
+
+.service-navigation-mobile {
+	border-bottom: 0 !important;
+	color: #A0B4BF;
+	border-top: 1px solid @menu-mobile-border;
+
+	.nav-item {
+		position: relative;
+		float: left;
+		width: 50%;
+		.m-clearfix;
+		
+		&.mod-highlighted {
+			font-weight: bold;
+			color: @anchorColor;
+			a {
+				color: @anchorColor;
+			}
+		}
+	}
+	i {
+		position: absolute;
+		left: 13px;
+		top: 15px;
+	}
+	.nav-item-link {
+		color: #A0B4BF;
+		display: block;
+		// float: left;
+		// width: 50%;
+		padding: 15px 15px 15px 45px;
+		text-decoration: none;
+		box-sizing: border-box;
+		border-bottom: 1px solid @menu-mobile-border;
+		border-right: 1px solid @menu-mobile-border;
+	}
+}

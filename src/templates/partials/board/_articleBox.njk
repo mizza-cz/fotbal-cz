@@ -1,0 +1,18 @@
+<!-- Automatický článek / Článek -->
+<article class="ArticleBox Board-item">
+  <picture class="ArticleBox-imgContainer">
+    {# Velikost náhledu 960 x 640 #}
+    <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg"/>
+    {# Velikost náhledů 1x: 320 x 213, 1.5x: 480 x 320, 2x: 640 x 426 #}
+    <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x"/>
+    {# Velikost náhledu 320 x 213 #}
+    <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt=""/>
+    <a href="#" class="Badge">Reprezentace</a>
+  </picture>
+  <div class="ArticleBox-textContainer">
+    <h5 class="H6 ArticleBox-title">
+      <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+    </h5>
+    <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+  </div>
+</article>

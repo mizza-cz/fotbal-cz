@@ -1,0 +1,82 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název nástěnky} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_matchCalendar.njk" as matchCalendar %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="u-sr-only">{Název nástěnky}</h1>
+    {% include "../templates/partials/_articleBoxBigTop.njk" %}
+
+    <!-- Banners (3 in a row, or 2 in a row, or only one, or none) -->
+    {% for item in range(0, 3) %}
+      <!-- Banner - small -->
+      <div class="Banner Banner--small u-mt-primary">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="./img/placeholder-banner-subpage-1.jpg" width="320" height="88" alt="{Popis obrázku / Název banneru}" loading="lazy"/>
+        </a>
+      </div>
+    {% endfor %}
+
+    {% for item in range(0, 2) %}
+      <!-- Banner - half width -->
+      <div class="Banner Banner--halfWidth u-mt-primary">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="./img/placeholder-banner-subpage-2.jpg" width="500" height="88" alt="{Popis obrázku / Název banneru}" loading="lazy"/>
+        </a>
+      </div>
+    {% endfor %}
+
+    <!-- Banner - full width -->
+    <div class="Banner u-mt-primary">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <img src="./img/placeholder-banner-subpage-3.jpg" width="1040" height="88" alt="{Popis obrázku / Název banneru}" loading="lazy"/>
+      </a>
+    </div>
+
+    {{ matchCalendar.render("MatchCalendar--alignedRight u-mt-primary") }}
+
+    <!-- Articles 4x -->
+    <div class="ArticlesGrid u-mt-primary">
+      {% for item in range(0, 4) %}
+        {% include "../templates/partials/_articleBox.njk" %}
+      {% endfor %}
+    </div>
+
+    <!-- Articles 6x -->
+    <section class="ArticlesGrid u-mt-primary">
+      {% for item in range(0, 6) %}
+        {% include "../templates/partials/_articleBox.njk" %}
+      {% endfor %}
+    </section>
+
+    <!-- Desktop advert -->
+    <div class="Ad Ad--desktop u-mt-primary">
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Reklama">
+        <img src="./img/placeholder-advert-homepage.jpg" width="1400" height="144" alt="" loading="lazy"/>
+      </a>
+    </div>
+
+    <!-- Mobile advert -->
+    <div class="Ad Ad--mobile u-mt-primary">
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Reklama">
+        <img src="./img/placeholder-advert-homepage-mobile.jpg" width="320" height="213" alt="" loading="lazy"/>
+      </a>
+    </div>
+
+    <!-- Small articles 4x -->
+    <section class="u-mt-primary">
+      <div class="ArticlesSmallGrid">
+        {% for item in range(0, 4) %}
+          {% include "../templates/partials/_articleBoxSmall.njk" %}
+        {% endfor %}
+      </div>
+      <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-24">
+        <a href="#" class="Button">Archiv zpráv</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}

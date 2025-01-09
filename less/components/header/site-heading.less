@@ -1,0 +1,267 @@
+/**
+ * Fotbal.cz - header
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+/**
+Header
+
+Logo sekce
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="line line-mid-blue line-site-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-60">
+				<h1 class="site-heading" id="js-mobile-menu-opener">Reprezentace</h1>
+				<p class="nav-opener" id="js-mobile-nav-opener">Fotbal.cz</p>
+			</div>
+			<div class="col-40">
+				<a href="" target="_blank" class="section-logo">
+					<img src="http://satyr.io/54x54/76">
+					<span>Generální partner</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+Styleguide 16
+*/
+
+.line-site-heading {
+	z-index: 1000;
+
+	.col-60 {
+		width: 100%;
+		float: none;
+		@media @show-navigation {
+			width: 60%;
+			float: left;
+		}
+	}
+
+	.col-40 {
+		display: none;
+		@media @show-navigation {
+			margin: 12px 0 0 0;
+			display: block;
+		}
+	}
+}
+
+.m-logo-facr-mobile-hp() {
+	.mod-hp .line-site-heading .container {
+		background: url( '../../img/logo-facr.png' ) 15px 5px no-repeat;
+		background-size: 29px 40px; 
+	}
+}
+// @media @tiny-only { .m-logo-facr-mobile-hp; }
+// @media @mini-only { .m-logo-facr-mobile-hp; }
+@media screen and (max-width: @w-show-navigation) {
+	.m-logo-facr-mobile-hp;
+}
+
+.site-heading {
+	.f-condensed-bold;
+	.f-20;
+	margin: 0;
+	color: #fff;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 15px;
+	float: left;
+	cursor: pointer;
+	display: none;
+	@media @show-navigation {
+		display: block;
+	}
+
+	&:after {
+		position: absolute;
+		content: " ";
+		border-width: 7px;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
+		right: -20px;
+		top: 45%;
+		margin-top: -1px;
+	}
+
+	@media @small {
+		.t-uppercase;
+		.f-28;
+		cursor: auto;
+		float: none;
+		height: 80px;
+		line-height: 80px;
+		padding-left: 35px;
+
+		&:before {
+			.m-size( 3px, 40px );
+			content: " ";
+			position: absolute;
+			top: 18px;
+			left: 0;
+			background: @sec-repre;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.mod-with-logo & {
+		@media @large {
+			margin-left: 143px;
+		}		
+	}
+
+	.mod-without-logo & {
+		margin-left: 0;
+	}
+
+
+
+}
+
+
+.section-logo {
+	display: block;
+	position: relative;
+	right: 0;
+	text-decoration: none;
+
+	span {
+		.f-base-bold;
+		.t-uppercase;
+		color: @partner-color-section;
+		margin: 17px 0 0 20px;
+		float: left;
+		@media @small {
+			float: right;
+			margin: 8px 20px 0 0;
+			width: 130px;
+		}
+	}
+	img {
+		float: left;
+		@media @small {
+			float: right;
+		}
+	}
+}
+
+.nav-opener {
+	.f-condensed-bold;
+	.f-20;
+	color: #fff;
+	float: right;
+	margin: 0 15px 0 0;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	cursor: pointer;
+
+	&:after {
+		position: absolute;
+		content: " ";
+		border-width: 7px;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
+		left: -20px;
+		top: 45%;
+		margin-top: -1px;
+	}
+
+	@media @show-navigation {
+		display: none;
+	}
+}
+
+.header {
+	&.mod-with-logo {
+		> .line {
+			padding: 0;
+			@media @small {
+				padding: 0 10px;
+				&.line-hp-nav + .line-main-nav {
+					padding: 0;
+				}
+				&.line-hp-nav {
+					padding: 10px;
+					> .container {
+						width: auto !important;
+					}
+				}
+				&.line-main-nav {
+					> .container {
+						width: auto !important;	
+					}
+				}
+			}
+			@media @medium {
+				padding: 0 30px;
+				&.line-hp-nav {
+					padding: 10px 30px;	
+				}
+				&.line-hp-nav + .line-main-nav {
+					padding: 0 20px;
+				}
+			}
+			@media @large {
+				padding: 0;
+				&.line-hp-nav {
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+	&.mod-without-logo {
+		> .line {
+			padding: 0;
+			@media @small {
+				padding: 0 15px;	
+			}
+			@media @medium {
+				padding: 0 30px;	
+			}
+		}
+	}
+}
+
+#js-mobile-menu-opener {
+	display: block;
+
+	.f-condensed-bold;
+	.f-20;
+	margin: 0;
+	color: #fff;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 15px;
+	float: left;
+	cursor: pointer;
+
+	&:after {
+		position: absolute;
+		content: " ";
+		border-width: 7px;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
+		right: -20px;
+		top: 45%;
+		margin-top: -1px;
+	}
+
+	@media @small {
+		display: none;
+	}
+}

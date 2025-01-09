@@ -1,0 +1,183 @@
+@mixin subMenuIcon() {
+  &::after {
+    content: "";
+    width: rem(10px);
+    height: rem(6px);
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    background-color: transparent;
+    background-image: url(../img/icons/chevron-down.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease-in-out;
+    z-index: 1;
+  }
+
+  &.is-active {
+    &::after {
+      transform: translateY(-50%) rotateX(180deg);
+    }
+  }
+}
+
+.SideNav {
+  width: rem(320px);
+  flex-shrink: 0;
+  background-color: $colorGrey--80;
+  border-radius: $borderRadiusPrimary;
+  box-shadow: inset 0 -0.125rem 0 0 $colorGrey--90;
+  padding: 1.5rem 0;
+  margin-top: 2.5rem;
+  margin-right: 2.5rem;
+
+  @include respondTo(lg) {
+    height: calc(100% - var(--header-height));
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    border-radius: 0;
+    margin-top: 0;
+    margin-right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transform-origin: center top;
+    overflow: auto;
+    @include customScrollbar(thin);
+    z-index: z(sideNav);
+    transition: opacity 0.25s $easeOutQuad, transform 0.25s $easeOutQuad, visibility 0.25s $easeOutQuad;
+
+    &.is-active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @include respondTo(xs) {
+    width: 100%;
+  }
+
+  &-menu {
+    margin-top: rem(18px);
+  }
+
+  &-item {
+    &--hasSubMenu {
+      background-color: transparent;
+      transition: background-color 0.25s ease;
+
+      .SideNav-link {
+        position: relative;
+        padding-right: 3rem;
+        text-decoration: none;
+        text-decoration-color: transparent;
+        transition: color 0.25s linear, outline-offset 0.25s linear, text-decoration-color 0.25s linear;
+
+        &:focus-visible {
+          text-decoration: underline;
+          text-decoration-color: currentColor;
+          text-decoration-thickness: 0.125rem;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: currentColor;
+          text-decoration-thickness: 0.125rem;
+        }
+
+        @include subMenuIcon();
+      }
+    }
+
+    &.is-active {
+      background-color: $colorGrey--90;
+    }
+  }
+
+  &-link {
+    display: block;
+    font-family: $fontFamilySecondary;
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    padding: rem(6px) 1.5rem;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      outline: none;
+    }
+  }
+
+  .SubMenu {
+    display: none;
+    padding: 0.125rem 0 rem(10px) 0;
+
+    &.is-active {
+      display: block;
+      animation-name: fadeInDownSubMenu;
+      animation-duration: 0.25s;
+      animation-timing-function: $easeOutQuad;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+    }
+
+    &-item {
+      &--hasSubMenu {
+        & > .SubMenu-link {
+          position: relative;
+
+          @include subMenuIcon();
+
+          &.is-active {
+            color: $colorBlack;
+            outline: none;
+          }
+        }
+      }
+
+      // SubMenu level 2
+      .SubMenu {
+        padding-left: 1rem;
+      }
+    }
+
+    &-link {
+      display: block;
+      font-family: $fontFamilySecondary;
+      @include text($colorTertiary, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+      padding: rem(6px) 2rem;
+
+      &:focus,
+      &:hover,
+      &:active,
+      &.is-active {
+        outline: none;
+      }
+
+      &:not(.js-subMenu-toggle) {
+        &.is-active {
+          text-decoration: underline;
+          text-decoration-color: currentColor;
+          text-decoration-thickness: 0.125rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInDownSubMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

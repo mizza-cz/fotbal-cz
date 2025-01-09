@@ -1,0 +1,54 @@
+/**
+Typografie
+
+Písma a velikosti
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 6.
+*/
+
+/**
+Fonty
+
+Fonty na webu Google Fonts: 
+<br>Roboto 400/<b>700</b> 
+<br><span class="f-condensed">Roboto Condensed 400/<b>700</b></span> 
+<br>S fallbackem na Helveticu a Arial 
+<br>Vyskytují se pouze v normální variantě bez kurzívy. 
+<br>Jako defaultní font webu (body {font-family}) je použito: Roboto 400  
+
+.f-base				- základní font: Roboto 400
+.f-base-bold		- tučný základní font: Roboto 700
+.f-condensed		- užší font: Roboto Condensed 400
+.f-condensed-bold	- tučný užší font: Roboto Condensed 700
+
+Markup:
+<p class="{{modifier_class}} {$modifier_class}">
+	Šlo vy úzce hnutí a 2800 i vybavení ukázky pyšně chráněna učí.
+</p>
+
+Styleguide 6.1.
+*/
+
+.f-base {
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	font-variant: normal;
+	font-weight: 400;
+}
+.f-base-bold {
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	font-variant: normal;
+	font-weight: 700;
+}
+.f-condensed {
+	font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+	font-variant: normal;
+	font-weight: 400;
+}
+.f-condensed-bold {
+	font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+	font-variant: normal;
+	font-weight: 700;
+}

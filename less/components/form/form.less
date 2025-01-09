@@ -1,0 +1,303 @@
+/**
+Form
+
+Styl pro formuláře
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 7.
+*/
+/**
+Rozložení
+
+Markup:
+<form class="form">
+	<div class="form-pair">
+		<div class="form-label">
+			<label for="name">Jméno:</label>
+		</div>
+		<div class="form-input">
+			<input type="text" id="name">
+		</div>
+	</div>
+	<div class="form-pair">
+		<div class="form-label">
+			<label for="password">Heslo:</label>
+		</div>
+		<div class="form-input">
+			<input type="password" id="password">
+		</div>
+	</div>
+	<div class="form-pair">
+		<div class="form-label">
+			<label>Dopravní prostředek:</label>
+		</div>
+		<div class="form-input">
+			<label><input type="checkbox" name="vehicle" value="bike"> Motorka</label>
+			<label><input type="checkbox" name="vehicle" value="car"> Auto</label>
+			<label><input type="checkbox" name="vehicle" value="bus"> Autobus</label>
+			<label><input type="checkbox" name="vehicle" value="plane"> Letadlo</label>
+		</div>
+	</div>
+	<div class="form-pair">
+		<div class="form-label">
+			<label>Stravování:</label>
+		</div>
+		<div class="form-input">
+			<label><input type="radio" name="meal" value="fullboard"> Plná penze</label>
+			<label><input type="radio" name="meal" value="halfboard"> polopenze</label>
+			<label><input type="radio" name="meal" value="breakfast"> Snídaně</label>
+		</div>
+	</div>
+	<div class="form-pair">
+		<div class="form-label">
+			<label for="year">Rok:</label>
+		</div>
+		<div class="form-input">
+			<select name="year" id="year" class="form-select" data-placeholder="Klikněte zde">
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-pair mod-small">
+		<div class="form-label">
+			<label for="year">Rok:</label>
+		</div>
+		<div class="form-input">
+			<select name="year" id="year" class="form-select" data-placeholder="Klikněte zde">
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-pair">
+		<div class="form-label">
+			<label for="note">Poznámka:</label>
+		</div>
+		<div class="form-input">
+			<textarea name="message" rows="5" cols="10">The cat was playing in the garden.</textarea>
+		</div>
+	</div>
+	<div class="form-pair mod-foot">
+		<div class="form-input">
+			<div class="btn-grout">
+				<a href="#" class="btn mod-link m-b-10">Link</a>
+				<button class="btn m-b-10">Button</button>
+				<input type="button" class="btn mod-danger m-b-10" value="input:button">
+				<input type="submit" class="btn mod-success m-b-10" value="input:submit">
+			</div>
+		</div>
+	</div>
+	<label class="label-ext">Label nad inputom</label>
+	<input type="text" name="q">
+</form>
+
+Styleguide 7.1.
+*/
+
+.form {
+	width: 100%;
+}
+
+.form-pair { 
+	.m-clearfix(); 
+	.m-b(15px); 
+
+	&:last-child { .m-b(0); }
+
+	&.mod-foot {
+		background-color: @tbl-background;
+		border-top: 1px solid @tbl-border;
+		.p-t(10px);
+	}
+}
+
+.form-label,
+.form-input {
+	label {
+		.f-base-bold;
+		line-height: 20px;
+		color: @midBlue;
+	}
+}
+
+.form-label label {
+	.f-base-bold;
+	&:first-letter { .t-uppercase; }
+}
+
+.form-input label {
+	line-height: 20px;
+	display: block;
+	.m-b(5px);
+}
+
+.label-ext {
+    .f-base-bold;
+    line-height: 1.3em;
+    margin: 0 0 10px 0;
+    display: block;
+}
+
+
+@media @small {
+	.form-label {
+		float: left;
+		width: 100%;
+		max-width: 180px;
+		min-height: 1px;
+		text-align: right;
+
+		label { line-height: 42px; }
+	}
+	.form-input {
+		  width: 100%;
+		  max-width: 750px;
+		  min-height: 1px;
+		  .p-l(200px);
+		  box-sizing: border-box;
+
+		  label:first-child { .p-t(10px); }
+	}
+	.form-pair.mod-small {
+		max-width: 360px;
+		.m-l(auto);
+		.m-r(0px);
+
+		.form-label { 
+		  	box-sizing: border-box;
+			max-width: 40%; 
+			.p-r(20px);
+		}
+		.form-input { 
+			.p-l(40%);
+			max-width: 100%; 
+		}
+	}
+	
+	.form-label-ext {
+        label {
+            line-height: 1.3em;
+        }
+    }
+}
+
+/**
+Filter pair
+
+Styl pro formulářové prvky ve filtru
+
+Markup:
+<div class="box mod-bottom-shadow form-filter">
+	<form class="row mod-extended">
+		<div class="col-100 col-xs-50 col-m-30 col-l-20">
+			<div class="form-pair form-pair-filter">
+				<div class="form-label">
+					<label for="year">Pozice:</label>
+				</div>
+				<div class="form-input">
+					<select name="year" id="year">
+						<option value="a">Brankář</option>
+						<option value="b">Obránce</option>
+						<option value="c">Útočník</option>
+						<option value="d">Záložník</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-100 col-xs-50 col-m-40 col-l-30">
+			<div class="form-pair form-pair-filter">
+				<div class="form-label">
+					<label for="year">Kraj:</label>
+				</div>
+				<div class="form-input">
+					<select name="year" id="year">
+						<option value="a">Královehradecký</option>
+						<option value="b">Vysočina</option>
+						<option value="c">Středočeský</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-100 col-xs-50 col-m-30 col-l-20">
+			<div class="form-pair form-pair-filter">
+				<div class="form-label">
+					<label for="year">Rok:</label>
+				</div>
+				<div class="form-input">
+					<select name="year" id="year">
+						<option value="2015">2015</option>
+						<option value="2014">2014</option>
+						<option value="2013">2013</option>
+						<option value="2012">2012</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-100 col-xs-50 col-m-40 col-l-30">
+			<div class="form-pair form-pair-filter">
+				<div class="form-label">
+					<label for="year">Tým:</label>
+				</div>
+				<div class="form-input">
+					<select name="year" id="year">
+						<option value="cze">Česká republika</option>
+						<option value="deu">Německo</option>
+						<option value="ita">Itálie</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-100 col-s-20 col-m-20 js-hide">
+			<div class="form-pair form-pair-filter">
+				<div class="form-label">
+				</div>
+				<div class="form-input">
+					<input type="submit" class="btn mod-left " value="odeslat">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+Styleguide 7.6.
+*/
+.form-filter {
+	.p(5px 10px 10px 10px);
+	@media @mini {
+		.p(5px 15px 10px 15px);
+	}
+	@media @small {
+		.p(5px 20px 10px 20px);
+	}
+	background: lighten(@lightBlue, 3%);
+}
+
+.form-pair-filter {
+	
+	.form-label {
+		.txt-l;
+		width:100%;
+		max-width: 100%;
+		float: none;
+		min-height: 1.8em;
+		display: block;
+		
+		label { 
+			line-height: 1.8em;
+		 }
+	}
+
+	.form-input {
+		max-width: 100%;
+		padding-left: 0;
+
+		.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) { width: 100%; }
+	}
+}

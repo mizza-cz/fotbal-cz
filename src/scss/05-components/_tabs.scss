@@ -1,0 +1,134 @@
+.Tabs {
+  &-nav {
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+  }
+
+  &-button {
+    display: inline-flex;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid $colorWhite;
+    border-bottom: none;
+    border-radius: $borderRadiusSecondary $borderRadiusSecondary 0 0;
+    padding: 1rem 2rem;
+    margin-right: 0.125rem;
+    margin-bottom: -0.125rem;
+    transition: background-color 0.25s linear, color 0.25s linear;
+    overflow: hidden;
+
+    @include respondTo(xs) {
+      padding: 1rem;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $colorPrimary;
+      transition: width 0.25s $easeOutSine;
+    }
+
+    &:focus,
+    &:hover,
+    &.is-active {
+      &::before {
+        width: 100%;
+      }
+
+      span {
+        color: $colorWhite;
+      }
+    }
+
+    span {
+      position: relative;
+      @include text($colorText, $fontSizeNormal, $fontWeightSemiBold, inherit);
+      z-index: 1;
+      transition: color 0.25s linear;
+    }
+  }
+
+  &-contentContainer {
+    background-color: transparent;
+    border: 2px solid $colorWhite;
+    padding: 2rem;
+
+    @include respondTo(xs) {
+      padding: 1rem;
+    }
+  }
+
+  &-panel {
+    display: none;
+
+    &.is-active {
+      display: block;
+      animation-name: showTabPanel;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+// Alternative design
+// .Tabs {
+//   &-nav {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 0.5rem;
+//   }
+
+//   &-button {
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-shrink: 0;
+//     min-width: 0;
+//     @include text($colorText, 0.75rem, $fontWeightHeavy, normal);
+//     text-decoration: none;
+//     background-color: $colorGrey--80;
+//     cursor: pointer;
+//     padding: 0.5rem 1rem;
+//     overflow: hidden;
+//     transition: color 0.25s ease, background-color 0.25s ease;
+
+//     &:focus,
+//     &:hover,
+//     &.is-active {
+//       color: $colorWhite;
+//       background-color: $colorPrimary;
+//     }
+//   }
+
+//   &-panel {
+//     display: none;
+
+//     &.is-active {
+//       display: block;
+//       animation-name: revealTabPanel;
+//       animation-duration: 0.5s;
+//       animation-timing-function: linear;
+//       animation-direction: alternate;
+//       animation-fill-mode: forwards;
+//       animation-iteration-count: 1;
+//     }
+//   }
+// }
+
+@keyframes showTabPanel {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

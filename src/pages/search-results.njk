@@ -1,0 +1,26 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'Vyhledávání "{dotaz}" | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container Container--slim">
+      <h1 class="H3">Vyhledávání</h1>
+      <p class="H6 u-mt-24">Počet výsledků „vyhledávácí fráze“: 98</p>
+      <!-- Search results list -->
+      <ul class="List List--topBordered u-mt-16">
+        {% for item in range(0, 10) %}
+          <li class="List-item">
+            <span class="Badge u-mb-8">Typ obsahu</span>
+            <a href="#" class="H6 Link--inverted Link--stretched u-display-block">Titulek nalezeného záznamu</a>
+            <p class="Date u-mt-8">10. 10. 2020</p>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% include "../templates/partials/_pagination.njk" %}
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,2635 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-flag-big-eng {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-glc {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ncy {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nir {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-qbc {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sco {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-wal {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-and {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-uae {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-afg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-atg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-aia {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-alb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-arm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ant {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ago {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ata {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-arg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-asm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-aut {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-aus {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-abw {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ala {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-aze {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bih {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-brb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ban {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bel {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bfa {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bul {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bhr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bdi {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ben {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-blm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bmu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bru {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bol {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bes {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bra {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bah {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bhu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bvt {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-bot {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-blr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-blz {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-can {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cck {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-zai {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cta {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cgo {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sui {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-civ {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cok {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-chi {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cmr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-chn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-col {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-crc {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cub {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cpv {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cuw {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cxr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cyp {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cze {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ger {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-dji {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-den {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-dma {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-dom {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-alg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ecu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-est {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-egy {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-esh {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-eri {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-esp {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-eth {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-fin {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-fij {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-flk {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-fsm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-fro {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-fra {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gab {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gbr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-grn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-geo {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-guf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ggy {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gha {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gib {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-grl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gam {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gin {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-glp {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-eqg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gre {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sgs {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gua {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gum {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-gnb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-guy {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-hkg {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-hmd {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-hon {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cro {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-hai {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-hun {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-idn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-irl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-isr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-imn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ind {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-iot {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-irq {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-irn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-isl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ita {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-jey {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-jam {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-jor {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-jpn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ken {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-kgz {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cam {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-kir {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-com {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sol {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-prk {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-kor {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-kwt {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cym {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-kaz {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lao {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lbn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lca {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lie {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sri {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lbr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-les {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ltu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lux {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lva {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-lby {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mar {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mon {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mda {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mne {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-maf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mad {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mhl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mkd {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mli {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mya {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mng {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mac {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mnp {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mtq {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mtn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-msr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mlt {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mri {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mdv {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mwi {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mex {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-mas {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-moz {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nam {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ncl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nig {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nfk {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nga {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nca {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ned {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nor {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nep {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nru {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-niu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-nzl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-oma {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pan {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-per {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pyf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-png {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-phi {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pak {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pol {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-spm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pcn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pri {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-pse {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-por {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-plw {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-par {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-qat {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-reu {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-rou {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-srb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-rus {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-rwa {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ksa {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-slb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sey {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sdn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-swe {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sin {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-shn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-svn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sjm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-svk {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sle {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-smr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sen {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-som {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sur {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ssd {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-stp {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-slv {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sxm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-syr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-swz {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tca {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-cha {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-atf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tgo {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tha {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tjk {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tkl {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tls {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tkm {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tun {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tga {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -324px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tur {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -378px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tri {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -432px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tuv {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -486px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-twn {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -540px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-tza {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -594px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ukr {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -648px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-uga {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -702px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-umi {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -756px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-usa {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: 0px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-uru {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -54px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-uzb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -108px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-vat {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -162px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-vin {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -216px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-ven {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -270px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-vgb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -324px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-vir {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -378px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-vie {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -432px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-van {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -486px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-wlf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -540px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-sam {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -594px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-xsa {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -648px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-xss {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -702px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-xue {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -756px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-xuh {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -810px -810px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-yem {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-myt {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px -54px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-yug {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px -108px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-zaf {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px -162px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-zmb {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px -216px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+.icon-flag-big-zwe {
+  background-image: url(../images/icon-flags-big.png?v=3);
+  background-position: -864px -270px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-flag-big-eng {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-glc {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ncy {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nir {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-qbc {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sco {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-wal {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-and {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-uae {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-afg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-atg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-aia {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-alb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-arm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ant {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ago {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ata {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-arg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-asm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-aut {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-aus {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-abw {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ala {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-aze {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bih {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-brb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ban {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bel {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bfa {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bul {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bhr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bdi {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ben {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-blm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bmu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bru {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bol {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bes {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bra {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bah {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bhu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bvt {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-bot {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-blr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-blz {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-can {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cck {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-zai {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cta {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cgo {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sui {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-civ {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cok {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-chi {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cmr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-chn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-col {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-crc {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cub {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cpv {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cuw {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cxr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cyp {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cze {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ger {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-dji {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-den {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-dma {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-dom {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-alg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ecu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-est {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-egy {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-esh {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-eri {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-esp {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-eth {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-fin {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-fij {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-flk {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-fsm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-fro {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-fra {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gab {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gbr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-grn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-geo {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-guf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ggy {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gha {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gib {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-grl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gam {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gin {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-glp {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-eqg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gre {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sgs {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gua {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gum {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-gnb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-guy {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-hkg {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-hmd {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-hon {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cro {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-hai {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-hun {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-idn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-irl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-isr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-imn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ind {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-iot {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-irq {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-irn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-isl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ita {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-jey {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-jam {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-jor {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-jpn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ken {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-kgz {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cam {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-kir {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-com {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sol {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-prk {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-kor {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-kwt {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cym {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-kaz {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lao {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lbn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lca {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lie {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sri {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lbr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-les {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ltu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lux {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lva {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-lby {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mar {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mon {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mda {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mne {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-maf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mad {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mhl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mkd {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mli {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mya {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mng {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mac {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mnp {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mtq {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mtn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-msr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mlt {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mri {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mdv {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mwi {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mex {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-mas {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-moz {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nam {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ncl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nig {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nfk {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nga {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nca {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ned {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nor {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nep {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nru {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-niu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-nzl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-oma {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pan {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-per {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pyf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-png {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-phi {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pak {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pol {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-spm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pcn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pri {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-pse {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-por {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-plw {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-par {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-qat {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-reu {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-rou {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-srb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-rus {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-rwa {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ksa {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-slb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sey {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sdn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-swe {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sin {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-shn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-svn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sjm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-svk {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sle {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-smr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sen {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-som {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sur {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ssd {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-stp {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-slv {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sxm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-syr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-swz {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tca {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-cha {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-atf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tgo {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tha {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tjk {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tkl {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tls {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tkm {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tun {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tga {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tur {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tri {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tuv {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-twn {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-tza {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ukr {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-uga {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-umi {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-usa {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-uru {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-uzb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-vat {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-vin {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-ven {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-vgb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-vir {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-vie {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-van {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-wlf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-sam {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-xsa {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-xss {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-xue {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-xuh {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-yem {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-myt {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-yug {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-zaf {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-zmb {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+  .icon-flag-big-zwe {
+    background-image: url(../images/icon-flags-big_@2X.png?v=3);
+    background-size: 912px 858px;
+  }
+}

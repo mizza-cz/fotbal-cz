@@ -1,0 +1,72 @@
+/**
+ * Fotbal.cz - site logo
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+**/
+
+.site-logo {
+
+	&.mod-logo-repre {
+		display: none;
+		@media @large {
+			.m-size( 71px, 95px );
+			display: block;
+			position: absolute;
+			top: 15px;
+			left: 31px;
+			z-index: 100;
+			span {
+				.m-size( 71px, 95px );
+				display: block;
+				background: url( '../../img/logo.png' ) 0 0 no-repeat;
+			}
+		}
+	}
+
+	&.mod-logo-zeny {
+		display: none;
+		@media @large {
+			.m-size( 72px, 100px );
+			display: block;
+			position: absolute;
+			top: 15px;
+			left: 31px;
+			z-index: 100;
+			span {
+				.m-size( 72px, 100px );
+				display: block;
+				background: url( '../../img/logo-zeny.png' ) 0 0 no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+
+	&.mod-logo-facr {
+		display: none;
+		@media @large {
+			.m-size( 70px, 98px );
+			display: block;
+			position: absolute;
+			z-index: 100;
+			span {
+				.m-size( 70px, 98px );
+				display: block;
+				background: url( '../../img/logo-facr.png' ) 0 0 no-repeat;
+				background-size: cover;
+			}
+
+			.mod-hp & {
+				top: -60px;
+				left: 10px;
+			}
+			.mod-section & {
+				top: 15px;
+				left: 31px;
+			}
+		}
+	}
+
+	.mod-without-logo & {
+		display: none;
+	}
+}

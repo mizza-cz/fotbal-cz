@@ -1,0 +1,63 @@
+.EventsList {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+
+  @include respondFrom(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-item {
+    list-style: none;
+    background-color: white;
+    padding: 0 0 1.5rem;
+    margin: 0;
+
+    &-imgContainer {
+      aspect-ratio: 1.5;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-bottom: 66.67%;
+      }
+
+      img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-textContainer {
+      text-align: center;
+      padding: 1.5rem 1.5rem 0.5rem;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-top: 0;
+      }
+    }
+
+    &-actionsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  }
+}

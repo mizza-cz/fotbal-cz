@@ -1,0 +1,76 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'registration-social | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsJS %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{% endblock %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+     <div class="registration-wrapper u-mx-auto">
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+      <div class="registration-modal u-mt-primary u-mx-auto">
+         <div class="registration-content u-mx-auto">
+            <h1 class="H3 u-mb-24">Registrace do věrnostního programu</h1>
+            <form action="" class="Form Grid registrationForm">
+                <div class="Grid-col Grid-col--12 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="email" maxlength="10" class="Form-input" placeholder="Zadejte emailovou adresu*" required>
+                  </div>
+                </div>
+                  <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1_1 u-pl-16 u-mb-32 u-mt-4">*Pro čerpání všech výhod zadejte e-mail používaný při nákupu vstupenek na Ticketportal.  </div>
+                  </div>
+                    <div class="Grid-col Grid-col--12">
+                     <div class="Form-item">
+                        <input type="submit" class="Button" value="Pokračovat">
+                     </div>
+                  </div>
+            </form>
+            <div class="u-fs-small u-lh-1 u-pl-24 u-mb-32 u-mt-4 u-c-grey--100 u-ta-center u-mt-32"
+             >
+               Máte již účet?   
+               <a class="u-c-blue u-pl-4 " href="#">Přihlásit se</a>
+            </div>
+            <div class="registration-decore">
+               Nebo
+           </div>
+           <ul class="registrationSocial">
+              
+               <li>
+                  <a href="#" class="registrationSocial-item">
+                    <img src="./img/logo-facr.svg" alt="">
+                     Pokračovat s IS FAČR
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="registrationSocial-item">
+                      <img src="./img/google.png" alt="">
+                     Pokračovat s Google
+                  </a>
+               </li>
+                 <li>
+                  <a href="#" class="registrationSocial-item">
+                      <img src="./img/fb.png" alt="">
+                     Pokračovat s Facebook
+                  </a>
+               </li>
+            </ul>
+            <ul class="registration-links">
+               <li>
+                  <a href="#">Podmínky používání</a>
+               </li>
+               <li>
+                  <a href="#">Zásady ochrany soukromí</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+     </div>
+    </div>
+  </main>
+{% endblock %}

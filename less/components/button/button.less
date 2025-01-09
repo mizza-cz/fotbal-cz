@@ -1,0 +1,484 @@
+/**
+Button
+
+Styl pro tlačítka
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 4.
+*/
+
+/**
+Stavy
+
+:hover    - <b>:active</b> a <b>.active</b> - Hover stav tlačítka
+:disabled   - <b>.disabled</b> - Stav zakázaného tlačítka
+
+Markup:
+<a href="#" class="btn {{modifier_class}} {$modifier_class} m-b-10">Link</a>
+<button class="btn {{modifier_class}} {$modifier_class} m-b-10">Button</button>
+<input type="button" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:button">
+<input type="submit" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:submit">
+
+Styleguide 4.1.
+*/
+
+.btn {
+	color: @btn-primary-color!important;
+	background: @btn-primary-background;
+	.f-base-bold;
+	min-height: 40px;
+	.p(10px 30px);
+	.f-16;
+	@media @large {
+		.f-14;
+	}
+	line-height: 20px;
+	border: 0 none;
+	border-radius: 100px;
+	box-sizing: border-box;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	.t-uppercase;
+
+	transition: background 300ms linear;
+
+	a& { display: table; }
+
+	&:hover {
+		background: darken(@btn-primary-background, 10%);
+		color: #fff;
+		cursor: pointer;
+	}
+
+	&.active,
+	&:active {
+		background: @btn-darkBlue;
+		color: #fff;
+		cursor: pointer;
+	}
+
+
+	&.disabled,
+	&:disabled {
+		color: lighten(@btn-disabled-background, 10%);
+		background: @btn-disabled-background;
+		cursor: default;
+	}
+
+}
+
+/**
+Velikosti
+
+.btn-small	- Malé tlačítko
+.btn-big	- Velké tlačítko
+.btn-block	- Tlačítko přes celou šířku kontejneru
+
+Markup:
+<a href="#" class="btn {{modifier_class}} {$modifier_class} m-b-10">Link</a>
+<button class="btn {{modifier_class}} {$modifier_class} m-b-10">Button</button>
+<input type="button" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:button">
+<input type="submit" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:submit">
+
+Styleguide 4.2.
+*/
+
+.btn-small {
+	min-height: 30px;
+	.p(5px 15px);	
+	.f-12;
+}
+
+.btn-big {
+	min-height: 50px;
+	.p(15px 40px);	
+	.f-16;
+}
+
+.btn-block {
+	width: 100%;
+}
+
+.btn-square {
+	border-radius: 0 0 0 0;
+}
+
+
+
+/**
+Pozice
+
+výchozí pozice tlačítka je vlevo
+
+.mod-right	- Tlačítko na pravé straně
+.mod-center	- Tlačítko uprostřed
+
+Markup:
+<a href="#" class="btn {{modifier_class}} {$modifier_class} m-b-10">Link</a>
+<button class="btn {{modifier_class}} {$modifier_class} m-b-10">Button</button>
+<input type="button" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:button">
+<input type="submit" class="btn {{modifier_class}} {$modifier_class} m-b-10" value="input:submit">
+
+Styleguide 4.3.
+*/
+
+.btn {
+	&.mod-right {
+		.m-l(auto);
+		.m-r(0);
+	}
+	
+	&.mod-center {
+		.m-l(auto);
+		.m-r(auto);
+	}
+}
+
+
+/**
+Barvy
+
+.mod-link		- button jako odkaz
+.mod-success	- zelené "ok" tlačítko
+.mod-danger		- červené "danger" tlačítko
+.mod-cancel		- <b>.mod-grey</b> - šedé "cancel" tlačítko
+.mod-blue		- <b>.mod-sec-1</b> - modré tlačítko - REPREZENTACE
+.mod-dark-blue	- tmavě modré tlačítko
+.mod-red		- <b>.mod-sec-2</b> - červené tlačítko - FAČR	
+.mod-yellow		- <b>.mod-sec-3</b> - žluté tlačítko - SOUTĚŽE
+.mod-orrange	- <b>.mod-sec-4</b> - oranžové tlačítko - MŮJ FOTBAL
+.mod-violet		- <b>.mod-sec-5</b> - fialové tlačítko - TRÉNINK
+.mod-grey-light	- <b>.mod-sec-6</b> - šedé tlačítko - ROZHODČÍ
+.mod-pink		- <b>.mod-sec-7</b> - růžové tlačítko - ŽENY
+.mod-gold		- <b>.mod-sec-8</b> - zlaté tlačítko - FUTSAL
+.mod-green		- <b>.mod-sec-9</b> - zelené tlačítko - TV
+.mod-white		- <b>.mod-sec-10</b> - bílé tlačítko - FANZONA
+
+Markup:
+<button class="btn {{modifier_class}} {$modifier_class}">Button</button>
+
+Styleguide 4.4.
+*/
+
+.btn {
+	&.mod-link {
+		background: transparent;
+		border-color: transparent;
+		color: @btn-link!important;
+		text-decoration: underline;
+
+		&.active,
+		&:active,
+		&:hover {
+			color: darken(@btn-link, 15%)!important;
+		}
+	}
+	&.mod-filter {
+		background: @btn-white;
+		color: @darkBlue!important;
+		border: 1px solid @darkBlue;
+		
+		&.active,
+		&:hover {
+			background: @darkBlue;
+			color: @white!important;
+		}
+
+		&.disabled:hover,
+		&.disabled {
+			background: @btn-white;
+			color: @darkBlue!important;
+		}
+	}
+	&.mod-success {
+		background: @btn-success-background;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-success-background, 10%);
+		}
+	}
+	&.mod-danger {
+		background: @btn-danger-background;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-danger-background, 15%);
+		}
+	}
+	&.mod-cancel,
+	&.mod-grey {
+		background: @btn-cancel-background;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-cancel-background, 10%);
+		}
+	}
+	&.mod-blue,
+	&.mod-sec-repre {
+		background: @btn-blue;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-blue, 10%);
+		}
+	}
+	&.mod-dark-blue {
+		background: @btn-darkBlue;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-darkBlue, 10%);
+		}
+	}
+	&.mod-red,
+	&.mod-sec-facr {
+		background: @btn-red;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-red, 16%);
+		}
+	}
+	&.mod-yellow,
+	&.mod-sec-souteze {
+		background: @btn-yellow;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-yellow, 10%);
+		}
+	}
+	&.mod-orrange,
+	&.mod-sec-mujfotbal {
+		background: @btn-orrange;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-orrange, 10%);
+		}
+	}
+	&.mod-violet,
+	&.mod-sec-trenink {
+		background: @btn-violet;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-violet, 13%);
+		}
+	}
+	&.mod-grey,
+	&.mod-sec-rozhodci {
+		background: @btn-grey;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-grey, 13%);
+		}
+	}
+	&.mod-pink,
+	&.mod-sec-zeny {
+		background: @btn-pink;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-pink, 13%);
+		}
+	}
+	&.mod-gold,
+	&.mod-sec-futsal {
+		background: @btn-gold;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-gold, 10%);
+		}
+	}
+	&.mod-green,
+	&.mod-sec-tv {
+		background: @btn-green;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-green, 10%);
+		}
+	}
+	&.mod-white,
+	&.mod-sec-fanzona {
+		background: @btn-white;
+		color: #111!important;
+
+		&.active,
+		&:active,
+		&:hover {
+			background: darken(@btn-white, 10%);
+		}
+	}
+}
+
+/**
+Kontejner
+
+.mod-merge	- tlačítka v jednom bloku
+
+Markup:
+<div class="btn-grout {{modifier_class}} {$modifier_class}">
+	<a href="#" class="btn m-b-10">Link</a>
+	<button class="btn m-b-10">Button</button>
+	<input type="button" class="btn m-b-10" value="input:button">
+	<input type="submit" class="btn m-b-10" value="input:submit">
+</div>
+
+Styleguide 4.5.
+*/
+
+.btn-grout {
+	.m-clearfix();
+	.btn {
+		display: block;
+		float: left;
+		.m-l(5px);
+		.m-r(5px);
+
+		//&:first-child { .m-l(0); }
+		//&:last-child { .m-r(0); }
+	}
+
+	&.mod-merge .btn{
+		border-radius: 0;
+		border-right: 1px solid darken(@btn-primary-background, 10%);
+		.m-l(0);
+		.m-r(0);
+
+		&:first-child { border-radius: 100px 0 0 100px; }
+		&:last-child { 
+			border-radius: 0 100px 100px 0; 
+			border-right: 0 none;
+		}
+	}
+}
+
+/**
+Toolbar
+
+.mod-right	- skupina tlačítek na pravé straně
+.mod-center	- skupina tlačítek na střed
+
+Markup:
+<div class="btn-toolbar {{modifier_class}} {$modifier_class}">
+	<div class="btn-grout">
+		<a href="#" class="btn m-b-10">Link</a>
+		<button class="btn m-b-10">Button</button>
+		<input type="button" class="btn m-b-10" value="input:button">
+		<input type="submit" class="btn m-b-10" value="input:submit">
+	</div>
+	<div class="btn-grout mod-merge">
+		<a href="#" class="btn m-b-10">Link</a>
+		<button class="btn m-b-10">Button</button>
+		<input type="button" class="btn m-b-10" value="input:button">
+		<input type="submit" class="btn m-b-10" value="input:submit">
+	</div>
+</div>
+
+Styleguide 4.6.
+*/
+
+.btn-toolbar {
+	.m-clearfix();
+	.btn-grout { 
+		display: table; 
+	}
+	&.mod-right .btn-grout {
+		float: right;
+	}
+	&.mod-center .btn-grout {
+		.m-r(auto);
+		.m-l(auto);
+	}
+}
+
+
+/**
+Button toggle
+
+Markup:
+<button class="btn btn-toggle mod-filter btn-small txt-c" onclick="app.toggleElem(this, '.toggle-me');">
+	<i class="icon-plus-circle icon-l vertical-sub mor-right"></i><span class="vertical-middle">více</span>
+</button>
+<div class="toggle-me js-hide">kjashkadhkadkahdkhkdf akshdkadhkhd</div>
+
+
+Styleguide 4.7.
+*/
+
+.btn-toggle {
+	.p-l(5px);
+	.p-r(5px);
+
+	span {
+		.p-r(9px);
+		.p-l(3px);
+	} 
+}
+
+/**
+Dropdown
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<nav>
+	<button class="btn btn-block btn-dropdown js-show" onclick="app.toggleElem(this, '.dropdown-group-23423');">
+	    <i class="icon-plus-circle icon-l icon-white vertical-sub mor-right"></i>
+	    <span class="vertical-middle">vyberte sekci</span>
+	</button>
+	<div class="box mod-bottom-shadow mod-white mod-noborder js-hide dropdown-group-23423">
+	<ul class="menu-ext">
+	    <li class="menu-ext-item"><a href="">Úvodní stránka</a></li>
+	    <li class="menu-ext-item"><a href="">Dokumenty</a></li>
+	    <li class="menu-ext-item"><a href="">Úřední deska</a></li>
+	    <li class="menu-ext-item"><a href="">Zprávy</a></li>
+	    <li class="menu-ext-line"></li>
+	    <li class="menu-ext-item"><a href="">Výkonný výbor</a></li>
+	    <li class="menu-ext-item"><a href="">Komise</a></li>
+	    <li class="menu-ext-item"><a href="">Sekretariát</a></li>
+	    <li class="menu-ext-line"></li>
+	    <li class="menu-ext-item"><a href="">Archiv soutěží</a></li>
+	    <li class="menu-ext-item"><a href="">Obsazení rozhodčích</a></li>
+	    <li class="menu-ext-item"><a href="">Adresář oddílu</a></li>
+	    <li class="menu-ext-item"><a href="">Adresář rozhodčích</a></li>
+	    <li class="menu-ext-item"><a href="">Adresář delegítu</a></li>
+	    <li class="menu-ext-item"><a href="">Udělené tresty</a></li>
+	    <li class="menu-ext-line"></li>
+	    <li class="menu-ext-item"><a href="">Přihlášky do soutéží</a></li>
+	    <li class="menu-ext-item"><a href="">Termínová listina Jaro 2015</a></li>
+	    <li class="menu-ext-item"><a href="">Status ŘFK</a></li>
+	    <li class="menu-ext-item"><a href="">Přihláška licence B UEFA</a></li>
+	</ul>
+</nav>
+
+Styleguide 4.8.
+*/
+
+.btn-dropdown {
+    border-radius: 0 0 0 0;
+    padding: 10px 0;
+}

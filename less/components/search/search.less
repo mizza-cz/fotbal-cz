@@ -1,0 +1,38 @@
+/**
+ * Fotbal.cz - search
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+.search {
+	float: left;
+	position: relative;
+	
+	.m-size(220px, 42px);
+	@media @medium {
+		.m-size(260px, 42px);
+	}
+
+	.search-submit {
+		position: absolute;
+		.m-size( 24px, 40px );
+		margin: 1px 0 0 0;
+		border: 0;
+		background: url('../../img/search-submit.png') 50% 50% no-repeat @search-input;
+		right: 20px;
+	}
+
+	.search-input {
+		.f-base;
+		.f-12;
+		.m-placeholder( @search-input-color );
+		background-color: @search-input;
+		border: 1px solid @search-input-border;
+		box-sizing: border-box;
+		height: 42px;
+		line-height: 42px;
+		color: @search-input-color;
+		border-radius: 21px;
+		padding: 0 45px 0 15px;
+	}
+}

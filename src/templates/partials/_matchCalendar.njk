@@ -1,0 +1,117 @@
+<!-- Match calendar -->
+{% macro render(modifiers) %}
+  <ul class="MatchCalendar {{ modifiers }}" id="js-matchCalendar">
+    <!-- Match - as link with result -->
+    <li class="MatchCalendar-item">
+      <time datetime="2022-12-09" class="MatchCalendar-item-date">9.12.</time>
+      <div>
+        <a href="#" class="MatchCalendar-item-link">
+          <p class="MatchCalendar-item-title">Česko A, 9. 12. 2022, 17:00</p>
+          <div>
+            <div class="MatchCalendar-item-team">
+              <span class="MatchCalendar-item-flag fi fi-cz fis"></span>
+              <strong class="H7">Česko</strong>
+            </div>
+            <div class="MatchCalendar-item-team">
+              <span class="MatchCalendar-item-flag fi fi-pt fis"></span>
+              <strong class="H7">Portugalsko</strong>
+            </div>
+          </div>
+          <strong class="MatchCalendar-item-result MatchCalendar-item-result--win">4:0</strong>
+        </a>
+        <div class="MatchCalendar-item-actions"></div>
+        <img src="./img/logo-o2_tv_sport@3x.png" class="MatchCalendar-item-logoTV u-mt-12" alt="logo O2 TV Sport" loading="lazy"/>
+      </div>
+    </li>
+    <!-- Match -->
+    <li class="MatchCalendar-item">
+      <time datetime="2023-01-08" class="MatchCalendar-item-date">8.1.</time>
+      <div>
+        <p class="MatchCalendar-item-title">Česko A, 8. 1. 2023, 17:00</p>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-cz fis"></span>
+          <strong class="H7">Česko</strong>
+        </div>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-fo fis"></span>
+          <strong class="H7">Faerské ostrovy</strong>
+        </div>
+        <div class="MatchCalendar-item-actions">
+          <a href="https://ticketportal.cz/" class="MatchCalendar-item-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
+            </svg>
+            <span>Vstupenky</span>
+          </a>
+          <a href="https://facr.tv/" class="MatchCalendar-item-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+            </svg>
+            <span>Video</span>
+          </a>
+          <a href="https://onlajny.com/" class="MatchCalendar-item-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exchange"></use>
+            </svg>
+            <span>On-line</span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <!-- Match -->
+    <li class="MatchCalendar-item">
+      <time datetime="2023-01-14" class="MatchCalendar-item-date">14.1.</time>
+      <div>
+        <p class="MatchCalendar-item-title">Česko U21, 14. 1. 2023, 17:00</p>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-cz fis"></span>
+          <strong class="H7">Česko</strong>
+        </div>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-es fis"></span>
+          <strong class="H7">Španělsko</strong>
+        </div>
+        <div class="MatchCalendar-item-actions">
+          <a href="#" class="MatchCalendar-item-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
+            </svg>
+            <span>Vstupenky</span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <!-- Match -->
+    <li class="MatchCalendar-item">
+      <time datetime="2023-02-04" class="MatchCalendar-item-date">4.2.</time>
+      <div>
+        <p class="MatchCalendar-item-title">Česko U21, 4.2. 2023, 17:00</p>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-cz fis"></span>
+          <strong class="H7">Česko</strong>
+        </div>
+        <div class="MatchCalendar-item-team">
+          <span class="MatchCalendar-item-flag fi fi-ba fis"></span>
+          <strong class="H7">Bosna a Hercegovina</strong>
+        </div>
+        <div class="MatchCalendar-item-actions">
+          <a href="#" class="MatchCalendar-item-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
+            </svg>
+            <span>Vstupenky</span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <!-- Entire calendar link -->
+    <li class="MatchCalendar-item">
+      <span class="MatchCalendar-item-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+        </svg>
+      </span>
+      <a href="#" class="Link">Kompletní kalendář</a>
+    </li>
+  </ul>
+{% endmacro %}

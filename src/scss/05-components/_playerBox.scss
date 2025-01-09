@@ -1,0 +1,77 @@
+.PlayerBox {
+  @include box();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: rem(320px);
+
+  @include respondTo(xs) {
+    width: 100%;
+  }
+
+  &-imgContainer {
+    position: relative;
+    width: rem(88px);
+    height: rem(88px);
+    border: $borderPrimary;
+    border-radius: $borderRadiusTertiary;
+    overflow: hidden;
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.125rem;
+      position: absolute;
+      left: 0;
+      background-color: $colorGrey--90;
+      border-radius: rem(1px);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    li + li {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 0.125rem;
+        height: 100%;
+        position: absolute;
+        left: rem(-17px);
+        top: 0;
+        background-color: $colorGrey--90;
+        border-radius: rem(1px);
+      }
+    }
+  }
+}

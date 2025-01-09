@@ -1,0 +1,255 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'Mapa klubů | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsJS %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{% endblock %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <h1 class="H3">Mapa klubů</h1>
+
+      <div class="Box u-mt-primary">
+        <!-- Filters -->
+        <form class="Form Form--secondary Form--4inputs" action="" method="post">
+          <div class="Form-item">
+            <label class="Form-label" for="">Vyhledat klub</label>
+            <input class="Form-input" type="text" name="" id="" placeholder="Název klubu nebo města"/>
+          </div>
+          <div class="Form-item">
+            <label class="Form-label" for="">Kraj</label>
+            <select class="Select" name="" id="">
+              <option value="">—Vyberte kraj—</option>
+              <option value="">Praha</option>
+              <option value="">Středočeský</option>
+              <option value="">...</option>
+            </select>
+          </div>
+          <div class="Form-item">
+            <label class="Form-label" for="">Okres</label>
+            <select class="Select" name="" id="">
+              <option value="">—Vyberte okres—</option>
+              <option value="">Beroun</option>
+              <option value="">Kladno</option>
+              <option value="">...</option>
+            </select>
+          </div>
+          <div class="Form-item">
+            <label class="Form-label" for="">Kategorie</label>
+            <select class="Select" name="" id="">
+              <option value="">—Všechny kategorie—</option>
+              <option value="">Muži</option>
+              <option value="">Děti (mládež)</option>
+              <option value="">Ženy</option>
+              <option value="">Futsal</option>
+              <option value="">Plážový fotbal</option>
+            </select>
+          </div>
+          <div class="Form-item">
+            <button type="submit" class="Button">Zobrazit kluby</button>
+          </div>
+        </form>
+
+        <!-- Map -->
+        <div class="GoogleMap u-mt-24" id="js-map-clubs"></div>
+
+        <!-- prettier-ignore -->
+        <script>
+          (g => {
+            var h,
+              a,
+              k,
+              p = "The Google Maps JavaScript API",
+              c = "google",
+              l = "importLibrary",
+              q = "__ib__",
+              m = document,
+              b = window;
+            b = b[c] || (b[c] = {});
+            var d = b.maps || (b.maps = {}),
+              r = new Set,
+              e = new URLSearchParams,
+              u = () => h || (h = new Promise(async (f, n) => {
+                await(a = m.createElement("script"));
+                e.set("libraries", [...r] + "");
+                for (k in g) 
+                  e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                e.set("callback", c + ".maps." + q);
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                d[q] = f;
+                a.onerror = () => h = n(Error(p + " could not load."));
+                a.nonce = m.querySelector("script[nonce]")
+                  ?.nonce || "";
+                m
+                  .head
+                  .append(a)
+              }));
+            d[l]
+              ? console.warn(p + " only loads once. Ignoring:", g)
+              : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+          })({key: "AIzaSyBrQ3FUjh--6PH_7bvqGqJnFxdOlmUF5Vk", v: "weekly"});
+        </script>
+
+        <!-- Dummy data -->
+        <script>
+          var clubs = [
+            {
+              name: "Název klubu 1",
+              url: "./club.html",
+              coordinates: {
+                lat: 49.74112510600398,
+                lng: 13.346633960629655
+              },
+              logo: "./img/logo-club-empty.svg"
+            }, {
+              name: "Název klubu 2",
+              url: "./club.html",
+              coordinates: {
+                lat: 50.104087544428,
+                lng: 14.389562969100913
+              },
+              logo: "./img/logo-club-empty.svg"
+            }, {
+              name: "Název klubu 3",
+              url: "./club.html",
+              coordinates: {
+                lat: 50.08436686262948,
+                lng: 14.421304604877058
+              },
+              logo: "./img/logo-club-empty.svg"
+            }, {
+              name: "Lorem ipsum dolor sit amet consectetur",
+              url: "./club.html",
+              coordinates: {
+                lat: 50.04987799574774,
+                lng: 14.465349793829931
+              },
+              logo: "./img/logo-club-empty.svg"
+            }, {
+              name: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+              url: "./club.html",
+              coordinates: {
+                lat: 49.20313607493695,
+                lng: 16.597464957362238
+              },
+              logo: "./img/logo-club-empty.svg"
+            }
+          ];
+        </script>
+      </div>
+
+      <section class="u-mt-primary">
+        <h2 class="u-ff-primary u-fs-small u-fw-semiBold u-tt-uppercase">Výsledky hledání</h2>
+        <h3 class="H5 u-mt-4">Okres Vsetín</h3>
+
+        <ul class="List List--topBordered u-mt-24">
+          <!-- Club -->
+          <li class="ListItemSplit">
+            <div class="ListItemSplit-leftContainer u-pl-24 u-sm-pl-0">
+              <!-- Club logo, name -->
+              <a class="Link--inverted u-display-flex u-align-items-center" href="#">
+                <img class="Logo Logo--small u-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                <span class="H7">Fotbalový klub Leskovec, z.s.</span>
+              </a>
+            </div>
+            <div class="ListItemSplit-rightContainer u-display-flex u-flex-wrap u-align-items-center u-column-gap-24 u-row-gap-8">
+              <!-- Club categories -->
+              <div class="ClubCategories">
+                <abbr class="BadgeCategory BadgeCategory--men" title="Muži">M</abbr>
+                <abbr class="BadgeCategory BadgeCategory--youth" title="Děti (mládež)">D</abbr>
+                <abbr class="BadgeCategory BadgeCategory--women" title="Ženy">Ž</abbr>
+                <abbr class="BadgeCategory BadgeCategory--futsal" title="Futsal">F</abbr>
+                <abbr class="BadgeCategory BadgeCategory--beach" title="Plážový fotbal">P</abbr>
+              </div>
+              <!-- Club address -->
+              <div class="ClubAddress">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#address"></use>
+                </svg>
+                <p>Pod strání 2268, Rožnov pod Radhoštěm, 75661</p>
+              </div>
+            </div>
+          </li>
+          <!-- Club -->
+          <li class="ListItemSplit">
+            <div class="ListItemSplit-leftContainer u-pl-24 u-sm-pl-0">
+              <!-- Club logo, name -->
+              <a class="Link--inverted u-display-flex u-align-items-center" href="#">
+                <img class="Logo Logo--small u-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                <span class="H7">Fotbalový club FC Rožnov pod Radhoštěm, z.s.</span>
+              </a>
+            </div>
+            <div class="ListItemSplit-rightContainer u-display-flex u-flex-wrap u-align-items-center u-column-gap-24 u-row-gap-8">
+              <!-- Club categories -->
+              <div class="ClubCategories">
+                <abbr class="BadgeCategory BadgeCategory--men" title="Muži">M</abbr>
+                <abbr class="BadgeCategory BadgeCategory--youth" title="Děti (mládež)">D</abbr>
+                <abbr class="BadgeCategory BadgeCategory--women" title="Ženy">Ž</abbr>
+              </div>
+              <!-- Club address -->
+              <div class="ClubAddress">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#address"></use>
+                </svg>
+                <p>Pod strání 2268, Rožnov pod Radhoštěm, 75661</p>
+              </div>
+            </div>
+          </li>
+          <!-- Club -->
+          <li class="ListItemSplit">
+            <div class="ListItemSplit-leftContainer u-pl-24 u-sm-pl-0">
+              <!-- Club logo, name -->
+              <a class="Link--inverted u-display-flex u-align-items-center" href="#">
+                <img class="Logo Logo--small u-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                <span class="H7">Tělovýchovná jednota Sokol Študlov, z.s.</span>
+              </a>
+            </div>
+            <div class="ListItemSplit-rightContainer u-display-flex u-flex-wrap u-align-items-center u-column-gap-24 u-row-gap-8">
+              <!-- Club categories -->
+              <div class="ClubCategories">
+                <div class="BadgeCategory BadgeCategoryInline BadgeCategory--futsal">Futsal</div>
+                <div class="BadgeCategory BadgeCategoryInline BadgeCategory--fotbal">Fotbal</div>
+              </div>
+              <!-- Club address -->
+              <div class="ClubAddress">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#address"></use>
+                </svg>
+                <p>{adresa klubu}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="u-display-flex u-flex-wrap u-align-items-center u-justify-center u-gap-16 u-mt-24">
+          <li class="u-display-flex u-align-items-center u-gap-8">
+            <span class="BadgeCategory BadgeCategory--men">M</span>
+            <span class="u-fs-small">Muži</span>
+          </li>
+          <li class="u-display-flex u-align-items-center u-gap-8">
+            <span class="BadgeCategory BadgeCategory--youth">D</span>
+            <span class="u-fs-small">Děti (mládež)</span>
+          </li>
+          <li class="u-display-flex u-align-items-center u-gap-8">
+            <span class="BadgeCategory BadgeCategory--women">Ž</span>
+            <span class="u-fs-small">Ženy</span>
+          </li>
+          <li class="u-display-flex u-align-items-center u-gap-8">
+            <span class="BadgeCategory BadgeCategory--futsal">F</span>
+            <span class="u-fs-small">Futsal</span>
+          </li>
+          <li class="u-display-flex u-align-items-center u-gap-8">
+            <span class="BadgeCategory BadgeCategory--beach">P</span>
+            <span class="u-fs-small">Plážový fotbal</span>
+          </li>
+        </ul>
+      </section>
+
+      {% include "../templates/partials/_paginationSimple.njk" %}
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,620 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název soutěže} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--competitionTournamentMatches' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+	<!-- Main content -->
+	<main class="Main" aria-label="Hlavní obsah">
+		<div class="Article">
+			<a href="#" class="Badge u-mb-8">Jihočeský KFS</a>
+			<h1 class="H3">2022 A1A - I.A třída mužů - sk."A"</h1>
+			{{ mainContentNav.render(competition.menu, 1) }}
+
+			<!-- Filter -->
+			<div class="Box u-mt-primary">
+				<form action="/souteze/turnaje/zapas/18d503d4-4afd-476a-920d-f82d5f506b08" method="post" id="frm-programFilter-form" class="Form Form--autoInputs">
+					<div class="Form-item">
+						<select name="round" id="frm-programFilter-form-round" class="Select">
+							<option value="">všechna kola</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="8">8</option>
+							<option value="11">11</option>
+							<option value="7">7</option>
+							<option value="10">10</option>
+							<option value="9">9</option>
+						</select>
+					</div>
+					<div class="Form-item">
+						<select name="team" id="frm-programFilter-form-team" class="Select">
+							<option value="">všechna družstva</option>
+							<option value="2bc4f7b1-555d-4ef5-a4d5-19aa392d31d6">Sportovní klub Viktoria Všestudy, z.s.</option>
+							<option value="4e42dec0-8eab-4ff8-ae21-536a4b8865ca">Tělovýchovná jednota Sokol Libiš B, z.s.</option>
+							<option value="0e3e982f-71f9-43e1-b8ef-8b21f111e4cf">SK Mšeno z.s.</option>
+							<option value="f982bd3b-220f-4efd-b70e-e03da6c88d7d">SK Liběchov, z.s.</option>
+							<option value="41d817d4-54f9-47d1-813e-7c6941eb9d6f">SK VOJKOVICE A</option>
+							<option value="a5de9990-1ddf-4f6e-9deb-a74b2777753a">Tělovýchovná jednota Sokol Tišice</option>
+							<option value="fd518654-b581-4be5-89d3-70bfbefde882">FK PŠOVKA MĚLNÍK B</option>
+							<option value="53d8ba98-6f55-4d62-bd30-18c9b6ea354c">SK Slavia Velký Borek A, z.s.</option>
+							<option value="45d34994-1c76-482d-bba5-d3c7cd50e7c9">Tělovýchovná jednota Sokol Horní Počaply, z.s.</option>
+							<option value="02d338cb-3109-49c1-a400-4bb94fa1f4fd">Tělocvičná jednota Sokol Čečelice</option>
+							<option value="bb7db735-3901-4131-ac67-205d70ebd237">Tělovýchovná jednota Sokol Obříství A</option>
+							<option value="9cebbe4c-c3c6-4853-a24b-f34694000c7d">TJ Slovan Horní Beřkovice z.s.</option>
+							<option value="5a72e823-01b9-47e5-bc76-330d9a412f67">Tělocvičná jednota Sokol Dolní Beřkovice</option>
+							<option value="b09b531a-f819-487c-a8d4-4b18146690a1">SK Labský Kostelec</option>
+						</select>
+					</div>
+					<div class="Form-item">
+						<select name="home" id="frm-programFilter-form-home" class="Select">
+							<option value="">doma i venku</option>
+							<option value="1">Doma</option>
+							<option value="0">Venku</option>
+						</select>
+					</div>
+					<div class="Form-item">
+						<input type="submit" name="select" value="Vybrat" class="Button">
+					</div>
+					<input
+					type="hidden" name="do" value="programFilter-form-submit">
+				<!--[if IE]><input type=IEbug disabled style="display:none"><![endif]-->
+				</form>
+			</div>
+
+			<!-- Round section -->
+			<section class="u-mt-primary js-matchRoundSection">
+				<div class="u-display-flex u-flex-wrap u-align-items-center u-justify-space-between u-gap-16">
+					<h2 class="H6">28. kolo</h2>
+					<button type="button" class="ToggleButton ToggleButton--collapse js-matchRoundDetails-toggle" aria-expanded="false">
+						<span class="js-matchRoundDetails-toggle-text-show">Zobrazit podrobnosti</span>
+						<span class="js-matchRoundDetails-toggle-text-hide u-display-none">Skrýt podrobnosti</span>
+						<svg width="10" height="6" focusable="false" aria-hidden="true">
+							<use xlink:href="#chevron-down"></use>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Round matches -->
+				<ul class="u-mt-8">
+					<li class="MatchRound js-matchRound">
+						<div
+							class="MatchRound-mainInfoContainer">
+							<!-- Match -->
+							<a
+								href="#" class="MatchRound-match">
+								<!-- Teams -->
+								<ul class="u-display-grid u-gap-4">
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">SK Sigma Olomouc</span>
+									</li>
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">FC Viktoria Plzeň</span>
+									</li>
+								</ul>
+								<!-- Result -->
+								<strong class="H4 u-c-tertiary">5:1</strong>
+							</a>
+							<!-- Actions collapsible -->
+							<div class="MatchRound-actions js-matchRoundDetails u-display-none">
+								<a href="#" class="Button">Video</a>
+								<a href="#" class="Button">Online</a>
+								<!-- optional note -->
+								<p class="u-my-4">Poznámka: ev. UMT</p>
+							</div>
+						</div>
+						<div
+							class="MatchRound-detailsContainer">
+							<!-- Meta -->
+							<ul class="MatchRound-meta">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+									</svg>
+									<p>
+										<strong>Datum:</strong>
+										sobota 22. 4. 2023, 16:00
+									</p>
+									<img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#match_id"></use>
+									</svg>
+									<p>
+										<strong>Číslo utkání:</strong>
+										2022310A1A1501
+									</p>
+								</li>
+							</ul>
+							<!-- Details collapsible -->
+							<ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
+									</svg>
+									<p>
+										<strong>Rozhodčí:</strong>
+										Všetečka Jan - Pečenka Jiří, Líkař Petr
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
+									</svg>
+									<p>
+										<strong>Delegát:</strong>
+										Lhoták Luděk, Bajer Josef
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+									</svg>
+									<p>
+										<strong>VAR:</strong>
+										Zelinka Miroslav
+									</p>
+									<p>
+										<strong>AVAR:</strong>
+										Křepský Michal
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+									</svg>
+									<p>
+										<strong>Hřiště:</strong>
+										Andrův stadion, Olomouc
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
+									</svg>
+									<p>
+										<strong>Diváků:</strong>
+										4660
+									</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="MatchRound js-matchRound">
+						<div
+							class="MatchRound-mainInfoContainer">
+							<!-- Match -->
+							<a
+								href="#" class="MatchRound-match">
+								<!-- Teams -->
+								<ul class="u-display-grid u-gap-4">
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">SK Slavia Praha</span>
+									</li>
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">Bohemians Praha 1905</span>
+									</li>
+								</ul>
+								<!-- Result -->
+								<strong class="H4 u-c-tertiary">1:2</strong>
+							</a>
+							<!-- Actions collapsible -->
+							<div class="MatchRound-actions js-matchRoundDetails u-display-none">
+								<a href="#" class="Button">Video</a>
+								<a href="#" class="Button">Online</a>
+								<!-- optional note -->
+								<p class="u-my-4">Poznámka: ev. UMT</p>
+							</div>
+						</div>
+						<div
+							class="MatchRound-detailsContainer">
+							<!-- Meta -->
+							<ul class="MatchRound-meta">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+									</svg>
+									<p>
+										<strong>Datum:</strong>
+										sobota 22. 4. 2023, 16:00
+									</p>
+									<img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#match_id"></use>
+									</svg>
+									<p>
+										<strong>Číslo utkání:</strong>
+										2022310A1A1501
+									</p>
+								</li>
+							</ul>
+							<!-- Details collapsible -->
+							<ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
+									</svg>
+									<p>
+										<strong>Rozhodčí:</strong>
+										Všetečka Jan - Pečenka Jiří, Líkař Petr
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
+									</svg>
+									<p>
+										<strong>Delegát:</strong>
+										Lhoták Luděk, Bajer Josef
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+									</svg>
+									<p>
+										<strong>VAR:</strong>
+										Zelinka Miroslav
+									</p>
+									<p>
+										<strong>AVAR:</strong>
+										Křepský Michal
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+									</svg>
+									<p>
+										<strong>Hřiště:</strong>
+										Andrův stadion, Olomouc
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
+									</svg>
+									<p>
+										<strong>Diváků:</strong>
+										4660
+									</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+				<div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+					<a href="#" class="Button">Rozpis zápasů</a>
+				</div>
+			</section>
+
+			<!-- Round section -->
+			<section class="u-mt-primary js-matchRoundSection">
+				<div class="u-display-flex u-flex-wrap u-align-items-center u-justify-space-between u-gap-16">
+					<h2 class="H6">29. kolo</h2>
+					<button type="button" class="ToggleButton ToggleButton--collapse js-matchRoundDetails-toggle" aria-expanded="false">
+						<span class="js-matchRoundDetails-toggle-text-show">Zobrazit podrobnosti</span>
+						<span class="js-matchRoundDetails-toggle-text-hide u-display-none">Skrýt podrobnosti</span>
+						<svg width="10" height="6" focusable="false" aria-hidden="true">
+							<use xlink:href="#chevron-down"></use>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Round matches -->
+				<ul class="u-mt-8">
+					<li class="MatchRound js-matchRound">
+						<div
+							class="MatchRound-mainInfoContainer">
+							<!-- Match -->
+							<a
+								href="#" class="MatchRound-match">
+								<!-- Teams -->
+								<ul class="u-display-grid u-gap-4">
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">SK Sigma Olomouc</span>
+									</li>
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">FC Viktoria Plzeň</span>
+									</li>
+								</ul>
+								<!-- Result -->
+								<strong class="H4 u-c-tertiary">5:1</strong>
+							</a>
+							<!-- Actions collapsible -->
+							<div class="MatchRound-actions js-matchRoundDetails u-display-none">
+								<a href="#" class="Button">Video</a>
+								<a href="#" class="Button">Online</a>
+								<!-- optional note -->
+								<p class="u-my-4">Poznámka: ev. UMT</p>
+							</div>
+						</div>
+						<div
+							class="MatchRound-detailsContainer">
+							<!-- Meta -->
+							<ul class="MatchRound-meta">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+									</svg>
+									<p>
+										<strong>Datum:</strong>
+										sobota 22. 4. 2023, 16:00
+									</p>
+									<img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#match_id"></use>
+									</svg>
+									<p>
+										<strong>Číslo utkání:</strong>
+										2022310A1A1501
+									</p>
+								</li>
+							</ul>
+							<!-- Details collapsible -->
+							<ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
+									</svg>
+									<p>
+										<strong>Rozhodčí:</strong>
+										Všetečka Jan - Pečenka Jiří, Líkař Petr
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
+									</svg>
+									<p>
+										<strong>Delegát:</strong>
+										Lhoták Luděk, Bajer Josef
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+									</svg>
+									<p>
+										<strong>VAR:</strong>
+										Zelinka Miroslav
+									</p>
+									<p>
+										<strong>AVAR:</strong>
+										Křepský Michal
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+									</svg>
+									<p>
+										<strong>Hřiště:</strong>
+										Andrův stadion, Olomouc
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
+									</svg>
+									<p>
+										<strong>Diváků:</strong>
+										4660
+									</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="MatchRound js-matchRound">
+						<div
+							class="MatchRound-mainInfoContainer">
+							<!-- Match -->
+							<a
+								href="#" class="MatchRound-match">
+								<!-- Teams -->
+								<ul class="u-display-grid u-gap-4">
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">SK Slavia Praha</span>
+									</li>
+									<li class="u-display-flex u-align-items-center">
+										<img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+										<span class="H7">Bohemians Praha 1905</span>
+									</li>
+								</ul>
+								<!-- Result -->
+								<strong class="H4 u-c-tertiary">1:2</strong>
+							</a>
+							<!-- Actions collapsible -->
+							<div class="MatchRound-actions js-matchRoundDetails u-display-none">
+								<a href="#" class="Button">Video</a>
+								<a href="#" class="Button">Online</a>
+								<!-- optional note -->
+								<p class="u-my-4">Poznámka: ev. UMT</p>
+							</div>
+						</div>
+						<div
+							class="MatchRound-detailsContainer">
+							<!-- Meta -->
+							<ul class="MatchRound-meta">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+									</svg>
+									<p>
+										<strong>Datum:</strong>
+										sobota 22. 4. 2023, 16:00
+									</p>
+									<img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#match_id"></use>
+									</svg>
+									<p>
+										<strong>Číslo utkání:</strong>
+										2022310A1A1501
+									</p>
+								</li>
+							</ul>
+							<!-- Details collapsible -->
+							<ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
+									</svg>
+									<p>
+										<strong>Rozhodčí:</strong>
+										Všetečka Jan - Pečenka Jiří, Líkař Petr
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
+									</svg>
+									<p>
+										<strong>Delegát:</strong>
+										Lhoták Luděk, Bajer Josef
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+									</svg>
+									<p>
+										<strong>VAR:</strong>
+										Zelinka Miroslav
+									</p>
+									<p>
+										<strong>AVAR:</strong>
+										Křepský Michal
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+									</svg>
+									<p>
+										<strong>Hřiště:</strong>
+										Andrův stadion, Olomouc
+									</p>
+								</li>
+								<li>
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
+									</svg>
+									<p>
+										<strong>Diváků:</strong>
+										4660
+									</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+
+				<div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+					<a href="#" class="Button">Rozpis zápasů</a>
+				</div>
+			</section>
+
+			<!-- Standings section -->
+			<section class="u-mt-primary">
+				<h2 class="H6">Tabulka soutěže</h2>
+				<table class="Table u-mt-16">
+					<thead>
+						<tr>
+							<th class="u-sticky-cell">
+								<abbr title="Pořadí">#</abbr>
+							</th>
+							<th class="u-width-dominate u-sticky-cell">Klub</th>
+							<th class="u-ta-center">
+								<abbr title="Zápasy">Z</abbr>
+							</th>
+							<th class="u-ta-center">
+								<abbr title="Výhry">V</abbr>
+							</th>
+							<th class="u-ta-center">
+								<abbr title="Remízy">R</abbr>
+							</th>
+							<th class="u-ta-center">
+								<abbr title="Prohry">P</abbr>
+							</th>
+							<th class="u-ta-center">Skóre</th>
+							<th>
+								<abbr title="Body">B</abbr>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="u-sticky-cell">1.</td>
+							<td class="u-sticky-cell">
+								<a href="#" class="Link Link--inverted">SK HS Kroměříž</a>
+							</td>
+							<td class="u-ta-center">17</td>
+							<td class="u-ta-center">12</td>
+							<td class="u-ta-center">4</td>
+							<td class="u-ta-center">1</td>
+							<td class="u-ta-center">49:20</td>
+							<td>
+								<strong>40</strong>
+							</td>
+						</tr>
+						<tr>
+							<td class="u-sticky-cell">2.</td>
+							<td class="u-sticky-cell">
+								<a href="#" class="Link Link--inverted">FC Hlučín</a>
+							</td>
+							<td class="u-ta-center">17</td>
+							<td class="u-ta-center">12</td>
+							<td class="u-ta-center">2</td>
+							<td class="u-ta-center">3</td>
+							<td class="u-ta-center">40:22</td>
+							<td>
+								<strong>38</strong>
+							</td>
+						</tr>
+						<tr>
+							<td class="u-sticky-cell">3.</td>
+							<td class="u-sticky-cell">
+								<a href="#" class="Link Link--inverted">FC Slovan Rosice</a>
+							</td>
+							<td class="u-ta-center">1</td>
+							<td class="u-ta-center">1</td>
+							<td class="u-ta-center">1</td>
+							<td class="u-ta-center">1</td>
+							<td class="u-ta-center">100:100</td>
+							<td>
+								<strong>0</strong>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+					<a href="#" class="Button">Podrobné tabulky</a>
+				</div>
+			</section>
+		</div>
+	</main>
+{% endblock %}

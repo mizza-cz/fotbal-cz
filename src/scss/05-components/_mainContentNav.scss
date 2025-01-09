@@ -1,0 +1,33 @@
+.MainContentNav {
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+
+    @include respondFrom(md) {
+      flex-wrap: wrap;
+      overflow-x: visible;
+    }
+  }
+
+  &-link {
+    display: block;
+    font-family: $fontFamilySecondary;
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: $colorGrey--80;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.25s ease, background-color 0.25s ease;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $colorWhite;
+      background-color: $colorBlack;
+    }
+  }
+}

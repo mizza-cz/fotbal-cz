@@ -1,0 +1,171 @@
+{% extends "../templates/layout-articlePage.njk" %}
+
+{% set pageTitle = '{Název článku} | Fotbal.cz' %}
+{% set bodyClass = 'ArticlePage' %}
+
+{% import "../templates/partials/_competitionNav.njk" as competitionNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <!-- Article -->
+    <article class="Article">
+      <!-- Article image -->
+      <picture class="Article-imgContainer">
+        <source media="(max-width: 576px)" srcset="./img/placeholder-article-mobile.jpg"/>
+        <source srcset="./img/placeholder-article.jpg 1x, ./img/placeholder-article@1.5x.jpg 1.5x, ./img/placeholder-article@2x.jpg 2x"/>
+        <img class="Article-img" src="./img/placeholder-article.jpg" width="1920" height="1080" alt="" loading="lazy"/>
+      </picture>
+      <div class="Container">
+        <div class="Article-grid">
+          <!-- Article content -->
+          <div class="Article-mainContent">
+            <div class="Article-container">
+              <header class="Article-header">
+                <a href="#" class="Badge">FORTUNA:LIGA</a>
+                <h1 class="H2">Šilhavý: Pozitivně tento rok hodnotit nemůžeme, ale herně jsme většinou nepropadli</h1>
+                <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+                <p class="Article-perex">Přestože čeští fotbalisté za sebou mají výsledkově nejhorší rok v samostatné historii, podle trenéra Jaroslava Šilhavého ve většině zápasů herně nepropadli. Reprezentačního kouče nejvíc mrzí, že jeho svěřenci v březnu neuspěli v baráži o mistrovství světa v Kataru. Kalendářní rok zakončil národní celek porážkou 1:2 v přípravě v Turecku.</p>
+              </header>
+
+              {% include "../templates/partials/ads/_fullWidth.njk" %}
+
+              <div class="Article-body">
+                <p>Reprezentačního kouče nejvíc mrzí, že jeho svěřenci v březnu neuspěli v baráži o mistrovství světa v Kataru. Kalendářní rok zakončil národní celek porážkou 1:2 v přípravě v Turecku.
+                  <a href="#">Česká reprezentace</a>
+                  v 10 letošních zápasech zapsala jen dvě vítězství, stejný počet remíz a šest porážek. V březnu v semifinále play off o mistrovství světa reprezentanti
+                  <a href="#">prohráli ve Švédsku 0:1</a>
+                  po prodloužení a poté v konkurenci favoritů Portugalska, Španělska a Švýcarska sestoupili z elitní skupiny A Ligy národů.</p>
+
+                <!-- Article widget - Gallery -->
+                {% include "../templates/partials/_articleWidget-gallery.njk" %}
+
+                <p>"Pozitivně to určitě hodnotit nemůžeme. Nejsmutnější jsme byli, že jsme neudělali baráž o mistrovství světa. To nás mrzí dodnes a ještě nějakou dobu mrzet bude. V tom zápase jsme herně nepropadli, byť je to málo k tomu, abychom se tím obhajovali," řekl Šilhavý na tiskové konferenci po prohře v Turecku.</p>
+
+                <p>"Potom ty zápasy v nejvyšší skupině Ligy národů, to je jako Liga mistrů těch zemí. Už to, že jsme se do té společnosti dostali, byl velký úspěch. Soupeři byli těžcí. Možná to špatné skóre trochu zkresluje to hodnocení. Ale bereme to, statistika je neúprosná. Myslím ale, že herně jsme nepropadli, tam bych hledal plusy," doplnil Šilhavý.</p>
+
+                <blockquote>
+                  <p>Je skvělé, že je nás tu tolik a že jsme si to před domácími fanoušky mohli všichni užít. Trenér Šilhavý po mně chtěl, ať hraju to, na co jsem zvyklý z klubu.</p>
+                </blockquote>
+
+                <p>Jeho svěřenci v rozlučce s kalendářním rokem nenavázali na středeční domácí vítězství 5:0 v přípravě nad Faerskými ostrovy a v Turecku o gól prohráli. "Soupeř byl daleko produktivnější než my. Ty branky jsme jim v podstatě připravili sami, soupeř trestal naše chyby. I když jsme bojovali o remízu, nepodařilo se nám to," litoval Šilhavý.</p>
+
+                <p>Při listopadovém srazu mu z různých důvodů scházelo téměř 30 hráčů a šanci dostali i nováčci. Útočník
+                  <a href="#">Mojmír Chytil</a>
+                  se proti Faeřanům při debutu blýskl hattrickem. "Hlavně v domácím zápase nás ti nováčci potěšili. Tentokrát se tam dostali v průběhu a taky určitě nezklamali. Viděli, že to bylo těžší. Je to pro ně velká zkušenost. Záleží, jak budou pokračovat. Opakované výkony doma v lize je sem mohou vynést," podotkl Šilhavý.</p>
+
+                <p>Už se těší na mistrovství světa. "Sledovat to budu, to je jasné. Že bych si ale vybral jedno mužstvo, to teď nemám. Jsem zvědavý, jak do toho týmy vlétnou. Přece jen je to nezvyk hrát mistrovství v zimě, v podstatě v půlce soutěží hned po týdnu jedou týmy na mistrovství. Do toho klimatické podmínky, to vše bude asi ovlivňovat kvalitu. Co se týče trendů, jsem zvědavý, co jde ještě posunout dál nebo upevnit," dodal Šilhavý. Jeho svěřence čeká v březnu start kvalifikace o mistrovství Evropy.</p>
+
+                <!-- Article widget - Match box -->
+                {% include "../templates/partials/_articleWidget-matchBox.njk" %}
+
+                <p>Elitní české kluby pro listopadový sraz nepustily své hráče. Slavia ale nakonec uvolnila pro švédskou reprezentaci stopera Aihama Ousoua, který by se po zranění nedostal do nominace na páteční zápas domácího poháru v Karviné." Samozřejmě chápu, že Slavia chce uspět v MOL Cupu. Když jsme se však dozvěděli, že uvolnila Ousoua do Švédska, byli jsme překvapeni," řekl ČT sport Šilhavý. Už se těší na mistrovství světa. "Sledovat to budu, to je jasné. Že bych si ale vybral jedno mužstvo, to teď nemám.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, in cumque, culpa perferendis maiores nulla sed omnis temporibus molestias odit error iure similique? Rerum, quidem! Facilis minima tempora corrupti omnis excepturi? Animi blanditiis numquam, nesciunt, incidunt quisquam quae deleniti corrupti nobis accusamus eos non a fugiat! Dolores, repellendus labore!</p>
+
+                <picture>
+                  <source media="(max-width: 576px)" srcset="./img/placeholder-subpage-img.jpg"/>
+                  <source srcset="./img/placeholder-subpage-img.jpg 1x, ./img/placeholder-subpage-img@1.5x.jpg 1.5x, ./img/placeholder-subpage-img@2x.jpg 2x"/>
+                  <img src="./img/placeholder-subpage-img.jpg" alt="" loading="lazy"/>
+                </picture>
+
+                <h2>Elitní české kluby pro listopadový sraz nepustily své hráče</h2>
+
+                <!-- Article widget - Player box -->
+                {% include "../templates/partials/_articleWidget-playerBox.njk" %}
+
+                <p>Kromě Chytila dnes odehráli premiérový zápas za národní tým i jeho kluboví spoluhráči Ondřej Zmrzlý a Jan Navrátil. "Je fajn, že jsme všichni nastoupili. Je skvělé, že je nás tu tolik a že jsme si to před domácími fanoušky mohli všichni užít," ocenil autor šesti ligových branek, kterými pomohl Olomouci ke čtvrtému místu po podzimní části.</p>
+
+                <p>Urostlý útočník dal druhý hattrick v sezoně a navázal na pohárový duel proti Uničovu (4:2). Formu z klubu si přenesl i do národního týmu. "Trenér Šilhavý po mně chtěl, ať hraju to, na co jsem zvyklý z klubu. Co se týče trendů, jsem zvědavý, co jde ještě posunout dál nebo upevnit," dodal Šilhavý.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero autem quod minus eius facere labore nam perferendis recusandae dicta quam, adipisci cum qui magni a dolore culpa sed dolorum. Accusantium minima velit fugiat tenetur ipsa repellendus. Veritatis eveniet libero sunt!</p>
+
+                <!-- YouTube -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FGx5jY6Q4HQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum non mollitia quo enim nemo sint repellendus asperiores ipsam id voluptates, numquam neque doloribus ex est. Exercitationem nulla similique id voluptas laborum totam. Impedit molestiae repellat facere harum sequi quisquam, ipsam quis, neque dolore corporis quam, mollitia laborum. Atque, pariatur itaque.</p>
+
+                <!-- Article widget - Article box -->
+                {% include "../templates/partials/_articleWidget-articleBox.njk" %}
+
+                <p>„Možná nejdůležitější byl úplně první kvalifikační zápas se Slovinskem. A vítězná branka Martina Vitíka v samém závěru utkání. Tím jsme dobře odstartovali a v tu chvíli jsem si říkal, že je štěstí přikloněno na naši stranu. Rozhodli jsme vyrovnaný zápas, přišly okamžiky velké radosti. Nebylo to jednoduché, šlo o první sraz, tým se teprve vytvářel, včetně toho realizačního. Cítil jsem tam určitou nervozitu a možná ani hráči nebyli úplně v pohodě. I když v tréninku odvedli kus práce.</p>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat. Byť jsme se potom utkali s Anglií, klopýtli jsme a nepodali očekávaný výkon. Možná i z přílišného respektu k soupeři… I proti takovým máme rozhodně na víc, než jsme zatím předvedli.“ A&nbsp;abych plnil pokyny, které mi dal před zápasem. To se podle mě povedlo,“ pochvaloval si Chytil, kterého čeká po hattricku i vysoké zápisné v kabině a vyřizování množství gratulací. "Asi si budu muset půjčit, uvidíme. A na telefon jsem se ještě pořádně nedíval, ale sám jsem zvědavý, kolik tam toho bude," dodal.</p>
+
+                <p>&nbsp;</p>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat.</p>
+
+                <hr>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat.</p>
+
+                <h3>Tabulka</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                    <tr>
+                      <td>Data</td>
+                      <td>
+                        <strong>Bold data</strong>
+                      </td>
+                      <td>Data a
+                        <a href="#">odkaz</a>
+                      </td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                    <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Elitní české kluby pro listopadový sraz nepustily své hráče. Slavia ale nakonec uvolnila pro švédskou reprezentaci stopera Aihama Ousoua, který by se po zranění nedostal do nominace na páteční zápas domácího poháru v Karviné. "Samozřejmě chápu, že Slavia chce uspět v MOL Cupu. Když jsme se však dozvěděli, že uvolnila Ousoua do Švédska, byli jsme překvapeni," řekl ČT sport Šilhavý.</p>
+
+                <h3>Související dokumenty</h3>
+                <!-- Article widget - Documents -->
+                {% include "../templates/partials/_articleWidget-documents.njk" %}
+              </div>
+
+              {% include "../templates/partials/ads/_fullWidth.njk" %}
+            </div>
+          </div>
+          <!-- Article sidebar -->
+          <aside class="Article-aside u-md-mt-40 u-sm-mt-24">
+            <h4 class="H9 H9--stretched u-tt-uppercase">Související</h4>
+            <!-- Related content nav -->
+            {{ competitionNav.render(null, "vertical") }}
+            <!-- Related articles -->
+            <div class="RelatedArticlesGrid u-mt-40 u-sm-mt-24">
+              {% for item in range(0, 3) %}
+                {% include "../templates/partials/_articleBox.njk" %}
+              {% endfor %}
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+{% endblock %}

@@ -1,0 +1,484 @@
+/**
+ * Fotbal.cz - navigation
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+**/
+
+.line-main-nav {
+
+    .logo {
+        position: absolute;
+        top: 13px;
+
+        .mod-hp & {
+            display: none;
+        }
+    }
+
+    .mod-without-logo & {
+        .logo {
+            left: 0;
+        }
+    }
+
+    .mod-with-logo & {
+        .logo {
+            left: 0;
+
+            @media @large {
+                left: 143px;
+            }
+        }
+    }
+}
+
+.navigation {
+
+    // position: relative;
+
+    >ul {
+        .m-clearfix;
+        .m-reset-list;
+        height: 49px;
+        overflow: hidden;
+        font-size: 1rem;
+        position: static;
+        top: -1px;
+    }
+
+    // Space for logo on large viewport
+    .mod-with-logo & {
+        @media @small {
+            margin-left: 97px;
+        }
+
+        @media @large {
+            margin-left: 246px;
+        }
+    }
+
+    .mod-without-logo & {
+        @media @small {
+            margin-left: 100px;
+        }
+
+        @media @large {
+            margin-left: 105px;
+        }
+    }
+
+    .mod-hp & {
+        margin-left: 0;
+
+        @media @large {
+            margin-left: 90px;
+        }
+    }
+
+    .menu-item {
+        float: left;
+
+        // position: relative;
+        // border-top: 4px solid #fff;
+        &.is-active,
+        &:hover {
+            a {
+                padding-top: 0;
+                background-color: @midBlue;
+
+                &:after {
+                    .m-size(100%, 2px);
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    background: @midBlue;
+                }
+            }
+        }
+
+        &:hover {
+            .submenu {
+                display: block;
+            }
+        }
+    }
+
+    .menu-item-link {
+        .f-condensed-bold;
+        .t-uppercase;
+        .m-block;
+        .t-bold;
+        z-index: 100;
+        color: #fff;
+        position: relative;
+        text-decoration: none;
+        height: 48px;
+        line-height: 41px;
+        border-top: 4px solid transparent;
+        border-right: 1px solid @border-main-nav;
+
+        &:hover {
+            background-color: @midBlue;
+        }
+
+        padding: 0 12px;
+
+        @media @large {
+            padding: 0 20px 0;
+        }
+
+        .mod-section & {
+            padding: 0 12px;
+
+            @media screen and (min-width: 1470px) {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .menu-item {
+        &-1 {
+            display: none;
+        }
+
+        &-2,
+        &-repre {
+            .menu-item(@sec-repre );
+        }
+
+        &-3,
+        &-facr {
+            .menu-item(@sec-facr );
+        }
+
+        &-4,
+        &-souteze {
+            .menu-item(@sec-competitions );
+        }
+
+        &-5,
+        &-mujfotbal {
+            .menu-item(@sec-myfootball );
+        }
+
+        &-6,
+        &-trenink {
+            .menu-item(@sec-training );
+        }
+
+        &-7,
+        &-rozhodci {
+            .menu-item(@sec-referees );
+        }
+
+        &-8,
+        &-zeny {
+            .menu-item(@sec-women );
+        }
+
+        &-9,
+        &-futsal {
+            .menu-item(@sec-futsal );
+        }
+
+        &-10,
+        &-tv {
+            .menu-item(@sec-tv );
+        }
+
+        // &-11, &-fanzona { .menu-item( @sec-fanzone ); }
+        &-11,
+        &-galerie {
+            .menu-item(@sec-gallery );
+        }
+
+        // &-euro2016 { .menu-item( @blueEURO ); }
+        &-eurowu17 {
+            .menu-item(@sec-eurowu17 );
+        }
+
+        &-sinslavy {
+            .menu-item(@sec-sinslavy );
+        }
+
+        &-euro2016 {
+            a {
+                border-top-color: @blueEURO;
+                background: @midBlueEURO  !important;
+                color: #fff !important;
+
+                &:after {
+                    background-color: @midBlueEURO;
+                }
+            }
+        }
+    }
+
+    .submenu {
+
+        display: none;
+
+        .p-25;
+        position: absolute;
+        box-sizing: border-box;
+        left: 0;
+        right: 0;
+        background: @midBlue;
+        border-bottom: 4px solid;
+
+        @media @large {
+            left: 10px;
+            right: 10px;
+        }
+
+        .submenu-border {
+            border-left: 1px solid @border-main-nav;
+            padding-left: 25px;
+            .p-t-5;
+        }
+
+        ul {
+            .m-clearfix;
+            .m-reset-list;
+        }
+
+        .submenu-item {
+            .m-b-5;
+        }
+
+        .container {
+            width: 100% !important;
+        }
+    }
+
+    .submenu-title {
+        .f-condensed-bold;
+        .t-uppercase;
+        .f-28;
+        .m-0;
+        .m-t-5;
+    }
+
+    .submenu-item-link {
+        .f-16;
+        .f-condensed;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .submenu-banner {
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        // .m-t-20;
+        .m-b-20;
+    }
+
+}
+
+.menu-item(@color ) {
+    .menu-item-link {
+        color: @white;
+    }
+
+    &.is-active,
+    &:hover {
+        .menu-item-link {
+            color: @color;
+            border-top-color: @color;
+        }
+    }
+
+    .submenu {
+        border-bottom-color: @color;
+    }
+
+    .submenu-title {
+        color: @color;
+    }
+
+    .submenu-item-link:hover {
+        color: @color;
+    }
+}
+
+.menu-item-mobile(@color ) {
+    a {
+        color: @color;
+    }
+}
+
+.navigation-mobile {
+
+    .csstransforms & {
+        transform: translate(100%, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    .no-csstransforms & {
+        margin-right: -100%;
+    }
+
+    .csstransitions & {
+        transition: all 300ms ease-in-out;
+    }
+
+    position: fixed;
+    right: 0;
+    width: 90%;
+    top: 0;
+    bottom: 0;
+    background-color: @blue;
+    z-index: 999;
+    overflow-y: auto;
+
+    @media @w-show-navigation {
+        display: none;
+    }
+
+    .mod-mobile-nav-open & {
+        .csstransforms & {
+            transform: translate(0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .no-csstransforms & {
+            margin-right: 0;
+        }
+    }
+
+    .logo {
+        display: none;
+    }
+
+    >ul {
+        .m-reset-list;
+        .m-clearfix;
+        margin-top: 50px;
+    }
+
+    .menu-item-link {
+        .t-bold;
+        .t-uppercase;
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-bottom: 1px solid @menu-mobile-border;
+        border-right: 1px solid @menu-mobile-border;
+
+        .csstransforms & {
+            padding: 0 15px;
+            height: 48px;
+            position: relative;
+
+            >span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .submenu {
+        display: none !important;
+    }
+
+    .menu-item {
+        // &-1 { .menu-item-mobile( #fff ); }
+        // &-2 { .menu-item-mobile( @sec-repre ); }
+        // &-3 { .menu-item-mobile( @sec-facr ); }
+        // &-4 { .menu-item-mobile( @sec-competitions ); }
+        // &-5 { .menu-item-mobile( @sec-myfootball ); }
+        // &-6 { .menu-item-mobile( @sec-training ); }
+        // &-7 { .menu-item-mobile( @sec-referees ); }
+        // &-8 { .menu-item-mobile( @sec-women ); }
+        // &-9 { .menu-item-mobile( @sec-futsal ); }
+        // &-10 { .menu-item-mobile( @sec-tv ); }
+        // &-11 { .menu-item-mobile( @sec-fanzone ); }
+
+
+        &-1 {
+            .menu-item-mobile(#fff);
+        }
+
+        &-2,
+        &-repre {
+            .menu-item(@sec-repre );
+        }
+
+        &-3,
+        &-facr {
+            .menu-item(@sec-facr );
+        }
+
+        &-4,
+        &-souteze {
+            .menu-item(@sec-competitions );
+        }
+
+        &-5,
+        &-mujfotbal {
+            .menu-item(@sec-myfootball );
+        }
+
+        &-6,
+        &-trenink {
+            .menu-item(@sec-training );
+        }
+
+        &-7,
+        &-rozhodci {
+            .menu-item(@sec-referees );
+        }
+
+        &-8,
+        &-zeny {
+            .menu-item(@sec-women );
+        }
+
+        &-9,
+        &-futsal {
+            .menu-item(@sec-futsal );
+        }
+
+        &-10,
+        &-tv {
+            .menu-item(@sec-tv );
+        }
+
+        // &-11, &-fanzona { .menu-item( @sec-fanzone ); }
+        &-11,
+        &-galerie {
+            .menu-item(@sec-gallery );
+        }
+
+        &-euro2016 {
+            .menu-item(@blueEURO );
+        }
+
+        &-eurowu17 {
+            .menu-item(@sec-eurowu17 );
+        }
+
+        &-sinslavy {
+            .menu-item(@sec-sinslavy );
+        }
+    }
+
+}
+
+navigation .menu-item-xps .menu-item-link {
+    color: #f92823;
+}
+
+.navigation .menu-item-xps:hover .menu-item-link {
+    color: #f92823;
+    border-top-color: #f92823;
+}

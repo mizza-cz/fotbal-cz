@@ -1,0 +1,35 @@
+.MatchBox {
+  @include box();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: rem(320px);
+
+  @include respondTo(xs) {
+    width: 100%;
+  }
+
+  &-meta {
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-flag {
+    flex-shrink: 0;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 0 0.25rem;
+  }
+
+  &-result {
+    font-size: 2.5rem;
+  }
+
+  .H6 {
+    text-align: center;
+  }
+}

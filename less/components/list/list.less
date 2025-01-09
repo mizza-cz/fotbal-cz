@@ -1,0 +1,123 @@
+/**
+List
+
+Výpis dat do seznamu
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 5.
+*/
+/**
+Výpis článků
+
+U položky <strong>.list-link</strong> může být i modifikátor <strong>.mod-nopadding</strong>, který
+ostraní postranní padding od první a poslední položky.
+
+Markup:
+<div class="box mod-bottom-shadow">
+	<ul class="list">
+		<li class="list-item">
+			<a href="#" class="list-link">
+				<span class="list-date">9.11.2014</span>
+				<span class="list-name">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</span>
+			</a>
+		</li>
+		<li class="list-item">
+			<a href="#" class="list-link mod-nopadding">
+				<span class="list-date">9.11.2014</span>
+				<!-- span class="list-image"><img src="public/image.png"></span -->
+				<span class="list-name">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</span>
+			</a>
+		</li>
+		<li class="list-item">
+			<a href="#" class="list-link">
+				<span class="list-date">9.11.2014</span>
+				<span class="list-name">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</span>
+			</a>
+		</li>
+		<li class="list-item">
+			<a href="#" class="list-link">
+				<span class="list-date">9.11.2014</span>
+				<span class="list-name">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+Styleguide 5.1
+*/
+
+.list {
+	.p(0);
+	.m(0);
+	display: block;
+	width: 100%;
+
+	.list-link { color: @text; }
+}
+
+.list-item {
+	.m-clearfix();
+	display: block;
+	box-sizing: border-box;
+	background: #fff;
+	border: 1px solid @list-border;
+	border-width: 0 0 1px 0;
+	
+	&:last-child {
+		border-bottom: 0;
+	}
+	.p(0);
+
+	&:hover {
+		background: lighten(@lightBlue, 5%);
+	}
+}
+
+.list-link {
+	
+		.p(5px 15px 5px 15px);
+		@media @mini {
+			.p(5px 20px 5px 20px);
+		}
+		@media @medium {
+	    	.p(10px 30px 10px 30px);
+		}
+	box-sizing: border-box;
+	display: table;
+	width: 100%;
+	text-decoration: none;
+	color: @text;
+
+}
+
+.list-date,
+.list-name {
+	display: table-cell;
+	vertical-align: middle;
+
+	line-height: 1.5em;
+	min-height: 24px;
+
+}
+
+.list-date {
+	width: 85px;
+	@media @small {
+		width: 100px;
+	}
+	white-space: nowrap; // Remove if neccessary
+	color: @grey;
+	.f-condensed;
+	.p-t(8px);
+	.p-b(8px);
+	.p-r(10px);
+}
+
+.list-name {
+	.f-condensed-bold;
+	.f-20;
+	.p-t(8px);
+	.p-b(8px);
+}

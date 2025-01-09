@@ -1,0 +1,34 @@
+.fade.in {
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.dropdown-menu {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.tox-promotion {
+  display: none;
+}
+
+.tox-statusbar__branding {
+  display: none;
+}
+
+.fileupload-processing .fileupload-process,
+.files .processing .preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.photo-picker-listWrapper {
+  max-height: 50vh;
+  overflow-y: auto;
+}

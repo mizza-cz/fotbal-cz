@@ -1,0 +1,102 @@
+.ListItemSplit {
+  display: flex;
+  position: relative;
+
+  @include respondTo(sm) {
+    flex-direction: column;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include roundedBorderHor();
+  }
+
+  &-leftContainer {
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem 1.125rem 0;
+    }
+
+    &--fullPadding {
+      @include respondFrom(md) {
+        padding: 1.125rem 1.5rem;
+      }
+    }
+  }
+
+  &-rightContainer {
+    position: relative;
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+
+    @include respondFrom(md) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1.125rem;
+        left: 0;
+        @include roundedBorderVer();
+        height: calc(100% - 2.25rem);
+      }
+    }
+  }
+
+  &-details {
+    display: grid;
+    gap: 0.25rem;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      svg {
+        flex-shrink: 0;
+      }
+
+      strong {
+        font-weight: $fontWeightSemiBold;
+      }
+
+      & > * {
+        margin-right: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.List {
+  &--topBordered {
+    .ListItemSplit {
+      &:first-child {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include roundedBorderHor();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.Board {
+  &-sizer {
+    width: 100%;
+
+    @include respondFrom(sm) {
+      width: math.percentage(math.div(500, 1040));
+    }
+
+    @include respondFrom(md) {
+      width: math.percentage(math.div(320, 1040));
+    }
+  }
+
+  &-gutterSizer {
+    width: 0;
+
+    @include respondFrom(sm) {
+      width: math.percentage(math.div(24, 1040));
+    }
+
+    @include respondFrom(md) {
+      width: math.percentage(math.div(40, 1040));
+    }
+  }
+
+  &-item {
+    margin-bottom: 1.5rem;
+
+    @include respondFrom(md) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .ArticleArchive,
+  .ArticleBox,
+  .ArticleBoxBig,
+  .Banner,
+  .Banner--small,
+  .MatchCalendar {
+    width: 100%;
+  }
+
+  .ArticleArchive {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -1rem;
+    margin-bottom: 0;
+
+    @include respondTo(sm) {
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  .ArticleBox,
+  .Banner--small,
+  .MatchCalendar {
+    @include respondFrom(sm) {
+      width: math.percentage(math.div(500, 1040));
+    }
+
+    @include respondFrom(md) {
+      width: math.percentage(math.div(320, 1040));
+    }
+  }
+
+  .ArticlesSmallGrid {
+    &.SectionTopBordered {
+      padding-top: rem(26px);
+
+      @include respondFrom(md) {
+        padding-top: rem(42px);
+      }
+    }
+  }
+
+  & > h1,
+  & > h2 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,147 @@
+.MatchRound {
+  display: flex;
+  position: relative;
+
+  @include respondTo(sm) {
+    flex-direction: column;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include roundedBorderHor();
+  }
+
+  &:first-child {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+  }
+
+  &-mainInfoContainer {
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem;
+    }
+  }
+
+  &-detailsContainer {
+    position: relative;
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+
+    @include respondFrom(md) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1.125rem;
+        left: 0;
+        @include roundedBorderVer();
+        height: calc(100% - 2.25rem);
+      }
+    }
+  }
+
+  &-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-decoration: none;
+
+    &--upcoming {
+      pointer-events: none;
+    }
+
+    .H4,
+    .H7 {
+      text-decoration-color: transparent;
+      transition: color 0.25s linear, outline-offset 0.25s linear, text-decoration-color 0.25s linear;
+    }
+
+    &:not(.MatchRound--upcoming):focus,
+    &:not(.MatchRound--upcoming):hover,
+    &:not(.MatchRound--upcoming):active {
+      .H4,
+      .H7 {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+      }
+
+      .H4 {
+        text-decoration-thickness: 0.25rem;
+      }
+
+      .H7 {
+        text-decoration-thickness: 0.125rem;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+
+    & > * {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-details,
+  &-meta {
+    display: grid;
+    gap: 0.25rem;
+
+    li {
+      display: flex;
+
+      // Icon
+      svg {
+        flex-shrink: 0;
+      }
+
+      // TV logo
+      img {
+        margin-top: rem(6px);
+      }
+
+      strong {
+        font-weight: $fontWeightSemiBold;
+      }
+
+      & > * {
+        margin-right: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

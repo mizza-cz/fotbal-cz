@@ -1,0 +1,72 @@
+/*
+Motiv EURO 2022
+
+*/
+
+.theme-euro2022 .line-site-heading {
+    background-image: url('../img/site-heading-euro-2.png');
+    background-size: contain;
+  }
+  
+  .theme-euro2022 .column-left {
+    background: #280018;
+  }
+  
+  .theme-euro2022 .menu .menu-item-link {
+    border-top: 1px solid #a1005c;
+    border-bottom: 1px solid #280018;
+  }
+  
+  .theme-euro2022 .menu .menu-item-link:hover {
+    color: #ddd;
+  }
+  
+  .theme-euro2022 .menu .menu-item > .menu-submenu {
+    background: #a1005c;
+  }
+  
+  .theme-euro2022 .menu .menu-item > .menu-submenu > .menu-item > .menu-item-link {
+    border-top: 1px solid #a1005c;
+    border-bottom: 1px solid #280018;
+  }
+  
+  .theme-euro2022 .line.line-mid-blue {
+    background-color: #a1005c;
+  }
+  
+  .theme-euro2022 .line.line-dark-blue {
+    background-color: #280018;
+  }
+  
+  .theme-euro2022 .line.line-main-nav {
+    background-color: #280018;
+  }
+  
+  .theme-euro2022 .line.line-footer-nav {
+    background-color: #280018;
+  }
+  
+  .theme-euro2022 .navigation .menu-item.is-active a,
+  .theme-euro2022 .navigation .menu-item:hover a {
+    background: #a1005c;
+    color: #fff;
+  }
+  
+  .theme-euro2022 .navigation .menu-item.is-active a:after,
+  .theme-euro2022 .navigation .menu-item:hover a:after {
+    background-color: #a1005c;
+  }
+  
+  .theme-euro2022 .navigation .menu-item.is-active.menu-item-euro2016 a,
+  .theme-euro2022 .navigation .menu-item:hover.menu-item-euro2016 a {
+    border-top-color: #0696d5;
+  }
+  
+  .theme-euro2022 .site-heading:before {
+    background-color: #280018;
+  }
+  
+  .theme-euro2022 .h1,
+  .theme-euro2022 .citation {
+    border-color: #0696d5;
+  }

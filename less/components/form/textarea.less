@@ -1,0 +1,26 @@
+/**
+Textarea
+
+Styl pro textareu
+
+Markup:
+<textarea rows="5" cols="10">
+</textarea>
+
+Styleguide 7.4.
+*/
+
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	border: 1px solid @input-border;
+	min-height: 60px;
+	line-height: 22px;
+	.p(10px 14px);
+
+	&:hover,
+	&:focus {
+		border-color: @darkBlue;
+	}
+}

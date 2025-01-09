@@ -1,0 +1,82 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Akreditace - nová žádost} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Nová žádost pro událost 25. řádná Valná hromada FAČR 23. 6. 2023</h1>
+
+    <div class="Box u-mt-primary">
+      <form action="" method="post" class="Form Form--accreditation">
+        <div class="Form-item">
+          <label class="Form-label" for="">Jméno/Name</label>
+          <input class="Form-input" type="text" name="" id=""/>
+        </div>
+        <div class="Form-item">
+          <label class="Form-label" for="">Příjmení/Surname</label>
+          <input class="Form-input" type="text" name="" id=""/>
+        </div>
+        <div class="Form-item">
+          <label class="Form-label" for="">E-mail</label>
+          <input class="Form-input" type="email" name="" id=""/>
+        </div>
+        <div class="Form-item">
+          <label class="Form-label" for="">Telefon/Phone</label>
+          <input class="Form-input" type="tel" name="" id=""/>
+        </div>
+        <div class="Form-item">
+          <label class="Form-label" for="">Redakce/Media</label>
+          <input class="Form-input" type="text" name="" id=""/>
+        </div>
+
+        <div class="Form-item">
+          <fieldset>
+            <legend class="Form-label">Typ akreditace/Type of accreditation</legend>
+            <div class="Form-item">
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-1" value="TEST-radio-1"/>
+                <label class="Radio-label" for="TEST-radio-1">píšící/written</label>
+              </div>
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-2" value="TEST-radio-2"/>
+                <label class="Radio-label" for="TEST-radio-2">foto/photo</label>
+              </div>
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-3" value="TEST-radio-3"/>
+                <label class="Radio-label" for="TEST-radio-3">radio right holder</label>
+              </div>
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-4" value="TEST-radio-4"/>
+                <label class="Radio-label" for="TEST-radio-4">radio non right holder</label>
+              </div>
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-5" value="TEST-radio-5"/>
+                <label class="Radio-label" for="TEST-radio-5">TV non right holder</label>
+              </div>
+              <div class="Radio">
+                <input class="Radio-button" type="radio" name="TEST-radio-group" id="TEST-radio-6" value="TEST-radio-6"/>
+                <label class="Radio-label" for="TEST-radio-6">TV right holder</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="Form-item">
+          <div class="Checkbox">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox" id="TEST-checkbox"/>
+            <label class="Checkbox-label" for="TEST-checkbox">
+              Souhlasím se zpracováním osobních údajů pro potřeby akreditace.
+              <a href="#" target="_blank" rel="noopener noreferrer">Více informací</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="Form-item">
+          <button type="submit" class="Button">Odeslat</button>
+        </div>
+      </form>
+    </div>
+  </main>
+{% endblock %}

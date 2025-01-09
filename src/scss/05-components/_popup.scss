@@ -1,0 +1,33 @@
+.Popup {
+  width: 100%;
+  max-width: rem(320px);
+  position: fixed;
+  top: 120px;
+  right: 0;
+  background-color: $colorWhite;
+  border-radius: $borderRadiusSecondary 0 0 $borderRadiusSecondary;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.25s $easeInQuad, visibility 0.25s $easeInQuad;
+  visibility: hidden;
+  z-index: z(popup);
+
+  &.is-active {
+    visibility: visible;
+    transform: translateX(0);
+    transition-timing-function: $easeOutSine;
+    transition-duration: 0.5s;
+  }
+
+  &-heading {
+    @include text($colorBlack, 1.5rem, $fontWeightSemiBold, 1.2);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .CloseButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

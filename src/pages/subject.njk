@@ -1,0 +1,100 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název subjektu} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+{% import "../templates/partials/_competitionNav.njk" as competitionNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Article">
+      <h1 class="H3 H3--withLogo">
+        <img class="Logo" src="./img/logo-subject-empty.svg" width="64" height="64" alt="logo {název subjektu}" loading="lazy"/>
+        <span>Jihomoravský kraj</span>
+      </h1>
+      {{ mainContentNav.render(subject.menu, 1) }}
+
+      <div class="Grid">
+        <div class="Grid-col Grid-col--6 Grid-col--sm-12 u-display-flex">
+          <!-- Documents section -->
+          <section class="u-flex-basis-100p u-mt-primary">
+            <h2 class="H6">Vybrané dokumenty</h2>
+            <!-- Article widget - Documents -->
+            {% include "../templates/partials/_articleWidget-documents.njk" %}
+          </section>
+        </div>
+        <div class="Grid-col Grid-col--6 Grid-col--sm-12 u-display-flex">
+          <!-- Contact section -->
+          <section class="u-flex-basis-100p u-mt-primary">
+            <h2 class="H6">Rychlý kontakt</h2>
+            <div class="Box u-mt-16">
+              <div class="Box-grid">
+                <section>
+                  <h3 class="u-display-flex u-align-items-center u-ff-primary u-fs-small u-fw-semiBold u-tt-uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="u-flex-shrink-0 u-mr-8" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#boss"></use>
+                    </svg>
+                    <span>Sekretář</span>
+                  </h3>
+                  <ul class="u-mt-4 u-ml-32">
+                    <li>Bc. Josef Dvořáček</li>
+                    <li>+420 777 222 170</li>
+                    <li>
+                      <a href="mailto:sekretar@jmkfs.cz">sekretar@jmkfs.cz</a>
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h3 class="u-display-flex u-align-items-center u-ff-primary u-fs-small u-fw-semiBold u-tt-uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="u-flex-shrink-0 u-mr-8" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#address"></use>
+                    </svg>
+                    <span>Sídlo KFS</span>
+                  </h3>
+                  <ul class="u-mt-4 u-ml-32">
+                    <li>Skuherského 14</li>
+                    <li>České Budějovice</li>
+                    <li>370 01</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3 class="u-display-flex u-align-items-center u-ff-primary u-fs-small u-fw-semiBold u-tt-uppercase">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="u-flex-shrink-0 u-mr-8" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#dollar"></use>
+                    </svg>
+                    <span>Bankovní a ostatní spojení</span>
+                  </h3>
+                  <ul class="u-mt-4 u-ml-32">
+                    <li>
+                      <strong>Účet:</strong>
+                      107-622190267/0100, Komerční banka
+                    </li>
+                    <li>
+                      <strong>IČ:</strong>
+                      709 33 162
+                    </li>
+                    <li>
+                      <strong>Datová schránka:</strong>
+                      h7p3v7s
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Article widget - Competitions -->
+      {% include "../templates/partials/_articleWidget-competitions.njk" %}
+
+      <!-- OFS section -->
+      <section class="u-mt-primary">
+        <h2 class="H6">OFS Jihomoravského kraje</h2>
+        {{ competitionNav.render(subject.competitionMenu, "horizontal") }}
+      </section>
+    </div>
+  </main>
+{% endblock %}

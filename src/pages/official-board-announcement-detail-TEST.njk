@@ -1,0 +1,57 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'Rozhodnutí Disciplinární komise Ligové fotbalové asociace č.j. 185/2022-23-2 | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <div class="Modal-dialog Modal-dialog--announcement NotAnimOnLoad u-mx-auto u-xs-width-100p">
+        <div id="modal-content">
+          <article id="js-announcement">
+            <h1 class="H5">TEST Oznámení</h1>
+            <ul class="IconList u-mt-24">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Platnost od-do:</strong>
+                  3. 3. 2023 - 3. 3. 2025
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#post"></use>
+                </svg>
+                <p>
+                  <strong>Zveřejnil:</strong>
+                  Disciplínární komise - Disciplinární komise Ligové fotbalové asociace
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#get"></use>
+                </svg>
+                <p>
+                  <strong>Adresát:</strong>
+                  A1A 2504 Madamidola Basil Ololade Akanji (Spartak Police nad Metují) ID 96121618, A2A 2501 Špicar Jan (TJ Sokol Stěžery) ID 04080253, A2A 2504 Sýkora Tomáš (SK Roudnice) ID 92090398, A3A 2101 Štěpánek Vojtěch (SK Jičín B) ID 03030185, A3B 2105 Hanusík Tomáš (TJ Velichovky) ID 00061065, C1B 0401 Hruška Tobiáš (TJ Dvůr Králové nad Labem) ID 05080060
+                </p>
+              </li>
+            </ul>
+
+            <h2 class="H6 u-mt-primary">Související dokumenty</h2>
+            <!-- Article widget - Documents -->
+            {% include "../templates/partials/_articleWidget-documents.njk" %}
+          </article>
+        </div>
+        <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+          <a href="#" class="Button">Úřední deska</a>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

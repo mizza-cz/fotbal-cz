@@ -1,0 +1,397 @@
+/**
+Icon
+
+Styly pro ikony
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 9.
+*/
+
+/** 
+duplikáty vlajek 
+
+NDR >> DEU
+*/
+
+.icon-flag-ndr { 
+  background-image: url(../images/icon-flags.png?2);
+  background-position: -240px 0px;
+  width: 24px;
+  height: 24px; opacity: 1!important;
+} 
+.icon-flag-big-ndr {
+  background-image: url(../images/icon-flags-big.png?2);
+  background-position: -432px 0px;
+  width: 48px;
+  height: 48px; opacity: 1!important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+	
+	.icon-flag-ndr {
+	    background-image: url(../images/icon-flags_@2X.png?2);
+	    background-size: 504px 474px;
+	}
+	.icon-flag-big-ndr {
+		background-image: url(../images/icon-flags-big_@2X.png?2);
+		background-size: 912px 858px;
+	}
+}
+
+
+/**
+Vlajky
+
+Ikony vlajek ve 3 písmenném iso kódu
+<br><br><p>
+<strong>VELIKOSTI!</strong> vlajky jsou ve velikosti 24x24px, nebo při úpravě tříd ".icon-flag .icon-flag-iso" > ".icon-flag-big .icon-flag-big-iso" ve velikosti 48x48px.
+</p>
+
+.icon-flag-afg          -	Afghanistan
+.icon-flag-ala          -	Åland Islands
+.icon-flag-alb          -	Albania
+.icon-flag-alg          -	Algeria
+.icon-flag-asm          -	American Samoa
+.icon-flag-and          -	Andorra
+.icon-flag-ago          -	Angola
+.icon-flag-aia          -	Anguilla
+.icon-flag-ata          -	Antarctica
+.icon-flag-atg          -	Antigua and Barbuda
+.icon-flag-arg          -	Argentina
+.icon-flag-arm          -	Armenia
+.icon-flag-abw          -	Aruba
+.icon-flag-aus          -	Australia
+.icon-flag-aut          -	Austria
+.icon-flag-aze          -	Azerbaijan
+.icon-flag-bah          -	Bahamas (the)
+.icon-flag-bhr          -	Bahrain
+.icon-flag-ban          -	Bangladesh
+.icon-flag-brb          -	Barbados
+.icon-flag-blr          -	Belarus
+.icon-flag-bel          -	Belgium
+.icon-flag-blz          -	Belize
+.icon-flag-ben          -	Benin
+.icon-flag-bmu          -	Bermuda
+.icon-flag-bhu          -	Bhutan
+.icon-flag-bol          -	Bolivia (Plurinational State of)
+.icon-flag-bes          -	Bonaire, Sint Eustatius and Saba
+.icon-flag-bih          -	Bosnia and Herzegovina
+.icon-flag-bot          -	Botswana
+.icon-flag-bvt          -	Bouvet Island
+.icon-flag-bra          -	Brazil
+.icon-flag-iot          -	British Indian Ocean Territory (the)
+.icon-flag-bru          -	Brunei Darussalam
+.icon-flag-bul          -	Bulgaria
+.icon-flag-bfa          -	Burkina Faso
+.icon-flag-bdi          -	Burundi
+.icon-flag-cpv          -	Cabo Verde
+.icon-flag-cam          -	Cambodia
+.icon-flag-cmr          -	Cameroon
+.icon-flag-can          -	Canada
+.icon-flag-cym          -	Cayman Islands (the)
+.icon-flag-cta          -	Central African Republic (the)
+.icon-flag-cha          -	Chad
+.icon-flag-chi          -	Chile
+.icon-flag-chn          -	China
+.icon-flag-cxr          -	Christmas Island
+.icon-flag-cck          -	Cocos (Keeling          - Islands (the)
+.icon-flag-col          -	Colombia
+.icon-flag-com          -	Comoros (the          -
+.icon-flag-zai          -	Congo (the Democratic Republic of the)
+.icon-flag-cgo          -	Congo (the)
+.icon-flag-cok          -	Cook Islands (the)
+.icon-flag-crc          -	Costa Rica
+.icon-flag-civ          -	Côte d'Ivoire
+.icon-flag-cro          -	Croatia
+.icon-flag-cub          -	Cuba
+.icon-flag-cuw          -	Curaçao
+.icon-flag-cyp          -	Cyprus
+.icon-flag-cze          -	Czech Republic (the)
+.icon-flag-den          -	Denmark
+.icon-flag-dji          -	Djibouti
+.icon-flag-dma          -	Dominica
+.icon-flag-dom          -	Dominican Republic (the)
+.icon-flag-ecu          -	Ecuador
+.icon-flag-egy          -	Egypt
+.icon-flag-slv          -	El Salvador
+.icon-flag-eqg          -	Equatorial Guinea
+.icon-flag-eri          -	Eritrea
+.icon-flag-est          -	Estonia
+.icon-flag-eth          -	Ethiopia
+.icon-flag-flk          -	Falkland Islands (the) [Malvinas]
+.icon-flag-fro          -	Faroe Islands (the)
+.icon-flag-fij          -	Fiji
+.icon-flag-fin          -	Finland
+.icon-flag-fra          -	France
+.icon-flag-guf          -	French Guiana
+.icon-flag-pyf          -	French Polynesia
+.icon-flag-atf          -	French Southern Territories (the)
+.icon-flag-gab          -	Gabon
+.icon-flag-gam          -	Gambia (the)
+.icon-flag-geo          -	Georgia
+.icon-flag-ger          -	Germany
+.icon-flag-gha          -	Ghana
+.icon-flag-gib          -	Gibraltar
+.icon-flag-gre          -	Greece
+.icon-flag-grl          -	Greenland
+.icon-flag-grn          -	Grenada
+.icon-flag-glp          -	Guadeloupe
+.icon-flag-gum          -	Guam
+.icon-flag-gua          -	Guatemala
+.icon-flag-ggy          -	Guernsey
+.icon-flag-gin          -	Guinea
+.icon-flag-gnb          -	Guinea-Bissau
+.icon-flag-guy          -	Guyana
+.icon-flag-hai          -	Haiti
+.icon-flag-hmd          -	Heard Island and McDonald Islands
+.icon-flag-vat          -	Holy See (the)
+.icon-flag-hon          -	Honduras
+.icon-flag-hkg          -	Hong Kong
+.icon-flag-hun          -	Hungary
+.icon-flag-isl          -	Iceland
+.icon-flag-ind          -	India
+.icon-flag-idn          -	Indonesia
+.icon-flag-irn          -	Iran (Islamic Republic of)
+.icon-flag-irq          -	Iraq
+.icon-flag-irl          -	Ireland
+.icon-flag-imn          -	Isle of Man
+.icon-flag-isr          -	Israel
+.icon-flag-ita          -	Italy
+.icon-flag-jam          -	Jamaica
+.icon-flag-jpn          -	Japan
+.icon-flag-jey          -	Jersey
+.icon-flag-jor          -	Jordan
+.icon-flag-kaz          -	Kazakhstan
+.icon-flag-ken          -	Kenya
+.icon-flag-kir          -	Kiribati
+.icon-flag-prk          -	Korea (the Democratic People's Republic of)
+.icon-flag-kor          -	Korea (the Republic of)
+.icon-flag-kwt          -	Kuwait
+.icon-flag-kgz          -	Kyrgyzstan
+.icon-flag-lao          -	Lao People's Democratic Republic (the)
+.icon-flag-lva          -	Latvia
+.icon-flag-lbn          -	Lebanon
+.icon-flag-les          -	Lesotho
+.icon-flag-lbr          -	Liberia
+.icon-flag-lby          -	Libya
+.icon-flag-lie          -	Liechtenstein
+.icon-flag-ltu          -	Lithuania
+.icon-flag-lux          -	Luxembourg
+.icon-flag-mac          -	Macao
+.icon-flag-mkd          -	Macedonia (the former Yugoslav Republic of)
+.icon-flag-mad          -	Madagascar
+.icon-flag-mwi          -	Malawi
+.icon-flag-mas          -	Malaysia
+.icon-flag-mdv          -	Maldives
+.icon-flag-mli          -	Mali
+.icon-flag-mlt          -	Malta
+.icon-flag-mhl          -	Marshall Islands (the)
+.icon-flag-mtq          -	Martinique
+.icon-flag-mtn          -	Mauritania
+.icon-flag-mri          -	Mauritius
+.icon-flag-myt          -	Mayotte
+.icon-flag-mex          -	Mexico
+.icon-flag-fsm          -	Micronesia (Federated States of)
+.icon-flag-mda          -	Moldova (the Republic of)
+.icon-flag-mon          -	Monaco
+.icon-flag-mng          -	Mongolia
+.icon-flag-mne          -	Montenegro
+.icon-flag-msr          -	Montserrat
+.icon-flag-mar          -	Morocco
+.icon-flag-moz          -	Mozambique
+.icon-flag-mya          -	Myanmar
+.icon-flag-nam          -	Namibia
+.icon-flag-nru          -	Nauru
+.icon-flag-nep          -	Nepal
+.icon-flag-ned          -	Netherlands (the)
+.icon-flag-ncl          -	New Caledonia
+.icon-flag-nzl          -	New Zealand
+.icon-flag-nca          -	Nicaragua
+.icon-flag-nig          -	Niger (the)
+.icon-flag-nga          -	Nigeria
+.icon-flag-niu          -	Niue
+.icon-flag-nfk          -	Norfolk Island
+.icon-flag-mnp          -	Northern Mariana Islands (the)
+.icon-flag-nor          -	Norway
+.icon-flag-oma          -	Oman
+.icon-flag-pak          -	Pakistan
+.icon-flag-plw          -	Palau
+.icon-flag-pse          -	Palestine, State of
+.icon-flag-pan          -	Panama
+.icon-flag-png          -	Papua New Guinea
+.icon-flag-par          -	Paraguay
+.icon-flag-per          -	Peru
+.icon-flag-phi          -	Philippines (the)
+.icon-flag-pcn          -	Pitcairn
+.icon-flag-pol          -	Poland
+.icon-flag-por          -	Portugal
+.icon-flag-pri          -	Puerto Rico
+.icon-flag-qat          -	Qatar
+.icon-flag-reu          -	Réunion
+.icon-flag-rou          -	Romania
+.icon-flag-rus          -	Russian Federation (the)
+.icon-flag-rwa          -	Rwanda
+.icon-flag-blm          -	Saint Barthélemy
+.icon-flag-shn          -	Saint Helena, Ascension and Tristan da Cunha
+.icon-flag-sol          -	Saint Kitts and Nevis
+.icon-flag-lca          -	Saint Lucia
+.icon-flag-maf          -	Saint Martin (French part)
+.icon-flag-spm          -	Saint Pierre and Miquelon
+.icon-flag-vin          -	Saint Vincent and the Grenadines
+.icon-flag-sam          -	Samoa
+.icon-flag-smr          -	San Marino
+.icon-flag-stp          -	Sao Tome and Principe
+.icon-flag-ksa          -	Saudi Arabia
+.icon-flag-sen          -	Senegal
+.icon-flag-srb          -	Serbia
+.icon-flag-sey          -	Seychelles
+.icon-flag-sle          -	Sierra Leone
+.icon-flag-sin          -	Singapore
+.icon-flag-sxm          -	Sint Maarten (Dutch part)
+.icon-flag-svk          -	Slovakia
+.icon-flag-svn          -	Slovenia
+.icon-flag-slb          -	Solomon Islands
+.icon-flag-som          -	Somalia
+.icon-flag-zaf          -	South Africa
+.icon-flag-sgs          -	South Georgia and the South Sandwich Islands
+.icon-flag-ssd          -	South Sudan
+.icon-flag-esp          -	Spain
+.icon-flag-sri          -	Sri Lanka
+.icon-flag-sdn          -	Sudan (the)
+.icon-flag-sur          -	Suriname
+.icon-flag-sjm          -	Svalbard and Jan Mayen
+.icon-flag-swz          -	Swaziland
+.icon-flag-swe          -	Sweden
+.icon-flag-sui          -	Switzerland
+.icon-flag-syr          -	Syrian Arab Republic
+.icon-flag-twn          -	Taiwan (Province of China)
+.icon-flag-tjk          -	Tajikistan
+.icon-flag-tza          -	Tanzania, United Republic of
+.icon-flag-tha          -	Thailand
+.icon-flag-tls          -	Timor-Leste
+.icon-flag-tgo          -	Togo
+.icon-flag-tkl          -	Tokelau
+.icon-flag-tga          -	Tonga
+.icon-flag-tri          -	Trinidad and Tobago
+.icon-flag-tun          -	Tunisia
+.icon-flag-tur          -	Turkey
+.icon-flag-tkm          -	Turkmenistan
+.icon-flag-tca          -	Turks and Caicos Islands (the)
+.icon-flag-tuv          -	Tuvalu
+.icon-flag-uga          -	Uganda
+.icon-flag-ukr          -	Ukraine
+.icon-flag-uae          -	United Arab Emirates (the)
+.icon-flag-gbr          -	United Kingdom of Great Britain and Northern Ireland (the)
+.icon-flag-umi          -	United States Minor Outlying Islands (the
+.icon-flag-usa          -	United States of America (the)
+.icon-flag-uru          -	Uruguay
+.icon-flag-uzb          -	Uzbekistan
+.icon-flag-van          -	Vanuatu
+.icon-flag-ven          -	Venezuela (Bolivarian Republic of)
+.icon-flag-vie          -	Viet Nam
+.icon-flag-vgb          -	Virgin Islands (British)
+.icon-flag-vir          -	Virgin Islands (U.S.)
+.icon-flag-wlf          -	Wallis and Futuna
+.icon-flag-esh          -	Western Sahara*
+.icon-flag-yem          -	Yemen
+.icon-flag-zmb          -	Zambia
+.icon-flag-zwe          -	Zimbabwe
+.icon-flag-eng			- 	England
+.icon-flag-wal			- 	Wales
+.icon-flag-qbc			- 	Quebec
+.icon-flag-sco			- 	Scotland
+.icon-flag-nir			- 	Northern Ireland
+.icon-flag-ncy			- 	Northern Cyprus
+.icon-flag-glc			- 	Northern Galicia
+.icon-flag-yug			- 	Jugoslavie
+.icon-flag-xue			- 	UEFA
+.icon-flag-xuh			- 	Uhry
+.icon-flag-xss			- 	SSSR
+.icon-flag-xsa			- 	Šanghaj
+.icon-flag-ndr			- 	NDR
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<i class="icon-flag {{modifier_class}} {$modifier_class}"></i>
+</div>
+
+Styleguide 9.5.
+*/
+
+.icon-flag {
+	background-image: url('/public/img/icon-flags.png?1');
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	opacity: 0; // hack kvůli pozici 0 0 při nezadaném kódu ({{modifier_class}})
+
+	&:before {
+		display: none;
+		content: '';
+	}
+
+	&.mod-bottom { vertical-align: bottom; }
+	&.mod-sub {	vertical-align: sub; }
+}
+
+.icon-flag-big {
+	background-image: url('/public/img/icon-flags-big.png?1');
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	opacity: 0; // hack kvůli pozici 0 0 při nezadaném kódu ({{modifier_class}})
+
+	&:before {
+		display: none;
+		content: '';
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+	.icon-flag { background-image: url('/public/img/icon-flags_@2X.png?1'); }
+	.icon-flag-big { background-image: url('/public/img/icon-flags-big_@2X.png?1'); }
+}
+
+
+/*
+Zarovnání ikon
+
+.mod-bottom		- zarovnání na spodek
+.mod-sub		- zarovnání na spodek, jinak (<strong>u některých kombinácí vlajek s textem vypadá lépe</strong>)
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<p><i class="icon-flag icon-flag-cze {{modifier_class}} {$modifier_class}"></i> Lorem ipsum</p>
+</div>
+
+Styleguide 9.7.
+*/
+
+/*
+Název země na stejný řádek jako vlajka
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<p><i class="icon-flag icon-flag-cze float-l"></i> <span class="country-name">Česká republika</span></p>
+	<p><i class="icon-flag-big icon-flag-big-deu float-l"></i> <span class="country-name">Německo</span></p>
+</div>
+
+Styleguide 9.8.
+*/
+
+[class*="icon-flag"] + .country-name {
+	margin-left: 10px;
+	line-height: 24px;
+	display: inline-block;
+}
+
+[class*="icon-flag-big"] + .country-name {
+	margin-left: 15px;
+	line-height: 48px;
+	.f-20;
+	display: inline-block;
+}

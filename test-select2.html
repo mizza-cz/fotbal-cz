@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - Select2</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/adminwww/lte/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- Select2 -->
+    <!-- <link rel="stylesheet" href="/adminwww/css/select2.css" /> -->
+    <link rel="stylesheet" href="/adminwww/lte/plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="/adminwww/lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="/adminwww/css/select2-extensions.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/adminwww/lte/dist/css/adminlte.min.css" />
+  </head>
+  <body>
+    <!-- Old Select2 3.4.8 markup -->
+    <!-- <div class="card p-2 m-5">
+      <div class="form-group">
+        <label for="frm-formEdit-form-base-user_id">Autor</label>
+        <input type="hidden" name="base[user_id]" data-whisper-select="http://www.fotbal.l:8080/admin/whisper/whisper/?type=author" id="frm-formEdit-form-base-user_id" value="191" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="frm-formEdit-form-rubric-rubric">Článek patří do rubriky (nepovinné)</label>
+        <input type="hidden" name="rubric[rubric]" data-whisper-multiselect="http://www.fotbal.l:8080/admin/whisper/whisper/?type=rubric" id="frm-formEdit-form-rubric-rubric" value="141" class="form-control" />
+      </div>
+    </div> -->
+
+    <!-- New Select2 4.0.13 markup -->
+    <div class="card p-2 m-5">
+      <div class="form-group">
+        <label for="frm-formEdit-form-base-user_id">Autor</label>
+        <!-- Single select box -->
+        <select name="base[user_id]" data-whisper-select="http://www.fotbal.l:8080/admin/whisper/whisper/?type=author" id="frm-formEdit-form-base-user_id" data-value="250" class="form-control select2bs4">
+          <option value="250" selected="selected">Jiří Chaloupka</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="frm-formEdit-form-rubric-rubric">Článek patří do rubriky (nepovinné)</label>
+        <!-- Multi-select box -->
+        <select name="rubric[rubric]" data-whisper-multiselect="http://www.fotbal.l:8080/admin/whisper/whisper/?type=rubric" id="frm-formEdit-form-rubric-rubric" data-value="51,142" class="form-control select2bs4" multiple="multiple">
+          <option value="51" selected="selected">1. liga žen</option>
+          <option value="142" selected="selected">Náš fotbal</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/adminwww/lte/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/adminwww/lte/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="/adminwww/lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/adminwww/lte/dist/js/adminlte.min.js"></script>
+    <!-- Select2 (v3) -->
+    <!-- <script src="/adminwww/js/vendors/select2.min.js"></script> -->
+    <!-- Select2 (v4, unused) -->
+    <script src="/adminwww/lte/plugins/select2/js/select2.full.min.js"></script>
+    <script src="/adminwww/lte/plugins/select2/js/i18n/cs.js"></script>
+    <!-- Nette -->
+    <script src="/adminwww/js/vendors/nette.ajax.js"></script>
+    <script src="/adminwww/js/vendors/netteForms.js"></script>
+    <!-- Select2 init -->
+    <!-- <script src="/adminwww/js/app/_whisper.form.js"></script> -->
+    <script src="/adminwww/js/app/whisper.form-select2-v4.js"></script>
+  </body>
+</html>

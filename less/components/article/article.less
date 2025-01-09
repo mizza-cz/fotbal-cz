@@ -1,0 +1,410 @@
+/**
+Article
+
+Styl pro stránku článku a jeho komponenty
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-header mod-with-photo">
+		<div class="article-photo">
+			<span class="article-photo-span" style="background-image: url(public/image.png)"></span>
+		</div>
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<div class="article-perex">
+			<p>Vozů a uf, v vůl od velmi. Otázka štábním ať půlka máte kupodivu tvrdě, tmy hry z za vylezl či břehů z životem odpouštěl jé sklepnice. Holčička sami prvý uznaných tě přítel otisky.</p>
+		</div>
+		<p>411 nu trní bok podívala slíbil růže uvalit. Pana v&nbsp;chci jedl ji husa zbavili. Sáčku ruku tvé co cit zachoval dnů hloub. Až ve ber pohnána plic skvělý prostřed strašlivého he lujza dán barevná naschvál. </p>
+		<p>Jemné on tě mě kravály si krutě? Nemožné o&nbsp;snu určitě mě váš v&nbsp;dorozumíme či 11 do&nbsp;přestávkách pakujte rakvi nadávat vši! Půjčte stopa nejhlubším co toje válce. Ex máknout? Té himl domácí osmý ta bot jasný – mého ke oka nebreč vzácné mi pronikl! </p>
+		<ol>
+			<li>Jízlivě kladivem považuje o&nbsp;votant, z&nbsp;ně mu.</li>
+			<li>Hojila sami oukropeček zavřeme nejistý dá flašinetáře vyběhla.</li>
+			<li>Do zavlečenou celá plány lži vytažena.</li>
+			<li>Boj hornatý ba mával ministra křečovitými krádeží!</li>
+			<li>Stůl tu přímo sice pyžama u&nbsp;opětoval nenechal šestatřicet k&nbsp;starostlivě.</li>
+		</ol>
+		<ul>
+			<li>Větu světů, dá uf frkal plečko, šlo tedy mluvit muk republice.</li>
+			<li>Té zlo, ta styděl.</li>
+			<li>Milý u&nbsp;zima druhé.</li>
+			<li>My válel uvedeného zamčen do&nbsp;boty ó košilí a&nbsp;ví štábu váš svým temně v&nbsp;šly punčocha.</li>
+			<li>Nešikovná šaltr baum v&nbsp;provaz.</li>
+		</ul>
+		<p>V sna au dává řku malinký stál psa přímo živá výslech. A 19 korespondent mnul zapře o doporučuje nanejvýš. Kde kozlík drclo leda deky jiném ukáže nemohou o mat válce. Ti dveří patnáct sad ze civilisty síni?</p>
+	</div>
+	<div class="article-share">
+		Sdílecí tlačítka
+	</div>
+</div>
+
+Styleguide 1
+*/
+
+.article {
+
+	.m-clearfix;
+	background: #fff;
+	margin: 0;
+	color: @text;
+
+	// Odstranění okrajů specificky u článku
+	margin: -5px;
+	@media @mini {
+		margin: -15px;
+	}
+
+	.article-header {
+		.m-clearfix;
+		padding: 15px 15px 0;
+		// border-bottom: 1px solid @lightBlue;
+		position: relative;
+
+		@media @small {
+			padding: 20px 20px 0;
+		}
+		@media @large {
+			padding: 40px 40px 0;
+		}
+
+		.article-heading {
+			.f-condensed-bold;
+			.f-28;
+			line-height: 1.2;
+			color: @darkBlue;
+			margin: 0;
+			@media @small {
+				.f-28;
+			}
+			@media @medium {
+				.f-36;
+			}
+			@media @large {
+				.f-40;
+			}
+		}
+
+		.article-date {
+			.f-condensed;
+			.f-14;
+			margin-top: 0;
+			color: @grey;
+		}
+	}
+
+	.article-share {
+		.m-clearfix;
+		text-align: center;
+		.m-t-20;
+		.m-b-20;
+	}
+
+	.article-content {
+		.f-base;
+		.m-clearfix;
+		box-sizing: border-box;
+		line-height: 1.6;
+
+		padding: 15px 15px 0;
+		@media @small { padding: 20px 20px 0; }
+		@media @large { padding: 40px 40px 0; }
+
+		@media @large {
+
+		}
+	}
+
+	.article-tags {
+		clear: both;
+		border-top: 1px solid @lightBlue;
+		padding: 20px;
+
+		@media @large {
+			padding: 20px 40px;
+		}
+
+	}
+
+	&.mod-no-negative-margin {
+		margin: 0;
+	}
+}
+
+.article-perex {
+	line-height: 1.6;
+	font-weight: bold;
+	.f-20;
+	
+	p {
+		.m-t-0;
+		.m-b-0;
+	}
+}
+
+
+// fotografie článku mezi nadpisem a perexem
+.article-photo-mobile {
+	max-height: 300px;
+	overflow: hidden;
+	.m-clearfix();
+	.m-b-20;
+	@media @mini {
+		img { margin-top: -8%; }
+	}
+}
+
+/**
+Tables
+
+Styl pro tabulku v článku
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>AC Milán</th>
+					<th>FC barcelona</th>
+					<th>AC Sparta Praha</th>
+					<th>FC Zbrojovka Brno</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Lorem ipsum dolor </th>
+					<td>sit amet, consectetur</td>
+					<td>adipisicing elit. Illum neque,</td>
+					<td>suscipit natus error blanditiis</td>
+					<td>eius. Sed aliquam pariatur</td>
+				</tr>
+				<tr>
+					<th>Lorem ipsum dolor </th>
+					<td>sit amet, consectetur</td>
+					<td>adipisicing elit. Illum neque,</td>
+					<td>suscipit natus error blanditiis</td>
+					<td>eius. Sed aliquam pariatur</td>
+				</tr>
+				<tr>
+					<th>Lorem ipsum dolor </th>
+					<td>sit amet, consectetur</td>
+					<td>adipisicing elit. Illum neque,</td>
+					<td>suscipit natus error blanditiis</td>
+					<td>eius. Sed aliquam pariatur</td>
+				</tr>
+				<tr>
+					<th>Lorem ipsum dolor </th>
+					<td>sit amet, consectetur</td>
+					<td>adipisicing elit. Illum neque,</td>
+					<td>suscipit natus error blanditiis</td>
+					<td>eius. Sed aliquam pariatur</td>
+				</tr>
+				<tr>
+					<th>Lorem ipsum dolor </th>
+					<td>sit amet, consectetur</td>
+					<td>adipisicing elit. Illum neque,</td>
+					<td>suscipit natus error blanditiis</td>
+					<td>eius. Sed aliquam pariatur</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+Styleguide 1.1
+*/
+
+
+/**
+Photogallery
+
+Styl pro vloženou galerii
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<div class="box box-full">
+			<div class="box-full-header">
+				<h3 class="box-title">Fotogalerie:</h3>
+				<h2 class="box-full-title">Zápis z valné hromady <span class="box-full-date">15.3.2015</span></h2>
+				<p class="box-full-link"><a href="">Kompletní galerie</a></p>
+			</div>
+			<div class="box-full-body">
+				<ul class="box-gallery">
+					<li class="box-gallery-item"><a href="" class="box-gallery-link"><span class="box-gallery-img" style="background-image: url(/www/img/image.jpg);"></span></a></li>
+					<li class="box-gallery-item"><a href="" class="box-gallery-link"><span class="box-gallery-img" style="background-image: url(/www/img/image.jpg);"></span></a></li>
+					<li class="box-gallery-item"><a href="" class="box-gallery-link"><span class="box-gallery-img" style="background-image: url(/www/img/image.jpg);"></span></a></li>
+					<li class="box-gallery-item"><a href="" class="box-gallery-link"><span class="box-gallery-img" style="background-image: url(/www/img/image.jpg);"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 1.2
+*/
+
+/**
+Document
+
+Styl pro dokument
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<div class="box box-document">
+			<h3 class="box-title">Dokument</h3>
+			<div class="box-document-body">
+				<p class="box-document-date">18.3.2015</p>
+				<h2 class="box-document-title">Zápis z valné hromady</h2>
+				<p class="box-document-link"><span class="icon-file-pdf"></span><a href="">Stáhnout (456 kB)</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 1.3
+*/
+
+
+/**
+Documents
+
+Styl pro seznam dokumentů
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<div class="box box-full">
+			<div class="box-full-header">
+				<h3 class="box-title">Složka dokumentů:</h3>
+				<h2 class="box-full-title">Valná hromada Brno <span class="box-full-date">15.3.2015</span></h2>
+				<p class="box-full-link"><a href="">Stáhnout vše</a></p>
+			</div>
+			<div class="box-full-body">
+				<ul class="box-documents">
+					<li class="box-document-item"><a href="" class="box-document-link"><span class="icon-file-pdf"></span>Zápis z valné hromady.pdf (456 kB)</a></li>
+					<li class="box-document-item"><a href="" class="box-document-link"><span class="icon-file-pdf"></span>Seznam účastníků.doc (291 kB)</a></li>
+					<li class="box-document-item"><a href="" class="box-document-link"><span class="icon-file-pdf"></span>Pravidla valné hromady.pdf (456 kB)</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 1.4
+*/
+
+
+/**
+Image
+
+Obrázek vložený do článku přes wysiwyg
+
+Markup:
+<div class="article">
+	<div class="article-header mod-without-photo">
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-header mod-with-photo">
+		<div class="article-photo">
+			<span class="article-photo-span" style="background-image: url(public/image.png)"></span>
+		</div>
+		<p class="article-date">3. 5. 2015 - Karel Čapek</p>
+		<h1 class="article-heading">Otevřte koše tys čem sáčku mezek šedivých!</h1>
+	</div>
+	<div class="article-content formatted-text">
+		<div class="article-perex">
+			<p>Vozů a uf, v vůl od velmi. Otázka štábním ať půlka máte kupodivu tvrdě, tmy hry z za vylezl či břehů z životem odpouštěl jé sklepnice. Holčička sami prvý uznaných tě přítel otisky.</p>
+		</div>
+		<p>411 nu trní bok podívala slíbil růže uvalit. Pana v&nbsp;chci jedl ji husa zbavili. Sáčku ruku tvé co cit zachoval dnů hloub. Až ve ber pohnána plic skvělý prostřed strašlivého he lujza dán barevná naschvál. </p>
+		<div class="article-image">
+			<img src="http://satyr.io/400:200-600/1">
+		</div>
+		<p>Jemné on tě mě kravály si krutě? Nemožné o&nbsp;snu určitě mě váš v&nbsp;dorozumíme či 11 do&nbsp;přestávkách pakujte rakvi nadávat vši! Půjčte stopa nejhlubším co toje válce. Ex máknout? Té himl domácí osmý ta bot jasný – mého ke oka nebreč vzácné mi pronikl! </p>
+		<ol>
+			<li>Jízlivě kladivem považuje o&nbsp;votant, z&nbsp;ně mu.</li>
+			<li>Hojila sami oukropeček zavřeme nejistý dá flašinetáře vyběhla.</li>
+			<li>Do zavlečenou celá plány lži vytažena.</li>
+			<li>Boj hornatý ba mával ministra křečovitými krádeží!</li>
+			<li>Stůl tu přímo sice pyžama u&nbsp;opětoval nenechal šestatřicet k&nbsp;starostlivě.</li>
+		</ol>
+		<ul>
+			<li>Větu světů, dá uf frkal plečko, šlo tedy mluvit muk republice.</li>
+			<li>Té zlo, ta styděl.</li>
+			<li>Milý u&nbsp;zima druhé.</li>
+			<li>My válel uvedeného zamčen do&nbsp;boty ó košilí a&nbsp;ví štábu váš svým temně v&nbsp;šly punčocha.</li>
+			<li>Nešikovná šaltr baum v&nbsp;provaz.</li>
+		</ul>
+		<p>V sna au dává řku malinký stál psa přímo živá výslech. A 19 korespondent mnul zapře o doporučuje nanejvýš. Kde kozlík drclo leda deky jiném ukáže nemohou o mat válce. Ti dveří patnáct sad ze civilisty síni?</p>
+	</div>
+	<div class="article-share">
+		Sdílecí tlačítka
+	</div>
+</div>
+
+Styleguide 1.4
+*/
+
+
+.article-image {
+
+	width: 100%;
+	margin: 20px auto;
+
+	img {
+		width: 100%;
+		max-width: 400px!important;
+		display: block;
+		margin: 0 auto;
+	}
+
+	@media @medium {
+		max-width: 300px;	
+		margin-right: 30px;	
+		float: left;
+	}
+
+	@media @large {
+		max-width: 400px;
+	}
+
+}

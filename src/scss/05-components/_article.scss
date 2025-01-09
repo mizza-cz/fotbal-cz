@@ -1,0 +1,517 @@
+.Article {
+  &-imgContainer {
+    @include responsiveMediumContainer(1920, 768);
+    max-width: rem(1920px);
+    margin: 0 auto;
+
+    @include respondTo(xs) {
+      @include responsiveMediumContainer(3, 2);
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &-grid {
+    display: flex;
+    flex-direction: column;
+
+    @include respondFrom(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &-mainContent {
+    flex: 1;
+    position: relative;
+    background-color: $colorWhite;
+
+    @include respondFrom(lg) {
+      margin-top: rem(-120px);
+    }
+  }
+
+  &-aside {
+    @include respondFrom(lg) {
+      width: rem(320px);
+      margin-top: 3rem;
+      margin-left: 2.5rem;
+    }
+  }
+
+  &-container {
+    max-width: rem(800px);
+    margin: 0 auto;
+
+    @include respondFrom(lg) {
+      max-width: calc(rem(800px) + 3rem);
+      padding: 0 1.5rem;
+    }
+  }
+
+  &-header {
+    position: relative;
+    padding-top: rem(28px);
+
+    @include respondFrom(md) {
+      padding-top: 2.5rem;
+    }
+
+    @include respondFrom(xl) {
+      padding-top: 5rem;
+    }
+
+    .Badge {
+      position: absolute;
+      top: 0.125rem;
+      transform: translateY(-50%);
+    }
+
+    .Date {
+      margin-top: 1rem;
+
+      @include respondTo(sm) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &-perex,
+  &-perex p {
+    @include text($colorText, $fontSizeHuge, $fontWeightSemiBold, 1.33);
+    margin-top: 2.5rem;
+
+    @include respondTo(sm) {
+      font-size: $fontSizeBig;
+      line-height: 1.44;
+      margin-top: 1.5rem;
+    }
+
+    em {
+      font-style: italic;
+    }
+  }
+
+  &-body {
+    font-size: initial;
+    margin-top: 2.5rem;
+
+    @include respondTo(sm) {
+      margin-top: 1.5rem;
+    }
+
+    h1:not(.Article-widget h1):not(.Box h1),
+    h2:not(.Article-widget h2):not(.Box h2),
+    h3:not(.Article-widget h3):not(.Box h3),
+    h4:not(.Article-widget h4):not(.Box h4),
+    h5:not(.Article-widget h5):not(.Box h5),
+    h6:not(.Article-widget h6):not(.Box h6) {
+      margin-top: 2.5rem;
+      clear: both;
+
+      @include respondTo(sm) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    h1:not(.Article-widget h1):not(.Box h1) {
+      @extend .H4;
+    }
+
+    h2:not(.Article-widget h2):not(.Box h2) {
+      @extend .H5;
+    }
+
+    h3:not(.Article-widget h3):not(.Box h3) {
+      @extend .H6;
+    }
+
+    h4:not(.Article-widget h4):not(.Box h4) {
+      @extend .H7;
+    }
+
+    h5:not(.Article-widget h5):not(.Box h5) {
+      @extend .H8;
+    }
+
+    h6:not(.Article-widget h6):not(.Box h6) {
+      @extend .H9;
+    }
+
+    p:not(.Article-widget p):not(blockquote p) {
+      @include text($colorText, $fontSizeBig, $fontWeightNormal, 1.444);
+      margin-top: 1rem;
+
+      @include respondTo(sm) {
+        font-size: $fontSizeNormal;
+        line-height: 1.5;
+      }
+    }
+
+    p:empty {
+      display: none;
+    }
+
+    p:first-child {
+      margin-top: 0 !important;
+    }
+
+    a:not(.Article-widget a) {
+      color: $colorTertiary;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    blockquote:not(.instagram-media):not(.tiktok-embed) {
+      position: relative;
+      font-family: $fontFamilySecondary;
+      @include text($colorText, $fontSizeHuge, $fontWeightSemiBold, 1.33);
+      padding: 3rem 2.5rem;
+      margin: 2.5rem 0;
+
+      @include respondTo(sm) {
+        font-size: $fontSizeExtraBig;
+        margin: 1.5rem 0;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        width: 2.5rem;
+        height: 2rem;
+        position: absolute;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 0;
+      }
+
+      &::before {
+        left: 0;
+        bottom: 0;
+        background-image: url(../img/icons/quotation-down.svg);
+      }
+
+      &::after {
+        top: 0;
+        right: 0;
+        background-image: url(../img/icons/quotation-up.svg);
+      }
+
+      p {
+        font-family: $fontFamilySecondary;
+        @include text($colorText, $fontSizeHuge, $fontWeightSemiBold, 1.33);
+        margin: 0;
+
+        @include respondTo(sm) {
+          font-size: $fontSizeExtraBig;
+        }
+      }
+    }
+
+    img:not(.Article-widget img) {
+      @include imgResponsive();
+      margin-top: 2.5rem;
+
+      @include respondTo(sm) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    ol,
+    ul {
+      list-style-type: none !important;
+    }
+
+    ul:not(.Article-widget ul) {
+      margin-top: 1rem;
+
+      li {
+        position: relative;
+        @include text($colorText, $fontSizeBig, $fontWeightNormal, 1.778);
+        padding-left: 2rem;
+
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
+
+        &::before {
+          content: "";
+          width: 0.25rem;
+          height: 0.25rem;
+          position: absolute;
+          left: 0.5rem;
+          top: rem(14px);
+          background-color: $colorSecondary;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    ol:not(.Article-widget ol) {
+      counter-reset: li-counter;
+      margin-top: 1rem;
+
+      li {
+        position: relative;
+        counter-increment: li-counter;
+        @include text($colorText, $fontSizeBig, $fontWeightNormal, 1.778);
+        padding-left: 2rem;
+
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
+
+        &::before {
+          content: counter(li-counter) ".";
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    table:not(.Article-widget table) {
+      width: 100%;
+      margin-top: 1rem;
+
+      @include respondTo(sm) {
+        margin-top: 0.5rem;
+      }
+
+      thead {
+        tr {
+          border-top: $borderPrimary;
+          border-bottom: $borderPrimary;
+        }
+
+        th {
+          vertical-align: middle;
+          @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.5);
+          text-align: left;
+          text-transform: uppercase;
+          white-space: nowrap;
+          background-color: $colorWhite;
+          padding: 0.5rem 1rem;
+
+          // &:first-child,
+          // &:last-child {
+          //   padding: 0.5rem;
+          // }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              background-color: $colorWhite;
+            }
+          }
+
+          &:nth-child(odd) {
+            td {
+              background-color: $colorGrey--80;
+            }
+          }
+
+          &:last-child {
+            border-bottom: $borderPrimary;
+          }
+        }
+
+        td {
+          vertical-align: middle;
+          @include text($colorText, $fontSizeNormal, $fontWeightNormal, 1.5);
+          text-align: left;
+          white-space: nowrap;
+          padding: 0.5rem 1rem;
+
+          // &:first-child,
+          // &:last-child {
+          //   padding: 0.5rem;
+          // }
+        }
+      }
+    }
+
+    .EmbedContainer {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2.5rem !important;
+      margin-bottom: 0 !important;
+      overflow: hidden;
+      clear: both;
+
+      @include respondTo(sm) {
+        margin-top: 1.5rem !important;
+      }
+
+      iframe {
+        width: 100%;
+        border-radius: $borderRadiusPrimary;
+      }
+    }
+
+    .twitter-tweet {
+      display: none;
+    }
+
+    .YouTubeContainer {
+      max-width: 100%;
+      height: 0;
+      position: relative;
+      padding-bottom: 56.25%;
+      margin-top: 2.5rem;
+      overflow: hidden;
+      clear: both;
+
+      @include respondTo(sm) {
+        margin-top: 1.5rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    // Reset old YouTube container
+    // .embed-container-youtube {
+    //   padding-bottom: 0;
+    //   padding-top: 0;
+    // }
+
+    .highlight {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+
+      @include respondTo(sm) {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .Partners {
+      flex-wrap: wrap;
+      gap: 2.5rem;
+
+      @include respondTo(sm) {
+        gap: 1.5rem;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+
+  &-widget {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    @include respondTo(sm) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &--alignedLeft {
+      float: left;
+      margin-right: 2.5rem;
+
+      & + p {
+        margin-top: 2.5rem !important;
+
+        @include respondTo(sm) {
+          margin-top: 1.5rem !important;
+        }
+      }
+
+      @include respondTo(xs) {
+        float: none;
+        margin-right: 0;
+      }
+    }
+
+    &--alignedRight {
+      float: right;
+      margin-left: 2.5rem;
+
+      & + p {
+        margin-top: 2.5rem !important;
+
+        @include respondTo(sm) {
+          margin-top: 1.5rem !important;
+        }
+      }
+
+      @include respondTo(xs) {
+        float: none;
+        margin-left: 0;
+      }
+    }
+
+    &--bordered {
+      position: relative;
+      padding: 1.5rem 0;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 100%;
+        height: 0.125rem;
+        position: absolute;
+        left: 0;
+        background-color: $colorGrey--90;
+        border-radius: rem(1px);
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    &.Box {
+      margin-top: 1rem !important;
+
+      @include respondTo(sm) {
+        margin-top: 0.5rem !important;
+      }
+    }
+
+    .ArticleBox {
+      width: rem(320px);
+
+      @include respondTo(xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .Ad {
+    margin-top: 1.5rem;
+
+    @include respondFrom(md) {
+      margin-top: 2.5rem;
+    }
+  }
+}

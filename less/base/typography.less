@@ -1,0 +1,330 @@
+/**
+ * Fotbal.cz - typography
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+ // Fonts
+body {
+ 	.f-base;
+}
+ 
+html {
+	font-size: 14px;
+	@media @small {
+		font-size: 14px;
+	}
+	@media @large {
+		font-size: 16px;
+	}
+}
+
+a {
+	color: @anchorColor;
+
+	&:hover,
+	&:focus { color: darken(@anchorColor, 10%); }
+}
+
+/**
+Velikosti
+
+Velikost fontů na webu (px): 
+12, 14, <b>16 (základní velikost html{font-size})</b>, 20, 24, 28, 36, 40, 50 
+
+.f-12	- velikost 12px
+.f-14	- velikost 14px
+.f-16	- velikost 16px
+.f-18	- velikost 18px
+.f-20	- velikost 20px
+.f-24	- velikost 24px
+.f-28	- velikost 28px
+.f-36	- velikost 36px
+.f-40	- velikost 40px
+.f-50	- velikost 50px
+
+Markup:
+<p class="{{modifier_class}} {$modifier_class}">
+	Šlo vy úzce hnutí a 2800 i vybavení ukázky.
+</p>
+
+Styleguide 6.2.
+*/
+
+// Font sizes
+// 1rem = 16px;
+// .f-14 = 14px = 0.875rem
+// .f-16 = 16px = 1rem
+// .f-18 = 18px = 1.125rem
+// Available font classes: from .f-10 to .f-40
+//
+// .font-size (@size) when (@size > 9) {
+//   	.font-size((@size - 1));    // next iteration
+//   	.f-@{size} {
+// 		font-size: @size/16rem;
+//   	}
+// }
+//
+// .font-size( 40 );
+
+.f-12 { font-size: 12/16rem; }
+.f-14 { font-size: 14/16rem; }
+.f-16 { font-size: 16/16rem; }
+.f-18 { font-size: 18/16rem; }
+.f-20 { font-size: 20/16rem; }
+.f-24 { font-size: 24/16rem; }
+.f-28 { font-size: 28/16rem; }
+.f-36 { font-size: 36/16rem; }
+.f-40 { font-size: 40/16rem; }
+.f-50 { font-size: 50/16rem; }
+.f-small { .f-14; }
+
+
+// Basic typography
+.formatted-text {
+	font-size: 1.2rem;
+	.lh;
+
+	@media @large { font-size: 1rem; }
+
+
+	p {
+		margin: 0 0 @gutter 0;
+	}
+
+	ul {
+		.m-reset-list;
+		margin: 0 0 @gutter 0;
+		list-style: none;
+		li {
+			line-height: 1.2em;
+			padding: .2em 0 .2em 38px;
+			position: relative;
+			&:before {
+				display: block;
+				.m-size( 4px );
+				content: " ";
+				position: absolute;
+				left: 7px;
+				top: .8em;
+				margin-top: -2px;
+				border-radius: 50%;
+				border: 2px solid @red;
+			}
+		}
+	}
+
+}
+
+
+em { font-style: normal!important; }
+
+/**
+Nadpisy
+
+Markup:
+<h1 class="h1">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h1>
+<h2 class="h2">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h2>
+<h2 class="h2 mod-name">Theodor <span>Gebre Selassie</span></h2>
+<h2 class="h2 mod-no-margin">Nadpis bez marginů</h2>
+<h2 class="h2 mod-numeric">Theodor <small>Gebre Selassie</small></h2>
+<h2 class="h2 mod-article-heading">Theodor <small>Gebre Selassie</small></h2>
+<h3 class="h3">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h3>
+<h3 class="h3 mod-grey">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h3>
+<h4 class="h4">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h4>
+<h4 class="h4 mod-grey">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h4>
+<h5 class="h5">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h5>
+<h6 class="h6">Vstupenky na derby Slovensko - Česko na pobočkách ČEDOKU</h6>
+
+Styleguide 6.3.
+*/
+
+.h1 {
+	.f-28;
+	.f-condensed;
+	.p(0 0 0 10px);
+	.m(0 0 15px 0);
+
+	border-left: solid @sec-repre;
+	color: @blue;
+	
+	border-width: 2px;
+	@media @small {
+		.f-36;
+		.m(0 0 30px 0);
+		.p(2px 0 2px 10px);
+		padding-left: 20px;
+		border-width: 4px;
+	}
+	@media @large {
+		.f-40;
+		padding-left: 30px;
+		border-width: 6px;
+	}
+
+	&.mod-small {
+		.f-28;
+	}
+}
+
+.h2 {
+	.f-28;
+	.f-condensed-bold;
+	color: @blue;
+
+	&.mod-name {
+		.m-t-0;
+		.m-b-20;
+		.f-28;
+		span {
+			display: block;
+			.f-50;
+		}
+	}
+
+	&.mod-score-default { color: @list-score-default; }
+	&.mod-big { .f-50; line-height: 1; }
+	&.mod-s-big {
+		@media @small {
+			.f-50;
+			line-height: 1; 
+		}
+	}
+	&.mod-green { color: @list-score-green; }
+	&.mod-red { color: @list-score-red; }
+	&.mod-blue { color: @list-score-blue; }
+	&.mod-no-margin { margin: 0; }
+	&.mod-article-heading { .f-36; }
+}
+
+.h3 {
+	.f-20;
+	.f-condensed-bold;
+	color: @blue;
+	margin: 10px 0;
+
+	&.mod-grey { color: @grey; }
+}
+
+.h4 {
+	.f-14;
+	.f-condensed-bold;
+	color: @blue;
+
+	&.mod-grey { color: @grey; }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+	small {
+		margin-left: 1em;
+		font-size: 80%;
+		color: lighten(@blue, 15%);
+
+		&.mod-block {
+			.m-block;
+			margin-left: 0;
+		}
+	}
+	&.mod-normal {
+		font-weight: normal;
+	}
+}
+
+/**
+Zvýraznění textu
+
+.t-uppercase	- text kapitálkami
+.t-bold			- tučný text
+.t-italic		- text kurzívou <strong style="color:red">@deprecated</strong>
+.t-underline	- podtržený text
+
+Markup:
+<p>
+	Šlo vy úzce hnutí a 2800 i <span class="{{modifier_class}} {$modifier_class}">vybavení ukázky</span> pyšně chráněna učí.
+</p>
+
+Styleguide 6.4.
+*/
+
+.t-uppercase { text-transform: uppercase; }
+.t-lowercase { text-transform: lowercase; }
+
+.t-bold { font-weight: 700; }
+
+.t-italic { font-style: italic; }
+
+.t-underline { text-decoration: underline; }
+
+
+/**
+Definiční list <dl>
+
+.mod-nomargin 		- list bez marginů
+.mod-low		 	- list s malým odsazením
+.mod-numeric		- list pro definici číselných hodnot dt s popiskem v dd
+
+Markup:
+<dl class="{{modifier_class}} {$modifier_class}">
+	<dt>Bernát Luděk</dt>
+	<dd>člen výpravy / member of delegation</dd>
+	<dt>Bruückner Karel</dt>
+	<dd>člen výpravy / member of delegation</dd>
+</dl>
+
+Styleguide 6.5.
+*/
+
+dl {
+	.m(20px 0 20px 0);
+	dt { 
+		.f-base-bold;
+		.m-b(15);
+		color: @midBlue;
+		.f-16;
+	}
+	dd {
+		.m(0 0 15px 0);
+		&:last-child { .m-b(); }
+	}
+
+	&.mod-nomargin { .m(); }
+	
+	&.mod-low { .m(10px 0 10px 0); }
+
+	&.mod-numeric {
+		dt { 
+			.f-20;
+			@media @medium { .f-24; }
+			@media @large { .f-28; }
+		}
+		dd { 
+			.f-14; 
+			color: @grey;
+		}
+	}
+}
+
+
+/**
+Line-height 
+
+Třída, která upravuje line-height elementu na defaultní 1.6
+
+Markup:
+<div class="lh">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam, maxime porro, nemo nostrum odio ducimus magnam exercitationem quos suscipit quas ab, incidunt nisi quaerat velit quis animi id magni.
+</div>
+
+Styleguide 6.6.
+*/
+
+.lh {
+	line-height: 1.6;
+}
+.lh-1 {
+	line-height: 1;
+}

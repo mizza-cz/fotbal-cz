@@ -1,0 +1,60 @@
+.HeaderSearch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  margin: 0.5rem 0.5rem 0.5rem 1.5rem;
+
+  @include respondTo(lg) {
+    margin: 0.125rem rem(60px) 0.125rem 1.5rem;
+  }
+
+  &-input {
+    min-width: 10rem;
+    width: 100%;
+    max-width: 30rem;
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, 1.5rem);
+    text-align: right;
+    background-color: $colorWhite;
+    border: 2px solid transparent;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem 0rem 0.5rem 0.75rem;
+    transition: border-color 0.25s ease;
+    @include placeholder($colorText, right);
+
+    @include respondTo(xxs) {
+      max-width: 10rem;
+    }
+
+    &:focus {
+      text-align: left;
+      border-color: $colorTertiary;
+      padding-right: 0.75rem;
+      outline: none;
+    }
+  }
+
+  &-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: $colorTertiary;
+    padding: 0.5rem;
+
+    &:focus,
+    &:hover {
+      svg {
+        stroke: $colorTertiary;
+        transform: scale(1.2);
+      }
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      stroke: $colorText;
+      transition: stroke 0.25s ease, transform 0.25s ease-in-out;
+    }
+  }
+}

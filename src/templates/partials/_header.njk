@@ -1,0 +1,242 @@
+<!-- Header -->
+<header class="Header" id="js-header">
+  <!-- Logo -->
+  <a href="/" class="Header-logo" title="Fotbalová asociace České republiky - domovská stránka">
+    <img src="./img/logo-facr.svg" width="94" height="128" alt="logo Fotbalová asociace České republiky"/>
+  </a>
+  <div id="js-headerSearchMobileContainer">
+    <!-- Search -->
+    <form class="HeaderSearch" action="" id="js-headerSearch">
+      <input class="HeaderSearch-input" type="search" name="" id="" placeholder="Vyhledávání" aria-label="Vyhledávání" autocomplete="off"/>
+      <button class="HeaderSearch-button" type="submit" aria-label="Vyhledat" title="Vyhledat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+  <!-- Menu button -->
+  <button type="button" class="MenuButton" id="js-nav-toggle" aria-controls="js-nav" aria-label="Zobrazit menu" aria-haspopup="true" aria-expanded="false">
+    <span class="MenuButton-layers"></span>
+  </button>
+  <!-- Match calendar button (displayed only on the HomePage) -->
+  <div class="Header-matchCalendarButtonContainer">
+    <button type="button" class="ToggleButton" id="js-matchCalendar-toggle" aria-controls="js-matchCalendar" aria-haspopup="true" aria-expanded="false">
+      <span>Kalendář zápasů</span>
+      <svg width="10" height="6" focusable="false" aria-hidden="true">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <!-- Side nav button (displayed only on a SubPage) -->
+  <div class="Header-sideNavButtonContainer">
+    <button type="button" class="ToggleButton" id="js-sideNav-toggle" aria-controls="js-sideNav" aria-haspopup="true" aria-expanded="false">
+      <span>Název kategorie</span>
+      <svg width="10" height="6" focusable="false" aria-hidden="true">
+        <use xlink:href="#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="Header-nav" id="js-nav">
+    <!-- Mobile lang switcher -->
+    <ul class="LangSwitcher LangSwitcher--mobile">
+      <li>
+        <a href="#" class="is-active">
+          <span class="LangSwitcher-flag fi fi-cz fis"></span>
+          <abbr class="LangSwitcher-abbr" title="čeština">CZ</abbr>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="LangSwitcher-flag fi fi-gb fis"></span>
+          <abbr class="LangSwitcher-abbr" title="english">EN</abbr>
+        </a>
+      </li>
+    </ul>
+    <!-- Primary nav container -->
+    <div class="Header-navPrimary" id="js-header-navPrimary">
+      <!-- Primary nav -->
+      <nav class="NavPrimary" aria-label="Hlavní navigace">
+        <ul class="NavPrimary-menu">
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Aktuality</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>FAČR</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Reprezentace</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Soutěže</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Náš fotbal</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Ženy</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Futsal</span>
+            </a>
+          </li>
+          <li class="NavPrimary-item">
+            <a href="#" class="NavPrimary-link">
+              <span>Vstupenky</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Secondary nav container -->
+    <div class="Header-navSecondary">
+      <!-- Logos -->
+      <div class="Header-logosSecondary u-mr-24">
+        <a href="https://www.uefa.com/" target="_blank" rel="noopener noreferrer" class="u-mr-16" title="The official website for European football | UEFA.com">
+          <img src="./img/logo-uefa.svg" width="36" height="16" alt="logo UEFA"/>
+        </a>
+        <a href="https://www.fifa.com/" target="_blank" rel="noopener noreferrer" title="FIFA">
+          <img src="./img/logo-fifa.svg" width="37" height="12" alt="logo FIFA"/>
+        </a>
+      </div>
+      <!-- Secondary nav -->
+      <nav class="NavSecondary" aria-label="Sekundární navigace">
+        <ul class="NavSecondary-menu">
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#official_desk"></use>
+              </svg>
+              <span>Úřední deska</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#is"></use>
+              </svg>
+              <span>IS FAČR</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#club_map"></use>
+              </svg>
+              <span>Mapa klubů</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fanzone"></use>
+              </svg>
+              <span>Fanzóna</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#media"></use>
+              </svg>
+              <span>Pro média</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="#" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#socials"></use>
+              </svg>
+              <span>Sociální sítě</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="https://fotobanka.fotbal.cz" target="_blank" class="NavSecondary-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#camera"></use>
+              </svg>
+              <span>Fotobanka</span>
+            </a>
+          </li>
+          <li class="NavSecondary-item">
+            <a href="https://facr.tv/" class="NavSecondary-link" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tv"></use>
+              </svg>
+              <span>FAČR.TV</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Lang switcher -->
+      <div class="LangSwitcher">
+        <button type="button" class="LangSwitcher-button" id="js-langSwitcher-toggle" aria-controls="js-langSwitcher-menu" aria-haspopup="true" aria-expanded="false" aria-label="Změna jazyka / Language switch">
+          <!-- CZ -->
+          <div class="LangSwitcher-lang is-active">
+            <span class="LangSwitcher-flag fi fi-cz fis"></span>
+            <abbr class="LangSwitcher-abbr" title="čeština">CZ</abbr>
+          </div>
+          <!-- EN -->
+          <div class="LangSwitcher-lang">
+            <span class="LangSwitcher-flag fi fi-cz fis"></span>
+            <abbr class="LangSwitcher-abbr" title="english">EN</abbr>
+          </div>
+          <svg width="10" height="6" focusable="false" aria-hidden="true">
+            <use xlink:href="#chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="LangSwitcher-dropdownMenu" id="js-langSwitcher-menu">
+          <li>
+            <a href="#">
+              <span class="LangSwitcher-flag fi fi-cz fis"></span>
+              <abbr class="LangSwitcher-abbr" title="čeština">CZ</abbr>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="LangSwitcher-flag fi fi-gb fis"></span>
+              <abbr class="LangSwitcher-abbr" title="english">EN</abbr>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Header footer -->
+    <div class="Header-footer">
+      <a href="/" class="Header-logo Header-logo--footer" title="Fotbalová asociace České republiky - domovská stránka">
+        <img src="./img/logo-facr.svg" width="54" height="74" alt="logo Fotbalová asociace České republiky"/>
+      </a>
+      <p class="u-ta-center u-mt-16">
+        Atletická 2474/8<br/>
+        169 00 Praha 6 - Strahov (<a href="https://www.google.com/maps/place/FA%C4%8CR,+Fotbalov%C3%A1+s%C3%AD%C5%88+sl%C3%A1vy/@50.079456,14.381353,16z/data=!4m6!3m5!1s0x470b950f523b56a9:0xc76f6f341f3c4f23!8m2!3d50.0794559!4d14.3813534!16s%2Fg%2F11b8c3gp06?hl=cs" target="_blank" rel="noopener noreferrer">mapa</a>)<br/>
+        <strong>tel:</strong>
+        +420 233 029 111<br/>
+        <strong>fax:</strong>
+        +420 233 353 107<br/>
+        <strong>e-mail:</strong>
+        <a href="mailto:facr@fotbal.cz">facr@fotbal.cz</a>
+      </p>
+      <div class="Header-logosSecondary Header-logosSecondary--footer u-mt-24">
+        <a href="https://www.uefa.com/" target="_blank" rel="noopener noreferrer" class="u-mr-16" title="The official website for European football | UEFA.com">
+          <img src="./img/logo-uefa.svg" width="36" height="16" alt="logo UEFA"/>
+        </a>
+        <a href="https://www.fifa.com/" target="_blank" rel="noopener noreferrer" title="FIFA">
+          <img src="./img/logo-fifa.svg" width="37" height="12" alt="logo FIFA"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

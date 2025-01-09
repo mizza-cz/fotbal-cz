@@ -1,0 +1,488 @@
+.Ads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    gap: 2.5rem;
+  }
+}
+
+.ArticlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    gap: 2.5rem;
+  }
+}
+
+.ArticlesMatchCalendarGrid {
+  display: flex;
+  flex-direction: column;
+
+  .ArticlesGrid {
+    margin-top: 1.5rem;
+  }
+
+  .MatchCalendar {
+    padding: 0;
+  }
+
+  @include respondFrom(sm) {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  @include respondFrom(md) {
+    flex-direction: row;
+
+    .ArticlesGrid {
+      order: 1;
+      margin-top: 0;
+    }
+
+    .MatchCalendar {
+      order: 2;
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+.ArticlesSmallGrid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.BannersGrid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    gap: 2.5rem;
+  }
+
+  &--homePageTop {
+    @include respondFrom(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respondFrom(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--projects {
+    @include respondFrom(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respondFrom(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &--subPage3x {
+    @include respondFrom(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respondFrom(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--subPage2x {
+    @include respondFrom(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  a {
+    display: block;
+    border-radius: $borderRadiusPrimary;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      @include imgResponsive();
+    }
+  }
+}
+
+.Box {
+  flex: 1;
+  background-color: $colorGrey--80;
+  border-radius: $borderRadiusPrimary;
+  padding: 1.5rem;
+
+  &--notes {
+    background-image: url(../img/icons/note.svg);
+    background-position: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    padding: 1.5rem 3rem 1.5rem rem(56px);
+
+    @include respondTo(xs) {
+      padding-right: 1.5rem;
+    }
+
+    p {
+      margin-top: 0.25rem;
+    }
+  }
+
+  &--roster {
+    position: relative;
+    padding: 1.5rem 3rem 1.5rem rem(56px);
+
+    @include respondTo(xs) {
+      padding-right: 1.5rem;
+    }
+
+    p {
+      margin-top: 0.25rem;
+    }
+
+    .Flag {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+  }
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    section {
+      flex: 1;
+      min-width: rem(200px);
+    }
+  }
+
+  a {
+    color: $colorTertiary;
+  }
+
+  .edd-root {
+    width: rem(280px);
+    color: $colorGrey--100;
+
+    @include respondTo(xs) {
+      width: 100%;
+    }
+  }
+
+  .edd-head {
+    background-color: $colorWhite;
+  }
+}
+
+.ClubAddress {
+  display: flex;
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+}
+
+.ClubCategories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: rem(108px);
+}
+
+.Competitions {
+  position: relative;
+  margin-top: 1.5rem;
+
+  &:first-of-type {
+    margin-top: 2.5rem;
+  }
+
+  &:not(:last-of-type) {
+    padding-bottom: rem(26px);
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.125rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $colorGrey--90;
+      border-radius: rem(1px);
+    }
+  }
+
+  &-grid {
+    display: flex;
+    flex-direction: column;
+
+    @include respondFrom(md) {
+      flex-direction: row;
+    }
+  }
+
+  &-map {
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+
+    @include respondTo(xs) {
+      flex-shrink: 1;
+    }
+
+    @include respondFrom(md) {
+      margin-right: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .ButtonNav {
+    margin-top: 0.25rem;
+  }
+
+  .ButtonNav-menu {
+    flex-wrap: wrap;
+    margin-bottom: -0.5rem;
+  }
+
+  .ButtonNav-item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.CompetitionsMap {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+
+  @include respondFrom(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.Document {
+  display: flex;
+  position: relative;
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}
+
+.FeaturedArticlesGrid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respondFrom(md) {
+    gap: 2.5rem;
+  }
+
+  @include respondFrom(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.HeadingWithButtonContainer,
+.HeadingWithSelectContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+
+  @include respondTo(xs) {
+    flex-wrap: wrap;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 !important;
+  }
+}
+
+.MembersGrid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.NavTopStoriesContainer {
+  @include respondFrom(lg) {
+    position: relative;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+
+    &::after {
+      content: "";
+      width: rem(1000px);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 1.25rem;
+      background-color: rgba(25, 25, 25, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: z(default);
+    }
+  }
+}
+
+.Partners {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-y: auto;
+
+  // @include respondFrom(lg) {
+  @include customScrollbar(thin);
+  // }
+
+  &--centered {
+    @include respondTo(md) {
+      justify-content: center;
+    }
+  }
+
+  &--small {
+    li {
+      a {
+        img,
+        svg {
+          @include respondFrom(lg) {
+            max-width: 6.5rem !important;
+            max-height: 6.5rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+
+      @include respondTo(sm) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    a {
+      display: block;
+      color: $colorPrimary;
+
+      img,
+      svg {
+        @include imgResponsive();
+        max-width: 7.5rem;
+        max-height: 7.5rem;
+
+        @include respondFrom(lg) {
+          max-width: 10rem;
+          max-height: 10rem;
+        }
+      }
+    }
+  }
+}
+
+.RelatedArticlesGrid {
+  display: grid;
+
+  @include respondTo(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+
+    .ArticleBox {
+      margin-top: 0 !important;
+    }
+  }
+
+  @include respondTo(sm) {
+    gap: 1.5rem;
+  }
+
+  @include respondTo(xs) {
+    grid-template-columns: auto;
+  }
+
+  .ArticleBox + .ArticleBox {
+    margin-top: 2.5rem;
+
+    @include respondTo(sm) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.SectionBottomBordered {
+  position: relative;
+  padding-bottom: rem(26px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include roundedBorderHor();
+  }
+}
+
+.SectionTopBordered {
+  position: relative;
+  padding-top: rem(26px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include roundedBorderHor();
+  }
+}
+
+.SideNavContainer {
+  order: 1;
+
+  @include respondFrom(xl) {
+    padding-bottom: 5rem;
+  }
+}
+
+.StaffGrid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.TopStories {
+  position: relative;
+  overflow: hidden;
+}

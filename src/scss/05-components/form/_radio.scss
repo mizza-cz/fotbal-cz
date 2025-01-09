@@ -1,0 +1,72 @@
+.Radio {
+  display: flex;
+  position: relative;
+
+  &-label {
+    display: flex;
+    align-items: center;
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      flex-shrink: 0;
+      background-color: $colorWhite;
+      border: $borderPrimary;
+      border-radius: 50%;
+      margin-right: 0.375rem;
+      transition: border-color 0.25s ease;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      flex-shrink: 0;
+      position: absolute;
+      top: 50%;
+      left: 0.25rem;
+      background-color: $colorWhite;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: background-color 0.25s ease;
+    }
+  }
+
+  &-button {
+    @include srOnly();
+
+    &:focus + .Radio-label {
+      &::before {
+        border-color: $colorTertiary;
+      }
+
+      &::after {
+        background-color: $colorTertiary;
+      }
+    }
+
+    &:checked + .Radio-label {
+      &::before {
+        border-color: $colorTertiary;
+      }
+
+      &::after {
+        background-color: $colorTertiary;
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 0.5rem;
+  }
+}

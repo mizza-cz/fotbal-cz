@@ -1,0 +1,24 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = 'Vyhledávání reprezentantů | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Vyhledávání reprezentantů</h1>
+    <div class="Box u-mt-primary">
+      <form class="Form Form--search" action="" method="post">
+        <div class="u-position-relative">
+          <label class="Form-label" for="">Jméno hráče</label>
+          <input class="Form-input Form-input--search" type="search" name="" id="" placeholder="Zadejte jméno hráče" autocomplete="off"/>
+          <button class="Form-searchButton" type="submit" aria-label="Vyhledat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+{% endblock %}

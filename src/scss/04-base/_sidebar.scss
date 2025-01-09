@@ -1,0 +1,13 @@
+.Sidebar {
+  section + section {
+    margin-top: 3rem;
+
+    @include respondTo(sm) {
+      margin-top: 2.5rem;
+    }
+
+    @include respondTo(xs) {
+      margin-top: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<!-- Box automatických článků -->
+<div class="ArticlesSmallGrid SectionTopBordered Board-item">
+  {# Libovolný počet článků #}
+  {% for item in range(0, 4) %}
+    {% include "../board/_articleBoxSmall.njk" %}
+  {% endfor %}
+</div>

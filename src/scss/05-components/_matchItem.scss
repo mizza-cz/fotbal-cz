@@ -1,0 +1,197 @@
+.MatchItem {
+  display: flex;
+  position: relative;
+
+  @include respondTo(sm) {
+    flex-direction: column;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include roundedBorderHor();
+  }
+
+  &:first-child {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+  }
+
+  &-mainInfoContainer {
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem;
+    }
+  }
+
+  &-detailsContainer {
+    position: relative;
+    padding: 1.125rem 0;
+
+    @include respondFrom(md) {
+      width: 50%;
+      padding: 1.125rem 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include roundedBorderHor();
+    }
+
+    @include respondFrom(md) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1.125rem;
+        left: 0;
+        @include roundedBorderVer();
+        height: calc(100% - 2.25rem);
+      }
+    }
+  }
+
+  &-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-decoration: none;
+
+    &--upcoming {
+      pointer-events: none;
+    }
+
+    .MatchItem-teamName,
+    .MatchItem-result {
+      text-decoration-color: transparent;
+      transition: color 0.25s linear, outline-offset 0.25s linear, text-decoration-color 0.25s linear;
+    }
+
+    &:not(.MatchItem-match--upcoming):focus,
+    &:not(.MatchItem-match--upcoming):hover,
+    &:not(.MatchItem-match--upcoming):active {
+      .MatchItem-teamName,
+      .MatchItem-result {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+      }
+
+      .MatchItem-teamName {
+        text-decoration-thickness: 0.125rem;
+      }
+
+      .MatchItem-result {
+        text-decoration-thickness: 0.25rem;
+      }
+    }
+  }
+
+  &-teams {
+    display: grid;
+    gap: 0.25rem;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-result {
+    color: $colorBlack;
+
+    &--win {
+      color: #00bf30;
+    }
+
+    &--loss {
+      color: $colorRed;
+    }
+
+    &--tie {
+      color: $colorGrey--100;
+    }
+
+    &--postponed {
+      display: inline-block;
+      color: $colorGrey--100;
+      text-align: center;
+      background-color: $colorGrey--90;
+      border-radius: $borderRadiusPrimary;
+      padding: rem(14px) rem(12px);
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    &:empty {
+      margin-top: 0;
+    }
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    @include text($colorTertiary, $fontSizeSmall, $fontWeightNormal, 1.571);
+
+    &:focus,
+    &:hover {
+      text-decoration-thickness: 0.0625rem;
+    }
+  }
+
+  &-details,
+  &-meta {
+    display: grid;
+    gap: 0.25rem;
+
+    li {
+      display: flex;
+
+      // Icon
+      svg {
+        flex-shrink: 0;
+      }
+
+      // TV logo
+      img {
+        margin-top: rem(6px);
+      }
+
+      strong {
+        font-weight: $fontWeightSemiBold;
+      }
+
+      a {
+        &:focus,
+        &:hover {
+          text-decoration-thickness: 0.0625rem;
+        }
+      }
+
+      & > * {
+        margin-right: 0.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

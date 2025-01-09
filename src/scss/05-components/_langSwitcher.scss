@@ -1,0 +1,155 @@
+.LangSwitcher {
+  display: flex;
+  height: 100%;
+  position: relative;
+  border-left: $borderPrimary;
+
+  @include respondTo(lg) {
+    display: none;
+  }
+
+  &--mobile {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: $colorWhite;
+    border-left: none;
+    border-bottom: $borderPrimary;
+    padding: 0.875rem 1rem;
+    z-index: z(default);
+
+    @include respondFrom(xl) {
+      display: none;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        opacity: 0.25;
+        transition: opacity 0.25s linear;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+
+          .LangSwitcher-abbr {
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+          }
+        }
+
+        &.is-active {
+          opacity: 1;
+        }
+
+        .LangSwitcher-abbr {
+          line-height: 1.25;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+
+    svg {
+      transition: fill 0.25s ease, transform 0.25s ease-in-out;
+    }
+
+    &:focus,
+    &:hover {
+      .LangSwitcher-abbr {
+        color: $colorTertiary;
+      }
+
+      svg {
+        fill: $colorTertiary;
+      }
+    }
+
+    &.is-active {
+      svg {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &-lang {
+    display: none;
+    align-items: center;
+
+    &.is-active {
+      display: flex;
+    }
+  }
+
+  &-flag {
+    flex-shrink: 0;
+    width: 1rem !important;
+    height: 1rem !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  &-abbr {
+    @include text($colorText, $fontSizeNormal, $fontWeightNormal, 1.5);
+    text-decoration: none;
+    text-decoration-color: transparent;
+    margin-right: 0.25rem;
+    transition: color 0.25s linear, outline-offset 0.25s linear, text-decoration-color 0.25s linear;
+  }
+
+  &-dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: $colorGrey--80;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem 0;
+    margin-top: -0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: all 0.25s $easeOutQuad;
+    z-index: z(popup);
+
+    &.is-active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    li {
+      padding: 0.5rem 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          .LangSwitcher-abbr {
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+          }
+        }
+      }
+    }
+  }
+}

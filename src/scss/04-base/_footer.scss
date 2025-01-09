@@ -1,0 +1,32 @@
+.Footer {
+  background-color: $colorFooter;
+  padding-bottom: 2.5rem;
+  margin-top: rem(34px);
+
+  @include respondTo(sm) {
+    margin-top: rem(24px);
+  }
+
+  &-logo {
+    display: block;
+    color: $colorWhite;
+    margin-top: -2rem;
+
+    @include respondTo(sm) {
+      margin-top: -1.5rem;
+    }
+
+    img,
+    svg {
+      @include imgResponsive();
+
+      @include respondTo(sm) {
+        width: rem(54px);
+      }
+    }
+  }
+
+  &-text {
+    @include text($colorWhite, $fontSizeExtraSmall, $fontWeightNormal, inherit);
+  }
+}

@@ -1,0 +1,64 @@
+.GalleryArticle {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respondFrom(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respondFrom(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-item {
+    display: block;
+    position: relative;
+    @include responsiveMediumContainer(230, 152);
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+
+      span {
+        position: relative;
+        font-family: $fontFamilySecondary;
+        @include text($colorWhite, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+        z-index: z(default);
+
+        strong {
+          display: block;
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 37, 122, 0.75);
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

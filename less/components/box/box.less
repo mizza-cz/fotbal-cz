@@ -1,0 +1,363 @@
+/**
+Box
+
+Kontejner 
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="box {$modifier_class} {{modifier_class}}">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla laborum repellat dolore in adipisci ex!
+</div>
+
+Styleguide 8.
+*/
+
+.box {
+	.m-clearfix;
+	box-sizing: border-box;
+	border: 1px solid @lightBlue;
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: @anchorColor;
+	}
+
+	&.box-document {
+		.mod-small;
+		.mod-white;
+
+		.box-document-body {
+			padding: 0 5px;
+		}
+		.box-document-date {
+			.f-condensed;
+			.f-14;
+			margin: 0;
+			color: @grey;
+			line-height: 1;
+			.t-bold;
+		}
+		.box-document-title {
+			.f-condensed-bold;
+			.f-20;
+			margin: 0;
+		}
+		.box-document-link {
+			.f-condensed;
+			.f-16;
+			margin: 30px 0 0;
+			a {
+				margin: 0 0 0 4px;
+			}
+		}
+	}
+
+	&.box-full {
+		.mod-full;
+		.mod-grey;
+		clear: both;
+
+		.box-title {
+			.f-16;
+			line-height: 1;
+			margin: 0 0 3px;
+			color: @grey;
+			.f-condensed-bold;
+			.t-uppercase;
+		}
+
+		.box-full-header {
+			margin: 0 0 @gutter;
+			@media @medium {
+				margin: 0;
+				float: left;
+				width: 195px;
+			}
+			@media @large {
+				width: 207px;
+			}
+		}
+
+		.box-full-body {
+
+			@media @medium {
+				float: right;
+				width: 405px;
+			}
+			@media @large {
+				width: 420px;
+			}
+		}
+
+		.box-full-title {
+			.f-condensed-bold;
+			.f-20;
+			line-height: 1.3;
+			margin: 0 0 4px;
+		}
+
+		.box-full-date {
+			.f-condensed;
+			.f-14;
+			color: @grey;
+		}
+
+		.box-full-link {
+			.f-condensed;
+			margin: 0;
+			line-height: 1;
+		}
+
+	}
+
+	&.mod-gallery-list {
+		padding: 10px 5px 10px;
+		@media @small {
+			padding: 15px 15px 5px;
+		}
+	}
+
+	&.mod-gallery {
+		max-width: 700px;
+	}
+
+	.box-gallery {
+		.m-reset-list;
+		.m-clearfix;
+
+		.box-gallery-item {
+			float: left;
+			width: 50%;
+			@media @mini {
+				width: 25%;
+			}
+			box-sizing: border-box;
+			padding: 0 5px 10px 5px;
+			margin: 0;
+			@media @small {
+				.m-size( 90px );
+				margin-bottom: 0;
+			}
+			@media @medium {
+				margin: 0 15px 0 0;
+			}
+			@media @large {
+				margin: 0 @gutter 0 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
+
+			&.mod-no-right-margin {
+				margin-right: 0;
+			}
+
+			&.mod-other-photos {
+				.box-gallery-link {
+					.box-gallery-photo-count-wrapper {
+						position: absolute;
+						top: 0;
+						right: 5px;
+						bottom:10px;
+						left: 5px;
+						display: block;
+						background: @anchorColor;
+						opacity: 0.7;
+						transition: 0.2s all linear;
+					}
+					.box-gallery-photo-count {
+						.f-36;
+						position: absolute;
+						top: 50%;
+						right: 5px;
+						left: 5px;
+						line-height: 1em;
+						margin-top: -.6em;
+						font-style: normal;
+						display: block;
+						text-decoration: none;
+						color: #fff;
+						font-weight: bold;
+						text-align: center;
+					}
+
+					&:hover {
+						.box-gallery-photo-count-wrapper {
+							background: darken( @anchorColor, 15% );
+						}
+					}
+				}
+			}
+		}
+		.box-gallery-link {
+			.m-size(100%);
+			display: block;
+		}
+		.box-gallery-img {
+			.m-size(100%);
+			display: block;
+			background: #eee;
+			background-position: 50% 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			&:after {
+				display: block;
+				content: '';
+				padding-top: 100%;
+			}
+		}
+	}
+
+	.box-documents {
+		.m-reset-list;
+		.box-document-item {
+			margin: 0 0 5px 0;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.box-document-link {
+			.f-condensed;
+			span[class^=icon] {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&.mod-bottom-shadow {
+		box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+	}
+
+	&.mod-padding {
+		.p(5px 10px 10px 10px);
+		@media @mini {
+			.p(5px 20px 10px 20px);
+		}
+		@media @small {
+			.p(5px 36px 10px 36px);
+		}
+	}
+
+	&.mod-padding-table {
+		.p(5px 0 10px 0);
+		@media @mini {
+			.p(5px);
+		}
+		@media @small {
+			.p(5px 36px 10px 36px);
+		}
+	}
+	
+	&.mod-padding-medium {
+		.p(0 10px 10px 10px);
+		@media @small {
+			.p(5px 15px 15px 15px);
+		}
+		@media @large {
+			.p(10px 20px 20px 20px);
+		}
+	}
+
+	&.mod-padding-ext {
+		.p(10px 10px 10px 10px);
+		@media @mini {
+			.p(20px 20px 10px 20px);
+		}
+		@media @small {
+	    	.p(36px 36px 10px 36px);
+		}
+	}
+
+	&.mod-grey {
+		background: @tbl-background;
+	}
+
+	&.mod-white {
+		background: #fff;
+		.box-title {
+			.f-16;
+			line-height: 1;
+			margin: 0;
+			color: @grey;
+			.t-bold;
+			.t-uppercase;
+			border-bottom: 1px solid @lightBlue;
+			padding: 0 0 15px 0;
+			margin: 0 0 15px 0;
+			text-indent: 5px;
+		}
+	}
+
+
+	&.mod-light-blue {
+		background: @tbl-background;
+		.box-title {
+			.f-16;
+			line-height: 1;
+			margin: 0;
+			color: @grey;
+			.t-bold;
+			.t-uppercase;
+			border-bottom: 1px solid @lightBlue;
+			padding: 0 0 15px 0;
+			margin: 0 0 15px 0;
+			text-indent: 5px;
+		}
+	} 
+
+	&.mod-full {
+		width: 100%;
+		float: none;
+
+		padding: 10px;
+		@media @medium {
+			padding: 15px;	
+		}
+		@media @large {
+			padding: 30px;	
+		}
+	}
+
+	&.mod-small {
+		padding: 20px;
+		@media @small {
+			width: 250px;
+			float: left;
+			margin-right: @gutter;
+		}
+	}
+
+	&.mod-no-margin {
+		margin-bottom: 0;
+	}
+
+	&.mod-noborder {
+		border-top: 0 none;
+		border-right: 0 none;
+		border-left: 0 none;
+	}
+
+	&.mod-noborder-bottom {
+		border-bottom: 0;
+	}
+
+	&.mod-right-border {
+		border-right: 1px solid @lightBlue;
+	}
+
+}
+
+// Hack pro box v tabech
+.tab-pane {
+	.box {
+		&.mod-bottom-shadow {
+			box-shadow: none;
+			border: 0;
+		}
+	}
+}

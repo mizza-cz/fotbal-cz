@@ -1,0 +1,94 @@
+/**
+ * Padding
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+.p (@value: 0) { padding: @value; }
+.p-t (@value: 0) { padding-top: @value; }
+.p-r (@value: 0) { padding-right: @value; }
+.p-b (@value: 0) { padding-bottom: @value; }
+.p-l (@value: 0) { padding-left: @value; }
+
+// padding-top
+.p-t-0 { .p-t; }
+.p-t-5 { .p-t(5px); }
+.p-t-10 { .p-t(10px); }
+.p-t-15 { .p-t(15px); }
+.p-t-20 { .p-t(20px); }
+.p-t-30 { .p-t(30px); }
+.p-t-40 { .p-t(40px); }
+    
+.p-t-small { 
+	.p-t-5; 
+	@media @mini { .p-t-10; }
+	@media @small { .p-t-15; }
+} 
+
+.p-t-medium { 
+	.p-t-10; 
+	@media @mini { .p-t-15; }
+	@media @small { .p-t-20; }
+}    
+.p-t-big { 
+	.p-t-10; 
+	@media @mini { .p-t-20; }
+	@media @small { .p-t-30; }
+}
+
+// padding-right
+.p-r-0 { .p-r; }
+.p-r-5 { .p-r(5px); }
+.p-r-10 { .p-r(10px); }
+.p-r-15 { .p-r(15px); }
+.p-r-20 { .p-r(20px); }
+.p-r-30 { .p-r(30px); }
+.p-r-40 { .p-r(40px); }
+
+// padding-bottom
+.p-b-0 { .p-b; }
+.p-b-5 { .p-b(5px); }
+.p-b-10 { .p-b(10px); }
+.p-b-15 { .p-b(15px); }
+.p-b-20 { .p-b(20px); }
+.p-b-25 { .p-b(25px); }
+.p-b-30 { .p-b(30px); }
+
+.p-b-medium { 
+	.p-b-10; 
+	@media @mini { .p-b-15; }
+	@media @small { .p-b-20; }
+}   
+.p-b-bigger { 
+	.p-b-5; 
+	@media @mini { .p-b-15; }
+	@media @small { .p-b-25; }
+} 
+.p-b-big { 
+	.p-b-10; 
+	@media @mini { .p-b-20; }
+	@media @small { .p-b-30; }
+}
+
+// padding-left
+.p-l-0 { .p-l; }
+.p-l-5 { .p-l(5px); }
+.p-l-10 { .p-l(10px); }
+.p-l-15 { .p-l(15px); }
+.p-l-20 { .p-l(20px); }
+.p-l-30 { .p-l(30px); }
+
+// padding
+.p-0 { .p; }
+.p-5 { .p(5px); }
+.p-10 { .p(10px); }
+.p-15 { .p(15px); }
+.p-20 { .p(20px); }
+.p-25 { .p(25px); }
+.p-30 { .p(30px); }
+
+.p-medium {
+	.p-5;
+	@media @small { .p-10; }
+	@media @medium { .p-15; }
+	@media @large { .p-20; }
+}

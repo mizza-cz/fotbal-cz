@@ -1,0 +1,156 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název stránky} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <article class="Article">
+      <h1 class="H3">UEFA Playmakers Disney</h1>
+
+      <div class="Article-body">
+        <h2>UEFA PLAYMAKERS DISNEY - PŘIHLÁŠKA NA PODZIM 2023</h2>
+        <p>
+          Unikátní projekt UEFA Playmakers Disney je určen pro dívky od 5 do 8 let, který je zábavným způsobem přenese do světa fotbalu. Dívky se s fotbalem seznámí prostřednictvím příběhů Walta Disneyho. Projekt je zaměřen na rozvoj základních pohybových schopností, životních a fotbalových dovedností. Vyplněním uvedeného formuláře dívku přihlašujete do Vámi vybraného centra Playmakers na období podzim 2023 (8-10 tréninkových bloků). Účast dívky v programu je možná po uhrazení 500,- Kč (detaily k platbě budou na Váš e-mail zaslány po vyplnění formuláře). S případnými dotazy se, prosím, obracejte na e-mailovou adresu infoplaymakers@fotbal.cz.
+        </p>
+
+        <p class="Box u-bgc-green u-c-white u-ff-secondary u-fw-bold u-ta-center">
+          Formulář byl úspěšně odeslán. Na Váš email byla zaslána potvrzovací zpráva.
+        </p>
+
+        <p class="Box u-bgc-red u-c-white u-ff-secondary u-fw-bold u-ta-center">
+          Vyskytla se chyba při odesílání formuláře. Prosím, zkuste to znovu později.
+        </p>
+
+        <div class="Box u-mt-primary">
+          <form class="Form Grid">
+
+            <div class="Grid-col Grid-col--md-12 Grid-col--6 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Jméno přihlášené dívky*</label>
+                <input type="text" maxlength="50" class="Form-input" required>
+              </div>
+            </div>
+
+            <div class="Grid-col Grid-col--md-12 Grid-col--6 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Příjmení přihlášené dívky*</label>
+                <input type="text" maxlength="50" class="Form-input" required>
+              </div>
+            </div>
+            
+            <div class="Grid-col Grid-col--12">
+              <div class="Form-item required">
+                <label class="Form-label required">Datum narození přihlášené dívky*</label>
+                <input type="date" class="Form-input" required>
+              </div>
+            </div>
+
+            <div class="Grid-col--12 Grid-col">
+              <hr>
+            </div>
+
+            <div class="Grid-col Grid-col--12 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Jméno a příjmení zákonného zástupce:*</label>
+                <input type="text" maxlength="100" class="Form-input" required>
+              </div>
+            </div>
+            
+            <div class="Grid-col Grid-col--md-12 Grid-col--6 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Kontaktní e-mail zákonného zástupce*</label>
+                <input type="email" maxlength="50" class="Form-input" required>
+              </div>
+            </div>
+            
+            <div class="Grid-col Grid-col--md-12 Grid-col--6 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Telefonní číslo zákonného zástupce*</label>
+                <input type="tel" maxlength="50" class="Form-input" required>
+              </div>
+            </div>
+            
+            <div class="Grid-col Grid-col--12">
+              <div class="Form-item required">
+                <label class="Form-label required">Adresa zákonného zástupce (ve vzoru ulice, č.p., město, PSČ):*</label>
+                <input type="text" class="Form-input" required>
+              </div>
+            </div>
+
+            <div class="Grid-col--12 Grid-col">
+              <hr>
+            </div>
+            
+            <div class="Grid-col Grid-col--12 u-mb-24">
+              <div class="Form-item required">
+                <label class="Form-label required">Vámi zvolené Centrum Playmakers (s dostupnými kapacitami):*</label>
+                <select class="Select js-select2 u-width-100p u-bgc-white">
+                  <option>SK OLOMOUC SIGMA MŽ, z.s.</option>
+                  <option>FK Baník Most-Souš mládež, z.s.</option>
+                  <option>1.SK Prostějov z.s.</option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="Grid-col Grid-col--12 u-mb-24">
+              <fieldset>
+                <legend class="Form-label"><label class="Form-label">Dosavadní zkušenosti s fotbalem*</label></legend>
+                <div class="Radio">
+                  <input type="radio" name="radio-experience" id="form-radio-experience-1" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-experience-1">Již hraje v klubu - registrována v něm i ve FAČR</label>
+                </div>
+                <div class="Radio">
+                  <input type="radio" name="radio-experience" id="form-radio-experience-2" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-experience-2">Již někdy trénovala, ale pouze s kamarády nebo rodinou (ne v organizovaném prostředí jako škola nebo klub)</label>
+                </div>
+                <div class="Radio">
+                  <input type="radio" name="radio-experience" id="form-radio-experience-3" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-experience-3">Trénuje pravidelně v klubu nebo ve škole, ale není registrovaná</label>
+                </div>
+                <div class="Radio">
+                  <input type="radio" name="radio-experience" id="form-radio-experience-4" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-experience-4">Nikdy nehrála ani netrénovala</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="Grid-col Grid-col--12 u-mb-24">
+              <fieldset>
+                <legend class="Form-label"><label class="Form-label">Souhlasím s použitím fotografií/ videí z programu Playmakers pro marketingové účely*</label></legend>
+                <div class="Radio">
+                  <input type="radio" name="radio-photo-usage" id="form-radio-photo-usage-1" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-photo-usage-1">Ano</label>
+                </div>
+                <div class="Radio">
+                  <input type="radio" name="radio-photo-usage" id="form-radio-photo-usage-2" required class="Radio-button">
+                  <label class="Radio-label u-whitespace-wrap" for="form-radio-photo-usage-2">Ne</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="Grid-col Grid-col--12 u-mb-24">
+              <div class="Checkbox required">
+                <input type="checkbox" class="Checkbox-originalCheck" id="frm-requestForm-form-agree" required>
+                <label class="Checkbox-label required" for="frm-requestForm-form-agree"><span>Souhlasím se zpracováním osobních údajů pro potřeby akreditace. Více informací <a href="https://akreditace.fotbal.cz/souhlas-se-zpracovanim-osobnich-udaju-pro-potreby-akreditace/p243" target="_blank">zde</a>.</span></label>
+              </div>
+            </div>
+
+            <div class="Grid-col Grid-col u-mb-24">
+              <div class="Form-item">
+                <input type="submit" class="Button" value="Odeslat">
+              </div>
+            </div>
+
+            
+            
+          </form>
+        </div>
+
+    </article>
+  </main>
+{% endblock %}

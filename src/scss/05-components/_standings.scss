@@ -1,0 +1,75 @@
+.Standings {
+  width: 100%;
+
+  thead {
+    tr {
+      background-color: $colorWhite;
+      border-bottom: $borderPrimary;
+    }
+
+    th {
+      vertical-align: middle;
+      @include text($colorText, $fontSizeNormal, $fontWeightBold, normal);
+      text-align: left;
+      padding: 0.5rem 1rem;
+
+      &:first-child {
+        width: 2rem;
+      }
+
+      &:nth-child(2) {
+        padding-left: 3rem;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $colorWhite;
+      border-bottom: $borderPrimary;
+
+      &.highlighted {
+        td {
+          color: $colorPrimary;
+          font-weight: $fontWeightBold;
+        }
+      }
+    }
+
+    td {
+      vertical-align: middle;
+      @include text($colorText, $fontSizeSmall, $fontWeightMedium, normal);
+      text-align: left;
+      white-space: nowrap;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &--simplified {
+    tbody {
+      td {
+        &:first-child,
+        &:last-child {
+          font-weight: $fontWeightBold;
+        }
+
+        &:first-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &-teamLogo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+}

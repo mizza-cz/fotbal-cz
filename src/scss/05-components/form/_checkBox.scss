@@ -1,0 +1,161 @@
+.Checkbox {
+  position: relative;
+  padding-left: 1.5rem;
+
+  &-label {
+    @include text($colorText, $fontSizeSmall, $fontWeightNormal, inherit);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $colorWhite;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: $borderPrimary;
+      border-radius: 0.125rem;
+      transition: border-color 0.25s ease;
+    }
+  }
+
+  &-originalCheck {
+    @include srOnly();
+
+    &:focus + .Checkbox-label {
+      &::before {
+        border-color: $colorTertiary;
+      }
+    }
+
+    &:checked + .Checkbox-label {
+      &::before {
+        background-image: url(../img/icons/check-tertiary.svg);
+      }
+    }
+  }
+
+  &--category {
+    flex-shrink: 0;
+    min-width: rem(120px);
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem;
+
+    &--men {
+      background-color: rgba(13, 85, 255, 0.15);
+
+      .Checkbox-originalCheck {
+        &:focus + .Checkbox-label {
+          &::before {
+            border-color: $colorBlue--90;
+          }
+        }
+
+        &:checked + .Checkbox-label {
+          &::before {
+            border-color: $colorBlue--90;
+            background-image: url(../img/icons/check-blue.svg);
+          }
+        }
+      }
+    }
+
+    &--youth {
+      background-color: rgba(53, 255, 105, 0.15);
+
+      .Checkbox-originalCheck {
+        &:focus + .Checkbox-label {
+          &::before {
+            border-color: #35ff69;
+          }
+        }
+
+        &:checked + .Checkbox-label {
+          &::before {
+            border-color: #35ff69;
+            background-image: url(../img/icons/check-green.svg);
+          }
+        }
+      }
+    }
+
+    &--women {
+      background-color: rgb(249 219 251);
+
+      .Checkbox-originalCheck {
+        &:focus + .Checkbox-label {
+          &::before {
+            border-color: #d91ee9;
+          }
+        }
+
+        &:checked + .Checkbox-label {
+          &::before {
+            border-color: #d91ee9;
+            background-image: url(../img/icons/check-purple.svg);
+          }
+        }
+      }
+    }
+
+    &--futsal {
+      background-color: rgb(252 234 233);
+
+      .Checkbox-originalCheck {
+        &:focus + .Checkbox-label {
+          &::before {
+            border-color: $colorRed;
+          }
+        }
+
+        &:checked + .Checkbox-label {
+          &::before {
+            border-color: $colorRed;
+            background-image: url(../img/icons/check-red.svg);
+          }
+        }
+      }
+    }
+
+    &--beach {
+      background-color: rgba(255, 198, 0, 0.1);
+
+      .Checkbox-originalCheck {
+        &:focus + .Checkbox-label {
+          &::before {
+            border-color: #ffc600;
+          }
+        }
+
+        &:checked + .Checkbox-label {
+          &::before {
+            border-color: #ffc600;
+            background-image: url(../img/icons/check-yellow.svg);
+          }
+        }
+      }
+    }
+
+    .Checkbox-label {
+      font-size: $fontSizeExtraSmall;
+      padding-left: 1.5rem;
+
+      &::before {
+        width: 1rem;
+        height: 1rem;
+        top: 50%;
+        left: 0.5rem;
+        border-color: $colorWhite;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

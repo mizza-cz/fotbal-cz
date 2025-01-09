@@ -1,0 +1,210 @@
+.Match {
+  &-meta {
+    position: relative;
+    text-align: center;
+    padding-bottom: 0.625rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include roundedBorderHor();
+    }
+
+    .Link {
+      font-size: inherit;
+    }
+  }
+
+  &-mainInfoContainer {
+    position: relative;
+    padding: 1rem 0 1.125rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include roundedBorderHor();
+    }
+
+    @include respondFrom(sm) {
+      padding: 1.5rem 4.5vw 1.625rem;
+    }
+  }
+
+  &-teams {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  &-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+
+    @include respondFrom(sm) {
+      flex-direction: row;
+
+      &:first-child {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .Logo,
+        .Flag {
+          margin-left: 1.5rem;
+        }
+      }
+
+      &:last-child {
+        text-align: left;
+
+        .Logo,
+        .Flag {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    .Logo,
+    .Flag {
+      width: 4.5rem !important;
+      height: 4.5rem !important;
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+
+      @include respondFrom(sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-result {
+    text-align: center;
+    margin-top: 0.5rem;
+
+    strong {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    &:empty {
+      margin-top: 0;
+    }
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    @include text($colorTertiary, $fontSizeSmall, $fontWeightNormal, 1.571);
+
+    &:focus,
+    &:hover {
+      text-decoration-thickness: 0.0625rem;
+    }
+  }
+
+  &-detailsContainer {
+    position: relative;
+    padding: 1rem 0 1.125rem;
+
+    &:not(.Match-detailsContainer--repre) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include roundedBorderHor();
+      }
+    }
+
+    @include respondFrom(sm) {
+      padding: 1.5rem 1.5rem 1.625rem;
+    }
+
+    &--repre {
+      p + p {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &-statsGrid {
+    @include respondFrom(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    // Hot fix
+    .Table {
+      tbody {
+        tr {
+          td {
+            // Player name
+            &:nth-child(3) {
+              font-family: $fontFamilySecondary;
+              font-size: $fontSizeSmall;
+              font-weight: $fontWeightSemiBold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-rostersGrid {
+    display: grid;
+    gap: 1.5rem;
+
+    @include respondFrom(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  .MatchTimeline + .Match-rostersGrid {
+    margin-top: 1.5rem;
+  }
+
+  .Match-embed {
+    padding: 1.5rem 0 1.625rem;
+    position: relative;
+    display: flex;
+    
+    &:after {
+      content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #dde1e6;
+    border-radius: 0.0625rem;
+    }
+
+    iframe{
+      width: 80%;
+      margin: auto;
+      aspect-ratio: 16 / 9;
+    }
+
+    .js-embedSocialMedia {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+  }
+}

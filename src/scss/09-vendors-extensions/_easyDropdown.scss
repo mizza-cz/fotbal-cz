@@ -1,0 +1,202 @@
+.edd-root,
+.edd-root *,
+.edd-root *::before,
+.edd-root *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.edd-root {
+  display: inline-block;
+  width: rem(200px);
+  position: relative;
+  @include text($colorText, $fontSizeSmall, $fontWeightNormal, 1.571);
+  user-select: none;
+
+  @include respondTo(xs) {
+    width: 100%;
+  }
+}
+
+.edd-root-disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.edd-root::after {
+  display: none;
+}
+
+.edd-head {
+  position: relative;
+  background-color: $colorGrey--80;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  background-size: 10px 6px;
+  border: none;
+  border-radius: $borderRadiusPrimary;
+  box-shadow: $boxShadowPrimary;
+  padding: rem(10px) rem(12px);
+  padding-right: rem(34px);
+  transition: outline-color 0.25s ease;
+  @include textOverflowEllipsis();
+  overflow: hidden;
+}
+
+// .edd-root:not(.edd-root-disabled) .edd-head:hover {
+// }
+
+.edd-root.edd-root-focused {
+  .edd-head {
+    background-color: $colorGrey--90;
+  }
+}
+
+.edd-value {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.edd-arrow {
+  display: none;
+}
+
+.edd-arrow::before {
+  display: none;
+}
+
+.edd-value,
+.edd-option,
+.edd-group-label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.edd-root:not(.edd-root-disabled) .edd-value,
+.edd-option {
+  cursor: default;
+}
+
+.edd-select {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  left: -100%;
+  top: 0;
+}
+
+.edd-root-native .edd-select {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.edd-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: $colorGrey--80;
+  border: 1px solid $colorGrey--90;
+  border-radius: $borderRadiusPrimary;
+  box-shadow: 0 0.25rem 0.75rem 0 rgba(135, 141, 150, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: z(popup);
+}
+
+.edd-root-open .edd-body {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+  transition: opacity 0.25s, transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.edd-root-open-above .edd-body {
+  bottom: 100%;
+}
+
+.edd-root-open-below .edd-body {
+  top: 100%;
+}
+
+.edd-items-list {
+  max-height: 0;
+  transition: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  @include customScrollbar(thin);
+}
+
+.edd-group-label {
+  font-size: 13px;
+  padding: 4px 8px 4px 0;
+  color: #555;
+  font-weight: 600;
+}
+
+.edd-group-has-label {
+  padding-left: 22px;
+}
+
+.edd-option {
+  position: relative;
+  padding: rem(10px) rem(12px);
+  transition: background-color 0.25s ease;
+
+  &:not(:last-child) {
+    border-bottom: $borderPrimary;
+  }
+}
+
+.edd-option-selected {
+  font-weight: $fontWeightSemiBold;
+}
+
+.edd-option-selected::before {
+  display: none;
+}
+
+.edd-option-focused:not(.edd-option-disabled) {
+  color: $colorText;
+  background-color: $colorGrey--90;
+}
+
+.edd-option-disabled,
+.edd-group-disabled .edd-option {
+  cursor: default;
+  color: #ccc;
+}
+
+.edd-gradient-top,
+.edd-gradient-bottom {
+  display: none;
+}
+
+.edd-gradient-top {
+  background-position: bottom;
+  top: 0;
+}
+
+.edd-gradient-bottom {
+  background-position: top;
+  bottom: 0;
+}
+
+.edd-body-scrollable .edd-gradient-top,
+.edd-body-scrollable .edd-gradient-bottom {
+  opacity: 1;
+}
+
+.edd-body-scrollable.edd-body-at-top .edd-gradient-top,
+.edd-body-scrollable.edd-body-at-bottom .edd-gradient-bottom {
+  opacity: 0;
+}

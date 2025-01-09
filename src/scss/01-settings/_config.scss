@@ -1,0 +1,87 @@
+$breakpoints-max: (
+  "xxxs": 320px,
+  "xxs": 414px,
+  "xs": 576px,
+  "sm": 768px,
+  "md": 992px,
+  "lg": 1200px
+);
+
+$breakpoints-min: (
+  "xxs": 321px,
+  "xs": 415px,
+  "sm": 577px,
+  "md": 769px,
+  "lg": 993px,
+  "xl": 1201px
+);
+
+$colors: (
+  "primary": $colorPrimary,
+  "secondary": $colorSecondary,
+  "tertiary": $colorTertiary,
+  "text": $colorText,
+  "black": $colorBlack,
+  "blue": $colorBlue,
+  "blue--80": $colorBlue--80,
+  "blue--90": $colorBlue--90,
+  "blue--100": $colorBlue--100,
+  "green": $colorGreen,
+  "green--dark": $colorGreen--dark,
+  "grey": $colorGrey,
+  "grey--70": $colorGrey--70,
+  "grey--80": $colorGrey--80,
+  "grey--90": $colorGrey--90,
+  "grey--100": $colorGrey--100,
+  "orange": $colorOrange,
+  "red": $colorRed,
+  "red--80": $colorRed--80,
+  "red--90": $colorRed--90,
+  "red--100": $colorRed--100,
+  "yellow": $colorYellow,
+  "white": $colorWhite
+);
+
+$fontSizes: (
+  "0": $fontSizeZero,
+  "tiny": $fontSizeTiny,
+  "extraSmall": $fontSizeExtraSmall,
+  "small": $fontSizeSmall,
+  "normal": $fontSizeNormal,
+  "big": $fontSizeBig,
+  "extraBig": $fontSizeExtraBig,
+  "huge": $fontSizeHuge
+);
+
+$fontWeights: (
+  "thin": $fontWeightThin,
+  "extraLight": $fontWeightExtraLight,
+  "light": $fontWeightLight,
+  "normal": $fontWeightNormal,
+  "medium": $fontWeightMedium,
+  "semiBold": $fontWeightSemiBold,
+  "bold": $fontWeightBold,
+  "extraBold": $fontWeightExtraBold,
+  "heavy": $fontWeightHeavy
+);
+
+$spacings: (0, 2, 4, 6, 8, 10, 12, 16, 24, 32, 40, 48, 64, 80);
+
+$z-indexes: (
+  "default": 1,
+  "headerLogo": 3,
+  "badge": 5,
+  "tooltip": 10,
+  "overlay": 100,
+  "matchCalendar": 101,
+  "sideNav": 101,
+  "stickyHeader": 102,
+  "mobileMenu": 103,
+  "mobileMenuBtn": 104,
+  "subMenu": 200,
+  "popup": 999,
+  "modal": 9999,
+  "alert": 99999,
+  "flashMessage": 99999,
+  "loader": 99999
+);

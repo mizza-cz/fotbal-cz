@@ -1,0 +1,88 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'login-loyalty | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsJS %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{% endblock %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+     <div class="registration-wrapper u-mx-auto">
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+      <div class="registration-modal u-mt-primary u-mx-auto">
+         <div class="registration-content u-mx-auto">
+            <h1 class="H3 u-mb-24">Přihlášení do věrnostního programu  </h1>
+            <form action="" class="Form Grid registrationForm">
+                 
+                 <div class="Grid-col Grid-col--12 u-mb-12">
+                  <div class="Form-item">
+                     <input type="email" maxlength="50" class="Form-input" required placeholder="Zadejte emailovou adresu">
+                  </div>
+                </div>
+                    <div class="Grid-col Grid-col--12 u-mb-24">
+                     <div class="Form-item required registrationForm-password">
+                        <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Zadejte heslo*">
+                         <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+                     </div>
+                   </div>
+                    <div class="Grid-col Grid-col--12">
+                     <div class="Form-item">
+                        <input type="submit" class="Button" value="Přihlásit se">
+                     </div>
+                  </div>
+            </form>
+            <div class="u-flex-wrap u-gap-16 u-px-16 u-display-flex u-my-32 u-fs-small u-lh-1 u-justify-space-between u-align-item-center">
+               <div
+                  class="u-c-grey--100    "
+               >
+                  Nemáte účet?
+                  <a class="u-c-blue u-pl-4" href="#">Zaregistrovat se </a>
+               </div>
+               <a class="u-c-blue" href="#">Zapomenuté heslo </a>
+            </div>
+            <div class="registration-decore">
+               Nebo
+           </div>
+           <ul class="registrationSocial">
+              
+               <li>
+                  <a href="#" class="registrationSocial-item">
+                    <img src="./img/logo-facr.svg" alt="">
+                     Pokračovat s IS FAČR
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="registrationSocial-item">
+                      <img src="./img/google.png" alt="">
+                     Pokračovat s Google
+                  </a>
+               </li>
+                 <li>
+                  <a href="#" class="registrationSocial-item">
+                      <img src="./img/fb.png" alt="">
+                     Pokračovat s Facebook
+                  </a>
+               </li>
+            </ul>
+            <ul class="registration-links">
+               <li>
+                  <a href="#">Podmínky používání</a>
+               </li>
+               <li>
+                  <a href="#">Zásady ochrany soukromí</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+     </div>
+    </div>
+  </main>
+{% endblock %}

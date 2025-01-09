@@ -1,0 +1,32 @@
+.CustomScrollbar {
+  scrollbar-color: $colorGrey $colorWhite; // Foreground, background
+
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $colorWhite;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorGrey;
+    border-left: 1px solid $colorWhite;
+    border-right: 1px solid $colorWhite;
+    border-radius: $borderRadiusSecondary;
+  }
+
+  &--thin {
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: $borderRadiusPrimary;
+    }
+  }
+}

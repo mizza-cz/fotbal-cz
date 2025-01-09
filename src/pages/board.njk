@@ -1,0 +1,42 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = 'Nástěnka | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <!-- Board -->
+    <div class="Board" id="js-board">
+      <!-- Board config -->
+      <div class="Board-sizer"></div>
+      <div class="Board-gutterSizer"></div>
+
+      <h1 class="Board-item">Nadpis H1</h1>
+
+      {% include "../templates/partials/board/_bannerFullWidth.njk" %}
+
+      {% include "../templates/partials/board/_articleBoxBig.njk" %}
+
+      {% include "../templates/partials/board/_bannerFullWidth.njk" %}
+
+      <h2 class="Board-item">Nadpis H2</h2>
+
+      {% include "../templates/partials/board/_articleBox.njk" %}
+
+      {% include "../templates/partials/board/_banner.njk" %}
+
+      {% include "../templates/partials/board/_matchCalendar.njk" %}
+
+      {% include "../templates/partials/board/_articleBox.njk" %}
+
+      {% include "../templates/partials/board/_articleBox.njk" %}
+
+      <h2 class="Board-item">Nadpis H2</h2>
+
+      {% include "../templates/partials/board/_articles.njk" %}
+
+      {% include "../templates/partials/board/_articleArchive.njk" %}
+    </div>
+  </main>
+{% endblock %}

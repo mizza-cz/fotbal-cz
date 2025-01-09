@@ -1,0 +1,281 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Reprezentace - Turnaj / kvalifikace} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Article">
+      <a href="#" class="Badge u-mb-8">A-tým Česko</a>
+      <h1 class="H3">Kvalifikace EURO 2024</h1>
+      <!-- Pozn. od Aleše: U záložky "Nominace" bychom měli rozlišovat, zda jde o typ "turnaj" nebo "kvalifikace". U turnaje ala Euro by zde byla tabulka nominovaných (BEZ zápasů). U kvalifikace by zde byl přehled nominací na jednotlivé související (dvoj, troj) zápasy https://esports.webista.cz/fotbal.cz/dist/repre-nominations.html a pak teprve proklik do detailu (VČETNĚ souvisejících zápasů ke konkrétní nominaci) -->
+      {{ mainContentNav.render(representation.qualification.menu, 1) }}
+
+      <!-- Pozn. od Aleše: Na přehledu bychom zobrazovali jeden odehraný / jeden nadcházející zápas -->
+      <section class="u-mt-primary js-matchRoundSection">
+        <div class="u-display-flex u-flex-wrap u-align-items-center u-justify-space-between u-gap-16">
+          <h2 class="H6">Zápasy</h2>
+          <button type="button" class="ToggleButton ToggleButton--collapse js-matchRoundDetails-toggle" aria-expanded="false">
+            <span class="js-matchRoundDetails-toggle-text-show">Zobrazit podrobnosti</span>
+            <span class="js-matchRoundDetails-toggle-text-hide u-display-none">Skrýt podrobnosti</span>
+            <svg width="10" height="6" focusable="false" aria-hidden="true">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Matches -->
+        <ul class="u-mt-8">
+          <!-- Match - over -->
+          <li class="MatchRound js-matchRound">
+            <div class="MatchRound-mainInfoContainer">
+              <a href="#" class="MatchRound-match">
+                <!-- Teams -->
+                <ul class="MatchItem-teams">
+                  <li>
+                    <span class="Flag fi fi-cz fis"></span>
+                    <span class="H7 MatchItem-teamName">Česko</span>
+                  </li>
+                  <li>
+                    <span class="Flag fi fi-es fis"></span>
+                    <span class="H7 MatchItem-teamName">Španělsko</span>
+                  </li>
+                </ul>
+                <!-- Result -->
+                <!-- <strong class="H4 MatchItem-result MatchItem-result--win">3:0</strong> -->
+                <!-- <strong class="H4 MatchItem-result MatchItem-result--loss">0:3</strong> -->
+                <strong class="H4 MatchItem-result MatchItem-result--tie">3:3</strong>
+              </a>
+              <!-- Actions collapsible -->
+              <div class="MatchRound-actions js-matchRoundDetails u-display-none">
+                <a href="#" class="Button">Video</a>
+                <a href="#" class="Button">Online</a>
+                <!-- optional note -->
+                <p class="u-my-4">Poznámka: ev. UMT</p>
+              </div>
+            </div>
+            <div class="MatchRound-detailsContainer">
+              <!-- Meta -->
+              <ul class="MatchRound-meta">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                  </svg>
+                  <p>
+                    <strong>Datum:</strong>
+                    pátek 3. 6. 2022, 18:00
+                  </p>
+                  <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                  </svg>
+                  <p>
+                    <strong>Turnaj:</strong>
+                    <a href="#" class="Link--inverted u-c-tertiary">Kvalifikace EURO 2024</a>
+                  </p>
+                </li>
+              </ul>
+              <!-- Details collapsible -->
+              <ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
+                  </svg>
+                  <p>
+                    <strong>Rozhodčí:</strong>
+                    Všetečka Jan - Pečenka Jiří, Líkař Petr
+                  </p>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
+                  </svg>
+                  <p>
+                    <strong>Delegát:</strong>
+                    Lhoták Luděk, Bajer Josef
+                  </p>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+                  </svg>
+                  <p>
+                    <strong>VAR:</strong>
+                    Zelinka Miroslav
+                  </p>
+                  <p>
+                    <strong>AVAR:</strong>
+                    Křepský Michal
+                  </p>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                  </svg>
+                  <p>
+                    <strong>Hřiště:</strong>
+                    Andrův stadion, Olomouc
+                  </p>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
+                  </svg>
+                  <p>
+                    <strong>Diváků:</strong>
+                    4660
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Match - upcoming -->
+          <li class="MatchRound js-matchRound">
+            <div class="MatchRound-mainInfoContainer">
+              <a href="#" class="MatchRound-match">
+                <!-- Teams -->
+                <ul class="MatchItem-teams">
+                  <li>
+                    <span class="Flag fi fi-cz fis"></span>
+                    <span class="H7 MatchItem-teamName">Česko</span>
+                  </li>
+                  <li>
+                    <span class="Flag fi fi-es fis"></span>
+                    <span class="H7 MatchItem-teamName">Španělsko</span>
+                  </li>
+                </ul>
+                <!-- Result -->
+                <strong class="H4 MatchItem-result">-:-</strong>
+              </a>
+            </div>
+            <div class="MatchRound-detailsContainer">
+              <!-- Meta -->
+              <ul class="MatchRound-meta">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                  </svg>
+                  <p>
+                    <strong>Datum:</strong>
+                    pátek 3. 6. 2022, 18:00
+                  </p>
+                  <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                  </svg>
+                  <p>
+                    <strong>Turnaj:</strong>
+                    <a href="#" class="Link--inverted u-c-tertiary">Kvalifikace EURO 2024</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+          <a href="#" class="Button">Rozpis zápasů</a>
+        </div>
+      </section>
+
+      <!-- Pozn. od Aleše: Pokud bude tabulka, tak i tu (divné je, že u kvalifikací se nyní tabulky negenerují, u turnajů ano) -->
+      <section class="u-mt-primary">
+        <h2 class="H6">Tabulka kvalifikace EURO 2024</h2>
+        <table class="Table u-mt-16">
+          <thead>
+            <tr>
+              <th class="u-sticky-cell">
+                <abbr title="Pořadí">#</abbr>
+              </th>
+              <th class="u-width-dominate u-sticky-cell">Klub</th>
+              <th class="u-ta-center">
+                <abbr title="Zápasy">Z</abbr>
+              </th>
+              <th class="u-ta-center">
+                <abbr title="Výhry">V</abbr>
+              </th>
+              <th class="u-ta-center">
+                <abbr title="Remízy">R</abbr>
+              </th>
+              <th class="u-ta-center">
+                <abbr title="Prohry">P</abbr>
+              </th>
+              <th class="u-ta-center">Skóre</th>
+              <th>
+                <abbr title="Body">B</abbr>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="u-sticky-cell">1.</td>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Česko</a>
+              </td>
+              <td class="u-ta-center">17</td>
+              <td class="u-ta-center">12</td>
+              <td class="u-ta-center">4</td>
+              <td class="u-ta-center">1</td>
+              <td class="u-ta-center">49:20</td>
+              <td>
+                <strong>40</strong>
+              </td>
+            </tr>
+            <tr>
+              <td class="u-sticky-cell">2.</td>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Moldavsko</a>
+              </td>
+              <td class="u-ta-center">17</td>
+              <td class="u-ta-center">12</td>
+              <td class="u-ta-center">2</td>
+              <td class="u-ta-center">3</td>
+              <td class="u-ta-center">40:22</td>
+              <td>
+                <strong>38</strong>
+              </td>
+            </tr>
+            <tr>
+              <td class="u-sticky-cell">3.</td>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Polsko</a>
+              </td>
+              <td class="u-ta-center">1</td>
+              <td class="u-ta-center">1</td>
+              <td class="u-ta-center">1</td>
+              <td class="u-ta-center">1</td>
+              <td class="u-ta-center">100:100</td>
+              <td>
+                <strong>0</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+          <a href="#" class="Button">Podrobné tabulky</a>
+        </div>
+      </section>
+
+      <!-- Pozn. od Aleše: Přehled posledních souvisejících článků k danému typu turnaje / kvalifikace -->
+      <section class="u-mt-primary">
+        <h2 class="H6">Články</h2>
+        <div class="ArticlesSmallGrid u-mt-16">
+          {% for item in range(0, 8) %}
+            {% include "../templates/partials/_articleBoxSmall.njk" %}
+          {% endfor %}
+        </div>
+        <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-24">
+          <a href="#" class="Button">Další zprávy</a>
+        </div>
+      </section>
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,374 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = 'Kalendář akcí | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Kalendář akcí</h1>
+
+    <article class="Calendar u-mt-primary">
+      <header class="Calendar-header">
+        <div class="Calendar-monthSwitcher">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-circle-left"></use>
+            </svg>
+          </a>
+          <h2 class="H6">Červen 2023</h2>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-circle-right"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="Calendar-filters">
+          <div class="Checkbox Checkbox--category Checkbox--category--men">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox-men" id="TEST-checkbox-men"/>
+            <label class="Checkbox-label" for="TEST-checkbox-men">Fotbal muži</label>
+          </div>
+          <div class="Checkbox Checkbox--category Checkbox--category--youth">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox-youth" id="TEST-checkbox-youth"/>
+            <label class="Checkbox-label" for="TEST-checkbox-youth">Fotbal mládež</label>
+          </div>
+          <div class="Checkbox Checkbox--category Checkbox--category--women">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox-women" id="TEST-checkbox-women"/>
+            <label class="Checkbox-label" for="TEST-checkbox-women">Fotbal ženy</label>
+          </div>
+          <div class="Checkbox Checkbox--category Checkbox--category--futsal">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox-futsal" id="TEST-checkbox-futsal"/>
+            <label class="Checkbox-label" for="TEST-checkbox-futsal">Futsal</label>
+          </div>
+          <div class="Checkbox Checkbox--category Checkbox--category--beach">
+            <input class="Checkbox-originalCheck" type="checkbox" name="TEST-checkbox-beach" id="TEST-checkbox-beach"/>
+            <label class="Checkbox-label" for="TEST-checkbox-beach">Plážový fotbal</label>
+          </div>
+        </form>
+      </header>
+
+      <div class="Calendar-body CustomScrollbar CustomScrollbar--thin u-mt-16 u-overflow-x-auto">
+        <table class="js-table-notResponsive">
+          <thead>
+            <tr>
+              <th>
+                <abbr title="Pondělí">Po</abbr>
+              </th>
+              <th>
+                <abbr title="Úterý">Út</abbr>
+              </th>
+              <th>
+                <abbr title="Středa">St</abbr>
+              </th>
+              <th>
+                <abbr title="Čtvrtek">Čt</abbr>
+              </th>
+              <th>
+                <abbr title="Pátek">Pá</abbr>
+              </th>
+              <th>
+                <abbr title="Sobota">So</abbr>
+              </th>
+              <th>
+                <abbr title="Neděle">Ne</abbr>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- Den nepatřící do zvoleného měsíce má třídu is-inactive -->
+              <td class="is-inactive">
+                <div>
+                  <span>30</span>
+                </div>
+              </td>
+              <!-- Den nepatřící do zvoleného měsíce má třídu is-inactive -->
+              <td class="is-inactive">
+                <div>
+                  <span>31</span>
+                </div>
+              </td>
+              <!-- Den se zápasy -->
+              <td>
+                <div>
+                  <span>1</span>
+                  <!-- Events / matches -->
+                  <div>
+                    <!-- Pro zápas dle kategorie se používá 5 třídních modifikátorů: Calendar-match--men Calendar-match--youth Calendar-match--women Calendar-match--futsal Calendar-match--beach -->
+                    <a href="#" class="Calendar-match Calendar-match--men">
+                      <p>Česko U21</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                      <strong class="MatchItem-result MatchItem-result--win">2:3</strong>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <!-- Den se zápasy -->
+              <td>
+                <div>
+                  <span>2</span>
+                  <!-- Events / matches -->
+                  <div>
+                    <!-- Pro zápas dle kategorie se používá 5 třídních modifikátorů: Calendar-match--men Calendar-match--youth Calendar-match--women Calendar-match--futsal Calendar-match--beach -->
+                    <a href="#" class="Calendar-match Calendar-match--men">
+                      <p>Česko A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                      <strong class="MatchItem-result MatchItem-result--tie">2:2</strong>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--futsal">
+                      <p>Futsal U21</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                      <strong class="MatchItem-result MatchItem-result--loss">2:3</strong>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <!-- Den bez událostí / zápasů -->
+              <td>
+                <div>
+                  <span>3</span>
+                </div>
+              </td>
+              <!-- Den bez událostí / zápasů -->
+              <td>
+                <div>
+                  <span>4</span>
+                </div>
+              </td>
+              <!-- Den bez událostí / zápasů -->
+              <td>
+                <div>
+                  <span>5</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span>6</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>7</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>8</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>9</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>10</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>11</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>12</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span>13</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>14</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>15</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>16</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>17</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>18</span>
+                  <!-- Events / matches -->
+                  <div>
+                    <!-- Pro zápas dle kategorie se používá 5 třídních modifikátorů: Calendar-match--men Calendar-match--youth Calendar-match--women Calendar-match--futsal Calendar-match--beach -->
+                    <a href="#" class="Calendar-match Calendar-match--men">
+                      <p>Česko U21 A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--women">
+                      <p>Ženy A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--youth">
+                      <p>Česko U18</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--beach">
+                      <p>Česko A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>19</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <span>27</span>
+                  <!-- Events / matches -->
+                  <div>
+                    <!-- Pro zápas dle kategorie se používá 5 třídních modifikátorů: Calendar-match--men Calendar-match--youth Calendar-match--women Calendar-match--futsal Calendar-match--beach -->
+                    <a href="#" class="Calendar-match Calendar-match--youth">
+                      <p>Česko U18</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>28</span>
+                  <!-- Events / matches -->
+                  <div>
+                    <!-- Pro zápas dle kategorie se používá 5 třídních modifikátorů: Calendar-match--men Calendar-match--youth Calendar-match--women Calendar-match--futsal Calendar-match--beach -->
+                    <a href="#" class="Calendar-match Calendar-match--men">
+                      <p>Česko U21 A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--women">
+                      <p>Ženy A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                    <a href="#" class="Calendar-match Calendar-match--beach">
+                      <p>Česko A</p>
+                      <div>
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <span aria-hidden="true">&nbsp;-&nbsp;</span>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>29</span>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <span>30</span>
+                </div>
+              </td>
+              <!-- Den nepatřící do zvoleného měsíce má třídu is-inactive -->
+              <td class="is-inactive">
+                <div>
+                  <span>1</span>
+                </div>
+              </td>
+              <!-- Den nepatřící do zvoleného měsíce má třídu is-inactive -->
+              <td class="is-inactive">
+                <div>
+                  <span>2</span>
+                </div>
+              </td>
+              <!-- Den nepatřící do zvoleného měsíce má třídu is-inactive -->
+              <td class="is-inactive">
+                <div>
+                  <span>3</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </main>
+{% endblock %}

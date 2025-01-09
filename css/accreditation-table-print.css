@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: left;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Helvetica Neu', 'Helvetica', 'Arial', sans-serif;
+    font-size: 11px;
+    line-height: 1.42;
+    width: 100%;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    -ms-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+body {
+    padding: 1% 1.5%;
+}
+h1 {
+    font-size: 1.428rem;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+small {
+    font-size: 1rem;
+    color: #777;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+thead {
+    display: table-header-group;
+}
+tfoot {
+    display: table-footer-group;
+}
+tbody td,
+thead th,
+tfoot td {
+    padding: 0;
+    border-bottom: 1px solid #666;
+}
+thead th {
+    border-bottom: 3px solid #000;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+tbody tr td:nth-child(1) {
+    white-space: nowrap;
+}
+thead th:nth-child(6) {
+    width: 115px;
+}
+thead th:nth-child(7) {
+    width: 100px;
+}
+tfoot td {
+    border-top: 3px solid #000;
+    font-weight: bold;
+}
+
+.rejected {
+    background-color: #FCCFD4;
+    color: #B00;
+    border-bottom: 1px solid #B00;
+}
+.accredited {
+    background-color: #BFFFE4;
+    color: #060;
+    border-bottom: 1px solid #060;
+}

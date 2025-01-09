@@ -1,0 +1,201 @@
+.fotbaltvItem {
+  border-bottom: 2px solid #dde1e6;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &:first-child {
+    border-top: 2px solid #dde1e6;
+  }
+
+  &__row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(100% - 56px);
+  }
+  .ToTopButton {
+    transition: all 0.1s;
+  }
+  .ToTopButton.is-active {
+    transform: rotate(90deg);
+  }
+  &-term {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 1px;
+    li {
+      font-weight: $fontWeightSemiBold;
+      font-family: $fontFamilySecondary;
+      color: #fff;
+      width: 40px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 1.33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-term--future {
+    background-color: $colorGrey--100;
+  }
+  &-term--live {
+    background-color: $colorRed;
+  }
+  &-term--finished {
+    background-color: $colorBlack;
+  }
+}
+
+.fotbaltvItem-wrapper {
+  animation-direction: alternate;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: fadeInDownSubMenu;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: none;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 40px 0;
+  padding-bottom: 24px;
+  @include respondTo(lg) {
+    gap: 20px 0;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @include respondTo(sm) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 24px;
+    padding-bottom: 8px;
+  }
+  &.is-active {
+    display: flex;
+  }
+  > li {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+    padding: 0 20px;
+    @include respondTo(lg) {
+      padding: 0 10px;
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+    @include respondTo(sm) {
+      max-width: 100%;
+      flex: 100%;
+      padding: 0;
+    }
+  }
+}
+.fotbaltvItem-box {
+  border: 2px solid $colorGrey--90;
+  padding: 16px;
+  border-radius: 4px;
+  height: 100%;
+  .MatchItem-teamName {
+    text-decoration: none !important;
+  }
+  .ButtonNav-link {
+    padding: 4px 0.75rem;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $colorRed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.fotbaltvItem-box--live {
+  .ButtonNav-link {
+    border-color: $colorRed;
+    color: $colorRed;
+  }
+}
+.fotbaltvItem-box--draw {
+  .ButtonNav-link {
+    border-color: $colorGrey--100;
+    color: $colorGrey--100;
+  }
+  .MatchItem-result {
+    color: $colorGrey--100;
+  }
+}
+
+.fotbaltvItem-box--win {
+  .ButtonNav-link {
+    border-color: $colorBlue--100;
+    color: $colorBlue--100;
+  }
+  .MatchItem-result {
+    color: $colorBlue--100;
+  }
+}
+
+.fotbaltv-slider {
+  border-top: 2px solid $colorGrey--90;
+  border-bottom: 2px solid $colorGrey--90;
+  padding: 16px 40px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  .swiper {
+    display: flex;
+    width: 100%;
+    max-width: 1094px;
+  }
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    border-right: 2px solid $colorGrey--90;
+    padding: 0 16px;
+    display: block;
+    text-decoration: none;
+    &.active::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: $colorBlack;
+      border-radius: 100%;
+      top: 0;
+    }
+  }
+  &__item--grey {
+    .fotbaltvItem-term li {
+      background: $colorGrey;
+    }
+    .H6 {
+      color: $colorGrey;
+    }
+  }
+  .swiper-button-prev {
+    position: absolute;
+    left: -0px;
+  }
+  .swiper-button-next {
+    position: absolute;
+    right: -0px;
+  }
+}

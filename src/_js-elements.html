@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="./css/flag-icons.min.css" />
+<link rel="stylesheet" href="./css/main.css" />
+
+<!-- For including CSS classes to production bundle only -->
+<span class="Loader u-mx-auto"></span>
+<p class="u-ta-center u-fs-big u-fw-bold u-my-24"></p>
+<p class="u-ta-center u-fs-big u-fw-bold u-mt-24"></p>
+<span class="H7 u-display-block u-c-grey--100 u-px-24 u-mt-16 u-mb-10">{$item['name']}</span>
+
+<div class="GoogleMap-infoWindowInner">
+  <img class="Logo" src="./img/logo-club-empty.svg" width="48" height="48" alt="logo {název klubu}" />
+  <h5 class="H8 u-mt-8">${club.name}</h5>
+  <a href="${club.url}" class="Button u-mt-8" tabindex="0">Detail klubu</a>
+</div>
+
+<form action="" method="post" id="registration-form" class="Form Form--vertical">
+  <div id="recaptcha" class="g-recaptcha" data-sitekey="6Ld5vhoUAAAAAO2tdic5toGyQZ2FXtirKrizVitY" data-callback="onSubmit" data-size="invisible"></div>
+
+  <fieldset class="form-fieldset">
+    <ul class="errors u-mb-24">
+      <li>Pro úspěšnou registraci je nutné vyplnit všechny rozpracované položky.</li>
+    </ul>
+  </fieldset>
+  <div class="Form-item">
+    <label class="Form-label" for="frm-name">Jméno</label>
+
+    <input class="Form-input" type="text" name="name" id="frm-name" required data-nette-rules='[{"op":":filled","msg":"Zadejte prosím jméno"}]' value="TEST" />
+  </div>
+  <div class="Form-item">
+    <label class="Form-label" for="frm-surname">Příjmení</label>
+
+    <input class="Form-input" type="text" name="surname" id="frm-surname" required data-nette-rules='[{"op":":filled","msg":"Zadejte prosím příjmení"}]' value="TEST" />
+  </div>
+  <div class="Form-item form-error">
+    <label class="Form-label" for="frm-email">Email</label>
+    Zadejte prosím platný email
+    <input class="Form-input" type="text" name="email" id="frm-email" required data-nette-rules='[{"op":":filled","msg":"Zadejte prosím email"},{"op":":email","msg":"Zadejte prosím platný email"}]' value="TEST" />
+  </div>
+  <div class="Form-item">
+    <label class="Form-label" for="frm-contact">Oddělení</label>
+
+    <select name="contact" id="frm-contact" required data-nette-rules='[{"op":":filled","msg":"This field is required."}]' class="Form-input">
+      <option value="0" selected>Covid-19</option>
+      <option value="1">Vstupenky</option>
+      <option value="2">Členství</option>
+      <option value="3">Finanční podpora</option>
+      <option value="4">Informační systém</option>
+      <option value="5">Domácí přestupy</option>
+      <option value="6">Mezinárodni přestupy</option>
+      <option value="7">Vzdělávaní trenéru</option>
+      <option value="8">Profesionální soutěže</option>
+      <option value="9">Ostatní</option>
+    </select>
+  </div>
+  <div class="Form-item">
+    <label class="Form-label" for="frm-message">Zpráva</label>
+
+    <textarea name="message" rows="10" id="frm-message" required data-nette-rules='[{"op":":filled","msg":"Zadejte prosím zprávu"}]' class="Form-input">TEST</textarea>
+  </div>
+  <div class="Form-item">
+    <input id="registration-form-token" type="hidden" name="token" value="" />
+    <button type="submit" onclick="return buttonOnClick();" class="Button">Odeslat</button>
+  </div>
+  <input type="hidden" name="_form_" value="contactForm" />
+</form>
+
+<span class="Flag fi fi-eng fis"></span>
+<span class="Flag fi fi-nir fis"></span>
+<span class="Flag fi fi-sco fis"></span>
+<span class="Flag fi fi-wal fis"></span>
+
+<div class="u-md-mt-24"></div>
+
+<div class="u-display-none u-lg-display-block u-ta-center u-mt-24">
+  <a href="http://www.novyfotbal.s7.esports.cz/socialni-site/p455" class="u-fs-small u-c-white">Sociální sítě</a>
+</div>
+
+<div class="u-width-100p u-ta-center">
+  <button type="button" data-cookie-placeholder class="Button u-mt-8">Otevřít nastavení cookies</button>
+</div>

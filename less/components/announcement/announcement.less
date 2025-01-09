@@ -1,0 +1,87 @@
+/**
+Úřední oznámení
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Tibor Piňo tibor.pino@gmail.com
+
+Markup:
+<!-- .announcement -->
+<article class="announcement">
+    <p class="announcement-nr">Značka ABC-101-100</p>
+    <h3 class="announcement-title">Nadační fond na podporu fotbalové mládeže</h3>
+    <div class="announcement-meta">
+        <div class="row">
+            <div class="col-1-3">
+                <p>Účinnost od: 10.5.2015<br>Účinnost od: 10.5.2015</p>
+            </div>
+            <div class="col-1-3">
+                <p>Účinnost od: 10.5.2015<br>Účinnost od: 10.5.2015</p>
+            </div>
+            <div class="col-1-3">
+                <p>Účinnost od: 10.5.2015<br>Účinnost od: 10.5.2015</p>
+            </div>
+        </div>
+    </div>
+    <p class="t-bold">Púvodce: Fotbalový svaz</p>
+    <p class="t-bold">Adresát: TJ Sokol Dolní Domaslavice</p>
+    <div class="announcement-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae sodales lacus. Quisque varius mauris fermentum augue sagittis porttitor blandit maximus neque. Vestibulum sit amet sapien cursus, aliquet enim ut, ullamcorper eros. Ut eu mi massa. Vivamus id mi vel libero tristique maximus vitae ut est. Duis eget justo ut mi tristique dictum. Sed non urna nulla. Sed eget pharetra eros. Duis et euismod turpis. Sed in mauris sollicitudin, accumsan enim ac, gravida lorem. Donec efficitur non odio id pharetra. Donec consectetur a nunc sit amet vehicula. Integer auctor massa ut arcu hendrerit, at viverra dui aliquet. Fusce viverra, nisi accumsan sodales egestas, dui libero volutpat risus, posuere molestie turpis metus at sem.</p>
+    </div>
+    <h4>Dokumenty</h4>
+    <ul class="announcement-file-group">
+        <li><a href=""><i class="icon-download icon-right"></i>Rozhodnutí komise (256KB)</a></li>
+        <li><a href=""><i class="icon-download icon-right"></i>Rozhodnutí komise (256KB)</a></li>
+        <li><a href=""><i class="icon-download icon-right"></i>Rozhodnutí komise (256KB)</a></li>
+        <li><a href=""><i class="icon-download icon-right"></i>Rozhodnutí komise (256KB)</a></li>
+        <li><a href=""><i class="icon-download icon-right"></i>Rozhodnutí komise (256KB)</a></li>
+    </ul>
+</article>
+<!-- end .announcement -->
+
+Styleguide 23.
+*/
+.announcement {
+    border: 1px solid @list-border;
+    padding: 15px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.announcement-nr {
+    .f-14;
+    color: @grey;
+    margin: 0 0 10px 0;
+}
+
+.announcement-title {
+    
+}
+
+.announcement-meta {
+    margin: 0 -15px;
+    background: @list-border;
+    padding: 15px;
+    
+    p {
+        line-height: 2em;
+        margin: 0;
+    }
+}
+
+.announcement-file-group {
+    padding: 0;
+    
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+}
+
+.announcement-text {
+    p {
+        .f-14;
+    }
+}

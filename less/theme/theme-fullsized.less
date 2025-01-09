@@ -1,0 +1,48 @@
+// roztažení webu na celou šířku - pouze jako návrh
+
+@media @small {
+	.container {
+		width: 100%!important;
+		.p-r-0;
+		.p-l-0;
+	}
+
+	.column-full {
+		.p-r-10;
+		.p-l-10;
+	}
+
+	.container-content {
+		max-width: 1180px;
+		.p(15px);
+
+		> .article {
+			.m(-15px);
+		}
+
+		&.mod-full {
+			max-width: 1610px;
+		}
+	}
+
+}
+
+@media @small-only {
+	.header .line {
+		.p-l-10;
+		.p-r-10;
+	}
+}
+
+@media @medium-only {
+	.header .line {
+		.p-l-10;
+		.p-r-10;
+	}
+}
+
+@media @large-only {
+	.mod-hp .container {
+		width: 1180px!important;
+	}
+}

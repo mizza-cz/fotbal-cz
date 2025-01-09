@@ -1,0 +1,25 @@
+.Select {
+  display: block;
+  width: rem(200px);
+  @include text($colorText, $fontSizeSmall, $fontWeightNormal, 1.571);
+  background-color: $colorGrey--80;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  background-size: 10px 6px;
+  border: none;
+  border-radius: $borderRadiusPrimary;
+  box-shadow: $boxShadowPrimary;
+  padding: rem(10px) rem(12px);
+  padding-right: rem(34px);
+  transition: outline-color 0.25s ease;
+  @include textOverflowEllipsis();
+
+  &:focus {
+    outline-color: $colorTertiary;
+  }
+
+  @include respondTo(xs) {
+    width: 100%;
+  }
+}

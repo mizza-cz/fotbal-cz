@@ -1,0 +1,29 @@
+{
+  "club": {
+    "menu": ["Přehled", "Položka menu hl. obsahu", "Položka menu hl. obsahu"]
+  },
+  "commission": {
+    "menu": ["Členové VV", "Články", "Dokumenty", "Úřední deska"]
+  },
+  "competition": {
+    "menu": ["Přehled", "Kluby", "Rozpis zápasů", "Rozhodčí a delegace", "Statistiky", "Tabulky"]
+  },
+  "competitions": {
+    "menu": ["Fotbal muži", "Fotbal ženy", "Futsal", "Plážový fotbal"],
+    "sectionMenu": ["Název soutěže", "Název soutěže", "Dlouhý název soutěže", "Název soutěže", "Dlouhý název soutěže"],
+    "regions": ["Hlavní město Praha", "Středočeský kraj", "Jihočeský kraj", "Plzeňský kraj", "Karlovarský kraj", "Ústecký kraj", "Liberecký kraj", "Královéhradecký kraj", "Pardubický kraj", "Kraj Vysočina", "Jihomoravský kraj", "Olomoucký kraj", "Zlínský kraj", "Moravskoslezský kraj"],
+    "dataRegions": ["hlavni-mesto-praha", "stredocesky-kraj", "jihocesky-kraj", "plzensky-kraj", "karlovarsky-kraj", "ustecky-kraj", "liberecky-kraj", "kralovehradecky-kraj", "pardubicky-kraj", "kraj-vysocina", "jihomoravsky-kraj", "olomoucky-kraj", "zlinsky-kraj", "moravskoslezsky-kraj"]
+  },
+  "officialBoard": {
+    "menu": ["Rozhodnutí", "Soubor předpisů", "Rozhodnutí VV FAČR", "Metodické pokyny", "Rozpisy soutěží"]
+  },
+  "representation": {
+    "qualification": {
+      "menu": ["Přehled", "Články", "Rozpis zápasů", "Nominace", "Statistiky", "Tabulky", "Info o kvalifikaci"]
+    }
+  },
+  "subject": {
+    "menu": ["Přehled", "Kontakty", "Úřední deska", "Dokumenty", "VV KFS", "Komise", "Partneři", "Foto", "Zprávy"],
+    "competitionMenu": ["Blansko", "Brno - město", "Brno - venkov", "Břeclav", "Hodonín", "Vyškov", "Znojmo"]
+  }
+}

@@ -1,0 +1,55 @@
+.Tooltip {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.625rem;
+    bottom: 100%;
+    border-style: solid;
+    border-width: 0.625rem 0.625rem 0 0.625rem;
+    border-color: rgba(29, 31, 33, 0.9) transparent transparent transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: z(tooltip);
+  }
+
+  &::after {
+    content: attr(aria-label);
+    display: inline-block;
+    min-width: 8rem;
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.625rem);
+    @include text($colorWhite, $fontSizeSmall, $fontWeightBold, inherit);
+    text-align: center;
+    background-color: rgba(29, 31, 33, 0.9);
+    border-radius: $borderRadiusPrimary;
+    padding: rem(2px) rem(12px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity 0.25s ease;
+    z-index: z(tooltip);
+  }
+
+  &:focus,
+  &:hover {
+    cursor: help;
+    outline: none;
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

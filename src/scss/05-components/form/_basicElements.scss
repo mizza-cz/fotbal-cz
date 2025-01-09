@@ -1,0 +1,244 @@
+.Form {
+  &--search,
+  &--clubFinder {
+    .Form-searchButton {
+      position: absolute;
+      bottom: rem(10px);
+      right: rem(6px);
+    }
+  }
+
+  &--4inputs {
+    display: grid;
+    align-items: end;
+    gap: 1.5rem;
+
+    @include respondFrom(sm) {
+      grid-template-columns: 1fr 1fr;
+
+      .Form-item {
+        &:last-child,
+        &:last-of-type {
+          grid-column: 1 / span 2;
+          justify-self: end;
+        }
+
+        .edd-root {
+          width: 100%;
+        }
+
+        .Button {
+          width: auto;
+        }
+      }
+    }
+
+    @include respondFrom(xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+
+      .Form-item {
+        &:last-child,
+        &:last-of-type {
+          grid-column: auto;
+          justify-self: auto;
+        }
+      }
+    }
+  }
+  &--3inputs {
+    display: grid;
+    align-items: end;
+    gap: 1.5rem;
+
+    @include respondFrom(sm) {
+      grid-template-columns: 1fr 1fr;
+
+      .Form-item {
+        .edd-root {
+          width: 100%;
+        }
+      }
+    }
+
+    @include respondFrom(xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+
+      .Form-item {
+        &:last-child,
+        &:last-of-type {
+          grid-column: auto;
+          justify-self: auto;
+        }
+      }
+      .Button {
+        width: auto !important;
+      }
+    }
+  }
+
+  &--autoInputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .Form-item {
+      min-width: 12rem;
+      flex: 1;
+
+      // submit button
+      &:last-child,
+      &:last-of-type {
+        // flex-basis: auto;
+        align-self: flex-end;
+      }
+
+      .edd-root {
+        width: 100%;
+      }
+    }
+  }
+
+  &--accreditation {
+    display: grid;
+    gap: 1.5rem;
+
+    @include respondFrom(sm) {
+      grid-template-columns: 1fr 1fr;
+
+      .Form-item {
+        // consent
+        &:nth-child(7) {
+          grid-column: 1 / span 2;
+        }
+
+        &:last-child {
+          grid-column: 1 / span 2;
+          justify-self: end;
+        }
+
+        .Button {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &--vertical {
+    .Form-item + .Form-item {
+      margin-top: 1.5rem;
+    }
+
+    .Button {
+      width: auto !important;
+    }
+  }
+
+  // Form with secondary Select (Easydropdown) styling
+  &--secondary {
+    .Form-input {
+      height: rem(41px);
+    }
+
+    .edd-head {
+      height: rem(41px);
+      line-height: 1;
+      background-color: $colorWhite;
+      border: $borderPrimary;
+      box-shadow: none;
+      padding: rem(8px) rem(12px);
+      padding-right: rem(34px);
+      transition: border-color 0.25s ease-in-out;
+    }
+
+    .edd-root.edd-root-focused {
+      .edd-head {
+        background-color: $colorWhite;
+        border-color: $colorTertiary;
+      }
+    }
+
+    .edd-body {
+      background-color: $colorWhite;
+    }
+
+    .edd-option-focused:not(.edd-option-disabled) {
+      font-weight: $fontWeightBold;
+    }
+  }
+
+  &-item {
+    .Button {
+      width: 100%;
+      padding: rem(7px) rem(36px);
+    }
+  }
+
+  &-label {
+    display: block;
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+
+    &--required {
+      &::after {
+        content: '*';
+        @include text($colorRed, inherit, inherit, inherit);
+      }
+    }
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    @include text($colorText, $fontSizeSmall, $fontWeightNormal, 1.5);
+    background-color: $colorWhite;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: rem(8px) rem(12px);
+    transition: border-color 0.25s ease-in-out;
+    @include placeholder($colorPlaceholder, left);
+
+    &:focus {
+      outline: none;
+      border-color: $colorTertiary;
+    }
+
+    &--search {
+      padding-right: rem(48px);
+    }
+  }
+
+  &-searchButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $colorTertiary;
+
+    &:focus,
+    &:hover {
+      svg {
+        width: 100%;
+        height: 100%;
+        stroke: $colorTertiary;
+        transform: scale(1.2);
+      }
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      stroke: $colorText;
+      transition: stroke 0.25s ease, transform 0.25s ease-in-out;
+    }
+  }
+
+  &-error {
+    display: block;
+    @include text($colorWhite, rem(14px), $fontWeightBold, normal);
+    background-color: $colorRed;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+  }
+}

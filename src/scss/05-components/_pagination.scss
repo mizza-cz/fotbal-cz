@@ -1,0 +1,95 @@
+.Pagination {
+  overflow-x: auto;
+
+  &--classic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: visible;
+    gap: 0.5rem;
+
+    & > strong {
+      width: 2.5rem;
+      height: 1.5rem;
+      color: $colorBlue;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .Button {
+      min-width: 2.5rem;
+
+      &[aria-current='page'] {
+        background-color: $colorBlue;
+        color: $colorWhite;
+      }
+    }
+  }
+
+  &--simple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: visible;
+
+    .Button {
+      width: 10rem;
+      margin: 0 0.25rem;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-item {
+    display: inline-flex;
+    margin: 0 0.25rem;
+  }
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    @include text($colorText, 0.875rem, $fontWeightBold, 1);
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0.25rem;
+    transition: background-color 0.25s linear;
+
+    &:not(.is-active):not(.is-disabled):focus,
+    &:not(.is-active):not(.is-disabled):hover,
+    &:not(.is-active):not(.is-disabled):active {
+      color: $colorWhite;
+      background-color: $colorSecondary;
+
+      svg {
+        fill: $colorWhite;
+      }
+    }
+
+    &.is-active {
+      color: $colorWhite;
+      background-color: $colorSecondary;
+      pointer-events: none;
+    }
+
+    &.is-disabled {
+      pointer-events: none;
+
+      svg {
+        fill: $colorGrey--100;
+      }
+    }
+
+    svg {
+      fill: $colorSecondary;
+      transition: fill 0.25s linear;
+    }
+  }
+}

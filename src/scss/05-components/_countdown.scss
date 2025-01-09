@@ -1,0 +1,29 @@
+.Countdown {
+  display: flex;
+  align-items: center;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    width: 5rem;
+    text-align: center;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-value {
+    display: block;
+    @include text($colorText, $fontSizeNormal, $fontWeightSemiBold, 1.5);
+  }
+
+  &-unit {
+    display: block;
+    @include text($colorText, $fontSizeTiny, $fontWeightNormal, 1.25);
+  }
+}

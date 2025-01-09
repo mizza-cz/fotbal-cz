@@ -1,0 +1,41 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název subjektu - partneři} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Article">
+      <h1 class="H3 H3--withLogo">
+        <img class="Logo" src="./img/logo-subject-empty.svg" width="64" height="64" alt="logo {název subjektu}" loading="lazy"/>
+        <span>Jihomoravský kraj</span>
+      </h1>
+      {{ mainContentNav.render(subject.menu, 4) }}
+
+      <div class="Article-body">
+        <div class="Article-widget">
+          <ul class="Partners">
+            <li>
+              <a href="https://www.pivovarferdinand.cz/" target="_blank" rel="noopener noreferrer" title="Pivo Ferdinand">
+                <img src="http://www.novyfotbal.s7.esports.cz/files/images/1784/ferdinand.png" alt="logo Pivo Ferdinand" loading="lazy"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.lenovo.com/cz/cs" target="_blank" rel="noopener noreferrer" title="Lenovo">
+                <img src="https://static.lenovo.com/fea/images/lenovo-logo-red.png" alt="logo Lenovo" loading="lazy"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://pepsi.cz/" target="_blank" rel="noopener noreferrer" title="Pepsi">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo_2014.svg/1200px-Pepsi_logo_2014.svg.png" alt="logo Pepsi" loading="lazy"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

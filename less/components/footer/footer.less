@@ -1,0 +1,75 @@
+/**
+Footer
+
+Styl bloku patičky
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 28.
+*/
+.footer {
+  .p(10px 15px);
+
+  @media @small {
+    .p(15px 20px);
+  }
+
+  @media @medium {
+    .p(20px 30px);
+  }
+
+  .col-s-offset-0 {
+    margin-left: 0;
+  }
+}
+
+.footer-link {
+  color: @grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: lighten(@grey, 7%);
+    text-decoration: underline;
+  }
+}
+
+.footer-link-container {
+  margin: 0;
+  .m-b-medium;
+  .m-t-medium;
+  .m-clearfix;
+  .f-14;
+}
+
+.footer-service-nav {
+  .m-reset-list;
+  .footer-link-container;
+
+  li {
+    display: block;
+    padding: 0;
+    margin: 0 0 20px 0;
+    width: 50%;
+    .f-18;
+    .txt-c;
+
+    @media @small {
+      margin: 0;
+      width: 12.5%;
+      .txt-r;
+      .f-14;
+    }
+
+    float: left;
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+      color: @icon-grey;
+    }
+
+    a {
+      .footer-link;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název subjektu - fotogalerie} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Article">
+      <h1 class="H3 H3--withLogo">
+        <img class="Logo" src="./img/logo-subject-empty.svg" width="64" height="64" alt="logo {název subjektu}" loading="lazy"/>
+        <span>Jihomoravský kraj</span>
+      </h1>
+      {{ mainContentNav.render(subject.menu, 8) }}
+
+      <!-- Galleries -->
+      {% for item in range(0, 3) %}
+        {% include "../templates/partials/_gallery.njk" %}
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}

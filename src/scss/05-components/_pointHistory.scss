@@ -1,0 +1,67 @@
+.pointHistory {
+  display: grid;
+  gap: 2.5rem 1.5rem;
+  @include respondTo(md) {
+    gap: 1.5rem;
+  }
+  grid-template-columns: repeat(3, 1fr);
+  @include respondTo(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respondTo(xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &-item {
+    margin-right: 22px;
+    position: relative;
+    padding: 15px 40px 13px 16px;
+    color: #000;
+    border-radius: 4px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateX(50%) translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &-item.lose {
+    border: 2px solid $colorSecondary;
+    &::before {
+      background-color: $colorSecondary;
+      background-image: url('../img/icons/close.svg');
+      background-size: 24px 24px;
+    }
+    span {
+      color: $colorSecondary;
+    }
+  }
+  &-item.win {
+    border: 2px solid #4ad300;
+    &::before {
+      background-color: #4ad300;
+      background-image: url('../img/icons/check.svg');
+      background-size: 24px 29px;
+    }
+    span {
+      color: #4ad300;
+    }
+  }
+  &-item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+    span {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+  }
+}

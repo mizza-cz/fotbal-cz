@@ -1,0 +1,38 @@
+.Loader {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: relative; // For demo only
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  background: transparent;
+  border: 3px solid $colorGrey--80;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba($colorWhite, 0.75);
+  // transform: translate(-50%, -50%);
+  z-index: z(loader);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid transparent;
+    border-top: 3px solid $colorTertiary;
+    border-right: 3px solid $colorTertiary;
+    border-radius: 50%;
+    animation: spinLoader 2s linear infinite;
+  }
+}
+
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,249 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Repre - detail zápasu} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+
+    {% include "../templates/partials/_breadcrumbs.njk" %}
+
+    <article class="Article Match">
+      <h1 class="H8 Match-meta">
+        6. 8. 2022 16:30, Reprezentační turnaje,
+        <a href="#" class="Link Link--inverted">Liga národů 2022/2023</a>, Generali Česká pojišťovna Arena, Praha - Česká republika
+      </h1>
+
+      <div class="Match-mainInfoContainer">
+        <div class="Match-teams">
+          <div class="Match-team">
+            <span class="Flag fi fi-cz fis"></span>
+            <strong class="H6">Česká republika</strong>
+          </div>
+          <div class="Match-team">
+            <span class="Flag fi fi-es fis"></span>
+            <strong class="H6">Španělsko</strong>
+          </div>
+        </div>
+        <div class="Match-result">
+          <strong class="H3">4:1</strong>
+          <p class="H8 u-c-grey--100">(2:0)</p>
+        </div>
+        {# <div class="Match-actions">
+          <a href="#" class="Button">Online</a>
+          <a href="#" class="Button">Video</a>
+          <a href="#" class="Button">Nominace</a>
+        </div> #}
+        <!-- Actions -->
+        <div class="Match-actions">
+          <div class="u-display-flex u-justify-center u-gap-8 u-width-100p u-mb-8">
+            <a href="#" class="Button">Nominace</a>
+            <a href="#" class="Button">Kvalifikace</a>
+          </div>
+          <a href="https://ticketportal.cz/" class="Match-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
+            </svg>
+            <span>Vstupenky</span>
+          </a>
+          <a href="https://facr.tv/" class="Match-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+            </svg>
+            <span>Video</span>
+          </a>
+          <a href="https://onlajny.com/" class="Match-action Link--inverted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exchange"></use>
+            </svg>
+            <span>Online</span>
+          </a>
+        </div>
+      </div>
+
+      <ol class="MatchTimeline">
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Krečman Tomáš
+            <span class="u-c-grey--100">(1:0)</span></p>
+          <strong>8.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Pecina Marek, PK
+            <span class="u-c-grey--100">(2:0)</span></p>
+          <strong>16.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Voráč Daniel
+            <span class="u-c-grey--100">(3:0)</span></p>
+          <strong>66.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--visitor -->
+        <li class="MatchTimeline-item MatchTimeline-item--visitor">
+          <p>Hadrava Tadeáš
+            <span class="u-c-grey--100">(3:1)</span></p>
+          <strong>68.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Apfelthaler Adam
+            <span class="u-c-grey--100">(4:1)</span></p>
+          <strong>89.</strong>
+        </li>
+      </ol>
+
+      <div class="Match-embed">
+        <!-- <iframe data-cookiecategory="social" data-placeholder  data-src="//embed.tvcom.cz/ad8d3237-e8b6-4006-9165-c79881be228f/" class=""></iframe> -->
+        <iframe data-cookiecategory="social" data-placeholder data-src="//www.youtube.com/embed/0PKbBStvkqc?si=udeGYTIsqMYKtCvX" class="" allow="fullscreen"></iframe>
+      </div>
+
+      <div class="Match-detailsContainer Match-detailsContainer--repre">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
+        <p>
+          <strong>Rozhodčí:</strong>
+          Všetečka Jan - Pečenka Jiří, Líkař Petr,
+          <strong>ŽK:</strong>
+          Masopust, Kopic - Paskotsi, Kreida, Kuusk,
+          <strong>Diváci:</strong>
+          12 068
+        </p>
+      </div>
+
+      <div class="Match-rostersGrid">
+        <div class="Box Box--roster">
+          <span class="Flag fi fi-cz fis"></span>
+          <strong class="u-fs-small u-tt-uppercase">Česká republika</strong>
+          <p>Vaclík - Coufal, Zima, Brabec, Novák - Král (60. Kuchta), Sadílek (69. Pavelka) - Masopust (60. Krmenčík), Barák, Pešek (28. Sýkora) - Vydra (69. Kopic).
+            <strong>Trenér:</strong>
+            Jiří Chytrý.</p>
+        </div>
+        <div class="Box Box--roster">
+          <span class="Flag fi fi-es fis"></span>
+          <strong class="u-fs-small u-tt-uppercase">Španělsko</strong>
+          <p>Igonen - Paskotsi (86. Kirss), Kuusk, Tamm, Mets, Sinyavskiy (61. Ojamaa) - Poom, Kreida, Vassiljev - Sappinen (76. Zenjov), Sorga (61. Anier).
+            <strong>Trenér:</strong>
+            Thomas Häberli</p>
+        </div>
+      </div>
+
+      <table class="Table u-mt-primary">
+        <thead>
+          <tr>
+            <th>
+              <abbr title="Číslo dresu">#</abbr>
+            </th>
+            <th>
+              <abbr title="Pozice">P</abbr>
+            </th>
+            <th class="u-width-dominate">Jméno</th>
+            <th class="u-ta-center">
+              <abbr title="Žlutá karta">ŽK</abbr>
+            </th>
+            <th class="u-ta-center">
+              <abbr title="Červená karta">ČK</abbr>
+            </th>
+            <th class="u-ta-center">
+              <abbr title="Střídání" class="u-display-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                </svg>
+              </abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>B</td>
+            <td class="Table-playerName">Tomáš Marcinko</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>O</td>
+            <td class="Table-playerName">Patrik Koch</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center">57'</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Z</td>
+            <td class="Table-playerName">Tomáš Klimenta</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center">55'</td>
+            <td class="u-ta-center"></td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th>
+              <abbr title="Číslo dresu" class="u-sr-only">#</abbr>
+            </th>
+            <th>
+              <abbr title="Pozice" class="u-sr-only">P</abbr>
+            </th>
+            <th class="u-width-dominate">Náhradníci</th>
+            <th class="u-ta-center u-sr-only">
+              <abbr title="Žlutá karta">ŽK</abbr>
+            </th>
+            <th class="u-ta-center u-sr-only">
+              <abbr title="Červená karta">ČK</abbr>
+            </th>
+            <th class="u-ta-center u-sr-only">
+              <abbr title="Střídání" class="u-display-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                </svg>
+              </abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>B</td>
+            <td class="Table-playerName">Ondřej Bláha</td>
+            <td class="u-ta-center">23'</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>O</td>
+            <td class="Table-playerName">Erik Hrňa</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center">57'</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Z</td>
+            <td class="Table-playerName">Juraj Mikuš</td>
+            <td class="u-ta-center"></td>
+            <td class="u-ta-center">55'</td>
+            <td class="u-ta-center"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="Article-body">
+        <h3>Fotogalerie</h3>
+        {% include "../templates/partials/_articleWidget-gallery.njk" %}
+
+        <h3>Články</h3>
+        <div class="ArticlesSmallGrid Article-widget u-mt-16">
+          {% for item in range(0, 4) %}
+            {% include "../templates/partials/_articleBoxSmall.njk" %}
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  </main>
+{% endblock %}

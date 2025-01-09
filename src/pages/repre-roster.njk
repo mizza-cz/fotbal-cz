@@ -1,0 +1,261 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Reprezentace - Soupiska} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="HeadingWithSelectContainer">
+      <h1 class="H3">Česko U21 - Hráčský kádr</h1>
+      <select class="Select" name="" id="TEST-select">
+        <option value="">2022/23</option>
+        <option value="">2021/22</option>
+        <option value="">2020/21</option>
+      </select>
+    </div>
+
+    <!-- Goalies section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Brankáři</h2>
+      <table class="Table u-mt-16">
+        <thead>
+          <tr>
+            <th class="u-sticky-cell u-width-25p">Jméno</th>
+            <th>Věk</th>
+            <th class="u-width-50p">Klub</th>
+            <th>
+              <abbr title="Zápasy">Z</abbr>
+            </th>
+            <th>
+              <abbr title="Góly">G</abbr>
+            </th>
+            <th>
+              <abbr title="Žluté karty">ŽK</abbr>
+            </th>
+            <th>
+              <abbr title="Červené karty">ČK</abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Ondřej Procházka</a>
+            </td>
+            <td>20 let</td>
+            <td>FC Slovan Rosice</td>
+            <!-- Pokud je hodnota 0, je zvýrazněna třídou u-c-grey--100 -->
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Pavel Pýcha</a>
+            </td>
+            <td>18 let</td>
+            <td>FC Hlučín</td>
+            <td>2</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Roberts Bukarts</a>
+            </td>
+            <td>21 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>8</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td>1</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Jan Pohl</a>
+            </td>
+            <td>18 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>7</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Defenders section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Obránci</h2>
+      <table class="Table u-mt-16">
+        <thead>
+          <tr>
+            <th class="u-sticky-cell u-width-25p">Jméno</th>
+            <th>Věk</th>
+            <th class="u-width-50p">Klub</th>
+            <th>
+              <abbr title="Zápasy">Z</abbr>
+            </th>
+            <th>
+              <abbr title="Góly">G</abbr>
+            </th>
+            <th>
+              <abbr title="Žluté karty">ŽK</abbr>
+            </th>
+            <th>
+              <abbr title="Červené karty">ČK</abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Lukáš Květoň</a>
+            </td>
+            <td>20 let</td>
+            <td>FC Slovan Rosice</td>
+            <!-- Pokud je hodnota 0, je zvýrazněna třídou u-c-grey--100 -->
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Martin Heřman</a>
+            </td>
+            <td>18 let</td>
+            <td>FC Hlučín</td>
+            <td>2</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Peter Mueller</a>
+            </td>
+            <td>21 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>8</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td>1</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Angelo Esposito</a>
+            </td>
+            <td>18 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>7</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Halfbacks section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Záložníci</h2>
+      <table class="Table u-mt-16">
+        <thead>
+          <tr>
+            <th class="u-sticky-cell u-width-25p">Jméno</th>
+            <th>Věk</th>
+            <th class="u-width-50p">Klub</th>
+            <th>
+              <abbr title="Zápasy">Z</abbr>
+            </th>
+            <th>
+              <abbr title="Góly">G</abbr>
+            </th>
+            <th>
+              <abbr title="Žluté karty">ŽK</abbr>
+            </th>
+            <th>
+              <abbr title="Červené karty">ČK</abbr>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Jaroslav Hlinka</a>
+            </td>
+            <td>20 let</td>
+            <td>FC Slovan Rosice</td>
+            <!-- Pokud je hodnota 0, je zvýrazněna třídou u-c-grey--100 -->
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Jan Ščotka</a>
+            </td>
+            <td>18 let</td>
+            <td>FC Hlučín</td>
+            <td>2</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Brandon Maxwell</a>
+            </td>
+            <td>21 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>31</td>
+            <td>
+              <strong>5</strong>
+            </td>
+            <td>1</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+          <tr>
+            <td class="u-sticky-cell">
+              <a href="#" class="Link Link--inverted">Nicholas Schaus</a>
+            </td>
+            <td>18 let</td>
+            <td>ČSK Uherský Brod</td>
+            <td>7</td>
+            <td class="u-c-grey--100">
+              <strong>0</strong>
+            </td>
+            <td class="u-c-grey--100">0</td>
+            <td class="u-c-grey--100">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+{% endblock %}

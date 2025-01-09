@@ -1,0 +1,6 @@
+galerie-form__img {
+    width: 100%;
+    min-width: 200px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}

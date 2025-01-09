@@ -1,0 +1,43 @@
+.match {
+
+    background: #fff;
+    border: 1px solid @grey;
+    border-width: 0 1px 1px 1px;
+    .f-12;
+
+    &:first-child {
+        border-top-width: 1px;
+    }
+}
+
+h2 + .match {
+    border-top-width: 1px;
+}
+
+.match-meta.match-meta {
+    background: @tbl-background;
+    display: block;
+    color: @text;
+    .p-5;
+    
+    &:hover, &:focus {
+        background: lighten(@lightBlue, 1%);
+    }
+}
+
+.match-description {
+    .p-0;
+    .f-12;
+    line-height: 1.5em;
+    p {
+        .p-5;
+        .m-0;
+        + p {
+            .p-t-0; 
+        }
+    }
+}
+
+.match-number {
+    text-decoration: underline;
+}

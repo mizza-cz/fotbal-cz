@@ -1,0 +1,230 @@
+@mixin subMenuActive() {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.NavPrimary {
+  @include respondTo(lg) {
+    width: 100%;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+
+    @include respondTo(lg) {
+      flex-direction: column;
+      align-items: stretch;
+      margin: 1rem 0;
+    }
+  }
+
+  &-item {
+    padding: 0 1.5rem;
+
+    @include respondFrom(xl) {
+      padding: 0 0.875rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:last-child) {
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 0.125rem;
+          height: 1rem;
+          position: absolute;
+          top: 50%;
+          right: -0.0625rem;
+          background-color: $colorGrey--90;
+          transform: translateY(-50%);
+          z-index: 0;
+        }
+      }
+    }
+
+    &--hasSubMenu {
+      position: relative;
+
+      @media (hover: hover) and (min-width: 801px) {
+        &:hover {
+          .Nav-link {
+            // color: $colorPrimary;
+          }
+
+          .SubMenu {
+            @include subMenuActive();
+            transition-timing-function: $easeOutQuad;
+            // transition-delay: 0s;
+          }
+        }
+
+        .Nav-link {
+          cursor: default;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      @include respondTo(sm) {
+        .Nav-link {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    font-family: $fontFamilySecondary;
+    @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-decoration: none;
+    text-decoration-color: transparent;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 1.25rem 0;
+
+    @include respondTo(lg) {
+      font-size: $fontSizeNormal;
+      line-height: 1.5;
+      padding: 0.5rem 0;
+      text-align: right;
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $colorTertiary;
+
+      span {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 0.125rem;
+        position: absolute;
+        bottom: -0.125rem;
+        background-color: $colorTertiary;
+        transition: transform 0.25s ease-in-out;
+        transform: scaleX(0);
+      }
+    }
+  }
+
+  // .SubMenu {
+  //   min-width: 10.5rem;
+  //   position: absolute;
+  //   top: calc(100% + 1rem);
+  //   left: 50%;
+  //   background-color: $colorWhite;
+  //   text-align: center;
+  //   padding: 1.5rem;
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   transform: translate(-50%, 1.5rem) scale(0.96);
+  //   transition: opacity 0.25s $easeInQuad 0.25s, visibility 0.25s $easeInQuad 0.25s, transform 0.25s $easeInQuad 0.25s;
+  //   will-change: opacity, transform;
+  //   z-index: z(default);
+
+  //   @include respondTo(sm) {
+  //     display: none;
+  //     min-width: 0;
+  //     width: 100%;
+  //     position: static;
+  //     top: 0;
+  //     background-color: $colorWhite;
+  //     border-radius: 0;
+  //     padding: 1rem 0 0;
+  //     transform: none;
+  //   }
+
+  //   &.is-active {
+  //     @include subMenuActive();
+  //     transition-timing-function: $easeOutQuad;
+  //     transition-delay: 0s;
+
+  //     @include respondTo(sm) {
+  //       display: block;
+  //       transition: none;
+  //       animation-name: fadeInUpSubMenu;
+  //       animation-duration: 0.5s;
+  //       animation-timing-function: $easeOutQuad;
+  //       animation-direction: alternate;
+  //       animation-fill-mode: forwards;
+  //       animation-iteration-count: 1;
+  //     }
+  //   }
+
+  //   &::before {
+  //     content: "";
+  //     width: 0;
+  //     height: 0;
+  //     position: absolute;
+  //     top: rem(-8px);
+  //     left: 50%;
+  //     border-style: solid;
+  //     border-width: 0 rem(8px) rem(8px) rem(8px);
+  //     border-color: transparent transparent $colorWhite transparent;
+  //     margin-left: -0.5rem;
+
+  //     @include respondTo(sm) {
+  //       display: none;
+  //     }
+  //   }
+
+  //   &-item {
+  //     margin-bottom: 0.5rem;
+
+  //     &:last-child {
+  //       margin-bottom: 0;
+  //     }
+
+  //     @include respondTo(sm) {
+  //       margin-bottom: 1rem;
+  //     }
+  //   }
+
+  //   &-link {
+  //     @include text($colorBlack, $fontSizeSmall, $fontWeightBold, inherit);
+  //     text-decoration: none;
+  //     white-space: nowrap;
+
+  //     &:focus,
+  //     &:hover,
+  //     &:active {
+  //       text-decoration: underline;
+  //     }
+  //   }
+  // }
+}
+
+// @keyframes fadeInUpSubMenu {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-0.5rem);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }

@@ -1,0 +1,266 @@
+/**
+Motivy
+
+Přebarvení částí jednotlivých sekcí
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 70.
+*/
+
+
+/**
+Motiv FAČR
+
+<strong>Slouží jako šablona témat i pro ostatní sekce -> ty vytvářet až bude toto téma hotové, ať je rozdíl pouze v barvách a ne obsahu</strong><br><br>
+Styl pro odlišení grafických prvků v sekci FAČR
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-facr">
+	<h1 class=".h1">Nadpis sekce FAČR</h1>
+</div>
+
+Styleguide 70.1.
+*/
+.theme-facr {
+	.site-heading:before { background-color: @red; }
+
+	.h1,
+	.citation { border-color: @red; }	
+}
+
+/**
+Motiv soutěže
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-souteze">
+	<h1 class=".h1">Nadpis sekce Soutěže</h1>
+</div>
+
+Styleguide 70.2.
+*/
+.theme-souteze {
+	.site-heading:before { background-color: @sec-competitions ; }
+	
+	.h1,
+	.citation { border-color: @sec-competitions ; }	
+}
+
+/**
+Motiv můj fotbal
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-mujfotbal">
+	<h1 class=".h1">Nadpis sekce Můj fotbal</h1>
+</div>
+
+Styleguide 70.3.
+*/
+.theme-mujfotbal {
+	.site-heading:before { background-color: @sec-myfootball ; }
+	
+	.h1,
+	.citation { border-color: @sec-myfootball ; }	
+}
+
+
+/**
+Motiv trénink
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-trenink">
+	<h1 class=".h1">Nadpis sekce Trénink</h1>
+</div>
+
+Styleguide 70.4.
+*/
+.theme-trenink {
+	.site-heading:before { background-color: @sec-training ; }
+	
+	.h1,
+	.citation { border-color: @sec-training ; }	
+}
+
+
+/**
+Motiv rozhodčí
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-rozhodci">
+	<h1 class=".h1">Nadpis sekce Rozhodčí</h1>
+</div>
+
+Styleguide 70.5.
+*/
+.theme-rozhodci {
+	.site-heading:before { background-color: @sec-referees ; }
+	
+	.h1,
+	.citation { border-color: @sec-referees ; }	
+}
+
+
+/**
+Motiv ženy
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-zeny">
+	<h1 class=".h1">Nadpis sekce Ženy</h1>
+</div>
+
+Styleguide 70.6.
+*/
+.theme-zeny {
+	.site-heading:before { background-color: @sec-women ; }
+	
+	.h1,
+	.citation { border-color: @sec-women ; }	
+}
+
+
+
+/**
+Motiv futsal
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-futsal">
+	<h1 class=".h1">Nadpis sekce Futsal</h1>
+</div>
+
+Styleguide 70.7.
+*/
+.theme-futsal {
+	.site-heading:before { background-color: @sec-futsal ; }
+	
+	.h1,
+	.citation { border-color: @sec-futsal ; }	
+}
+
+
+/**
+Motiv tv
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-tv">
+	<h1 class=".h1">Nadpis sekce TV</h1>
+</div>
+
+Styleguide 70.8.
+*/
+.theme-tv {
+	.site-heading:before { background-color: @sec-tv ; }
+	
+	.h1,
+	.citation { border-color: @sec-tv ; }	
+}
+
+/**
+Motiv EURO 2016
+
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+
+Markup:
+<div style="padding: 10px; background: #fff" class="theme-euro2016">
+	<h1 class=".h1">Nadpis sekce TV</h1>
+</div>
+
+Styleguide 70.8.
+*/
+
+@blueEURO: #0696d5;
+@midBlueEURO: #0068a9;
+@darkBlueEURO: #002b5b;
+
+.theme-euro2016 {
+
+	.line-site-heading {
+		background-image: url('../img/site-heading-euro.png');
+		background-size: contain;
+	}
+
+	.column-left {
+		background: @blueEURO;
+	}
+
+	.menu {
+		.menu-item-link {
+			border-top: 1px solid lighten(@blueEURO, 10%);
+			border-bottom: 1px solid darken(@blueEURO, 10%);
+			&:hover {
+				color: #ddd;
+			}
+		}
+
+		.menu-item > .menu-submenu {
+			background: @midBlueEURO;
+
+			> .menu-item > .menu-item-link {
+				border-top: 1px solid lighten(@midBlueEURO, 10%);
+				border-bottom: 1px solid darken(@midBlueEURO, 10%);
+			}
+		}
+	}
+
+	.line {
+		&.line-mid-blue {
+			background-color: @midBlueEURO;
+		}
+		&.line-dark-blue {
+			background-color: @darkBlueEURO;
+		}
+		&.line-main-nav {
+			background-color: @darkBlueEURO;
+		}
+		&.line-footer-nav {
+			background-color: @darkBlueEURO;
+		}
+	}
+
+	.navigation {
+		 .menu-item {
+		 	&.is-active, &:hover {
+		 		a {
+		 			background: @midBlueEURO;
+		 			color: #fff;
+		 			&:after {
+		 				background-color: @midBlueEURO;
+		 			}
+		 		}
+		 		&.menu-item-euro2016 {
+		 			a {
+		 				border-top-color: @blueEURO;
+		 			}
+		 		}
+		 	}
+		 }
+	}
+	
+	.site-heading:before { background-color: @blueEURO ; }
+	
+	.h1,
+	.citation { border-color: @blueEURO ; }	
+}

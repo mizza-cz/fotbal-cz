@@ -1,0 +1,31 @@
+/**
+ * Fotbal.cz - media queries
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+
+// Breakpoints
+@w-mini: 440px;
+@w-extraSmall: 576px;
+@w-small: 769px;
+@w-show-navigation: 990px;
+@w-medium: 1024px;
+@w-large: 1320px;
+
+// Media queries
+@mini: ~"only screen and (min-width: @{w-mini})";
+@extraSmall: ~"only screen and (min-width: @{w-extraSmall})";
+@small: ~"only screen and (min-width: @{w-small})";
+@show-navigation: ~"only screen and (min-width: @{w-show-navigation})";
+@medium: ~"only screen and (min-width: @{w-medium})";
+@large: ~"only screen and (min-width: @{w-large})";
+
+@tiny-only: ~"only screen and (max-width: 439px)";
+@mini-only: ~"only screen and (min-width: @{w-mini}) and (max-width: 768px)";
+@small-only: ~"only screen and (min-width: @{w-small}) and (max-width: 1023px)";
+@medium-only: ~"only screen and (min-width: @{w-medium}) and (max-width: 1319px)";
+@large-only: ~"only screen and (min-width: @{w-large})";
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)", ~"only screen and (min--moz-device-pixel-ratio: 1.5)", ~"only screen and (-o-min-device-pixel-ratio: 3/2)", ~"only screen and (min-device-pixel-ratio: 1.5)";
+
+// TODO: tablet with orientation landscape

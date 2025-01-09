@@ -1,0 +1,83 @@
+/**
+Alert
+
+Blok výstrahy
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 12.
+*/
+
+/**
+Základní styl - NewsRoll
+
+Markup:
+<div class="alert {{modifier_class}} {$modifier_class}">
+		<a href="#" class="btn mod-grey mod-small t-uppercase">Newsroll</a>
+		<button class="btn mod-small mod-link alert-close" onclick="app.alertFadeOut(this)">X</button>
+		<div class="alert-content">
+			<p>Krajské výběry starších žáků se utkají na prestižním fotbalovém utkání <a href="#">Kouba cup</a>.</p>
+		</div>	
+</div>
+
+Styleguide 12.1.
+*/
+
+.alert {
+	background: @alert-background; 
+	color: @darkBlue;
+	.p(15px 40px 15px 15px);
+	.m-clearfix();
+	position: relative;
+
+	.alert-content { 
+		clear: left;
+		
+		* { .f-14; }
+
+		p { .m(0); } 
+		
+		@media @small {
+			width: 100%;
+			box-sizing: border-box;
+			display: table-cell;
+		}
+	}
+
+	.alert-content a,
+	.alert-close { 
+		color: @blue; 
+
+		&:hover,
+		&:focus { color: #000; }
+	}
+
+	.btn { 
+		.m-block;
+		.m-b-10; 
+		.m-r(50px);
+		
+		@media @small {
+			.m-inline-block;
+			.m-r-20;
+			.m-b-0;
+			float: left;
+		}
+	}
+
+	.alert-close {
+		.m-r(0);
+		.m-b(0);
+		.m-t(-20px);
+		.m-block;
+		.f-20;
+		.p(10px 15px);
+		float: right;
+		text-decoration: none;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		color: @grey;
+	}
+}

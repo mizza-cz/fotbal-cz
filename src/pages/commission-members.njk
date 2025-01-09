@@ -1,0 +1,54 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název komise} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Výkonný výbor</h1>
+    {{ mainContentNav.render(commission.menu, 1) }}
+
+    <!-- Members -->
+    <ul class="MembersGrid u-mt-primary">
+      <li class="MemberItem">
+        <div class="MemberItem-imgContainer">
+          <img class="MemberItem-img" src="./img/placeholder-commission-member@3x.jpg" width="84" height="84" alt="{Jméno člena komise}" loading="lazy"/>
+        </div>
+        <div class="MemberItem-textContainer">
+          <a href="#" class="H6 Link--inverted Link--stretched">Petr Fousek</a>
+          <p class="u-mt-4">Předseda VV FAČR</p>
+        </div>
+      </li>
+      <li class="MemberItem">
+        <div class="MemberItem-imgContainer">
+          <img class="MemberItem-img" src="./img/placeholder-commission-member@3x.jpg" width="84" height="84" alt="{Jméno člena komise}" loading="lazy"/>
+        </div>
+        <div class="MemberItem-textContainer">
+          <a href="#" class="H6 Link--inverted Link--stretched">{Jméno Příjmení}</a>
+          <p class="u-mt-4">{Funkce}</p>
+        </div>
+      </li>
+      <li class="MemberItem">
+        <div class="MemberItem-imgContainer">
+          <img class="MemberItem-img" src="./img/placeholder-commission-member@3x.jpg" width="84" height="84" alt="{Jméno člena komise}" loading="lazy"/>
+        </div>
+        <div class="MemberItem-textContainer">
+          <a href="#" class="H6 Link--inverted Link--stretched">{Jméno Příjmení}</a>
+          <p class="u-mt-4">{Funkce}</p>
+        </div>
+      </li>
+      <li class="MemberItem">
+        <div class="MemberItem-imgContainer">
+          <img class="MemberItem-img" src="./img/placeholder-commission-member@3x.jpg" width="84" height="84" alt="{Jméno člena komise}" loading="lazy"/>
+        </div>
+        <div class="MemberItem-textContainer">
+          <a href="#" class="H6 Link--inverted Link--stretched">{Jméno Příjmení}</a>
+          <p class="u-mt-4">{Funkce}</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+{% endblock %}

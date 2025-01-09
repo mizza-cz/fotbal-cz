@@ -1,0 +1,223 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Jméno trenéra} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <article class="Coach">
+      <header class="Coach-header">
+        <!-- Zdroj ideálně čtverec 640 x 640 px, pokud nebude, nevadí, zobrazí se odshora jako čtverec -->
+        <img class="Coach-img" src="./img/placeholder-coach.jpg" width="320" height="320" alt="{jméno trenéra}"/>
+        <h1 class="H2 u-mt-24">
+          <span class="H6 u-display-block">Jaroslav</span>
+          Šilhavý
+        </h1>
+        <p class="H8 u-c-grey--100">Trenér, 61 let</p>
+      </header>
+      <div class="Coach-body u-mt-24">
+        <div class="Article-body u-mt-0">
+          <p>
+            <strong>Trenérská kariéra:
+            </strong>
+            předseda futsalové komise ČMFS (1990-2001), tiskový mluvčí a vedoucí mezinárodního oddělení ČMFS (1995-96), generální sekretář ČMFS (2001-07), člen futsalových komisí UEFA (od 1994, byl i místopředsedou a předsedou) a FIFA (1998-2016), člen expertního týmu ČOV (2012-16), poradce předsedy FAČR (2011-17), šéf organizačního výboru mistrovství Evropy hráčů do 21 let na českém území (2015), krizový manažer FIFA v Řecku (2018 - 2020), předseda FAČR (od roku 2021), člen VV UEFA (od roku 2023).</p>
+        </div>
+      </div>
+
+      <table class="TableStats TableStats--coach">
+        <thead>
+          <tr>
+            <th>Tým</th>
+            <th>Zápasy</th>
+            <th>
+              <abbr title="výhry-remízy-prohry">V-R-P</abbr>
+            </th>
+            <th>Skóre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Team stats row -->
+          <tr>
+            <td>Česko A</td>
+            <td>3</td>
+            <td>1-1-1</td>
+            <td>
+              4:4
+              <button type="button" class="ToggleIconButton u-mr-16 u-md-mr-0 js-statsDetails-toggle" aria-expanded="false" title="Zobrazit/skrýt podrobnosti">
+                <svg width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xlink:href="#chevron-circle-down"></use>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <!-- Collapsible team stats details -->
+          <tr class="TableStats-details js-statsDetails u-display-none">
+            <td colspan="4">
+              <table class="js-table-notResponsive">
+                <tbody>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Přípravné utkání</td>
+                    <td>11. 10. 2023</td>
+                    <td>Gaziantep</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <strong class="u-c-green--dark">2:0</strong>
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Liga národů 2022/23</td>
+                    <td>11. 10. 2023</td>
+                    <td>Olomouc</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <strong class="u-c-red">0:2</strong>
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Kvalifikace EURO</td>
+                    <td>11. 10. 2023</td>
+                    <td>Lisabon</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <strong class="u-c-grey--100">2:2</strong>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- Team stats row -->
+          <tr>
+            <td>Česko U21</td>
+            <td>3</td>
+            <td>1-1-1</td>
+            <td>
+              4:4
+              <button type="button" class="ToggleIconButton u-mr-16 u-md-mr-0 js-statsDetails-toggle" aria-expanded="false" title="Zobrazit/skrýt podrobnosti">
+                <svg width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xlink:href="#chevron-circle-down"></use>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <!-- Collapsible team stats details -->
+          <tr class="TableStats-details u-display-none js-statsDetails">
+            <td colspan="4">
+              <table class="js-table-notResponsive">
+                <tbody>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Přípravné utkání</td>
+                    <td>11. 10. 2023</td>
+                    <td>Gaziantep</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <strong class="u-c-green--dark">2:0</strong>
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Spojené arabské emiráty">UAE</abbr>
+                        <span class="Flag fi fi-ae fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Liga národů 2022/23</td>
+                    <td>11. 10. 2023</td>
+                    <td>Olomouc</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <strong class="u-c-red">0:2</strong>
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Spojené arabské emiráty">UAE</abbr>
+                        <span class="Flag fi fi-ae fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Kvalifikace EURO</td>
+                    <td>11. 10. 2023</td>
+                    <td>Lisabon</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <strong class="u-c-grey--100">2:2</strong>
+                        <abbr title="Spojené arabské emiráty">UAE</abbr>
+                        <span class="Flag fi fi-ae fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Articles 6x -->
+    <section class="u-mt-24">
+      <h2 class="H6">Články</h2>
+      <div class="ArticlesSmallGrid u-mt-16">
+        {% for item in range(0, 6) %}
+          {% include "../templates/partials/_articleBoxSmall.njk" %}
+        {% endfor %}
+      </div>
+      <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-24">
+        <a href="#" class="Button">Další zprávy</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}

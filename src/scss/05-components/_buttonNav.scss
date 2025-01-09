@@ -1,0 +1,62 @@
+.ButtonNav {
+  &--vertical {
+    .ButtonNav-item {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &--horizontal {
+    .ButtonNav-menu {
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .ButtonNav-item {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    font-family: $fontFamilySecondary;
+    @include text($colorTertiary, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+    text-decoration: none;
+    text-decoration-color: transparent;
+    white-space: nowrap;
+    background-color: $colorWhite;
+    border: $borderPrimary;
+    border-radius: $borderRadiusPrimary;
+    cursor: pointer;
+    padding: rem(8px) rem(12px);
+    transition: color 0.25s linear, outline-offset 0.25s linear, text-decoration-color 0.25s linear,
+      transform 0.25s ease-in-out;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 0.125rem;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  &-link--grey {
+    border-color: $colorGrey--100;
+    color: $colorGrey--100;
+  }
+  &-link--red {
+    border-color: $colorRed;
+    background: $colorRed;
+    color: #fff;
+  }
+  &-link--black {
+    border-color: #000;
+    color: #000;
+  }
+}

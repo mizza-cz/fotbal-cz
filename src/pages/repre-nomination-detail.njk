@@ -1,0 +1,434 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Reprezentace - Nominace - detail} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Nominace ČR A na červnové zápasy Ligy národů</h1>
+
+    <!-- Optional notes -->
+    <div class="Box Box--notes u-mt-24">
+      <strong class="u-fs-small u-tt-uppercase">Poznámky</strong>
+      <p>ZAHÁJENÍ SRAZU je v neděli
+        <strong>18. září 2022 v 18:00</strong>
+        v Hotelu Pyramida v Praze<br/>UKONČENÍ SRAZU je v úterý
+        <strong>27. září 2022 po utkání s Islandem</strong>
+      </p>
+    </div>
+
+    <!-- Matches section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Zápasy</h2>
+      <ul class="u-mt-16">
+        <!-- Match - win -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--win">4:0</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Turnaj:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - tie -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--tie">3:3</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Turnaj:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - loss -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--loss">2:5</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Turnaj:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - upcoming -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result">-:-</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Turnaj:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - upcoming/postponed -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H8 MatchItem-result MatchItem-result--postponed">Zápas odložen</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Turnaj:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Team section -->
+    <section class="u-mt-primary">
+      <h2 class="H5">Nominováni / National Team Squad</h2>
+
+      <!-- Goalies section -->
+      <section class="u-mt-24">
+        <h3 class="H6">Brankáři / Goalkeepers</h3>
+        <table class="Table u-mt-16">
+          <thead>
+            <tr>
+              <th class="u-sticky-cell u-width-25p">Jméno</th>
+              <th>Věk</th>
+              <th class="u-width-50p">Klub</th>
+              <th>
+                <abbr title="Zápasy">Z</abbr>
+              </th>
+              <th>
+                <abbr title="Góly">G</abbr>
+              </th>
+              <th>
+                <abbr title="Žluté karty">ŽK</abbr>
+              </th>
+              <th>
+                <abbr title="Červené karty">ČK</abbr>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Ondřej Procházka</a>
+              </td>
+              <td>20 let</td>
+              <td>FC Slovan Rosice</td>
+              <!-- Pokud je hodnota 0, je zvýrazněna třídou u-c-grey--100 -->
+              <td class="u-c-grey--100">0</td>
+              <td class="u-c-grey--100">
+                <strong>0</strong>
+              </td>
+              <td class="u-c-grey--100">0</td>
+              <td class="u-c-grey--100">0</td>
+            </tr>
+            <tr>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Pavel Pýcha</a>
+              </td>
+              <td>18 let</td>
+              <td>FC Hlučín</td>
+              <td>2</td>
+              <td class="u-c-grey--100">
+                <strong>0</strong>
+              </td>
+              <td class="u-c-grey--100">0</td>
+              <td class="u-c-grey--100">0</td>
+            </tr>
+            <tr>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Roberts Bukarts</a>
+              </td>
+              <td>21 let</td>
+              <td>ČSK Uherský Brod</td>
+              <td>8</td>
+              <td class="u-c-grey--100">
+                <strong>0</strong>
+              </td>
+              <td>1</td>
+              <td class="u-c-grey--100">0</td>
+            </tr>
+            <tr>
+              <td class="u-sticky-cell">
+                <a href="#" class="Link Link--inverted">Jan Pohl</a>
+              </td>
+              <td>18 let</td>
+              <td>ČSK Uherský Brod</td>
+              <td>7</td>
+              <td class="u-c-grey--100">
+                <strong>0</strong>
+              </td>
+              <td class="u-c-grey--100">0</td>
+              <td class="u-c-grey--100">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Staff section -->
+      <section class="u-mt-primary">
+        <h3 class="H6">Realizační tým</h3>
+        <div class="StaffGrid u-mt-16">
+          <table class="Table">
+            <thead class="u-sr-only">
+              <tr>
+                <th>Jméno</th>
+                <th>Funkce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Ondřej Procházka</a>
+                </td>
+                <td>Jaroslav Šilhavý</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Radek Černý</a>
+                </td>
+                <td>Trenér gólmanů</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Tomáš Galásek</a>
+                </td>
+                <td>Asistent trenéra</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="Table">
+            <thead class="u-sr-only">
+              <tr>
+                <th>Jméno</th>
+                <th>Funkce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Ondřej Procházka</a>
+                </td>
+                <td>Jaroslav Šilhavý</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Radek Černý</a>
+                </td>
+                <td>Trenér gólmanů</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">Tomáš Galásek</a>
+                </td>
+                <td>Asistent trenéra</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="Link Link--inverted">{jméno příjmení}</a>
+                </td>
+                <td>{funkce}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+{% endblock %}

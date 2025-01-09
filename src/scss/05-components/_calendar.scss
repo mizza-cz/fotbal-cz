@@ -1,0 +1,199 @@
+.Calendar {
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &-monthSwitcher {
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: $colorBlack;
+      transition: fill 0.25s ease;
+    }
+
+    &:focus,
+    &:hover {
+      svg {
+        fill: $colorTertiary;
+      }
+    }
+
+    h2 {
+      min-width: rem(200px);
+      text-align: center;
+      margin: 0 0.5rem;
+    }
+  }
+
+  &-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &-body {
+    table {
+      width: 100%;
+
+      thead {
+        tr {
+          display: flex;
+          border-top: $borderPrimary;
+          border-bottom: $borderPrimary;
+        }
+
+        th {
+          min-width: rem(148px);
+          width: calc(100% / 7);
+          @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+          text-align: center;
+          text-transform: uppercase;
+          white-space: nowrap;
+          background-color: $colorWhite;
+          padding: 0.5rem 1rem;
+
+          abbr {
+            text-decoration: none;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          display: flex;
+          border-bottom: $borderPrimary;
+        }
+
+        td {
+          min-width: rem(148px);
+          width: calc(100% / 7);
+          position: relative;
+          font-family: $fontFamilySecondary;
+          @include text($colorText, $fontSizeExtraBig, $fontWeightSemiBold, 1.4);
+          text-align: right;
+          white-space: nowrap;
+          background-color: $colorWhite;
+          padding: 1rem 0.625rem 0.5rem 0.5rem;
+
+          &:not(:last-child) {
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0.5rem;
+              right: 0;
+              @include roundedBorderVer();
+              height: calc(100% - 1rem);
+            }
+          }
+
+          &.is-inactive {
+            div {
+              & > span {
+                color: $colorGrey--100;
+              }
+            }
+          }
+
+          & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: rem(122px);
+            height: 100%;
+            line-height: 1;
+
+            & > span {
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-match {
+    display: block;
+    text-decoration: none;
+    border-radius: $borderRadiusPrimary;
+    padding: 0.5rem;
+
+    &--men {
+      background-color: rgba(13, 85, 255, 0.15);
+    }
+
+    &--youth {
+      background-color: rgba(53, 255, 105, 0.15);
+    }
+
+    &--women {
+      background-color: rgb(249 219 251);
+    }
+
+    &--futsal {
+      background-color: rgb(252 234 233);
+    }
+
+    &--beach {
+      background-color: rgba(255, 198, 0, 0.1);
+    }
+
+    & + & {
+      margin-top: 0.125rem;
+    }
+
+    // Wrapper
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Flag {
+      width: 1rem !important;
+      height: 1rem !important;
+      margin-right: 0.25rem;
+
+      &:last-of-type {
+        margin-left: 0.25rem;
+        margin-right: 0;
+      }
+    }
+
+    // Category
+    p {
+      font-family: $fontFamilyPrimary;
+      @include text($colorGrey--100, $fontSizeExtraSmall, $fontWeightNormal, inherit);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    // Team abbr
+    abbr {
+      @include text($colorText, $fontSizeExtraSmall, $fontWeightSemiBold, 1.33);
+      text-decoration: none;
+      text-decoration-color: transparent;
+      transition: color 0.25s linear, text-decoration-color 0.25s linear;
+    }
+
+    &:focus,
+    &:hover {
+      abbr {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+        text-decoration-thickness: 0.125rem;
+      }
+    }
+
+    // Result
+    .MatchItem-result {
+      display: block;
+      font-size: $fontSizeSmall;
+      text-align: center;
+    }
+  }
+}

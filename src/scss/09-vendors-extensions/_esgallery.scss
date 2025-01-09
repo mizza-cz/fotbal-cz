@@ -1,0 +1,224 @@
+.esgallery {
+  font-family: $fontFamilyPrimary;
+
+  .sprite,
+  .sprite-social,
+  #media-top #media-back a:after,
+  #media-top #media-back a:hover:after {
+    background-image: none;
+  }
+
+  #media-top #media-title h1 {
+    line-height: 70px !important;
+    padding: 0 !important;
+    margin-left: 2rem;
+
+    @include respondTo(xs) {
+      margin-left: 1rem;
+    }
+  }
+
+  #media-top #media-back a {
+    display: flex !important;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 !important;
+    margin-right: 2rem;
+
+    @include respondTo(xs) {
+      margin-right: 1rem;
+    }
+
+    &:focus,
+    &:hover {
+      color: $colorWhite !important;
+      text-decoration: underline;
+    }
+
+    span {
+      @include text($colorWhite, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+      text-transform: none;
+    }
+  }
+
+  #media-container {
+    background-color: $colorBlack;
+  }
+
+  #media-main-container {
+    .arrow {
+      width: rem(42px);
+      height: rem(42px);
+
+      @include respondTo(xs) {
+        width: rem(22px);
+        height: rem(22px);
+      }
+    }
+
+    .arrow.left,
+    .arrow.right {
+      a {
+        width: rem(42px);
+        height: rem(42px);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include respondTo(xs) {
+          width: rem(22px);
+          height: rem(22px);
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .arrow.left {
+      left: 2rem;
+
+      @include respondTo(xs) {
+        left: 1rem;
+      }
+
+      a {
+        background-image: url(../img/icons/chevron-circle-left-white.svg);
+      }
+    }
+
+    .arrow.right {
+      right: 2rem;
+
+      @include respondTo(xs) {
+        right: 1rem;
+      }
+
+      a {
+        background-image: url(../img/icons/chevron-circle-right-white.svg);
+      }
+    }
+  }
+
+  #media-top,
+  #media-control {
+    background-color: rgba($colorWhite, 0.1);
+  }
+
+  #media-control {
+    height: auto;
+    background-image: none;
+    box-shadow: none;
+    padding: 0.5rem 0;
+  }
+
+  #media-control-container a {
+    border: none;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      background-image: none;
+    }
+  }
+
+  #media-control-container {
+    width: rem(52px) !important;
+
+    .control-playlist,
+    .control-slideshow {
+      width: rem(22px) !important;
+      height: rem(22px) !important;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      span {
+        display: none !important;
+      }
+    }
+
+    .control-playlist {
+      background-image: url(../img/icons/arrow-circle-down-white.svg) !important;
+      margin-right: 0.5rem;
+    }
+
+    .control-slideshow {
+      background-image: url(../img/icons/play-circle-white.svg) !important;
+    }
+
+    .control-full-image {
+      display: none !important;
+    }
+  }
+
+  #media-control-container a.control-playlist.active-control {
+    background-image: url(../img/icons/arrow-circle-up-white.svg) !important;
+  }
+
+  #media-control-container a.control-slideshow.active-control {
+    background-image: url(../img/icons/pause-circle-white.svg?v2) !important;
+  }
+
+  #media-playlist {
+    background-color: rgba($colorWhite, 0.15);
+  }
+
+  #media-list {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+
+      li {
+        display: block;
+        width: rem(124px);
+        height: auto;
+        padding: 0;
+
+        a {
+          display: block;
+          position: relative;
+          @include responsiveMediumContainer(3, 2);
+          border: 2px solid transparent;
+          transition: border-color 0.25s ease-in;
+
+          &:focus,
+          &:hover {
+            border-color: $colorWhite;
+            outline: none;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+
+  span.error:after {
+    background: #fff;
+    border: none;
+    color: red;
+    content: "Omlouváme se! Obrázek je zřejmě poškozen, nebo dočasně nedostupný.";
+    font-size: 1rem;
+    font-weight: 700;
+    height: auto;
+    line-height: 1.5;
+    padding: 1rem;
+    text-align: center;
+    top: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

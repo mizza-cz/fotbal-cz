@@ -1,0 +1,109 @@
+$sortable-colorActive: $colorPrimary;
+
+.sortable {
+  th {
+    button {
+      position: relative;
+      cursor: pointer;
+      @include transition(color, 0.25s, ease);
+
+      &:hover {
+        color: $sortable-colorActive;
+
+        &::after {
+          color: inherit;
+        }
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: transparent;
+        content: "\2195";
+        margin-left: 0.25rem;
+      }
+    }
+
+    &.dir-d {
+      button {
+        color: $sortable-colorActive;
+
+        &::after {
+          color: inherit;
+          content: "\2193";
+          transform: translateY(calc(-50% + 1px));
+        }
+      }
+    }
+
+    &.dir-u {
+      button {
+        color: $sortable-colorActive;
+
+        &::after {
+          color: inherit;
+          content: "\2191";
+          transform: translateY(calc(-50% + 1px));
+        }
+      }
+    }
+  }
+}
+
+// Alternate design with SVG icons
+// $sortable-colorActive: $colorPrimary;
+
+// .sortable {
+//   th {
+//     position: relative;
+//     cursor: pointer;
+//     @include transition(color, 0.25s, ease);
+
+//     &:hover {
+//       color: $sortable-colorActive;
+//       -webkit-text-fill-color: $sortable-colorActive !important;
+
+//       &::after {
+//         opacity: 1;
+//       }
+//     }
+
+//     &::after {
+//       content: "";
+//       display: inline-block;
+//       width: 1.5rem;
+//       height: 1.5rem;
+//       position: absolute;
+//       top: 50%;
+//       background-color: transparent;
+//       background-image: url(../img/icons/chevrons-y-red.svg);
+//       background-position: center center;
+//       background-repeat: no-repeat;
+//       background-size: contain;
+//       transform: translate(-0.125rem, calc(-50% - 0.5rem));
+//       opacity: 0;
+//       transition: opacity 0.25s linear;
+//     }
+
+//     &.dir-d {
+//       color: $sortable-colorActive;
+//       -webkit-text-fill-color: $sortable-colorActive !important;
+
+//       &::after {
+//         background-image: url(../img/icons/chevron-down-red.svg);
+//       }
+//     }
+
+//     &.dir-u {
+//       color: $sortable-colorActive;
+//       -webkit-text-fill-color: $sortable-colorActive !important;
+
+//       &::after {
+//         background-image: url(../img/icons/chevron-up-red.svg);
+//       }
+//     }
+//   }
+// }

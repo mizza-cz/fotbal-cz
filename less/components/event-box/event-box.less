@@ -1,0 +1,93 @@
+/**
+Event box
+
+Výpis události do boxu
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="box mod-bottom-shadow event-box">
+	<div class="event-box_body">
+		<img class="event-box_img" src="http://satyr.io/130x130/">
+		<h2 class="event-box_heading">Mistrovství světa</h2>
+		<p class="event-box_perex">Nejdůležitější soutěž mužských fotbalových družstev.</p>
+		<p class="event-box_description">Je organizována světovou fotbalovou konfederací FIFA. Finálový turnaj je nejsledovanější světovou sportovní událostí, předstihuje dokonce i olympijské hry.</p>
+	</div>
+	<div class="event-box_foot">
+		<form>
+			<div class="form-pair mod-small">
+				<div class="form-label">
+					<label for="year">Vyberte ročník:</label>
+				</div>
+				<div class="form-input">
+					<select name="year" id="year" class="form-select" data-placeholder="Klikněte zde">
+						<option></option>
+						<option value="2015">2015</option>
+						<option value="2014">2014</option>
+						<option value="2013">2013</option>
+						<option value="2012">2012</option>
+					</select>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+Styleguide 17.
+*/
+
+.event-box { background: #fff; }
+
+.event-box_body {
+	.m-clearfix();
+	.p(15px);
+	color: @darkBlue;
+}
+
+.event-box_img {
+	display: block;
+	.m(0 auto 15px auto);
+	width: 100%;
+	max-width: 130px;
+	max-height: auto;
+}
+
+.event-box_heading {
+	.m(0);
+	.m-b(10px);
+	text-align: center;
+	color: @blue;
+	.f-condensed-bold;
+	.f-28;
+}
+
+.event-box_perex {
+	.f-20;
+	.m(0);
+	.m-b(10px);
+}
+
+.event-box_description { .m(0); }
+
+.event-box_foot {
+	background-color: @tbl-background;
+	border-top: 1px solid @tbl-border;
+	.p(10px);
+}
+
+@media @small{
+	.event-box_img {
+		float: left;
+		.m-r(15px);
+		.m-b(0);
+	}
+	.event-box_heading { text-align: left; }
+	
+	.event-box_img ~ .event-box_heading,
+	.event-box_img ~ .event-box_perex,
+	.event-box_img ~ .event-box_description {
+		.p-l(145px);
+	}
+
+}

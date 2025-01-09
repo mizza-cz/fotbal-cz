@@ -1,0 +1,195 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'registration-loyalty | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsJS %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{% endblock %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+     <div class="registration-wrapper u-mx-auto">
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+      <div class="registration-modal u-mt-primary u-mx-auto">
+         <div class="registration-content u-mx-auto">
+            <h1 class="H3 u-mb-24">Registrace do věrnostního programu</h1>
+            <form action="" class="Form Grid registrationForm">
+                <div class="Grid-col Grid-col--3 u-mb-12">
+                  <div class="Form-item">
+                     <input type="text" maxlength="10" class="Form-input" placeholder="Titul">
+                  </div>
+                </div>
+                 <div class="Grid-col Grid-col--9 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" required class="Form-input" required placeholder="Jméno*">
+                  </div>
+                </div>
+                 <div class="Grid-col Grid-col--12 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Prostřední jméno*">
+                  </div>
+                </div>
+                 <div class="Grid-col Grid-col--12 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Příjmení*">
+                  </div>
+                </div>
+                  <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Datum narození</div>
+                  </div>
+                  <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+                     <div class="Form-item required">
+                        <select class="Select js-select2 u-width-100p u-bgc-white">
+                           <option>Den*</option>
+                           <option>1</option>
+                           <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                           <option>...</option>
+                        </select>
+                     </div>
+                  </div>
+                  
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+                     <div class="Form-item required">
+                        <select class="Select js-select2 u-width-100p u-bgc-white">
+                           <option>Měsíc*</option>
+                           <option>Leden</option>
+                           <option>Únor</option>
+                            <option>Březen</option>
+                            <option>Květen</option>
+                           <option>...</option>
+                        </select>
+                     </div>
+                  </div>
+                    <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+                     <div class="Form-item required">
+                        <select class="Select js-select2 u-width-100p u-bgc-white">
+                           <option>Rok*</option>
+                           <option>2024</option>
+                           <option>2023</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                           <option>...</option>
+                        </select>
+                     </div>
+                  </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                     <div class="Form-item required">
+                        <select class="Select js-select2 u-width-100p u-bgc-white">
+                           <option>Pohlaví*</option>
+                           <option>Muž</option>
+                           <option>Žena</option>
+                        </select>
+                     </div>
+                  </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Státní příslušnost*">
+                  </div>
+                </div>
+
+                <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Adresa trvalého bydliště</div>
+                  </div>
+               <div class="Grid-col Grid-col--xs-12 Grid-col--8 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Ulice*">
+                  </div>
+                </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Číslo popisné*">
+                  </div>
+                </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Město*">
+                  </div>
+                </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="PSČ*">
+                  </div>
+                </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="text" maxlength="50" class="Form-input"  placeholder="+420">
+                  </div>
+                </div>
+                   <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+                  <div class="Form-item required">
+                     <input type="tel" maxlength="50" class="Form-input"  placeholder="Telefonní číslo">
+                  </div>
+                </div>
+                 <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Zadejte heslo</div>
+                  </div>
+
+                    <div class="Grid-col Grid-col--12 u-mb-12">
+                     <div class="Form-item required registrationForm-password">
+                        <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Zadejte heslo*">
+                         <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+                     </div>
+                   </div>
+                    <div class="Grid-col Grid-col--12 u-mb-12">
+                     <div class="Form-item required registrationForm-password">
+                        <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Potvrďte heslo*">
+                          <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+                     </div>
+                  </div>
+                   <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1_1 u-pl-24 u-mb-24 u-mt-4 u-c-red">
+                        Heslo musí obsahovat alespoň 8 znaků. Jedno malé písmeno, jedno velké písmeno, jedno číslo a jeden speciální znak. Bez diakritiky.
+                     </div>
+                  </div>
+                    <div class="Grid-col Grid-col--12 u-mb-24">
+                     <div class="Checkbox required">
+                        <input type="checkbox" class="Checkbox-originalCheck" id="frm-requestForm-form-agree" required>
+                        <label class="Checkbox-label required u-pl-8" for="frm-requestForm-form-agree"><span>
+                           *Souhlasím se zpracováním osobních údajů... </span></label>
+                     </div>
+                  </div>
+                <div class="Grid-col Grid-col--12 u-mb-24">
+                     <div class="Checkbox  ">
+                        <input type="checkbox" class="Checkbox-originalCheck" id="frm-requestForm-form-agree2">
+                        <label class="Checkbox-label u-pl-8" for="frm-requestForm-form-agree2"><span>
+                          Souhlasím se zpracováním osobních údajů za účelem marketingu....</span></label>
+                     </div>
+               </div>
+                <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1_1 u-mb-24 u-mt-4 u-pl-16">
+                     Políčka označené * jsou povinná.
+                     </div>
+                  </div>
+                    <div class="Grid-col Grid-col--12">
+                     <div class="Form-item">
+                        <input type="submit" class="Button" value="Pokračovat">
+                     </div>
+                  </div>
+            </form>
+            <ul class="registration-links">
+               <li>
+                  <a href="#">Podmínky používání</a>
+               </li>
+               <li>
+                  <a href="#">Zásady ochrany soukromí</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+     </div>
+    </div>
+  </main>
+{% endblock %}

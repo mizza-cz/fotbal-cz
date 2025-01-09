@@ -1,0 +1,56 @@
+@media only screen and (min-width: 769px) {
+    .theme-eurou21 .line.line-main-nav {
+/*         background: linear-gradient( to top, rgb(227, 0, 45), rgb(8, 12, 64));        */
+        background: transparent;
+        border-color: rgba(255,255,255,.2);
+    }
+    
+    .theme-eurou21 .site-heading:before {
+        background: rgb(227, 0, 45);
+    }
+}
+
+.theme-eurou21 .header {
+/*     background: linear-gradient( to top, rgb(227, 0, 45), rgb(8, 12, 64)); */
+    background: rgb(8, 12, 64) url('../images/bg-header-eurou21.jpg') center bottom no-repeat;
+}
+
+.theme-eurou21 .line.line-dark-blue {
+    background: transparent;
+}
+
+
+.theme-eurou21 .menu {
+    background: rgb(8, 12, 64);
+}
+
+.theme-eurou21 .menu .menu-item-link {
+    border: 1px solid rgba(255,255,255,.2);
+    border-width: 0 0 1px 0;
+}
+.theme-eurou21 .menu .menu-item-link:hover {
+    color: rgb(227, 0, 45);
+}
+
+
+.theme-eurou21 .column-left {
+    background: transparent;
+}
+
+.theme-eurou21 .navigation .menu-item-link {
+    border-right-color: rgba(255,255,255,.2);
+}
+
+.theme-eurou21 .navigation .menu-item.is-active a:after, 
+.theme-eurou21 .navigation .menu-item:hover a:after,
+.theme-eurou21 .navigation .menu-item-link:hover {
+    background: rgba(255,255,255,.2);
+}
+
+.theme-eurou21 .line.line-footer-nav {
+    background: rgb(8, 12, 64);
+}
+
+.theme-eurou21 .line.line-mid-blue {
+    background: transparent;
+}

@@ -1,0 +1,194 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Reprezentace - Bilance dle roků} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Česko A - Bilance dle roků</h1>
+    <!-- Stats by years -->
+    <section class="u-mt-primary js-stats">
+      <table class="TableStats TableStats--team">
+        <thead>
+          <tr>
+            <th>Rok</th>
+            <th>Zápasy</th>
+            <th>
+              <abbr title="výhry-remízy-prohry">V-R-P</abbr>
+            </th>
+            <th>Skóre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Year stats row -->
+          <tr>
+            <td>2022</td>
+            <td>3</td>
+            <td>1-1-1</td>
+            <td>
+              4:4
+              <button type="button" class="ToggleIconButton u-mr-16 u-md-mr-0 js-statsDetails-toggle" aria-expanded="false" title="Zobrazit/skrýt podrobnosti">
+                <svg width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xlink:href="#chevron-circle-down"></use>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <!-- Collapsible year stats details -->
+          <tr class="TableStats-details u-display-none js-statsDetails">
+            <td colspan="4">
+              <table class="js-table-notResponsive">
+                <tbody>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Přípravné utkání</td>
+                    <td>11. 10. 2023</td>
+                    <td>Gaziantep</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <strong class="u-c-green--dark">2:0</strong>
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Liga národů 2022/23</td>
+                    <td>11. 10. 2023</td>
+                    <td>Olomouc</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <strong class="u-c-red">0:2</strong>
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Kvalifikace EURO</td>
+                    <td>11. 10. 2023</td>
+                    <td>Lisabon</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <strong class="u-c-grey--100">2:2</strong>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- Year stats row -->
+          <tr>
+            <td>2021</td>
+            <td>3</td>
+            <td>1-1-1</td>
+            <td>
+              4:4
+              <button type="button" class="ToggleIconButton u-mr-16 u-md-mr-0 js-statsDetails-toggle" aria-expanded="false" title="Zobrazit/skrýt podrobnosti">
+                <svg width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xlink:href="#chevron-circle-down"></use>
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <!-- Collapsible year stats details -->
+          <tr class="TableStats-details u-display-none js-statsDetails">
+            <td colspan="4">
+              <table class="js-table-notResponsive">
+                <tbody>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Přípravné utkání</td>
+                    <td>11. 10. 2023</td>
+                    <td>Gaziantep</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <strong class="u-c-green--dark">2:0</strong>
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Liga národů 2022/23</td>
+                    <td>11. 10. 2023</td>
+                    <td>Olomouc</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <strong class="u-c-red">0:2</strong>
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <!-- <strong class="u-c-grey--100">2:2</strong> -->
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Match row -->
+                  <tr>
+                    <td>Kvalifikace EURO</td>
+                    <td>11. 10. 2023</td>
+                    <td>Lisabon</td>
+                    <td>
+                      <a href="#" class="TableStats-match">
+                        <span class="Flag fi fi-cz fis"></span>
+                        <abbr title="Česko">CZE</abbr>
+                        <!-- Win state -> class "u-c-green--dark" -->
+                        <!-- <strong class="u-c-green--dark">2:0</strong> -->
+                        <!-- Loss state -> class "u-c-red" -->
+                        <!-- <strong class="u-c-red">0:2</strong> -->
+                        <!-- Tie state -> class "u-c-grey--100" -->
+                        <strong class="u-c-grey--100">2:2</strong>
+                        <abbr title="Španělsko">ESP</abbr>
+                        <span class="Flag fi fi-es fis"></span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+{% endblock %}

@@ -1,0 +1,356 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název zápasu} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <article class="Match">
+      <h1 class="H8 Match-meta">6. 8. 2022 16:30, 28.kolo,
+        <a href="#" class="Link Link--inverted">AGADOS Krajský přebor mužů</a>
+      </h1>
+
+      <div class="Match-mainInfoContainer">
+        <div class="Match-teams">
+          <div class="Match-team">
+            <!-- Zdroj dávat klidně 3x, tedy 216 x 216 px -->
+            <img class="Logo" src="./img/logo-club-empty.svg" width="72" height="72" alt="logo {název klubu}" loading="lazy"/>
+            <a href="#" class="H6 u-c-tertiary Link--inverted Link--stretched">Fotbalový klub Kovofiniš Ledeč nad Sázavou</a>
+          </div>
+          <div class="Match-team">
+            <!-- Zdroj dávat klidně 3x, tedy 216 x 216 px -->
+            <img class="Logo" src="./img/logo-club-empty.svg" width="72" height="72" alt="logo {název klubu}" loading="lazy"/>
+            <a href="#" class="H6 u-c-tertiary Link--inverted Link--stretched">Tělovýchovná jednota Slovan Kamenice nad Lipou</a>
+          </div>
+        </div>
+        <div class="Match-result">
+          <strong class="H3">4:1</strong>
+          <p class="H8 u-c-grey--100">(2:0)</p>
+        </div>
+        <div class="Match-actions">
+          <a href="#" class="Button">Online</a>
+          <a href="#" class="Button">Video</a>
+        </div>
+      </div>
+
+      <ol class="MatchTimeline">
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Krečman Tomáš
+            <span class="u-c-grey--100">(1:0)</span></p>
+          <strong>8.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Pecina Marek, PK
+            <span class="u-c-grey--100">(2:0)</span></p>
+          <strong>16.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Voráč Daniel
+            <span class="u-c-grey--100">(3:0)</span></p>
+          <strong>66.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--visitor -->
+        <li class="MatchTimeline-item MatchTimeline-item--visitor">
+          <p>Hadrava Tadeáš
+            <span class="u-c-grey--100">(3:1)</span></p>
+          <strong>68.</strong>
+        </li>
+        <!-- Home team item -> class mod MatchTimeline-item--home -->
+        <li class="MatchTimeline-item MatchTimeline-item--home">
+          <p>Apfelthaler Adam
+            <span class="u-c-grey--100">(4:1)</span></p>
+          <strong>89.</strong>
+        </li>
+      </ol>
+
+      <div class="Match-detailsContainer">
+        <p>
+          <strong>Číslo utkání:</strong>
+          2022310A1A1501,
+          <strong>Rozhodčí:</strong>
+          Všetečka Jan - Pečenka Jiří, Líkař Petr,
+          <strong>Delegát:</strong>
+          Lhoták Luděk, Bajer Josef,
+          <strong>VAR:</strong>
+          Zelinka Miroslav,
+          <strong>AVAR:</strong>
+          Křepský Michal,
+          <strong>Hřiště:</strong>
+          Andrův stadion, Olomouc,
+          <strong>Diváků:</strong>
+          4660</p>
+      </div>
+
+      <div class="Match-statsGrid">
+        <section class="u-mt-24 u-overflow-x-auto">
+          <h2 class="H7">Fotbalový klub Kovofiniš Ledeč nad Sázavou</h2>
+          <table class="Table u-mt-8">
+            <thead>
+              <tr>
+                <th>
+                  <abbr title="Číslo dresu">#</abbr>
+                </th>
+                <th>
+                  <abbr title="Pozice">P</abbr>
+                </th>
+                <th class="u-width-dominate">Jméno</th>
+                <th class="u-ta-center">
+                  <abbr title="Žlutá karta">ŽK</abbr>
+                </th>
+                <th class="u-ta-center">
+                  <abbr title="Červená karta">ČK</abbr>
+                </th>
+                <th class="u-ta-center">
+                  <abbr title="Střídání" class="u-display-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                    </svg>
+                  </abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>B</td>
+                <td>Tomáš Marcinko</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>O</td>
+                <td>Patrik Koch</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">57'</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>Tomáš Klimenta</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">55'</td>
+                <td class="u-ta-center"></td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>
+                  <abbr title="Číslo dresu" class="u-sr-only">#</abbr>
+                </th>
+                <th>
+                  <abbr title="Pozice" class="u-sr-only">P</abbr>
+                </th>
+                <th class="u-width-dominate">Náhradníci</th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Žlutá karta">ŽK</abbr>
+                </th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Červená karta">ČK</abbr>
+                </th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Střídání" class="u-display-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                    </svg>
+                  </abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>B</td>
+                <td>Ondřej Bláha</td>
+                <td class="u-ta-center">23'</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>O</td>
+                <td>Erik Hrňa</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">57'</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>Juraj Mikuš</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">55'</td>
+                <td class="u-ta-center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="u-mt-24 u-overflow-x-auto">
+          <h2 class="H7">Tělovýchovná jednota Slovan Kamenice nad Lipou</h2>
+          <table class="Table u-mt-8">
+            <thead>
+              <tr>
+                <th>
+                  <abbr title="Pořadí">#</abbr>
+                </th>
+                <th>
+                  <abbr title="Pozice">P</abbr>
+                </th>
+                <th class="u-width-dominate">Jméno</th>
+                <th class="u-ta-center">
+                  <abbr title="Žlutá karta">ŽK</abbr>
+                </th>
+                <th class="u-ta-center">
+                  <abbr title="Červená karta">ČK</abbr>
+                </th>
+                <th class="u-ta-center">
+                  <abbr title="Střídání" class="u-display-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                    </svg>
+                  </abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>B</td>
+                <td>Tomáš Marcinko</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>O</td>
+                <td>Patrik Koch</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">57'</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>Tomáš Klimenta</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">55'</td>
+                <td class="u-ta-center"></td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <th>
+                  <abbr title="Pořadí" class="u-sr-only">#</abbr>
+                </th>
+                <th>
+                  <abbr title="Pozice" class="u-sr-only">P</abbr>
+                </th>
+                <th class="u-width-dominate">Náhradníci</th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Žlutá karta">ŽK</abbr>
+                </th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Červená karta">ČK</abbr>
+                </th>
+                <th class="u-ta-center u-sr-only">
+                  <abbr title="Střídání" class="u-display-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
+                    </svg>
+                  </abbr>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>B</td>
+                <td>Ondřej Bláha</td>
+                <td class="u-ta-center">23'</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>O</td>
+                <td>Erik Hrňa</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">57'</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Z</td>
+                <td>Juraj Mikuš</td>
+                <td class="u-ta-center"></td>
+                <td class="u-ta-center">55'</td>
+                <td class="u-ta-center"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <section class="u-mt-primary">
+        <h2 class="H6">Další zápasy kola</h2>
+        <ul class="u-mt-8">
+          <!-- Match - over -->
+          <li class="MatchRound">
+            <div class="MatchRound-mainInfoContainer u-width-100p">
+              <a href="#" class="MatchRound-match">
+                <!-- Teams -->
+                <ul class="u-display-grid u-gap-4">
+                  <li class="u-display-flex u-align-items-center">
+                    <!-- Zdroj dávat klidně 3x, tedy 72 x 72 px -->
+                    <img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                    <span class="H7">SK Sigma Olomouc</span>
+                  </li>
+                  <li class="u-display-flex u-align-items-center">
+                    <!-- Zdroj dávat klidně 3x, tedy 72 x 72 px -->
+                    <img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                    <span class="H7">FC Viktoria Plzeň</span>
+                  </li>
+                </ul>
+                <!-- Result -->
+                <strong class="H4 u-c-tertiary">5:1</strong>
+              </a>
+            </div>
+          </li>
+          <!-- Match - upcoming -->
+          <li class="MatchRound">
+            <div class="MatchRound-mainInfoContainer u-width-100p">
+              <!-- Match - upcoming -> class mod MatchRound-match--upcoming -->
+              <a href="#" class="MatchRound-match MatchRound-match--upcoming">
+                <!-- Teams -->
+                <ul class="u-display-grid u-gap-4">
+                  <li class="u-display-flex u-align-items-center">
+                    <!-- Zdroj dávat klidně 3x, tedy 72 x 72 px -->
+                    <img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                    <span class="H7">FC Hradec Králové</span>
+                  </li>
+                  <li class="u-display-flex u-align-items-center">
+                    <!-- Zdroj dávat klidně 3x, tedy 72 x 72 px -->
+                    <img class="Logo Logo--small u-mr-12 u-sm-mr-8" src="./img/logo-club-empty.svg" width="24" height="24" alt="logo {název klubu}" loading="lazy"/>
+                    <span class="H7">FC TRINITY Zlín</span>
+                  </li>
+                </ul>
+                <!-- Result - upcoming -> without class u-c-tertiary -->
+                <strong class="H4">-:-</strong>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
+          <a href="#" class="Button">Rozpis zápasů</a>
+        </div>
+      </section>
+    </article>
+  </main>
+{% endblock %}

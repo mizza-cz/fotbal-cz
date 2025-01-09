@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>kss-node Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="1">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Buttons</span></a></li>
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Tables</span></a></li>
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Pagination</span></a></li>
+            </ul>
+            <ul class="kss-menu-child">
+              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Base styles &amp; states</span></a></li>
+              <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Sizing</span></a></li>
+              <li class="kss-menu-item"><a href="#section-1.3"><span class="kss-ref">1.3</span><span class="kss-name">Skins</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Buttons</h1>
+            <div class="kss-description">
+              <p>Button styles can be applied to anything with the <code>.btn</code> class applied.
+However, typically you&#39;ll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+
+            </div>
+          </section>
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Base styles &amp; states</h1>
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary ">Button</button>
+<button type="submit" class="btn ">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:hover</div>
+                  <div class="kss-modifier-description">
+                    Hover state.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary pseudo-class-hover">Button</button>
+<button type="submit" class="btn pseudo-class-hover">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">:active</div>
+                  <div class="kss-modifier-description">
+                    Active state.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary pseudo-class-active">Button</button>
+<button type="submit" class="btn pseudo-class-active">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.disabled</div>
+                  <div class="kss-modifier-description">
+                    Disabled button. If you use <code>&lt;button&gt;</code> element, that is acceptable to add <code>disabled</code> attribute instead.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary disabled">Button</button>
+<button type="submit" class="btn disabled">Button</button>
+                </div>
+              </div>
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary &quot;&gt;Button&lt;/button&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn &quot;&gt;Button&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+          <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Sizing</h1>
+            <div class="kss-description">
+              <p>Fancy larger or smaller buttons?
+Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary ">Button</button>
+<button type="submit" class="btn ">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-large</div>
+                  <div class="kss-modifier-description">
+                    Large button.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary btn-large">Button</button>
+<button type="submit" class="btn btn-large">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-smalll</div>
+                  <div class="kss-modifier-description">
+                    Small button.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary btn-smalll">Button</button>
+<button type="submit" class="btn btn-smalll">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-mini</div>
+                  <div class="kss-modifier-description">
+                    Mini button.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary btn-mini">Button</button>
+<button type="submit" class="btn btn-mini">Button</button>
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-block</div>
+                  <div class="kss-modifier-description">
+                    Block level button.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <button type="submit" class="btn btn-primary btn-block">Button</button>
+<button type="submit" class="btn btn-block">Button</button>
+                </div>
+              </div>
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary &quot;&gt;Button&lt;/button&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn &quot;&gt;Button&lt;/button&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+          <section id="section-1.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.3</span> Skins</h1>
+            <div class="kss-description">
+              <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+
+            </div>
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn ">Link</a>
+<button type="submit" class="btn ">Button</button>
+<input type="submit" class="btn " value="Input:submit" />
+<input type="button" class="btn " value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-primary</div>
+                  <div class="kss-modifier-description">
+                    Provides extra visual weight and identifies the primary action in a set of buttons.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-primary">Link</a>
+<button type="submit" class="btn btn-primary">Button</button>
+<input type="submit" class="btn btn-primary" value="Input:submit" />
+<input type="button" class="btn btn-primary" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-info</div>
+                  <div class="kss-modifier-description">
+                    Used as an alternative to the default styles.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-info">Link</a>
+<button type="submit" class="btn btn-info">Button</button>
+<input type="submit" class="btn btn-info" value="Input:submit" />
+<input type="button" class="btn btn-info" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-success</div>
+                  <div class="kss-modifier-description">
+                    Indicates a successful or positive action.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-success">Link</a>
+<button type="submit" class="btn btn-success">Button</button>
+<input type="submit" class="btn btn-success" value="Input:submit" />
+<input type="button" class="btn btn-success" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-warning</div>
+                  <div class="kss-modifier-description">
+                    Indicates caution should be taken with this action.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-warning">Link</a>
+<button type="submit" class="btn btn-warning">Button</button>
+<input type="submit" class="btn btn-warning" value="Input:submit" />
+<input type="button" class="btn btn-warning" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-danger</div>
+                  <div class="kss-modifier-description">
+                    Indicates a dangerous or potentially negative action.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-danger">Link</a>
+<button type="submit" class="btn btn-danger">Button</button>
+<input type="submit" class="btn btn-danger" value="Input:submit" />
+<input type="button" class="btn btn-danger" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-inverse</div>
+                  <div class="kss-modifier-description">
+                    Alternate dark gray button, not tied to a semantic action or use.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-inverse">Link</a>
+<button type="submit" class="btn btn-inverse">Button</button>
+<input type="submit" class="btn btn-inverse" value="Input:submit" />
+<input type="button" class="btn btn-inverse" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.btn-link</div>
+                  <div class="kss-modifier-description">
+                    Deemphasize a button by making it look like a link while maintaining button behavior.
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <a href="#" class="btn btn-link">Link</a>
+<button type="submit" class="btn btn-link">Button</button>
+<input type="submit" class="btn btn-link" value="Input:submit" />
+<input type="button" class="btn btn-link" value="Input:button" />
+                </div>
+              </div>
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn &quot;&gt;Link&lt;/a&gt;
+&lt;button type=&quot;submit&quot; class=&quot;btn &quot;&gt;Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn &quot; value=&quot;Input:submit&quot; /&gt;
+&lt;input type=&quot;button&quot; class=&quot;btn &quot; value=&quot;Input:button&quot; /&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+  </body>
+</html>

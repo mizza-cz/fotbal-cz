@@ -1,0 +1,109 @@
+/**
+ * Fotbal.cz - left column navigation
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+**/
+
+.footernav {
+	.m-clearfix;
+	display: none;
+	
+	@media @small {
+		padding: 10px 0 20px 0;
+		display: block;
+	}
+	
+	@media @medium {
+		padding: 15px 0 35px 0;	
+	}
+
+	@media @large {
+		padding: 30px 0 50px 0;	
+	}
+
+	ul {
+		.m-reset-list;
+	}
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus { text-decoration: underline; }
+	}
+
+	.menu-top-level {
+		.m-clearfix;
+
+		> .menu-item {
+			box-sizing: border-box;
+			display: block;
+			padding: 0 20px;
+			margin-bottom: 20px;
+			width: 50%;
+
+			@media @small {
+				width: 50%;
+				float: left;
+				margin-bottom: 0;
+			}
+			@media @medium {
+				width: 20%;
+				float: left;
+				margin-bottom: 0;
+			}
+			
+			&:nth-child(1) > a { color: @sec-repre;}
+			&:nth-child(2) > a { color: @sec-competitions;}
+			&:nth-child(3) > a { color: @sec-training;}
+			&:nth-child(4) > a { color: @sec-referees;}
+			&:nth-child(5) > a { color: @sec-women;}
+
+			> a {
+				.f-condensed-bold;
+				.f-20;
+				display: inline-block;
+
+				margin-bottom: 10px;
+				@media @medium {
+					margin-bottom: 20px;
+				}
+
+			}
+		}
+	}
+
+	.menu-submenu {
+		.menu-item {
+			@media @small {
+				display: block;
+				margin: 0 0 10px 0;
+				padding: 0 8px 0 0;
+				//border-right: 1px solid @blue;
+				&:last-child {
+					border: 0;
+				}
+			}
+			@media @medium {
+				display: block;
+				margin: 0 0 10px 0;	
+				padding: 0;
+				border: 0;
+			}	
+		}
+		.menu-item-link {
+			.f-14;
+			display: block;
+			padding: 10px 5px;
+			border-bottom: 1px solid @blue;
+			@media @small {
+				display: inline-block;
+				padding: 0;
+				border: 0;
+			}
+		}
+	}
+
+	.menu-item-link {
+		color: #fff;
+	}
+}

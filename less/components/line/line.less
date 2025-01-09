@@ -1,0 +1,119 @@
+/**
+Line
+
+Styl bloku
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 11.
+*/
+
+/**
+Jednotlivé varianty
+
+.line-blue    		- Světle modrý blok
+.line-mid-blue   	- Středně modrý blok
+.line-dark-blue		- Tmavě modrý blok
+.mod-bordered		- Blok s rámečkem
+.mod-border-top		- Blok s rámečkem na horní straně
+.mod-height-50		- Blok s velikostí 50px
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<div class="line {{modifier_class}} {$modifier_class} ">
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+
+Styleguide 11.1.
+*/
+
+/**
+Kombinace bloků
+
+.line-main-nav		- Blok hlavní navigace
+.line-footer-nav	- Blok navigace v patičce
+.line-footer-social	- Blok sociálních sítí v patičce
+.line-footer-service - Blok servisního menu v patičce
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<div class="line {{modifier_class}} {$modifier_class} ">
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+
+Styleguide 11.2.
+*/
+
+.line {
+	position: relative;
+	z-index: 100;
+
+	&.line-blue {
+		background-color: @blue;
+	}
+
+	&.line-mid-blue {
+		background-color: @midBlue;
+	}
+
+	&.line-dark-blue {
+		background-color: @darkBlue;
+	}
+
+	&.mod-bordered {
+		border-top: 1px solid @border-main-nav;
+		border-bottom: 1px solid @border-main-nav;
+	}
+
+	&.mod-border-top {
+		border-top: 1px solid @tbl-border;
+	}
+
+	&.mod-height-50 {
+		height: 50px;
+	}
+	
+	&.line-main-nav {
+		display: none;
+		z-index: 1001;
+		@media @show-navigation {
+			display: block;
+			.line-dark-blue;
+			.mod-bordered;
+			.mod-height-50;
+		}
+	}
+
+	&.line-footer-nav {
+		.line-dark-blue;
+		clear: both;
+	}
+
+	&.line-footer-social {
+		.line-dark-blue;
+		clear: both;
+	}
+	
+	&.line-footer-service {
+		.line-dark-blue;
+		clear: both;
+	}
+
+	&.line-hp-nav {
+		display: none;
+		@media @show-navigation {
+			display: block;
+			padding: 20px 0;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Název stránky} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+	<!-- Main content -->
+	<main class="Main" aria-label="Hlavní obsah">
+		<article class="Article">
+			<h1 class="H3">Hlavní nadpis</h1>
+			{{ mainContentNav.render() }}
+
+			<div class="Article-body">
+				<h2>Podnadpis H2</h2>
+				<p>Seriál Skvěle, kluci! představuje devět základních principů hry, kterými by se na základě analýzy současných trendů chtěly prezentovat mládežnické reprezentace a bude postupně představovat povedené akce mládežnických reprezentací i s komentářem jejich trenérů. Zároveň se zaměří na základní principy hry českých národních týmů. V očích trenérů národních týmů je vzorovým hráčem, který naplňuje všechny tyto principy, záložník A týmu Tomáš Souček. Týden, co týden tak pro vás budou nyní trenéři U15 - U20 vybírat a komentovat herní situace, které tyto zásady v jejich očích splňují.</p>
+
+				<picture>
+					<source media="(max-width: 576px)" srcset="./img/placeholder-subpage-img.jpg"/>
+					<source srcset="./img/placeholder-subpage-img.jpg 1x, ./img/placeholder-subpage-img@1.5x.jpg 1.5x, ./img/placeholder-subpage-img@2x.jpg 2x"/>
+					<img src="./img/placeholder-subpage-img.jpg" alt="" loading="lazy"/>
+				</picture>
+
+				<h3>Podnadpis H3</h3>
+				<p>Pro hráče je celkově připraveno šest hodin pohybových aktivit, které jsou dominantně zaměřeny na rozvoj pohybových dovedností s cílem dosáhnout efektivnějšího řízení a následné ekonomiky pohybu projevující se v koordinačních schopnostech. Cílem je pozitivně ovlivňovat ty svalové skupiny, u kterých je jednostranným fotbalovým zatěžováním pozměněna časová souhra v jejich aktivaci. Výsledkem je vytvořený pohybový vzor, který se projevuje v podobě dosažené úrovně základní pohybové gramotnosti.</p>
+
+				<!-- Untagged text -->
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, aut aliquid, sit dolore distinctio illum soluta molestiae dolores esse tempora at aspernatur! Reiciendis impedit non rem optio ex veniam nobis.
+
+				<!-- YouTube -->
+				<iframe width="560" height="315" data-src="https://www.youtube.com/embed/x7_XGtvq3b4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-cookiecategory="social" data-placeholder="data-placeholder"></iframe>
+
+				<p>Nedostatečná úroveň základní pohybové gramotnosti se pak stává limitním faktorem tělesné výkonnosti a herních dovedností hráče. Prostředkem odstraňování těchto nedostatků je systematické zařazování vybraných pohybových aktivit do dopoledních hodin tělesné výchovy, kdy je kritériem mnohdy mnohonásobné precizní provedení pohybu s adekvátní korekcí proškolené osoby.</p>
+
+				<h3>Podnadpis H3</h3>
+				<ul>
+					<li>Položka nečíslovaného seznamu</li>
+					<li>Položka nečíslovaného seznamu</li>
+					<li>Položka nečíslovaného seznamu</li>
+					<li>Položka nečíslovaného seznamu</li>
+					<li>Položka nečíslovaného seznamu</li>
+				</ul>
+
+				<h3>Související dokumenty</h3>
+				<!-- Article widget - Documents -->
+				{% include "../templates/partials/_articleWidget-documents.njk" %}
+
+				<!-- Article widget - Competitions -->
+				{% include "../templates/partials/_articleWidget-competitions.njk" %}
+
+				<h3>Související fotogalerie</h3>
+				<!-- Article widget - Gallery -->
+				{% include "../templates/partials/_articleWidget-gallery.njk" %}
+			</div>
+		</article>
+	</main>
+{% endblock %}

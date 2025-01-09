@@ -1,0 +1,26 @@
+<!-- Competition nav -->
+{% macro render(data, direction, dataAttributes) %}
+  <nav class="ButtonNav {% if direction === 'vertical' %} ButtonNav--vertical {% elseif direction === 'horizontal' %} ButtonNav--horizontal {% endif %} u-mt-16">
+    {% if data %}
+      <ul class="ButtonNav-menu">
+        {% for item in data %}
+          <li class="ButtonNav-item">
+            <a href="#" class="ButtonNav-link{% if dataAttributes %} js-region{%endif%}" data-region="{{dataAttributes[loop.index0]}}">{{ item }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul class="ButtonNav-menu">
+        <li class="ButtonNav-item">
+          <a href="#" class="ButtonNav-link">Položka menu</a>
+        </li>
+        <li class="ButtonNav-item">
+          <a href="#" class="ButtonNav-link">Položka menu</a>
+        </li>
+        <li class="ButtonNav-item">
+          <a href="#" class="ButtonNav-link">Položka menu</a>
+        </li>
+      </ul>
+    {% endif %}
+    {# </nav> #}
+  {% endmacro %}

@@ -1,0 +1,205 @@
+/**
+Share button
+
+Styl pro share button
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class='share-button'></div>
+
+Styleguide 27
+*/
+
+.share-button {
+	.f-condensed;
+	&.mod-center {
+		margin: 0 auto;
+	}
+}
+
+.share-button .social.bottom, .share-button .social.top {
+    transform-origin: 0 0 0;
+}
+.share-button {
+    -moz-user-select: none;
+    height: 30px;
+    width: 92px;
+}
+
+.share-button label {
+    background: @anchorColor;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px 0;
+    transition: all 0.3s ease 0s;
+}
+.share-button label:hover {
+    opacity: 0.8;
+}
+.share-button label span {
+    font-weight: 700;
+    text-transform: uppercase;
+    i {
+    	margin: 0 5px 0 0;
+    	vertical-align: baseline;
+    }
+
+}
+.share-button .social {
+    margin-left: -15px;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+    visibility: hidden;
+    position: absolute;
+}
+.share-button .social.top {
+    margin-top: -80px;
+    transform-origin: 0 0 0;
+}
+.share-button .social.bottom {
+    margin-top: 5px;
+    transform-origin: 0 0 0;
+}
+.share-button .social.middle.left, .share-button .social.middle.right {
+    transform-origin: 5% 50% 0;
+}
+.share-button .social.middle {
+    margin-top: -34px;
+}
+.share-button .social.middle.right {
+    margin-left: 105px;
+}
+.share-button .social.networks-1.center, .share-button .social.networks-1.left, .share-button .social.right {
+    margin-left: 14px;
+}
+.share-button .social.load {
+    transition: none 0s ease 0s !important;
+}
+.share-button .social.networks-1 {
+    width: 60px;
+}
+.share-button .social.networks-1.middle.left {
+    margin-left: -70px;
+}
+.share-button .social.networks-1 ul {
+    width: 60px;
+}
+.share-button .social.networks-2, .share-button .social.networks-2 ul {
+    width: 120px;
+}
+.share-button .social.networks-2.center {
+    margin-left: -13px;
+}
+.share-button .social.networks-2.left {
+    margin-left: -44px;
+}
+.share-button .social.networks-2.middle.left {
+    margin-left: -130px;
+}
+.share-button .social.networks-3, .share-button .social.networks-3 ul {
+    width: 180px;
+}
+.share-button .social.networks-3.center {
+    margin-left: -45px;
+}
+.share-button .social.networks-3.left {
+    margin-left: -102px;
+}
+.share-button .social.networks-3.middle.left {
+    margin-left: -190px;
+}
+.share-button .social.networks-4, .share-button .social.networks-4 ul {
+    width: 240px;
+}
+.share-button .social.networks-4.center {
+    margin-left: -75px;
+}
+.share-button .social.networks-4.left {
+    margin-left: 162px;
+}
+.share-button .social.networks-4.middle.left {
+    margin-left: -250px;
+}
+.share-button .social.networks-5, .share-button .social.networks-5 ul {
+    width: 300px;
+}
+.share-button .social.networks-5.center {
+    margin-left: -105px;
+}
+.share-button .social.networks-5.left {
+    margin-left: -225px;
+}
+.share-button .social.networks-5.middle.left {
+    margin-left: -320px;
+}
+.share-button .social.active {
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+    visibility: visible;
+}
+.share-button .social.active.top {
+    transform: scale(1) translateY(-20px);
+}
+.share-button .social.active.bottom {
+    transform: scale(1) translateY(15px);
+}
+.share-button .social.active.middle.right {
+    transform: scale(1) translateX(10px);
+}
+.share-button .social.active.middle.left {
+    transform: scale(1) translateX(-10px);
+}
+.share-button .social ul {
+    color: #fff;
+    height: 46px;
+    left: 0;
+    list-style: outside none none;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    right: 0;
+}
+.share-button .social ul li {
+    box-sizing: content-box;
+    cursor: pointer;
+    display: none;
+    float: left;
+    font-size: 20px;
+    height: 22px;
+    margin: 0;
+    padding: 12px 0;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 60px;
+    z-index: 2;
+}
+.share-button .social ul li:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.share-button .social li[class*="facebook"] {
+    background: #3b5998 none repeat scroll 0 0;
+    display: block;
+}
+.share-button .social li[class*="twitter"] {
+    background: #6cdfea none repeat scroll 0 0;
+    display: block;
+}
+.share-button .social li[class*="gplus"] {
+    background: #e34429 none repeat scroll 0 0;
+    display: block;
+}
+.share-button .social li[class*="pinterest"] {
+    background: #c5282f none repeat scroll 0 0;
+    display: none;
+}
+.share-button .social li[class*="paper-plane"] {
+    background: #42c5b0 none repeat scroll 0 0;
+    display: none;
+}

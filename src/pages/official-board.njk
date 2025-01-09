@@ -1,0 +1,429 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'Úřední deska | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsCSS %}
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+{% endblock %}
+{% block vendorsJS %}
+  <script src="./js/vendors/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+{% endblock %}
+
+{% import "../templates/partials/_mainContentNav.njk" as mainContentNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <h1 class="H3">Úřední deska</h1>
+      {{ mainContentNav.render(officialBoard.menu, 1) }}
+
+      <!-- Filters -->
+      <div class="Box u-mt-primary">
+        <form action="/urednideska/uredni-deska-rozhodnuti" method="post" id="frm-officialBoardFilter-form" class="Form Form--secondary Form--autoInputs">
+          <div class="Form-item">
+            <label for="frm-officialBoardFilter-form-recipient" class="Form-label">Adresát rozhodnutí</label>
+            <input type="text" name="recipient" id="frm-officialBoardFilter-form-recipient" class="Form-input" placeholder="Zadejte adresáta">
+          </div>
+          <div class="Form-item">
+            <label for="frm-officialBoardFilter-form-name" class="Form-label">Název dokumentu</label>
+            <input type="text" name="name" id="frm-officialBoardFilter-form-name" class="Form-input" placeholder="Zadejte název dokumentu">
+          </div>
+          <div class="Form-item">
+            <label for="frm-officialBoardFilter-form-from" class="Form-label">Platnost od</label>
+            <input type="text" name="from" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-from" placeholder="Zadejte datum od" readonly="readonly">
+          </div>
+          <div class="Form-item">
+            <label for="frm-officialBoardFilter-form-to" class="Form-label">Platnost do</label>
+            <input type="text" name="to" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-to" placeholder="Zadejte datum do" readonly="readonly">
+          </div>
+          <div class="Form-item">
+            <label for="frm-officialBoardFilter-form-subject" class="Form-label">Subjekt</label>
+            <select name="subject" id="frm-officialBoardFilter-form-subject" class="Form-input js-select2">
+              <option value="reset" selected="selected">Vyberte subjekt</option>
+              <option value="617">Ekonomická komise</option>
+              <option value="605">Fotbal Travel</option>
+              <option value="248">Fotbalová asociace</option>
+              <option value="372">|- Arbitrážní komise</option>
+              <option value="392">|- FAČR Ženy</option>
+              <option value="365">|- Finanční oddělení</option>
+              <option value="559">| ---- Finanční oddělení</option>
+              <option value="610">| ------ Ředitel finančního oddělení</option>
+              <option value="560">| ---- Úsek finanční</option>
+              <option value="562">| ---- Úsek investic</option>
+              <option value="385">|- Komise pro činnost zprostředkovatelů</option>
+              <option value="386">|- Komise pro historii a statistiku</option>
+              <option value="383">|- Komise pro regionální fotbal</option>
+              <option value="382">|- Komise pro stadiony a hrací plochy</option>
+              <option value="371">|- Komise rozhodčích</option>
+              <option value="245">|- Komise ženského fotbalu</option>
+              <option value="389">| ---- Disciplinární komise FŽ</option>
+              <option value="505">| ---- Komise mládeže žen</option>
+              <option value="390">| ---- Komise rozhodčích žen</option>
+              <option value="388">| ---- Sportovně-technická komise FŽ</option>
+              <option value="378">|- Licenční komise</option>
+              <option value="391">|- Licenční tribunál</option>
+              <option value="501">|- Ligové shromáždění</option>
+              <option value="626">|- Listina rozhodčích FORTUNA:NÁRODNÍ LIGY - jaro 2022</option>
+              <option value="528">|- Nominační listina asistentů profesionálních soutěží pro soutěžní ročník 2022/2023</option>
+              <option value="627">|- Nominační listina VAR specialistů profesionálních soutěží pro soutěžní ročník 2022/2023</option>
+              <option value="587">|- Oddělení bezpečnosti</option>
+              <option value="361">|- Oddělení organizace a služeb</option>
+              <option value="557">|- Oddělení řízení kanceláře předsedy FAČR</option>
+              <option value="376">|- Odvolací komise</option>
+              <option value="525">|- Organizační výbor EURO WU17 2017</option>
+              <option value="629">|- Organizační výbor EURO WU19 2022</option>
+              <option value="380">|- Pravidlová komise</option>
+              <option value="377">|- Revizní a kontrolní komise</option>
+              <option value="249">|- Řídící komise pro Čechy</option>
+              <option value="251">| ---- Hl. město Praha</option>
+              <option value="265">| ---- Jihočeský kraj</option>
+              <option value="266">| ------ České Budějovice</option>
+              <option value="267">| ------ Český Krumlov</option>
+              <option value="268">| ------ Jindřichův Hradec</option>
+              <option value="269">| ------ Písek</option>
+              <option value="270">| ------ Prachatice</option>
+              <option value="271">| ------ Strakonice</option>
+              <option value="272">| ------ Tábor</option>
+              <option value="281">| ---- Karlovarský kraj</option>
+              <option value="282">| ------ Cheb</option>
+              <option value="283">| ------ Karlovy Vary</option>
+              <option value="284">| ------ Sokolov</option>
+              <option value="298">| ---- Královéhradecký kraj</option>
+              <option value="299">| ------ Hradec Králové</option>
+              <option value="300">| ------ Jičín</option>
+              <option value="301">| ------ Náchod</option>
+              <option value="302">| ------ Rychnov nad Kněžnou</option>
+              <option value="303">| ------ Trutnov</option>
+              <option value="293">| ---- Liberecký kraj</option>
+              <option value="294">| ------ Česká Lípa</option>
+              <option value="295">| ------ Jablonec nad Nisou</option>
+              <option value="296">| ------ Liberec</option>
+              <option value="297">| ------ Semily</option>
+              <option value="310">| ---- Pardubický kraj</option>
+              <option value="311">| ------ Chrudim</option>
+              <option value="312">| ------ Pardubice</option>
+              <option value="313">| ------ Svitavy</option>
+              <option value="314">| ------ Ústí nad Orlicí</option>
+              <option value="273">| ---- Plzeňský kraj</option>
+              <option value="274">| ------ Domažlice</option>
+              <option value="275">| ------ Klatovy</option>
+              <option value="277">| ------ Plzeň - jih</option>
+              <option value="276">| ------ Plzeň - město</option>
+              <option value="278">| ------ Plzeň - sever</option>
+              <option value="279">| ------ Rokycany</option>
+              <option value="280">| ------ Tachov</option>
+              <option value="252">| ---- Středočeský kraj</option>
+              <option value="253">| ------ Benešov</option>
+              <option value="254">| ------ Beroun</option>
+              <option value="255">| ------ Kladno</option>
+              <option value="256">| ------ Kolín</option>
+              <option value="257">| ------ Kutná Hora</option>
+              <option value="258">| ------ Mělník</option>
+              <option value="259">| ------ Mladá Boleslav</option>
+              <option value="260">| ------ Nymburk</option>
+              <option value="261">| ------ Praha - východ</option>
+              <option value="262">| ------ Praha - západ</option>
+              <option value="263">| ------ Příbram</option>
+              <option value="264">| ------ Rakovník</option>
+              <option value="285">| ---- Ústecký kraj</option>
+              <option value="286">| ------ Děčín</option>
+              <option value="287">| ------ Chomutov</option>
+              <option value="288">| ------ Litoměřice</option>
+              <option value="289">| ------ Louny</option>
+              <option value="290">| ------ Most</option>
+              <option value="291">| ------ Teplice</option>
+              <option value="292">| ------ Ústí nad Labem</option>
+              <option value="250">|- Řídící komise pro Moravu</option>
+              <option value="315">| ---- Jihomoravský kraj</option>
+              <option value="316">| ------ Blansko</option>
+              <option value="317">| ------ Brno - město</option>
+              <option value="318">| ------ Brno - venkov</option>
+              <option value="319">| ------ Břeclav</option>
+              <option value="320">| ------ Hodonín</option>
+              <option value="321">| ------ Vyškov</option>
+              <option value="322">| ------ Znojmo</option>
+              <option value="334">| ---- Moravskoslezský kraj</option>
+              <option value="335">| ------ Bruntál</option>
+              <option value="336">| ------ Frýdek-Místek</option>
+              <option value="337">| ------ Karviná</option>
+              <option value="338">| ------ Nový Jičín</option>
+              <option value="339">| ------ Opava</option>
+              <option value="340">| ------ Ostrava - město</option>
+              <option value="323">| ---- Olomoucký kraj</option>
+              <option value="324">| ------ Jeseník</option>
+              <option value="325">| ------ Olomouc</option>
+              <option value="326">| ------ Prostějov</option>
+              <option value="327">| ------ Přerov</option>
+              <option value="328">| ------ Šumperk</option>
+              <option value="304">| ---- Vysočina kraj</option>
+              <option value="305">| ------ Havlíčkův Brod</option>
+              <option value="306">| ------ Jihlava</option>
+              <option value="307">| ------ Pelhřimov</option>
+              <option value="308">| ------ Třebíč</option>
+              <option value="309">| ------ Žďár nad Sázavou</option>
+              <option value="329">| ---- Zlínský kraj</option>
+              <option value="330">| ------ Kroměříž</option>
+              <option value="331">| ------ Uherské Hradiště</option>
+              <option value="332">| ------ Vsetín</option>
+              <option value="333">| ------ Zlín</option>
+              <option value="563">|- Řídící komise TOP soutěží FAČR</option>
+              <option value="373">|- Sbor rozhodců</option>
+              <option value="592">|- Sekce financí a správy majetku</option>
+              <option value="364">| ---- IT oddělení</option>
+              <option value="553">| ------ Úsek IT podpory</option>
+              <option value="552">| ------ Úsek vývoje IS</option>
+              <option value="595">| ---- Oddělení financí a kontroly</option>
+              <option value="596">| ---- Oddělení investic</option>
+              <option value="598">| ---- Oddělení státní podpory</option>
+              <option value="593">| ---- Ředitel sekce financí a správy majetku</option>
+              <option value="387">|- Sportovní rada FAČR</option>
+              <option value="504">|- Sportovní sekce</option>
+              <option value="589">| ---- A tým</option>
+              <option value="590">| ---- U21</option>
+              <option value="546">| ---- Úsek projektů a podpory STO</option>
+              <option value="366">|- Středisko Strahov</option>
+              <option value="368">|- Úsek členských práv - středisko členství</option>
+              <option value="550">|- Úsek lidských zdrojů</option>
+              <option value="370">|- Úsek zahraničních přestupů</option>
+              <option value="375">|- Výkonný výbor SFČR</option>
+              <option value="516">| ---- Aktuální vítězové futsalových anket</option>
+              <option value="512">| ---- Arbitrážní komise SF FAČR</option>
+              <option value="518">| ---- Disciplinární komise SFČR</option>
+              <option value="616">| ---- Halová komise SFČR</option>
+              <option value="515">| ---- Komise delegátů SFČR</option>
+              <option value="601">| ---- Komise mládeže SFČR</option>
+              <option value="523">| ---- Komise plážového fotbalu</option>
+              <option value="514">| ---- Komise rozhodčích a delegátů SFČR</option>
+              <option value="513">| ---- Komise vnitřního auditu SFČR</option>
+              <option value="509">| ---- Komise ženského futsalu SFČR</option>
+              <option value="520">| ---- Licenční komise SFČR</option>
+              <option value="521">| ---- Matriční komise SFČR</option>
+              <option value="511">| ---- Odvolací komise SFČR</option>
+              <option value="602">| ---- PR komise SFČR</option>
+              <option value="519">| ---- Regionální komise SFČR</option>
+              <option value="599">| ---- Sbor rozhodců SFČR</option>
+              <option value="510">| ---- Sekretariát Výkonného výboru SFČR</option>
+              <option value="564">| ---- Soubor předpisů a legislativa SFČR</option>
+              <option value="517">| ---- Soutěžně technická komise SFČR</option>
+              <option value="522">| ---- Trenérsko-metodická komise SFČR</option>
+              <option value="381">|- Zdravotní komise</option>
+              <option value="603">Kancelář Generálního sekretáře FAČR</option>
+              <option value="608">Kancelář předsedy VV FAČR</option>
+              <option value="594">|- Oddělení správy majetku</option>
+              <option value="609">|- STES</option>
+              <option value="625">Kontakty</option>
+              <option value="611">Kontroling</option>
+              <option value="618">Legislativní rada</option>
+              <option value="549">Lektoři FAČR</option>
+              <option value="535">Létající týmy KFS - Jihočeský KFS</option>
+              <option value="541">Létající týmy KFS - Jihomoravský KFS</option>
+              <option value="533">Létající týmy KFS - Karlovarský KFS</option>
+              <option value="538">Létající týmy KFS - KFS Praha</option>
+              <option value="537">Létající týmy KFS - KFS Vysočina</option>
+              <option value="543">Létající týmy KFS - Královéhradecký KFS</option>
+              <option value="536">Létající týmy KFS - Liberecký KFS</option>
+              <option value="540">Létající týmy KFS - Moravskoslezský KFS</option>
+              <option value="530">Létající týmy KFS - Olomoucký KFS</option>
+              <option value="542">Létající týmy KFS - Pardubický KFS</option>
+              <option value="532">Létající týmy KFS - Plzeňský KFS</option>
+              <option value="531">Létající týmy KFS - Středočeský KFS</option>
+              <option value="534">Létající týmy KFS - Ústecký KFS</option>
+              <option value="539">Létající týmy KFS - Zlínský KFS</option>
+              <option value="600">Nominační listina delegátů profesionálních soutěží pro soutěžní ročník 2022/2023</option>
+              <option value="527">Nominační listina rozhodčích profesionálních soutěží pro soutěžní ročník 2022/2023</option>
+              <option value="584">Oddělení logistiky a služeb</option>
+              <option value="632">|- Úsek centrálního nákupu</option>
+              <option value="583">Oddělení mezinárodních styků</option>
+              <option value="585">Oddělení správy lidských zdrojů</option>
+              <option value="524">Ondrášovka Cup</option>
+              <option value="633">Planeo Cup – Pohár mládeže FAČR</option>
+              <option value="369">Právní oddělení</option>
+              <option value="588">Ředitel oddělení rozvoje fotbalu</option>
+              <option value="604">Ředitel Úseku Elitní mládeže</option>
+              <option value="631">Univerzitní fotbalová liga</option>
+              <option value="358">Úsek akademií</option>
+              <option value="558">|- Akademie</option>
+              <option value="606">|- Vedení RFA</option>
+              <option value="642">Úsek členských práv</option>
+              <option value="554">Úsek FIFA/UEFA</option>
+              <option value="591">Úsek futsalu a plážového fotbalu</option>
+              <option value="612">Úsek investic</option>
+              <option value="555">Úsek KFS</option>
+              <option value="615">Úsek mezd</option>
+              <option value="556">Úsek OFS</option>
+              <option value="639">Úsek přestupů</option>
+              <option value="545">Úsek reprezentací</option>
+              <option value="544">Úsek rozhodčích</option>
+              <option value="362">Úsek soutěží</option>
+              <option value="244">|- Disciplínární komise</option>
+              <option value="508">|- Etická komise</option>
+              <option value="613">Úsek účetnictví FAČR</option>
+              <option value="614">Úsek účetnictví STES</option>
+              <option value="526">Úsek žen</option>
+              <option value="247">Výkonný výbor</option>
+            </select>
+          </div>
+          <div class="Form-item">
+            <input type="submit" name="select" value="Vybrat" class="Button">
+          </div>
+          <input type="hidden" name="do" value="officialBoardFilter-form-submit">
+        </form>
+      </div>
+
+      <!-- Results -->
+      <!-- Poznámky od Aleše: - Zobrazovali bychom defaultně 20 jednotlivých výpisů, pak stránkování - Jednotlivé typy příspěvků se liší barevností tagu (jsou jen ty tři) - Pokud vyhledávání nevyplivne žádné výsledky, zobrazme titulek "Příspěvek nenalezen" a pod to text "Zadaným kritériím neodpovídají žádné příspěvky." -->
+      <ul class="u-mt-24">
+        <!-- Rozhodnutí - item -->
+        <li class="ListItemSplit">
+          <div class="ListItemSplit-leftContainer">
+            <!-- Rozhodnutí - default (red) badge -->
+            <span class="Badge u-mb-8">Rozhodnutí</span>
+            <a href="./official-board-announcement-detail.html" class="H7 Link--inverted u-display-block js-fetchAnnouncement js-modal-open js-modal-open--announcement" role="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-announcement">Rozhodnutí Disciplinární komise Ligové fotbalové asociace č.j. 185/2022-23-2</a>
+          </div>
+          <div class="ListItemSplit-rightContainer">
+            <ul class="IconList">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Platnost od-do:</strong>
+                  3. 3. 2023 - 3. 3. 2025
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#post"></use>
+                </svg>
+                <p>
+                  <strong>Zveřejnil:</strong>
+                  Disciplínární komise - Disciplinární komise Ligové fotbalové asociace
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#get"></use>
+                </svg>
+                <p>
+                  <strong>Adresát:</strong>
+                  FC ZBROJOVKA BRNO, a. s.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Komuniké item -->
+        <li class="ListItemSplit">
+          <div class="ListItemSplit-leftContainer">
+            <!-- Komuniké - blue badge -->
+            <span class="Badge Badge--blue u-mb-8">Komuniké</span>
+            <a href="./official-board-announcement-detail-TEST.html" class="H7 Link--inverted u-display-block js-fetchAnnouncement js-modal-open js-modal-open--announcement" role="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-announcement">Komuniké z jednání DK ze dne 3. 3. 2023</a>
+          </div>
+          <div class="ListItemSplit-rightContainer">
+            <ul class="IconList">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Platnost od-do:</strong>
+                  3. 3. 2023 - 3. 3. 2025
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#post"></use>
+                </svg>
+                <p>
+                  <strong>Zveřejnil:</strong>
+                  Plzeňský kraj - DK
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#get"></use>
+                </svg>
+                <p>
+                  <strong>Adresát:</strong>
+                  Kluby PKFS - DK
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Zápis item -->
+        <li class="ListItemSplit">
+          <div class="ListItemSplit-leftContainer">
+            <!-- Zápis - green badge -->
+            <span class="Badge Badge--green u-mb-8">Zápis</span>
+            <a href="./TEST-non-exist-announcement-detail.html" class="H7 Link--inverted u-display-block js-fetchAnnouncement js-modal-open js-modal-open--announcement" role="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-announcement">Protokol o hlasování Valné hromady OFS Ústí nad Labem per rollam</a>
+          </div>
+          <div class="ListItemSplit-rightContainer">
+            <ul class="IconList">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Platnost od-do:</strong>
+                  3. 3. 2023 - 3. 3. 2025
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#post"></use>
+                </svg>
+                <p>
+                  <strong>Zveřejnil:</strong>
+                  Ústí nad Labem
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#get"></use>
+                </svg>
+                <p>
+                  <strong>Adresát:</strong>
+                  Kluby OFS Ústí nad Labem
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      {% include "../templates/partials/_paginationSimple.njk" %}
+
+      <!-- No results message -->
+      <div class="u-mt-24">
+        <strong class="H7">Příspěvek nenalezen</strong>
+        <p>Zadaným kritériím neodpovídají žádné příspěvky.</p>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+{% block modals %}
+  <!-- Modal - Announcement detail -->
+  <div class="Modal js-modal" id="modal-announcement" tabindex="-1" role="dialog" aria-labelledby="modal-announcement-heading">
+    <div class="Modal-dialog Modal-dialog--announcement CustomScrollbar CustomScrollbar--thin js-modal-dialog">
+      <div id="modal-content">
+        <!-- Dynamic content populated with JS -->
+      </div>
+      <div class="u-display-none u-justify-space-between u-sm-justify-center u-gap-16 u-mt-16" id="modal-actions-success">
+        <button type="button" class="Button Button--withIcon" id="modal-url" data-url="">
+          <svg xmlns="http://www.w3.org/2000/svg" class="Button-icon u-display-none" width="16" height="16" focusable="false" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick-circle"></use>
+          </svg>
+          <span>Uložit URL</span>
+        </button>
+        <button type="button" class="Button js-modal-close">Zavřít detail</button>
+      </div>
+      <div class="u-display-none u-justify-flex-end u-sm-justify-center u-mt-16" id="modal-actions-error">
+        <button type="button" class="Button js-modal-close">Zavřít detail</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'Partneři | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav PartnersPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+      <h1 class="H3">Partneři</h1>
+      {% include "../templates/partials/_partners.njk" %}
+    </div>
+  </main>
+{% endblock %}

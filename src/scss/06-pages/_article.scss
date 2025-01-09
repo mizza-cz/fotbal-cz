@@ -1,0 +1,38 @@
+.ArticlePage {
+  .Article-widget {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    @include respondTo(sm) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .GalleryArticle {
+    @include respondTo(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respondTo(xs) {
+      grid-template-columns: auto;
+    }
+  }
+
+  .GalleryArticle-item:last-child span strong {
+    font-size: 2rem;
+  }
+
+  .Header-sideNavButtonContainer {
+    display: block;
+  }
+
+  .SideNavContainer {
+    display: none;
+    order: unset;
+
+    @include respondTo(md) {
+      display: block;
+    }
+  }
+}

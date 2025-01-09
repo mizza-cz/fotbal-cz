@@ -1,0 +1,53 @@
+.cookie-modal {
+    right: .5rem;
+    bottom: .5rem;
+    left: .5rem;
+    transition: all .3s ease-in-out;
+    position: fixed;
+    background-color: white;
+    padding: 1rem;
+    transform: translate(-100rem, 0);
+    opacity: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+    will-change: auto;
+    z-index: 10000;
+}
+
+.cookie-modal.is-active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.cookie-text {
+    font-size: 13px;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cookie-btn {
+    font-size: 14px;
+    padding: .5rem 1rem;
+    background-color: rgb(174, 186, 194);
+    border: 0;
+}
+
+.cookie-btn,
+.cookie-btn:visited,
+.cookie-btn:active,
+.cookie-btn:focus {
+    color: white;
+}
+
+
+.cookie-btn:hover {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .cookie-modal {
+        left: 2rem;
+        bottom: 2rem;
+        right: inherit;
+        max-width: 30rem;
+    }
+}

@@ -1,0 +1,48 @@
+.Socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--article {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    .Socials-item {
+      &::before {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    .Socials-link {
+      color: $colorTertiary;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &-link {
+    display: block;
+    color: $colorWhite;
+
+    &:focus,
+    &:hover {
+      .Socials-icon {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-icon {
+    display: block;
+    transition: transform 0.25s ease-in-out;
+  }
+}

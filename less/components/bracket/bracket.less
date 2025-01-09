@@ -1,0 +1,36 @@
+/**
+Bracket
+
+Zápasový pavouk 
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="bracket">
+	<div class="bracket-container">
+	</div>
+</div>
+
+Styleguide 29.
+*/
+
+.bracket {
+	width: 100%;
+	//overflow: scroll;
+	min-height: 1000px;
+
+	.g_gracket { width: 9999px; background-color: #fff; padding: 55px 15px 5px; line-height: 100%; position: relative; overflow: hidden;}
+	.g_round { float: left; margin-right: 40px; }
+	.g_game { position: relative; margin-bottom: 15px; }
+	.g_gracket h3 { margin: 0; padding: 0 8px; font-size: .8rem; line-height: 2.5em; font-weight: normal; color: #fff}
+	.g_gracket h3 small { font-weight: bold; float: right; margin-left: 20px; font-size: 1rem;}
+	.g_team { background: @blue; }
+	.g_team:last-child {  background: @darkBlue; }
+	.g_round:last-child { margin-right: 20px; }
+	.g_winner { background: #444; }
+	.g_winner .g_team { background: none; }
+	.g_current { cursor: pointer; color: @darkBlue!important; background: @sec-competitions!important; }
+	.g_current h3{ color: @darkBlue!important; }
+	.g_round_label { top: -5px; font-weight: normal; color: @darkBlue; text-align: center; font-size: 1rem; }
+	.g_no_current .g_team { background: @sec-referees!important; cursor: default!important; }
+}

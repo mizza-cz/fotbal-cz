@@ -1,0 +1,55 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = 'registration-successful | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block vendorsJS %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{% endblock %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+     <div class="registration-wrapper u-mx-auto">
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+      <div class="registration-modal u-mt-primary u-mx-auto">
+         <div class="registration-content u-mx-auto">
+            <h1 class="H3 u-mb-24">Děkujeme, registrace proběhla úspěšně!  </h1>
+            <form action="" class="Form Grid registrationForm">
+                  <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1_1 u-mb-16 u-mt-4 u-pl-16">
+                        Na uvedenou e-mailovou adresu jsem vám zaslali potvrzovací odkaz...
+                     </div>
+                  </div>
+                   <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-fw-bold  u-lh-1_1 u-mb-16 u-mt-4 u-pl-16">
+                        Váš uvedený email
+                     </div>
+                  </div>
+                
+                <div class="Grid-col--12">
+                     <div class="u-fs-extraSmall u-lh-1_1 u-mb-16 u-mt-4 u-pl-16">
+                    Neobdrželi jste potvrzovací link?
+                     </div>
+                  </div>
+                    <div class="Grid-col Grid-col--12">
+                     <div class="Form-item">
+                        <input type="submit" class="Button" value="Odeslat znovu">
+                     </div>
+                  </div>
+            </form>
+            <ul class="registration-links">
+               <li>
+                  <a href="#">Podmínky používání</a>
+               </li>
+               <li>
+                  <a href="#">Zásady ochrany soukromí</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+     </div>
+    </div>
+  </main>
+{% endblock %}

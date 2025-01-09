@@ -1,0 +1,514 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Reprezentace - Zápasy} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="HeadingWithSelectContainer">
+      <h1 class="H3">Česko U21 - Termínová listina</h1>
+      <select class="Select" name="" id="TEST-select">
+        <option value="">2022/23</option>
+        <option value="">2021/22</option>
+        <option value="">2020/21</option>
+      </select>
+    </div>
+
+    <!-- Matches section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Kvalifikace ME 2023</h2>
+      <ul class="u-mt-16">
+        <!-- Match - win -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--win">4:0</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Místo konání:</strong>
+                  {stadion}, {město}, {země}
+                </p>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
+                </svg>
+                <p>
+                  <strong>Soutěž:</strong>
+                  <a href="#" class="Link--inverted u-c-tertiary">Liga národů 2022/2023</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - tie -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--tie">3:3</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+            <!-- Actions -->
+            <div class="MatchItem-actions">
+              <a href="https://ticketportal.cz/" class="MatchItem-action Link--inverted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
+                </svg>
+                <span>Vstupenky</span>
+              </a>
+              <a href="https://facr.tv/" class="MatchItem-action Link--inverted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
+                </svg>
+                <span>Video</span>
+              </a>
+              <a href="https://onlajny.com/" class="MatchItem-action Link--inverted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exchange"></use>
+                </svg>
+                <span>On-line</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- Match - loss -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--loss">2:5</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+            <!-- Actions -->
+            <div class="MatchItem-actions">
+              <a href="#" class="Button">Video</a>
+              <a href="#" class="Button">Online</a>
+            </div>
+          </div>
+        </li>
+        <!-- Match - upcoming -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result">-:-</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+            <!-- Actions -->
+            <div class="MatchItem-actions">
+              <a href="#" class="Button">Vstupenky</a>
+            </div>
+          </div>
+        </li>
+        <!-- Match - upcoming/postponed -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H8 MatchItem-result MatchItem-result--postponed">Zápas odložen</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+            <!-- Actions -->
+            <div class="MatchItem-actions">
+              <a href="#" class="Button">Vstupenky</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Matches section -->
+    <section class="u-mt-primary">
+      <h2 class="H6">Přípravné zápasy</h2>
+      <ul class="u-mt-16">
+        <!-- Match - win -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--win">4:0</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - tie -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--tie">3:3</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - loss -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result MatchItem-result--loss">2:5</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - upcoming -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H4 MatchItem-result">-:-</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Match - upcoming/postponed -->
+        <li class="MatchItem">
+          <div class="MatchItem-mainInfoContainer">
+            <a href="#" class="MatchItem-match MatchItem-match--upcoming" tabindex="-1">
+              <!-- Teams -->
+              <ul class="MatchItem-teams">
+                <li>
+                  <span class="Flag fi fi-cz fis"></span>
+                  <span class="H7 MatchItem-teamName">Česko U-21</span>
+                </li>
+                <li>
+                  <span class="Flag fi fi-es fis"></span>
+                  <span class="H7 MatchItem-teamName">Španělsko U-21</span>
+                </li>
+              </ul>
+              <!-- Result -->
+              <strong class="H8 MatchItem-result MatchItem-result--postponed">Zápas odložen</strong>
+            </a>
+          </div>
+          <div class="MatchItem-detailsContainer">
+            <!-- Meta -->
+            <ul class="MatchItem-meta">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
+                </svg>
+                <p>
+                  <strong>Datum:</strong>
+                  pátek 3. 6. 2022, 18:00
+                </p>
+                <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy"/>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
+                </svg>
+                <p>
+                  <strong>Hřiště:</strong>
+                  Střelecký Ostrov, České Budějovice - Česko
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+{% endblock %}

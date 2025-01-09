@@ -1,0 +1,152 @@
+.Header {
+  position: relative;
+  background-color: $colorHeader;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(135, 141, 150, 0.05), 0 0.25rem 2rem 0 rgba(135, 141, 150, 0.15);
+
+  @include respondTo(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $colorHeader;
+    z-index: z(stickyHeader);
+  }
+
+  &-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respondTo(lg) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      max-width: rem(375px);
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: $colorNav;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(100%);
+      transform-origin: center top;
+      overflow: auto;
+      z-index: z(mobileMenu);
+      transition: opacity 0.25s $easeOutQuad, transform 0.25s $easeOutQuad, visibility 0.25s $easeOutQuad;
+      @include customScrollbar(thin);
+
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @include respondTo(xs) {
+      max-width: 100%;
+    }
+  }
+
+  &-navPrimary {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: rem(158px);
+
+    @include respondTo(lg) {
+      align-items: stretch;
+      padding-left: 0;
+    }
+  }
+
+  &-navSecondary {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: $borderPrimary;
+    padding-left: rem(158px);
+
+    @include respondTo(lg) {
+      flex-wrap: wrap;
+      border-bottom: none;
+      padding-left: 0;
+    }
+  }
+
+  &-logo {
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    left: 1.5rem;
+    color: $colorTertiary;
+    z-index: z(headerLogo);
+
+    @include respondTo(lg) {
+      width: rem(54px);
+      top: 0.5rem;
+      left: 1rem;
+    }
+
+    &--footer {
+      position: static;
+      top: unset;
+      left: unset;
+    }
+
+    img,
+    svg {
+      @include imgResponsive();
+    }
+  }
+
+  &-logosSecondary {
+    display: flex;
+    align-items: center;
+
+    @include respondTo(lg) {
+      &:not(.Header-logosSecondary--footer) {
+        display: none;
+      }
+    }
+  }
+
+  &-matchCalendarButtonContainer,
+  &-sideNavButtonContainer {
+    display: none;
+    width: 100%;
+    text-align: right;
+    background-color: $colorWhite;
+    border-top: $borderPrimary;
+
+    @include respondFrom(xl) {
+      display: none !important;
+    }
+  }
+
+  &-footer {
+    order: 3;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorGrey--90;
+    padding: 1.5rem;
+
+    @include respondFrom(xl) {
+      display: none;
+    }
+
+    p {
+      font-size: $fontSizeSmall;
+      line-height: 1.571;
+    }
+  }
+}

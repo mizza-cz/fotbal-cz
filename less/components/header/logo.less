@@ -1,0 +1,33 @@
+/**
+ * Fotbal.cz - logo
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+ **/
+ 
+
+
+
+.logo {
+	.f-condensed-bold;
+ 	.t-uppercase;
+ 	color: #fff;
+ 	text-decoration: none;
+ 	line-height: 1;
+ 	.mod-section & {
+		.f-20;
+ 	}
+ 	.mod-hp & {
+		.f-28;
+		margin: 0 30px 0 0;
+		float: left;
+		position: relative;
+		top: 8px;
+		@media @large {
+			margin-left: 130px;
+		}
+ 	}
+}
+.logo-ending {
+	color: @logoEnding;
+	text-transform: lowercase;
+}

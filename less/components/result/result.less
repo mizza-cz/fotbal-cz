@@ -1,0 +1,1371 @@
+/**
+Blok Resul
+
+Výpis výsledků
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 24.
+*/
+
+@c-result-col-padding-top: 4px;
+@c-result-col-padding-side: 30px;
+
+/**
+Základní výpis
+
+základní výpisy jsou s šedým pozadím, je s tím počítáno jako s rozlišením rozbaleného seznamu a světlé hlavičky. 
+Pokud jsou výpisy "result-container" použity nezabalené, je dobré jim dát modifikátor "mod-light" a budou mít bílé pozadí, jako druhý v příkladu.
+
+.mod-blue 	- modré skóre
+.mod-green 	- zelené skóre
+.mod-red 	- červené skóre
+.mod-big 	- velké skóre
+.mod-small 	- malé skóre
+
+Markup:
+<div class="result-container">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title">Kvalifikace MS 2016</span>
+			<span class="result-description">O<sup>2</sup> Aréna</span>
+		</div>
+		<div class="result-col-perex col-30">
+			<span class="result-date">15.12.2014</span>
+			<span class="result-time">19:00</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+<div class="result-container mod-light">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title">Kvalifikace MS 2016</span>
+			<span class="result-description">O<sup>2</sup> Aréna</span>
+		</div>
+		<div class="result-col-perex col-30">
+			<span class="result-date">15.12.2014</span>
+			<span class="result-time">19:00</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1 <i>pen: 2:3</i></span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+Styleguide 24.1.
+*/
+
+
+.result-container {
+	border-top: 1px solid @lightBlue;
+	background: @white;
+	background: @tbl-background;
+	margin-bottom: 10px;
+
+	&.mod-light { background: @white; }
+	//&:first-child { border-top: 0 none; }
+}
+
+
+.result-link {
+	display: block;
+	color: @midBlue;
+
+	.p-t(@c-result-col-padding-top);
+	.p-b(@c-result-col-padding-top);
+	
+	&:focus,
+	&:hover {
+		background: lighten(@lightBlue, 5%); 
+		color: @midBlue;
+		cursor: pointer;
+	}
+	
+	&:not([href]):hover,
+	&:not([href]):focus {
+		cursor: default;
+	}
+
+	> div {
+		&:first-child {
+			.p-l(@c-result-col-padding-side/3);	
+			
+			@media @small { .p-l(@c-result-col-padding-side/1.5); }
+			@media @large { .p-l(@c-result-col-padding-side); }
+		}
+		&.result-col-perex {
+			.p-r(@c-result-col-padding-side/3);	
+			
+			@media @small { .p-r(@c-result-col-padding-side/1.5); }
+			@media @large { .p-r(@c-result-col-padding-side); }
+		}
+		&.result-col-note {
+			color: #8895a3;
+			.p-b(4px);
+			.p-l(@c-result-col-padding-side/3);	
+			.p-r(@c-result-col-padding-side/3);	
+			
+			@media @small {
+				.p-l(@c-result-col-padding-side/1.5);
+				.p-r(@c-result-col-padding-side/1.5);
+			}
+			@media @large {
+				.p-l(@c-result-col-padding-side);
+				.p-r(@c-result-col-padding-side);
+			}
+		}
+		&.mod-padding-left-10 {
+			padding-left: 10px;
+		}
+		&.mod-padding-right-10 {
+			padding-right: 10px;
+		}
+	}
+}
+
+
+.result-col-title,
+.result-col-perex,
+.result-col-data {
+	line-height: 24px;
+	.p(0 0 0 @c-result-col-padding-side/3);	
+	@media @small { .p-l(@c-result-col-padding-side/1.5); }
+	@media @large { .p-l(@c-result-col-padding-side); }
+	
+	width: 100%;
+	color: @midBlue;
+
+	@media @medium { 
+		.p(@c-result-col-padding-top/2 0 @c-result-col-padding-top/2 @c-result-col-padding-side/2);
+	}
+
+	.result-middle { 
+		@media @medium { .p-t(12px); } 
+	}
+
+}
+
+.result-col-title { @media @mini { width: 100%; } }
+.result-col-title.col-60 { @media @mini { width: 60%; } }
+.result-col-perex { @media @mini { width: 45%; } }
+.result-col-perex.col-40 { @media @mini { width: 40%; } }
+.result-col-data { @media @mini { width: 55%; } }
+
+.result-col-title { @media @medium { width: 35%; } }
+.result-col-perex { @media @medium { width: 30%; } }
+.result-col-data { @media @medium { width: 35%; } }
+
+.result-col-title { @media @large { 
+	width: 35%; 
+	.result-title { 
+		.f-20;
+		@media @small {
+			.f-18;
+		}
+	}
+} }
+.result-col-perex { @media @large { width: 20%; } }
+.result-col-data { @media @large { 
+	width: 45%; 
+	> .media > .media-right { 
+		width: 15%; 
+		.txt-c;
+	}
+
+	.media-body,
+	.media-right,
+	.media-left { 
+		height: 48px;
+		vertical-align: middle;
+	}
+} }
+
+.result-title,
+.result-description,
+.result-date,
+.result-time { display: block; }
+
+.result-title {
+	.f-condensed-bold;
+	color: @midBlue;
+	.f-20;
+	@media @small {
+		.f-18;
+	}
+	&.mod-middle {
+		.p-t(0);
+		min-height: 0;
+		@media @mini { 
+			.p-t(12px); 
+			min-height: 52px;
+		}
+	}
+}
+
+.result-date,
+.result-time {
+	display: inline-block;
+	@media @mini { display: block; }
+	.f-condensed;
+	color: @grey;
+}
+
+.result-icon {
+	
+	.media { 
+		@media @medium { .p-t(12px); }
+	}
+
+	&.mod-two {
+		.m-t(0);
+		.media { 
+			.p-t(0);
+		}
+	}	
+
+	.m-t(0);
+	.p-t(0);
+	.p-b(0);
+	.media {
+		.m-t(0);
+	}
+}
+
+.result-team {
+	.f-condensed-bold;
+	color: @darkBlue;
+	display: block;
+	.m(0);
+
+	.icon-flag { float: left; }
+}
+
+.result-team-long { 
+	padding: 3px 0;
+	line-height: 18px; 
+	display: inline-block;
+}
+
+.result-score {
+	.f-condensed-bold;
+	color: @list-score-default;
+	text-decoration: underline;
+	.f-20;
+
+	&.mod-blue { color: @list-score-blue; }
+	&.mod-green { color: @list-score-green; }
+	&.mod-red { color: @list-score-red; }
+	&.mod-small { 
+		.f-16;
+		@media @small {.f-14;}
+	}
+	&.mod-big { .f-24; }
+	i {
+		.f-14;
+		display: block;
+		font-style: normal;
+	}
+}
+
+
+/**
+Skupina výpisů
+
+<strong>.result-group</strong> jako kontejner několika výpisů
+
+Markup:
+<div class="result-container result-group">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title">Kvalifikace MS 2016</span>
+			<span class="result-description">O<sup>2</sup> Aréna</span>
+		</div>
+		<div class="result-col-perex col-30">
+			<span class="result-date">15.12.2014</span>
+			<span class="result-time">19:00</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	<a class="result-link row">
+		<div class="result-col-title col-35"></div>
+		<div class="result-col-perex col-25">
+			<span class="result-date">15.12.2014</span>
+			<span class="result-time">19:00</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	<a class="result-link row">
+		<div class="result-col-title col-35"></div>
+		<div class="result-col-perex col-25">
+			<span class="result-date">15.12.2014</span>
+			<span class="result-time">19:00</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+Styleguide 24.2.
+*/
+.result-group {
+	.p-t(@c-result-col-padding-top);
+	.p-b(@c-result-col-padding-top);
+
+
+	.result-link {
+		.p-t(0);
+		.p-b(0);
+		.result-col-title { 
+			.p-t(0); 
+			.p-b(0); 
+		}
+		
+		.result-col-perex {
+			.p-t(4px);
+			.p-b(0px);
+			@media @mini { 
+				.p-b(4px);
+			}
+		}
+
+		.result-col-data {
+			.p-t(0px);
+			.p-b(4px);
+			@media @mini { 
+				.p-t(4px);
+			}
+		}
+
+		&:first-child:hover .result-col-title,
+		&:first-child:focus .result-col-title,
+		&:first-child .result-col-title {
+			display: block;
+			.p-t(4px);
+			.p-b(4px);
+
+			@media @medium { 
+				.p-t(4px);
+			}
+		}
+	}
+}
+
+/**
+Výpis termínové listiny
+
+Markup:
+<div class="box mod-white mod-bottom-shadow">	
+	<div class="result-container">
+		<a class="result-link row">
+			<div class="result-col-title col-35">
+				<span class="result-title">Kvalifikace MS 2016</span>
+				<span class="result-description">O<sup>2</sup> Aréna</span>
+			</div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+	<div class="result-container">
+		<a class="result-link row">
+			<div class="result-col-title col-35">
+				<span class="result-title">Kvalifikace MS 2016</span>
+				<span class="result-description">O<sup>2</sup> Aréna</span>
+			</div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+	<div class="result-container result-group">
+		<a class="result-link row">
+			<div class="result-col-title col-35">
+				<span class="result-title">Kvalifikace MS 2016</span>
+				<span class="result-description">O<sup>2</sup> Aréna</span>
+			</div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="result-link row">
+			<div class="result-col-title col-35"></div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a class="result-link row">
+			<div class="result-col-title col-35"></div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+	<div class="result-container">
+		<a class="result-link row">
+			<div class="result-col-title col-35">
+				<span class="result-title">Kvalifikace MS 2016</span>
+				<span class="result-description">O<sup>2</sup> Aréna</span>
+			</div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+	<div class="result-container">
+		<a class="result-link row">
+			<div class="result-col-title col-35">
+				<span class="result-title">Kvalifikace MS 2016</span>
+				<span class="result-description">O<sup>2</sup> Aréna</span>
+			</div>
+			<div class="result-col-perex col-25">
+				<span class="result-date">15.12.2014</span>
+				<span class="result-time">19:00</span>
+			</div>
+			<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+</div>
+
+Styleguide 24.3.
+*/
+
+/**
+Výpis detailu u trenéra
+
+Markup:
+<div class="result-container">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title result-middle">Kvalifikace MS 2016</span>
+		</div>
+		<div class="result-col-perex col-25">
+			<span class="result-date result-middle">15.12.2014</span>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+
+Styleguide 24.4.
+*/
+
+
+/**
+Výpis detailu u hráče
+
+Markup:	
+<div class="result-container">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title">Kvalifikace MS 2016</span>
+			<span class="result-date">15.12.2014</span>
+		</div>
+		<div class="result-col-perex col-25">
+			<div class="row row-extended">
+				<div class="col-65">
+					<div class="result-icon mod-two">
+						<div class="media">
+							<div class="media-left"><i class="icon-stopwatch icon-l icon-grey"></i></div>
+							<div class="media-body result-text">90 minut</div>
+						</div>
+						<div class="media">
+							<div class="media-left"><i class="icon-ball icon-l icon-grey"></i></div>
+							<div class="media-body result-text">3 gólů</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-35">
+					<div class="result-icon mod-two">
+						<div class="media">
+							<div class="media-left"><i class="icon-cards icon-l icon-yellow"></i></div>
+							<div class="media-body result-text">3 Ž</div>
+						</div>
+						<div class="media">
+							<div class="media-left"><i class="icon-cards icon-l icon-red"></i></div>
+							<div class="media-body result-text">1 Č</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+
+Styleguide 24.5.
+*/
+
+
+/**
+Bilance dle soupeřů
+
+Markup:	
+<div class="result-container">
+	<a class="result-link row">
+		<div class="result-col-title col-35">
+			<span class="result-title">Kvalifikace MS 2016</span>
+			<span class="result-date">15.12.2014</span>
+		</div>
+		<div class="result-col-perex col-25">
+			<div class="result-icon">
+				<div class="media">
+					<div class="media-left media-middle"><i class="icon-field icon-xl icon-grey"></i></div>
+					<div class="media-body result-text">České Budějovice</div>
+				</div>
+			</div>
+		</div>
+		<div class="result-col-data col-35">
+			<div class="media">
+				<div class="media-body">
+				<div class="row mod-extended">
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-cze"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">cze</span>
+							<span class="result-team-long">Česká Republika</span>
+						</div>
+					</div>
+					<div class="col-l-10 display-large"></div>
+					<div class="result-team media col-100 col-l-45">
+						<div class="media-left">
+							<i class="icon-flag icon-flag-bra"></i>
+						</div>
+						<div class="media-body">
+							<span class="result-team-short t-uppercase hide-micro hide-medium hide-small">bra</span>
+							<span class="result-team-long">Brazílie</span>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="media-right media-middle">
+					<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>
+
+
+Styleguide 24.6.
+*/
+
+
+/**
+Hlavička výpisu výsledků - detail trenera
+
+Markup:	
+<div class="box mod-white mod-bottom-shadow">
+	<div class="resulthead row">
+		<div class="resulthead-title col-25">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">rok</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-25">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">zápasů</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-30">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase"><abbr title="výhry">v</abbr> - <abbr title="remízy">r</abbr> - <abbr title="prohry">p</abbr></dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-20"></div>
+	</div>
+	<!-- FOREACH SEASON -->
+	<div class="hr mod-tiny"></div>
+	<div class="resulthead row">
+		<div class="resulthead-title col-25">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>2015</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-25">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>11</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-30">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>3-6-2</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-20">
+			<button  onclick="app.toggleElem(this, '.tgl-season-2015')" class="btn btn-small mod-filter mod-center txt-c btn-toggle js-tgl-group-item" data-text-open="více" data-text-close="méně">
+				<i class="icon-plus-circle icon-l  vertical-sub"></i><span class="vertical-middle hide-micro">více</span>
+			</button>
+		</div>
+	</div>
+	<div class="tgl-all-season tgl-season-2015 js-hide">
+		<div class="result-container">
+			<a class="result-link row">
+				<div class="result-col-title col-35">
+					<span class="result-title result-middle">Kvalifikace MS 2015</span>
+				</div>
+				<div class="result-col-perex col-25">
+					<span class="result-date result-middle">15.12.2014</span>
+				</div>
+				<div class="result-col-data col-35">
+				<div class="media">
+					<div class="media-body">
+					<div class="row mod-extended">
+						<div class="result-team media col-100 col-l-45">
+							<div class="media-left">
+								<i class="icon-flag icon-flag-cze"></i>
+							</div>
+							<div class="media-body">
+								<span class="result-team-long">Česká Republika</span>
+							</div>
+						</div>
+						<div class="col-l-10 display-large"></div>
+						<div class="result-team media col-100 col-l-45">
+							<div class="media-left">
+								<i class="icon-flag icon-flag-bra"></i>
+							</div>
+							<div class="media-body">
+								<span class="result-team-long">Brazílie</span>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="media-right media-middle">
+						<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<!-- END FOREACH -->
+</div>
+
+
+Styleguide 24.7.
+*/
+
+.resulthead-head {
+	background-color: @white;
+	.m-b-15;
+}
+
+.resulthead {
+	background-color: @white;
+	.p-t(5px);
+	.p-b(5px);
+	
+	@media @large {
+		.p-t(8px);
+		.p-b(8px);
+	}
+}
+
+.resulthead-title {
+	.p-r-10;
+	min-height: 32px;
+	dt { line-height: 32px; }
+
+	.p-l(@c-result-col-padding-side/3);	
+	
+	@media @small { .p-l(@c-result-col-padding-side/1.5); }
+	@media @large { .p-l(@c-result-col-padding-side); }
+
+	.btn { 
+		.m-t(1px);
+		.m-b(1px); 
+	}
+
+	.b-r;
+	&:last-child { border-right: 0 none; }
+	
+	dl.mod-numeric dt { 
+		.f-16; 
+		@media @mini {
+			.f-18;
+		}	
+		@media @medium {
+			.f-20;
+		}	
+		@media @large {
+			.f-24;
+		}
+	}
+
+	@media @tiny-only { &.mod-noborder-tiny { border-right: 0 none; } }
+	@media @mini-only { &.mod-noborder-mini { border-right: 0 none; } }
+	@media @small-only { &.mod-noborder-small { border-right: 0 none; } }
+
+}
+
+/**
+Hlavička výpisu výsledků - detail hráče
+
+Markup:	
+<div class="box mod-white mod-bottom-shadow">
+	<div class="resulthead row">
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">rok</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">zápasů</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-small">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">minut</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">gólů</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">č/ž karet</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6"></div>
+	</div>
+	<!-- FOREACH SEASON -->
+	<div class="hr mod-tiny"></div>
+	<div class="resulthead row">
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>2015</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>11</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-small">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>325</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>7</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>0/3</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<button  onclick="app.toggleElem(this, '.tgl-player-season-2015')" class="btn btn-small mod-filter mod-center txt-c btn-toggle js-tgl-group-item" data-text-open="více" data-text-close="méně">
+				<i class="icon-plus-circle icon-l  vertical-sub"></i><span class="vertical-middle hide-micro">více</span>
+			</button>
+		</div>
+	</div>
+	<div class="tgl-all-season tgl-player-season-2015 js-hide">
+		<div class="result-container">
+			<a class="result-link row">
+				<div class="result-col-title col-35">
+					<span class="result-title">Kvalifikace MS 2016</span>
+					<span class="result-date">15.12.2014</span>
+				</div>
+				<div class="result-col-perex col-25">
+					<div class="row row-extended">
+						<div class="col-65">
+							<div class="result-icon mod-two">
+								<div class="media">
+									<div class="media-left"><i class="icon-stopwatch icon-l icon-grey"></i></div>
+									<div class="media-body result-text">90 minut</div>
+								</div>
+								<div class="media">
+									<div class="media-left"><i class="icon-ball icon-l icon-grey"></i></div>
+									<div class="media-body result-text">3 gólů</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-35">
+							<div class="result-icon mod-two">
+								<div class="media">
+									<div class="media-left"><i class="icon-cards icon-l icon-yellow"></i></div>
+									<div class="media-body result-text">3 Ž</div>
+								</div>
+								<div class="media">
+									<div class="media-left"><i class="icon-cards icon-l icon-red"></i></div>
+									<div class="media-body result-text">1 Č</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="result-col-data col-35">
+				<div class="media">
+					<div class="media-body">
+					<div class="row mod-extended">
+						<div class="result-team media col-100 col-l-45">
+							<div class="media-left">
+								<i class="icon-flag icon-flag-cze"></i>
+							</div>
+							<div class="media-body">
+								<span class="result-team-long">Česká Republika</span>
+							</div>
+						</div>
+						<div class="col-l-10 display-large"></div>
+						<div class="result-team media col-100 col-l-45">
+							<div class="media-left">
+								<i class="icon-flag icon-flag-bra"></i>
+							</div>
+							<div class="media-body">
+								<span class="result-team-long">Brazílie</span>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="media-right media-middle">
+						<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+	</div>
+	<!-- END FOREACH -->
+</div>
+
+Styleguide 24.8.
+*/
+
+
+/**
+Hlavička výpisu výsledků - bilance dle soupeřů
+
+Markup:	
+<div class="box mod-white mod-bottom-shadow">
+	<div class="resulthead row">
+		<div class="resulthead-title col-100 col-s-2-3 col-m-1-3 mod-noborder-mini">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">země</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-small">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">zápasů</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">v/r/p</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-low">
+				<dd class="t-uppercase">skóre</dd>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6"></div>
+	</div>
+	<!-- FOREACH COUNTRY -->
+	<div class="hr mod-tiny"></div>
+	<div class="resulthead row">
+		<div class="resulthead-title col-100 col-s-2-3 col-m-1-3 mod-noborder-mini">
+			<div class="media">
+			<div class="media-left media-middle">
+				<i class="icon-flag icon-flag-eng float-l"></i>
+			</div>
+			<div class="media-body media-middle">
+				<span class="h2 mod-no-margin">Anglie</span>
+			</div>
+		</div>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-small">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>12</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6 mod-noborder-mini">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>7/2/3</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<dl class="mod-numeric mod-nomargin">
+				<dt>14:10</dt>
+			</dl>
+		</div>
+		<div class="resulthead-title col-50 col-s-1-3 col-m-1-6">
+			<button  onclick="app.toggleElem(this, '.tgl-country-season-2015')" class="btn btn-small mod-filter mod-center txt-c btn-toggle js-tgl-group-item" data-text-open="více" data-text-close="méně">
+				<i class="icon-plus-circle icon-l  vertical-sub"></i><span class="vertical-middle hide-micro">více</span>
+			</button>
+		</div>
+	</div>
+	<div class="tgl-all-season tgl-country-season-2015 js-hide">
+		<div class="result-container">
+			<a class="result-link row">
+				<div class="result-col-title col-35">
+					<span class="result-title">Kvalifikace MS 2016</span>
+					<span class="result-date">15.12.2014</span>
+				</div>
+				<div class="result-col-perex col-25">
+					<div class="result-icon">
+						<div class="media">
+							<div class="media-left media-middle"><i class="icon-field icon-xl icon-grey"></i></div>
+							<div class="media-body result-text">České Budějovice</div>
+						</div>
+					</div>
+				</div>
+				<div class="result-col-data col-35">
+					<div class="media">
+						<div class="media-body">
+						<div class="row mod-extended">
+							<div class="result-team media col-100 col-l-45">
+								<div class="media-left">
+									<i class="icon-flag icon-flag-cze"></i>
+								</div>
+								<div class="media-body">
+									<span class="result-team-long">Česká Republika</span>
+								</div>
+							</div>
+							<div class="col-l-10 display-large"></div>
+							<div class="result-team media col-100 col-l-45">
+								<div class="media-left">
+									<i class="icon-flag icon-flag-bra"></i>
+								</div>
+								<div class="media-body">
+									<span class="result-team-long">Brazílie</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="media-right media-middle">
+							<span class="result-score {$modifier_class} {{modifier_class}}">3:1</span>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- END FOREACH -->
+</div>
+
+Styleguide 24.9.
+*/

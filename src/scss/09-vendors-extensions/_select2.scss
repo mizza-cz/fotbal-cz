@@ -1,0 +1,49 @@
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  height: auto;
+  background-color: $colorWhite;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
+  background-size: 10px 6px;
+  border: $borderPrimary;
+  border-radius: $borderRadiusPrimary;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single,
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+  border-color: $colorTertiary;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  @include text($colorText, $fontSizeSmall, $fontWeightNormal, 1.5);
+  @include textOverflowEllipsis();
+  padding: 0;
+}
+
+.select2-dropdown {
+  background-color: $colorWhite;
+  border: 2px solid $colorTertiary;
+  border-radius: $borderRadiusPrimary;
+}
+
+.select2-container--default .select2-results__option--selected {
+  color: $colorText;
+  background-color: $colorGrey--80;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  color: $colorWhite;
+  background-color: $colorTertiary;
+}
+
+.select2-selection__arrow {
+  display: none;
+}

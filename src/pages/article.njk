@@ -1,0 +1,463 @@
+{% extends "../templates/layout-articlePage.njk" %}
+
+{% set pageTitle = '{Název článku} | Fotbal.cz' %}
+{% set bodyClass = 'ArticlePage' %}
+
+{% import "../templates/partials/_competitionNav.njk" as competitionNav %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <!-- Article -->
+    <article class="Article">
+      <!-- Article image -->
+      <picture class="Article-imgContainer">
+        <source media="(max-width: 576px)" srcset="./img/placeholder-article-mobile.jpg"/>
+        <source srcset="./img/placeholder-article.jpg 1x, ./img/placeholder-article@1.5x.jpg 1.5x, ./img/placeholder-article@2x.jpg 2x"/>
+        <img class="Article-img" src="./img/placeholder-article.jpg" width="1920" height="1080" alt="" loading="lazy"/>
+      </picture>
+      <div class="Container">
+        <div class="Article-grid">
+          <!-- Article content -->
+          <div class="Article-mainContent">
+            <div class="Article-container">
+              <header class="Article-header">
+                <a href="#" class="Badge">FORTUNA:LIGA</a>
+                <h1 class="H2">Šilhavý: Pozitivně tento rok hodnotit nemůžeme, ale herně jsme většinou nepropadli</h1>
+                <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+                <div class="Article-perex">
+                  <p>Přestože čeští fotbalisté za sebou mají výsledkově nejhorší rok v samostatné historii, podle trenéra
+                    <em>Jaroslava Šilhavého</em>
+                    ve většině zápasů herně nepropadli. Reprezentačního kouče nejvíc mrzí, že jeho svěřenci v březnu neuspěli v baráži o mistrovství světa v Kataru. Kalendářní rok zakončil národní celek porážkou 1:2 v přípravě v Turecku.</p>
+                </div>
+              </header>
+              <div class="Article-body">
+                <p>
+                  Reprezentačního kouče nejvíc mrzí, že jeho svěřenci v březnu neuspěli v baráži o mistrovství světa v Kataru. Kalendářní rok zakončil národní celek porážkou 1:2 v přípravě v Turecku.
+                  <a href="#">Česká reprezentace</a>
+                  v 10 letošních zápasech zapsala jen dvě vítězství, stejný počet remíz a šest porážek. V březnu v semifinále play off o mistrovství světa reprezentanti
+                  <a href="#">prohráli ve Švédsku 0:1</a>
+                  po prodloužení a poté v konkurenci favoritů Portugalska, Španělska a Švýcarska sestoupili z elitní skupiny
+                  <em>A Ligy národů</em>.
+                </p>
+
+                <!-- Article widget - Gallery -->
+                {% include "../templates/partials/_articleWidget-gallery.njk" %}
+
+                <p>"Pozitivně to určitě hodnotit nemůžeme. Nejsmutnější jsme byli, že jsme neudělali baráž o mistrovství světa. To nás mrzí dodnes a ještě nějakou dobu mrzet bude. V tom zápase jsme herně nepropadli, byť je to málo k tomu, abychom se tím obhajovali," řekl Šilhavý na tiskové konferenci po prohře v Turecku.</p>
+
+                <ul>
+                  <li>Položka odrážkového seznamu</li>
+                  <li>Položka odrážkového seznamu</li>
+                  <li>Položka odrážkového seznamu</li>
+                </ul>
+
+                <ol>
+                  <li>Položka číslovaného seznamu</li>
+                  <li>Položka číslovaného seznamu</li>
+                  <li>Položka číslovaného seznamu</li>
+                </ol>
+
+                <blockquote>
+                  <p>Je skvělé, že je nás tu tolik a že jsme si to před domácími fanoušky mohli všichni užít. Trenér Šilhavý po mně chtěl, ať hraju to, na co jsem zvyklý z klubu.</p>
+                </blockquote>
+
+                <p>Jeho svěřenci v rozlučce s kalendářním rokem nenavázali na středeční domácí vítězství 5:0 v přípravě nad Faerskými ostrovy a v Turecku o gól prohráli. "Soupeř byl daleko produktivnější než my. Ty branky jsme jim v podstatě připravili sami, soupeř trestal naše chyby. I když jsme bojovali o remízu, nepodařilo se nám to," litoval Šilhavý.</p>
+
+                <h2>TEST soc. media</h2>
+
+                <h3>YouTube</h3>
+                <!-- YouTube -->
+                <iframe width="560" height="315" data-src="https://www.youtube.com/embed/x7_XGtvq3b4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" data-cookiecategory="social" data-placeholder="data-placeholder"></iframe>
+
+                <h3>Facebook</h3>
+                <!-- Facebook -->
+                <iframe data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fnarodak%2Fposts%2Fpfbid0NGHAp5Q1zyJkbnDu9kxvz1d2DQGn2Nm4NLF4gvucEBoeQgr78ca2HMJR8QbEVwu4l&show_text=true&width=500" width="500" height="590" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-cookiecategory="social" data-placeholder="data-placeholder"></iframe>
+
+                <h3>Twitter</h3>
+                <!-- Twitter -->
+                <blockquote class="twitter-tweet">
+                  <p lang="cs" dir="ltr">Fotbalová asociace České republiky se přidává k zástupu gratulantů tenistce Markétě Vondroušové k jejímu vítězství ve Wimbledonu. Bylo úžasné celou cestu sledovat! Jde o skvělou reklamu nejen pro český tenis. Markéto, ještě jednou blahopřejeme!</p>
+                  &mdash; FAČR (@FACR_Asociace)
+                  <a href="https://twitter.com/FACR_Asociace/status/1680244900799959040?ref_src=twsrc%5Etfw">July 15, 2023</a>
+                </blockquote>
+                <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8" type="text/plain" data-cookiecategory="social"></script>
+
+                <h3>Instagram</h3>
+                <!-- Instagram -->
+                <blockquote class="instagram-media" data-instgrm-captioned="data-instgrm-captioned" data-instgrm-permalink="https://www.instagram.com/p/CujqYi-Nrc6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background: #fff; border: 0; border-radius: 3px; box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15); margin: 1px; max-width: 540px; min-width: 326px; padding: 0; width: 99.375%; width: -webkit-calc(100% - 2px); width: calc(100% - 2px)">
+                  <div style="padding: 16px">
+                    <a href="https://www.instagram.com/p/CujqYi-Nrc6/?utm_source=ig_embed&amp;utm_campaign=loading" style="background: #ffffff; line-height: 0; padding: 0 0; text-align: center; text-decoration: none; width: 100%" target="_blank">
+                      <div style="display: flex; flex-direction: row; align-items: center">
+                        <div style="background-color: #f4f4f4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px"></div>
+                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center">
+                          <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px"></div>
+                          <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px"></div>
+                        </div>
+                      </div>
+                      <div style="padding: 19% 0"></div>
+                      <div style="display: block; height: 50px; margin: 0 auto 12px; width: 50px">
+                        <svg width="50px" height="50px" viewbox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                              <g>
+                                <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div style="padding-top: 8px">
+                        <div style="color: #3897f0; font-family: Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: 550; line-height: 18px">Zobrazit příspěvek na Instagramu</div>
+                      </div>
+                      <div style="padding: 12.5% 0"></div>
+                      <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center">
+                        <div>
+                          <div style="background-color: #f4f4f4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px)"></div>
+                          <div style="background-color: #f4f4f4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px"></div>
+                          <div style="background-color: #f4f4f4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px)"></div>
+                        </div>
+                        <div style="margin-left: 8px">
+                          <div style="background-color: #f4f4f4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px"></div>
+                          <div style="width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                        </div>
+                        <div style="margin-left: auto">
+                          <div style="width: 0px; border-top: 8px solid #f4f4f4; border-right: 8px solid transparent; transform: translateY(16px)"></div>
+                          <div style="background-color: #f4f4f4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px)"></div>
+                          <div style="width: 0; height: 0; border-top: 8px solid #f4f4f4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px)"></div>
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px">
+                        <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px"></div>
+                        <div style="background-color: #f4f4f4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px"></div>
+                      </div >
+                    </a>
+                    <p style="color: #c9c8cd; font-family: Arial, sans-serif; font-size: 14px; line-height: 17px; margin-bottom: 0; margin-top: 8px; overflow: hidden; padding: 8px 0 7px; text-align: center; text-overflow: ellipsis; white-space: nowrap">
+                      <a href="https://www.instagram.com/p/CujqYi-Nrc6/?utm_source=ig_embed&amp;utm_campaign=loading" style="color: #c9c8cd; font-family: Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; line-height: 17px; text-decoration: none" target="_blank">Příspěvek sdílený Česká fotbalová reprezentace (@ceskarepre)</a>
+                    </p>
+                  </div>
+                </blockquote>
+                <script async="async" src="//www.instagram.com/embed.js" charset="utf-8" type="text/plain" data-cookiecategory="social"></script>
+
+                <h3>TikTok</h3>
+                <!-- TikTok -->
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@ceskarepre/video/7252980156027915546" data-video-id="7252980156027915546" style="max-width: 605px; min-width: 325px">
+                  <section>
+                    <a target="_blank" title="@ceskarepre" href="https://www.tiktok.com/@ceskarepre?refer=embed">@ceskarepre</a>
+                    Začala nám příprava, tak si projedeme trochu toho zpracování, protože první dotek rozhoduje! 💪🏼 Jak si povede Vasil Kušej a Pavel Šulc, aniž by dostali ⚽️ mimo ↩️?
+                    <a title="ceskarepre" target="_blank" href="https://www.tiktok.com/tag/ceskarepre?refer=embed">#ceskarepre</a>
+                    <a title="hrdilvi🦁" target="_blank" href="https://www.tiktok.com/tag/hrdilvi%F0%9F%A6%81?refer=embed">#hrdilvi🦁</a>
+                    <a target="_blank" title="♬ original sound - 🇵🇹🐐" href="https://www.tiktok.com/music/original-sound-7158203625696004869?refer=embed">♬ original sound - 🇵🇹🐐</a>
+                  </section>
+                </blockquote>
+                <script async="async" src="https://www.tiktok.com/embed.js" charset="utf-8" type="text/plain" data-cookiecategory="social"></script>
+
+                <p>
+                  Při listopadovém srazu mu z různých důvodů scházelo téměř 30 hráčů a šanci dostali i nováčci. Útočník
+                  <a href="#">Mojmír Chytil</a>
+                  se proti Faeřanům při debutu blýskl hattrickem. "Hlavně v domácím zápase nás ti nováčci potěšili. Tentokrát se tam dostali v průběhu a taky určitě nezklamali. Viděli, že to bylo těžší. Je to pro ně velká zkušenost. Záleží, jak budou pokračovat. Opakované výkony doma v lize je sem mohou vynést," podotkl Šilhavý.
+                </p>
+
+                <p>Už se těší na mistrovství světa. "Sledovat to budu, to je jasné. Že bych si ale vybral jedno mužstvo, to teď nemám. Jsem zvědavý, jak do toho týmy vlétnou. Přece jen je to nezvyk hrát mistrovství v zimě, v podstatě v půlce soutěží hned po týdnu jedou týmy na mistrovství. Do toho klimatické podmínky, to vše bude asi ovlivňovat kvalitu. Co se týče trendů, jsem zvědavý, co jde ještě posunout dál nebo upevnit," dodal Šilhavý. Jeho svěřence čeká v březnu start kvalifikace o mistrovství Evropy.</p>
+
+                <!-- Article widget - Match box -->
+                {% include "../templates/partials/_articleWidget-matchBox.njk" %}
+
+                <p>Elitní české kluby pro listopadový sraz nepustily své hráče. Slavia ale nakonec uvolnila pro švédskou reprezentaci stopera Aihama Ousoua, který by se po zranění nedostal do nominace na páteční zápas domácího poháru v Karviné." Samozřejmě chápu, že Slavia chce uspět v MOL Cupu. Když jsme se však dozvěděli, že uvolnila Ousoua do Švédska, byli jsme překvapeni," řekl ČT sport Šilhavý. Už se těší na mistrovství světa. "Sledovat to budu, to je jasné. Že bych si ale vybral jedno mužstvo, to teď nemám.</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem, in cumque, culpa perferendis maiores nulla sed omnis temporibus molestias odit error iure similique? Rerum, quidem! Facilis minima tempora corrupti omnis excepturi? Animi blanditiis numquam, nesciunt, incidunt quisquam quae deleniti corrupti nobis accusamus eos non a fugiat! Dolores, repellendus labore!</p>
+
+                <picture>
+                  <source media="(max-width: 576px)" srcset="./img/placeholder-subpage-img.jpg"/>
+                  <source srcset="./img/placeholder-subpage-img.jpg 1x, ./img/placeholder-subpage-img@1.5x.jpg 1.5x, ./img/placeholder-subpage-img@2x.jpg 2x"/>
+                  <img src="./img/placeholder-subpage-img.jpg" alt="" loading="lazy"/>
+                </picture>
+
+                <h2>Elitní české kluby pro listopadový sraz nepustily své hráče</h2>
+
+                <!-- Article widget - Player box -->
+                {% include "../templates/partials/_articleWidget-playerBox.njk" %}
+
+                <p>Kromě Chytila dnes odehráli premiérový zápas za národní tým i jeho kluboví spoluhráči Ondřej Zmrzlý a Jan Navrátil. "Je fajn, že jsme všichni nastoupili. Je skvělé, že je nás tu tolik a že jsme si to před domácími fanoušky mohli všichni užít," ocenil autor šesti ligových branek, kterými pomohl Olomouci ke čtvrtému místu po podzimní části.</p>
+
+                <p>Urostlý útočník dal druhý hattrick v sezoně a navázal na pohárový duel proti Uničovu (4:2). Formu z klubu si přenesl i do národního týmu. "Trenér Šilhavý po mně chtěl, ať hraju to, na co jsem zvyklý z klubu. Co se týče trendů, jsem zvědavý, co jde ještě posunout dál nebo upevnit," dodal Šilhavý.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero autem quod minus eius facere labore nam perferendis recusandae dicta quam, adipisci cum qui magni a dolore culpa sed dolorum. Accusantium minima velit fugiat tenetur ipsa repellendus. Veritatis eveniet libero sunt!</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum non mollitia quo enim nemo sint repellendus asperiores ipsam id voluptates, numquam neque doloribus ex est. Exercitationem nulla similique id voluptas laborum totam. Impedit molestiae repellat facere harum sequi quisquam, ipsam quis, neque dolore corporis quam, mollitia laborum. Atque, pariatur itaque.</p>
+
+                <!-- Article widget - Article box -->
+                {% include "../templates/partials/_articleWidget-articleBox.njk" %}
+
+                <p>„Možná nejdůležitější byl úplně první kvalifikační zápas se Slovinskem. A vítězná branka Martina Vitíka v samém závěru utkání. Tím jsme dobře odstartovali a v tu chvíli jsem si říkal, že je štěstí přikloněno na naši stranu. Rozhodli jsme vyrovnaný zápas, přišly okamžiky velké radosti. Nebylo to jednoduché, šlo o první sraz, tým se teprve vytvářel, včetně toho realizačního. Cítil jsem tam určitou nervozitu a možná ani hráči nebyli úplně v pohodě. I když v tréninku odvedli kus práce.</p>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat. Byť jsme se potom utkali s Anglií, klopýtli jsme a nepodali očekávaný výkon. Možná i z přílišného respektu k soupeři… I proti takovým máme rozhodně na víc, než jsme zatím předvedli.“ A&nbsp;abych plnil pokyny, které mi dal před zápasem. To se podle mě povedlo,“ pochvaloval si Chytil, kterého čeká po hattricku i vysoké zápisné v kabině a vyřizování množství gratulací. "Asi si budu muset půjčit, uvidíme. A na telefon jsem se ještě pořádně nedíval, ale sám jsem zvědavý, kolik tam toho bude," dodal.</p>
+
+                <p>&nbsp;</p>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat.</p>
+
+                <hr/>
+
+                <p>Pak to z nás spadlo. Zápas se Slovinskem jsme výsledkově zvládli a udělali si dobrou výchozí pozici. Po čtyřech zápasech jsme měli stoprocentní zisk bez inkasované branky, což byl vysněný start do kvalifikace, na který jsme pak mohli navázat.</p>
+
+                <h3>Tabulka</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                      <th>Sloupec</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                    <tr>
+                      <td>Data</td>
+                      <td>
+                        <strong>Bold data</strong>
+                      </td>
+                      <td>
+                        Data a
+                        <a href="#">odkaz</a>
+                      </td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                    <tr>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                      <td>Data</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Elitní české kluby pro listopadový sraz nepustily své hráče. Slavia ale nakonec uvolnila pro švédskou reprezentaci stopera Aihama Ousoua, který by se po zranění nedostal do nominace na páteční zápas domácího poháru v Karviné. "Samozřejmě chápu, že Slavia chce uspět v MOL Cupu. Když jsme se však dozvěděli, že uvolnila Ousoua do Švédska, byli jsme překvapeni," řekl ČT sport Šilhavý.</p>
+
+                <h3>Futsal tabulky</h3>
+                <h4>O1A - 1. Futsal liga</h4>
+                <table border="0" cellspacing="0" cellpadding="1" width="470">
+                  <tbody>
+                    <tr>
+                      <td colspan="6" class="Titulka">
+                        <p align="center"><img alt="" align="left" src="/img/hlstr/titulkaL.gif" border="0" hspace="0" vspace="0">
+                          <align="center">1. kolo 25.08.2023</align="center">
+                        </p>
+                      </td>
+                    </tr>
+                    <tr bgcolor="bbbbbb">
+                      <td>
+                        <b>Zápas
+                        </b>
+                      </td>
+                      <td>
+                        <b>Domácí</b>
+                      </td>
+                      <td>
+                        <b>Hosté</b>
+                      </td>
+                      <td>
+                        <b>Termín</b>
+                      </td>
+                      <td>
+                        <b>Den</b>
+                      </td>
+                      <td>
+                        <b>Hřiště</b>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0101</td>
+                      <td>SK Interobal Plzeň</td>
+                      <td>Oxyworld Baník Chomutov</td>
+                      <td>25.08. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8">
+                      <td>O1A0102</td>
+                      <td>FK Chrudim</td>
+                      <td>Žab. Vlci Brno</td>
+                      <td>25.08. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0103</td>
+                      <td>SK Slavia Praha</td>
+                      <td>Rapid Ústí n. L.</td>
+                      <td>25.08. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8"></tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0105</td>
+                      <td>Helas Brno</td>
+                      <td>Intern. FC Kadaň</td>
+                      <td>25.08. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8">
+                      <td>O1A0106</td>
+                      <td>SK Olympik Mělník</td>
+                      <td>FTZS Liberec</td>
+                      <td>25.08. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellspacing="0" cellpadding="1" width="470">
+                  <tbody>
+                    <tr>
+                      <td colspan="6" class="Titulka">
+                        <p align="center"><img alt="" align="left" src="/img/hlstr/titulkaL.gif" border="0" hspace="0" vspace="0">
+                          <align="center">2. kolo 01.09.2023</align="center">
+                        </p>
+                      </td>
+                    </tr>
+                    <tr bgcolor="bbbbbb">
+                      <td>
+                        <b>Zápas
+                        </b>
+                      </td>
+                      <td>
+                        <b>Domácí</b>
+                      </td>
+                      <td>
+                        <b>Hosté</b>
+                      </td>
+                      <td>
+                        <b>Termín</b>
+                      </td>
+                      <td>
+                        <b>Den</b>
+                      </td>
+                      <td>
+                        <b>Hřiště</b>
+                      </td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0201</td>
+                      <td>Oxyworld Baník Chomutov</td>
+                      <td>FTZS Liberec</td>
+                      <td>01.09. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8">
+                      <td>O1A0202</td>
+                      <td>Intern. FC Kadaň</td>
+                      <td>SK Olympik Mělník</td>
+                      <td>01.09. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0203</td>
+                      <td>SKUP Olomouc</td>
+                      <td>Helas Brno</td>
+                      <td>01.09. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8"></tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td>O1A0205</td>
+                      <td>Žab. Vlci Brno</td>
+                      <td>SK Slavia Praha</td>
+                      <td>01.09. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                    <tr bgcolor="#f8f8f8">
+                      <td>O1A0206</td>
+                      <td>SK Interobal Plzeň</td>
+                      <td>FK Chrudim</td>
+                      <td>01.09. 20:00</td>
+                      <td>PÁ</td>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#aaaaaa">
+                      <td colspan="6" height="1"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>Související dokumenty</h3>
+                <!-- Article widget - Documents -->
+                {% include "../templates/partials/_articleWidget-documents.njk" %}
+              </div>
+            </div>
+          </div>
+          <!-- Article sidebar -->
+          <aside class="Article-aside u-md-mt-40 u-sm-mt-24">
+            <h4 class="H9 H9--stretched u-tt-uppercase">Související</h4>
+            <!-- Related content nav -->
+            {{ competitionNav.render(null, "vertical") }}
+            <!-- Related articles -->
+            <div class="RelatedArticlesGrid u-mt-40 u-sm-mt-24">
+              {% for item in range(0, 3) %}
+                {% include "../templates/partials/_articleBox.njk" %}
+              {% endfor %}
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+{% endblock %}

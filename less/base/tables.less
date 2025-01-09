@@ -1,0 +1,376 @@
+/**
+Table
+
+Styl pro tabulky
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 10.
+*/
+/**
+Normální tabulka
+
+Markup:
+<table class="table">
+	<thead>
+		<tr>
+			<th># ID</th>
+			<th>Jméno</th>
+			<th>Telefon</th>
+			<th><abbr title="Bez české předvolby">Tel.</abbr></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1.</td>
+			<td>Petr Kysela</td>
+			<td><a href="#">petr@kysela.biz</a></td>
+			<td>739 *** ***</td>
+		</tr>
+			<td>2.</td>
+			<td>Michal Kobelka</td>
+			<td><a href="#">michalkobelka@gmail.com</a></td>
+			<td>739 *** ***</td>
+		</tr>
+	</tbody>	
+</table>
+
+Styleguide 10.1.
+*/
+
+th {
+    .txt-l;
+} // hack kvůli udržení na první úrovni a možnosti v html nastylovat na střed pomocí .txt-c
+
+.table {
+    width: 100%;
+    margin: 0 0 @gutter 0;
+    border: 1px solid @tbl-border;
+    background: #fff;
+    td,
+    th {
+        border: 1px solid @tbl-border;
+        .f-14;
+        padding: 5px;
+        @media @small {
+            padding: 10px;
+        }
+    }
+
+    thead {
+        td,
+        th {
+            .t-uppercase;
+            background: @tbl-background;
+            .f-14;
+            .f-condensed-bold;
+        }
+    }
+
+    tbody tr:nth-child(even) {
+        th,
+        th + td {
+            background: @tbl-background !important;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                td,
+                th {
+                    background: @tbl-background !important;
+                }
+            }
+
+            &:nth-child(even):hover,
+            &:hover {
+                td,
+                th {
+                    background: lighten(@lightBlue, 5%) !important;
+                }
+            }
+        }
+    }
+
+    td {
+        a {
+            .t-bold;
+        }
+    }
+}
+
+/**
+Modifikátory tabulky
+
+.mod-nostripped 	- tabulka bez zvýrazňovaných řádků
+.mod-bottomborder 	- tabulka s ohraničením pouze na spodní straně řádků
+.mod-lighthead 		- tabulka se světlým záhlavím
+.mod-noborder 		- tabulka bez ohraničení
+.mod-nohover 		- tabulka bez zvýraznění řádku při hover
+.mod-nomargin 		- tabulka bez marginu
+
+Markup:
+<table class="table {{modifier_class}} {$modifier_class}">
+	<thead>
+		<tr>
+			<th># ID</th>
+			<th>Jméno</th>
+			<th>Telefon</th>
+			<th><abbr title="Bez české předvolby">Tel.</abbr></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1.</td>
+			<td>Petr Kysela</td>
+			<td><a href="#">petr@kysela.biz</a></td>
+			<td>739 *** ***</td>
+		</tr>
+			<td>2.</td>
+			<td>Michal Kobelka</td>
+			<td><a href="#">michalkobelka@gmail.com</a></td>
+			<td>739 *** ***</td>
+		</tr>
+	</tbody>	
+</table>
+
+Styleguide 10.2.
+*/
+
+.table {
+    &.mod-nostripped {
+        tbody tr:nth-child(even) {
+            td,
+            th {
+                background: transparent;
+            }
+        }
+    }
+
+    &.mod-bottomborder {
+        border: 0 none;
+        border-bottom: 1px solid @tbl-border;
+        td,
+        th {
+            border: 0 none;
+            border-top: 1px solid @tbl-border;
+        }
+    }
+
+    &.mod-lighthead {
+        thead {
+            td,
+            th {
+                color: @grey;
+                background: lighten(@lightBlue, 3.4%);
+            }
+        }
+    }
+
+    &.mod-noborder {
+        border: 0 none;
+
+        th,
+        td {
+            border: 0 none;
+        }
+    }
+
+    &.mod-nohover {
+        tbody tr:hover {
+            td,
+            th {
+                background: transparent !important;
+            }
+        }
+    }
+
+    &.mod-nomargin {
+        margin: 0;
+    }
+
+    .row-group {
+        border-top: 0 none;
+        padding-top: 0;
+    }
+}
+
+.table {
+    .table.mod-lighthead;
+    .table.mod-nostripped;
+    .table.mod-bottomborder;
+}
+
+/**
+Kontajner tabulky
+
+Markup:
+<div class="table-container">
+	<table class="table mod-nostripped mod-bottomborder mod-lighthead">
+		<thead>
+			<tr>
+				<th>Jméno a příjmení</th>
+				<th>Věk</th>
+				<th>Narození</th>
+				<th>Aktuální klub</th>
+				<th class="txt-c">Starty</th>
+				<th class="txt-c">Branky</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="#">Petr Kysela</a></td>
+				<td>26 let</td>
+				<td>07.12. 1988</td>
+				<td>eSports, s.r.o.</td>
+				<td class="txt-c">0</td>
+				<td class="txt-c">0</td>
+			<tr>
+			</tr>
+				<td><a href="#">Michal Kobelka</a></td>
+				<td></td>
+				<td></td>
+				<td>eSports, s.r.o.</td>
+				<td class="txt-c">0</td>
+				<td class="txt-c">0</td>
+			</tr>
+			</tr>
+				<td><a href="#">Sivon Tomáš</a></td>
+				<td>25 let</td>
+				<td>07.07. 1989</td>
+				<td>Paris Saint Germain</td>
+				<td class="txt-c">34</td>
+				<td class="txt-c">0</td>
+			</tr>
+		</tbody>	
+	</table>
+</div>
+
+Styleguide 10.3.
+*/
+
+.table-container {
+    overflow-x: auto;
+    position: relative;
+}
+
+/*
+Řazení sloupců tabulky
+
+Pro řazení je použit <strong style="color: red;">UPRAVENÝ (pozor na aktualizace celého balíku)</strong> balíček 
+https://github.com/terrilldent/tsorter. Upravený je ve smyslu, že se neřadí veškeré sloupce v tabulce, ale pouze ty, které 
+mají atribut <strong>data-tsorter</strong>, ten může být buď bez hodnoty nebo s hodnotami: 'numeric', 'link' nebo 'input'
+<br>
+Více dle dokumentace pluginu.
+
+Markup:
+<table class="table mod-bottomborder mw-xs" id="tsorter-tournament-stats-0">
+	<thead>
+		<tr>
+			<th class="th-col-5" data-tsorter="">#</th>
+			<th>Jméno Příjmení</th>
+			<th data-tsorter="numeric" class=" ">Góly</th>
+			<th>Aktuální klub</th>
+			<th class="txt-c " data-tsorter="numeric">ŽK</th>
+			<th class="txt-c " data-tsorter="numeric">ČK</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1.</td>
+			<td>Karel Krakovčík</td>
+			<td>1</td>
+			<td> ### </td>
+			<td class="txt-c">0</td>
+			<td class="txt-c">0</td>
+		</tr><tr>
+			<td>2.</td>
+			<td>Ivan Novotný</td>
+			<td>1</td>
+			<td> ### </td>
+			<td class="txt-c">0</td>
+			<td class="txt-c">0</td>
+		</tr><tr>
+			<td>3.</td>
+			<td>Antonín Plachý</td>
+			<td>1</td>
+			<td> ### </td>
+			<td class="txt-c">0</td>
+			<td class="txt-c">0</td>
+		</tr><tr>
+			<td>4.</td>
+			<td>Jan Koller</td>
+			<td>1</td>
+			<td> ### </td>
+			<td class="txt-c">0</td>
+			<td class="txt-c">0</td>
+		</tr><tr>
+			<td>5.</td>
+			<td>Aleš Soumar </td>
+			<td>1</td>
+			<td> ### </td>
+			<td class="txt-c">0</td>
+			<td class="txt-c">0</td>
+		</tr>
+	</tbody>
+</table>
+
+Styleguide 10.4.
+*/
+
+.table thead {
+    th[data-tsorter]:after,
+    th.ascend:after,
+    th.descend:after {
+        font-family: icons;
+        font-style: normal;
+        font-weight: 400;
+        speak: none;
+        display: inline-block;
+        position: absolute;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: 0.2em;
+        text-align: center;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        margin-left: 0.2em;
+        -webkit-font-smoothing: antialiased;
+        color: lighten(@grey, 20%);
+    }
+    th[data-tsorter],
+    th.ascend,
+    th.descend {
+        cursor: pointer;
+    }
+
+    th.ascend,
+    th.ascend:after,
+    th.descend,
+    th.descend:after {
+        color: @darkBlue!important;
+    }
+
+    th[data-tsorter]:after {
+        content: '\e819';
+    }
+    th.ascend:after {
+        content: '\e817';
+    }
+    th.descend:after {
+        content: '\e818';
+    }
+}
+
+.table-up {
+    color: green !important;
+}
+
+.table-down {
+    color: red !important;
+}

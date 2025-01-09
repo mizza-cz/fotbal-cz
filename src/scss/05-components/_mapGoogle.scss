@@ -1,0 +1,22 @@
+.GoogleMap {
+  @include responsiveMediumContainer(1352, 676);
+  border-radius: $borderRadiusPrimary;
+
+  @include respondTo(sm) {
+    @include responsiveMediumContainer(3, 2);
+  }
+
+  .gm-style {
+    font-family: $fontFamilySecondary !important;
+  }
+
+  &-infoWindowInner {
+    text-align: center;
+
+    .Logo {
+      width: 3rem;
+      height: 3rem;
+      margin: auto;
+    }
+  }
+}

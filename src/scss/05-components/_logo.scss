@@ -1,0 +1,17 @@
+.Logo {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  object-position: center;
+
+  @include respondTo(xs) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &--small {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

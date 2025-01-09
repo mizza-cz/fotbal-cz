@@ -1,0 +1,100 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = '{Název statické stránky} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+
+      <article class="Article">
+        <h1 class="H3">Hlavní nadpis</h1>
+        <div class="Article-body">
+          <!-- Static content goes here -->
+          <h2>Podnadpis H2</h2>
+          <p>Seriál Skvěle, kluci! představuje devět základních principů hry, kterými by se na základě analýzy současných trendů chtěly prezentovat mládežnické reprezentace a bude postupně představovat povedené akce mládežnických reprezentací i s komentářem jejich trenérů. Zároveň se zaměří na základní principy hry českých národních týmů. V očích trenérů národních týmů je vzorovým hráčem, který naplňuje všechny tyto principy, záložník A týmu Tomáš Souček. Týden, co týden tak pro vás budou nyní trenéři U15 - U20 vybírat a komentovat herní situace, které tyto zásady v jejich očích splňují.</p>
+
+          <!-- YouTube -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FGx5jY6Q4HQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe>
+
+          <h3>Podnadpis H3</h3>
+          <p>Pro hráče je celkově připraveno šest hodin pohybových aktivit, které jsou dominantně zaměřeny na rozvoj pohybových dovedností s cílem dosáhnout efektivnějšího řízení a následné ekonomiky pohybu projevující se v koordinačních schopnostech. Cílem je pozitivně ovlivňovat ty svalové skupiny, u kterých je jednostranným fotbalovým zatěžováním pozměněna časová souhra v jejich aktivaci. Výsledkem je vytvořený pohybový vzor, který se projevuje v podobě dosažené úrovně základní pohybové gramotnosti.</p>
+
+          <div class="Article-widget">
+            <ul class="EventsList">
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/4568/finale-poharu-zen-2023-2x3.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Pohár: AC Sparta Praha – SK Slavia Praha</h2>
+                  <p>26. května 2023, 18:00, Stadion v Kollárově ulici, Vlašim</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://zeny.fotbal.cz/vlasim-bude-hostit-finale-zenskeho-poharu/a18331">Více informací</a>
+                  <a class="Button" href="https://www.ticketportal.cz/event/Finale-poharu-zen-FACR-AC-Sparta-Praha-SK-Slavia-Praha">Koupit vstupenky</a>
+                </div>
+              </li>
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/8/2023-09-07-albanie.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Reprezentace A: Česko – Albánie</h2>
+                  <p>7. září 2023, 20:45</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://repre.fotbal.cz/tym/terminy/1">Více informací</a>
+                  <a class="Button" href="#">Prodej nezahájen</a>
+                </div>
+              </li>
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/8/2023-09-07-walesu21.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Reprezentace do 21 let: Česko – Wales</h2>
+                  <p>13. října 2023</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://repre.fotbal.cz/tym/terminy/2">Více informací</a>
+                  <a class="Button" href="#">Prodej nezahájen</a>
+                </div>
+              </li>
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/8/2023-09-07-faerskeostrovy.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Reprezentace A: Česko – Faerské ostrovy</h2>
+                  <p>15. října 2023, 18:00, Doosan Arena – Plzeň</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://repre.fotbal.cz/tym/terminy/1">Více informací</a>
+                  <a class="Button" href="#">Prodej nezahájen</a>
+                </div>
+              </li>
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/8/2023-09-07-danskou21.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Reprezentace do 21 let: Česko – Dánsko</h2>
+                  <p>17. října 2023</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://repre.fotbal.cz/tym/terminy/2">Více informací</a>
+                  <a class="Button" href="#">Prodej nezahájen</a>
+                </div>
+              </li>
+              <li class="EventsList-item">
+                <div class="EventsList-item-imgContainer"><img src="/files/images/8/2023-11-20-moldavsko.png" alt="" width="" height=""></div>
+                <div class="EventsList-item-textContainer">
+                  <h2 class="H4">Reprezentace A: Česko – Moldavsko</h2>
+                  <p>20. listopadu 2023, 20:45, Andrův stadion – Olomouc</p>
+                </div>
+                <div class="EventsList-item-actionsContainer">
+                  <a class="Button" href="https://repre.fotbal.cz/tym/terminy/1">Více informací</a>
+                  <a class="Button" href="#">Prodej nezahájen</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+{% endblock %}

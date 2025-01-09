@@ -1,0 +1,75 @@
+/**
+Menu obsah
+
+Kontejner 
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Tibor Piňo tibor.pino@gmail.com
+
+Markup:
+<!-- .menu-ext -->
+<nav>
+    <h4 class="menu-ext-title">KFS Stredočeský kraj</h4>
+    <ul class="menu-ext box mod-white">
+        <li class="menu-ext-item"><a href="">Úvodní stránka</a></li>
+        <li class="menu-ext-item"><a href="">Dokumenty</a></li>
+        <li class="menu-ext-line"></li>
+        <li class="menu-ext-item"><a href="">Výkonný výbor</a></li>
+        <li class="menu-ext-line"></li>
+        <li class="menu-ext-item"><a href="">Udělené tresty</a></li>
+    </ul>
+</nav>
+<!-- end .menu-ext -->
+
+Styleguide 25.
+*/
+.menu-ext {
+    margin: 0;
+    padding: 0;
+    background: @white;
+}
+
+.menu-ext-title {
+    .f-14;
+    background: @blue;
+    color: @white;
+    padding: 10px 15px;
+    margin: 0;
+    
+    a {
+        color: @white;
+        
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-ext-item {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid lighten(@lightBlue, 5%);
+    
+    a {
+        .f-14;
+        display: block;
+        padding: 8px 15px;
+        text-decoration: none;
+        
+        &:hover, &:focus {
+            background: lighten(@lightBlue, 5%);
+        }
+    }
+}
+
+.menu-ext-line {
+    border-bottom: 1px solid @tbl-border;
+}
+
+.menu-ext-select {
+    margin: 5px 0 20px 0;
+}
+
+.menu-ext-hr {
+    height: 20px;
+    width: 100%;
+}

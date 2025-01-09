@@ -1,0 +1,43 @@
+.Ad {
+  display: block;
+  // border-radius: $borderRadiusPrimary;
+  // overflow: hidden;
+
+  &--half {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  &--desktop {
+    display: none;
+
+    @include respondFrom(sm) {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    display: block;
+
+    @include respondFrom(sm) {
+      display: none;
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    @include imgResponsive();
+    margin: auto;
+  }
+
+  & + .Article {
+    margin-top: 1.5rem;
+
+    @include respondFrom(md) {
+      margin-top: 2.5rem;
+    }
+  }
+}

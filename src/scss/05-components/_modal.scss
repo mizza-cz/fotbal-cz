@@ -1,0 +1,147 @@
+.Modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $colorOverlay;
+  z-index: z(modal);
+  overflow: hidden;
+
+  &.is-active {
+    display: flex;
+    animation-name: fadeInModal;
+    animation-duration: 0.25s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    // .Modal-dialog {
+    //   animation-delay: 0.25s;
+    // }
+  }
+
+  &.is-closing {
+    display: flex;
+    animation-name: fadeOutModal;
+    animation-duration: 0.5s;
+
+    .Modal-dialog {
+      animation-name: hideModalDialog;
+      animation-duration: 0.25s;
+    }
+  }
+
+  &-dialog {
+    width: calc(100% - 2rem);
+    max-width: rem(1024px);
+    max-height: calc(100% - 2rem);
+    position: relative;
+    background-color: $colorWhite;
+    border-radius: $borderRadiusBig;
+    box-shadow: $boxShadowBig;
+    padding: 2.5rem;
+    overflow: auto;
+    opacity: 0;
+    transform: translateY(-50%);
+    animation-name: showModalDialog;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+    @include respondTo(sm) {
+      padding: 1.5rem;
+    }
+
+    &--announcement {
+      max-width: rem(1160px);
+    }
+
+    &--cover {
+      max-width: rem(880px);
+
+      .Ad {
+        border-radius: none;
+      }
+    }
+
+    &--youTubeVideo {
+      padding: 0;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    overflow: auto;
+  }
+
+  // &-heading {
+  //   @include text($colorBlack, 1.5rem, $fontWeightSemiBold, 1.2);
+  //   margin-top: 1rem;
+  //   margin-bottom: 1.5rem;
+  // }
+
+  .CloseButton {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: transparent;
+    z-index: 10;
+  }
+
+  img {
+    @include imgResponsive();
+    margin: 0 auto;
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutModal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showModalDialog {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hideModalDialog {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+}

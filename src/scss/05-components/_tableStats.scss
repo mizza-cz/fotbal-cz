@@ -1,0 +1,320 @@
+.TableStats {
+  width: 100%;
+
+  thead {
+    tr {
+      border-top: $borderPrimary;
+      border-bottom: $borderPrimary;
+
+      @include respondTo(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: calc(100vw - 3rem);
+      }
+
+      @include respondTo(xs) {
+        width: calc(100vw - 2rem);
+      }
+    }
+
+    th {
+      vertical-align: middle;
+      @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      background-color: $colorWhite;
+      padding: 0.5rem 1rem;
+
+      @include respondTo(sm) {
+        display: block;
+        width: 50% !important;
+        min-width: 0 !important;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--player {
+    thead {
+      th {
+        width: 20%;
+
+        // Match
+        &:nth-child(2) {
+          min-width: rem(200px);
+        }
+      }
+    }
+
+    .TableStats-details {
+      table {
+        tbody {
+          td {
+            width: 20%;
+
+            // Match
+            &:nth-child(2) {
+              min-width: rem(200px);
+            }
+
+            @include respondTo(sm) {
+              width: 50%;
+              min-width: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--team {
+    thead {
+      th {
+        width: 25%;
+
+        // Match
+        &:nth-child(4) {
+          min-width: rem(200px);
+        }
+      }
+    }
+
+    .TableStats-details {
+      table {
+        tbody {
+          td {
+            width: 25%;
+
+            // Match
+            &:nth-child(4) {
+              min-width: rem(200px);
+            }
+
+            @include respondTo(sm) {
+              width: 50%;
+              min-width: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--teamByOpponents,
+  &--coach {
+    thead {
+      th {
+        width: 20%;
+
+        // Opponent
+        &:first-child {
+          width: 40%;
+        }
+
+        // Match
+        &:nth-child(4) {
+          min-width: rem(200px);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td:not(.TableStats-details td:first-child) {
+          // Opponent
+          &:first-child {
+            text-align: left !important;
+            white-space: normal !important;
+          }
+        }
+      }
+    }
+
+    .TableStats-details {
+      table {
+        tbody {
+          td {
+            width: 20%;
+
+            // Opponent
+            &:first-child {
+              width: 40%;
+            }
+
+            // Match
+            &:nth-child(4) {
+              min-width: rem(200px);
+            }
+
+            @include respondTo(sm) {
+              width: 50% !important;
+              min-width: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--coach {
+    thead {
+      tr {
+        border-top: none;
+      }
+
+      th {
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr:not(.TableStats-details) {
+      @include respondTo(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+    tr:not(.TableStats-details tbody tr) {
+      border-bottom: $borderPrimary;
+    }
+
+    td:not(.TableStats-details tbody td) {
+      position: relative;
+      vertical-align: middle;
+      font-family: $fontFamilySecondary;
+      @include text($colorText, $fontSizeExtraBig, $fontWeightSemiBold, 1.4);
+      text-align: center;
+      white-space: nowrap;
+      background-color: $colorWhite;
+      padding: 0.5rem 1rem;
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0.5rem;
+          right: 0;
+          @include roundedBorderVer();
+          height: calc(100% - 1rem);
+
+          @include respondTo(sm) {
+            display: none;
+          }
+        }
+      }
+
+      @include respondTo(sm) {
+        display: block;
+        width: 50%;
+        font-size: $fontSizeBig;
+      }
+
+      @include respondTo(xs) {
+        font-size: $fontSizeNormal;
+      }
+
+      .ToggleIconButton {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-details {
+    td {
+      padding: 0 !important;
+    }
+
+    & > td {
+      @include respondTo(sm) {
+        width: 100% !important;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tbody {
+        tr {
+          background-color: $colorGrey--70;
+
+          &:not(:last-child) {
+            border-bottom: 2px solid $colorWhite;
+          }
+        }
+
+        td {
+          vertical-align: middle;
+          font-family: $fontFamilySecondary;
+          @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.571);
+          text-align: center;
+          white-space: nowrap;
+          padding: 0.75rem 1rem !important;
+
+          &:first-child {
+            text-align: left;
+            white-space: normal;
+
+            @include respondTo(sm) {
+              text-align: center;
+            }
+          }
+
+          @include respondTo(xxs) {
+            font-size: $fontSizeExtraSmall;
+          }
+
+          .TableStats-match {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+
+            abbr {
+              text-decoration: none;
+            }
+
+            .Flag {
+              width: 1rem !important;
+              height: 1rem !important;
+              margin-right: 0.5rem;
+
+              &:last-of-type {
+                margin-left: 0.5rem;
+                margin-right: 0;
+              }
+            }
+
+            // result
+            strong {
+              text-decoration-color: transparent;
+              transition: color 0.25s linear, text-decoration-color 0.25s linear;
+              margin: 0 0.5rem;
+            }
+
+            &:focus,
+            &:hover {
+              strong {
+                text-decoration: underline;
+                text-decoration-color: currentColor;
+                text-decoration-thickness: 0.125rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

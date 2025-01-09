@@ -1,0 +1,114 @@
+.Map {
+  @include imgResponsive();
+
+  &--praha {
+    --praha: #00257a;
+  }
+
+  &--stredocesky {
+    --stredocesky: #00257a;
+  }
+
+  &--jihocesky {
+    --jihocesky: #00257a;
+  }
+
+  &--plzensky {
+    --plzensky: #00257a;
+  }
+
+  &--karlovarsky {
+    --karlovarsky: #00257a;
+  }
+
+  &--ustecky {
+    --ustecky: #00257a;
+  }
+
+  &--liberecky {
+    --liberecky: #00257a;
+  }
+
+  &--kralovehradecky {
+    --kralovehradecky: #00257a;
+  }
+
+  &--pardubicky {
+    --pardubicky: #00257a;
+  }
+
+  &--vysocina {
+    --vysocina: #00257a;
+  }
+
+  &--jihomoravsky {
+    --jihomoravsky: #00257a;
+  }
+
+  &--olomoucky {
+    --olomoucky: #00257a;
+  }
+
+  &--moravskoslezsky {
+    --moravskoslezsky: #00257a;
+  }
+
+  &--zlinsky {
+    --zlinsky: #00257a;
+  }
+
+  &--cechy {
+    --praha: #00257a;
+    --stredocesky: #00257a;
+    --jihocesky: #00257a;
+    --plzensky: #00257a;
+    --karlovarsky: #00257a;
+    --ustecky: #00257a;
+    --liberecky: #00257a;
+    --kralovehradecky: #00257a;
+    --pardubicky: #00257a;
+  }
+
+  &--morava {
+    --vysocina: #00257a;
+    --jihomoravsky: #00257a;
+    --olomoucky: #00257a;
+    --moravskoslezsky: #00257a;
+    --zlinsky: #00257a;
+  }
+
+  &--cr {
+    --praha: #00257a;
+    --stredocesky: #00257a;
+    --jihocesky: #00257a;
+    --plzensky: #00257a;
+    --karlovarsky: #00257a;
+    --ustecky: #00257a;
+    --liberecky: #00257a;
+    --kralovehradecky: #00257a;
+    --pardubicky: #00257a;
+    --vysocina: #00257a;
+    --jihomoravsky: #00257a;
+    --olomoucky: #00257a;
+    --moravskoslezsky: #00257a;
+    --zlinsky: #00257a;
+  }
+}
+
+#interactive-cr-map {
+  color: #DDE1E6;
+}
+.js-region {
+  cursor: pointer;
+
+  &.is-highlighted {
+    &:is(g) {
+      color: #00257a;
+    }
+    &:is(a) {
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 0.125rem;
+    }
+  }
+}

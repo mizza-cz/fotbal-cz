@@ -1,0 +1,143 @@
+/**
+Tile Result
+
+Dlaždice s tabulkami výsledků
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<div class="c-tile-group mod-side-full">
+	<div class="c-tile-item mod-width-4 mod-nosquare">
+		<div class="box mod-square mod-white mod-bottom-shadow">
+			<div class="c-tile-result">
+				<h2 class="h3 c-tile-result-heading">Klasifikace MS Evropy 2015</h2>
+				<table class="c-tile-result-table mod-lighthead mod-bottomborder mod-nostripped mod-nohover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Stát</th>
+							<th><abbr title="Počet odehraných zápasů">Z</abbr></th>
+							<th>Skóre</th>
+							<th>Body</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Česká republika</td>
+							<td>4</td>
+							<td>35:12</td>
+							<td>35:12</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="c-tile-result-match mod-lighthead mod-noborder mod-nostripped mod-nohover">
+					<tbody>
+						<tr>
+							<td>Česko vs Nizozemsko</td>
+							<td><strong>5:0</strong></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn-grout">
+					<a href="#" class="btn btn-small mod-dark-blue">Tabulka turnaje</a>
+					<a href="#" class="btn btn-small mod-dark-blue">Rozpis utkání</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+Styleguide 2.7.
+*/
+
+.c-tile-result {
+	.p(15px);
+	//.m-b(15px);
+	font-size: .8rem;
+
+	.c-tile-result-heading { 
+		.p(0); 
+		.m(0 0 10px 0);
+	}
+
+	.c-tile-result-table {
+		.m-b(10px);
+
+		thead tr th {
+			.p(7px 0 7px 14px);
+		}
+
+		tbody tr td {
+			.p(7px 0 7px 14px);
+			&:first-child { .f-base-bold; }
+		}
+	}
+
+	.c-tile-result-match {
+		td { .p(6px 0 6px 14px); }
+		td:first-child { width: 75%; }
+	}
+
+	.btn-grout { .p-l(14px); }
+
+	@media @mini {
+		.p-25;
+		font-size: 1rem;
+	
+		.h2 { .m(0 0 20px 0); }
+		
+		.c-tile-result-match {
+			td:first-child { width: 55%; }
+		}
+	}
+
+	@media @medium {
+		.p-10;
+		font-size: .8rem;
+	
+		.h2 { .m(0 0 10px 0); }
+		
+		.c-tile-result-table {
+			.m-b(10px);
+
+			thead tr th {
+				.p-l(7px);
+			}
+
+			tbody tr td {
+				.p-l(7px);
+			}
+		}
+		.c-tile-result-match {
+			display: none;
+		}
+		.btn-grout { .p-l(7px); }
+	}
+
+	@media @large {
+		.p-25;
+		.h2 { .m(0 0 20px 0); }
+		.c-tile-result-table {
+			.m-b(15px);
+
+			thead tr th {
+				.p(9px 0 9px 14px);
+			}
+
+			tbody tr td {
+				.p(7px 0 7px 14px);
+				&:first-child { .f-base-bold; }
+			}
+		}
+
+		.c-tile-result-match {
+			display: table;
+			td { .p(6px 0 6px 14px); }
+			td:first-child { width: 55%; }
+		}
+
+		.btn-grout { .p-l(14px); }
+	}
+}

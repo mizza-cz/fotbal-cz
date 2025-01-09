@@ -1,0 +1,115 @@
+.registration-wrapper {
+  width: calc(100% - 2rem);
+  max-width: 51.5rem;
+}
+.registration-modal {
+  background-color: $colorGrey--70;
+  border-radius: 1rem;
+  padding: 46px 32px 32px;
+  @include respondTo(md) {
+    padding: 32px 16px 24px;
+  }
+}
+.registration-content {
+  max-width: 31rem;
+}
+.registrationForm {
+  --gridGutter: 10px;
+}
+
+.registrationForm-password {
+  position: relative;
+  .toggle-password {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+  }
+}
+.registration-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  @include respondTo(md) {
+    margin-top: 40px;
+  }
+  li + li {
+    padding-left: 17px;
+    margin-left: 16px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 16px;
+      width: 1px;
+      top: 0;
+      background-color: #000;
+    }
+  }
+  li {
+    position: relative;
+  }
+  a {
+    display: block;
+    font-size: 12px;
+    text-decoration-color: transparent;
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
+}
+.registration-decore {
+  font-size: 14px;
+  color: $colorPlaceholder;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(50% - 32px);
+    background-color: #707070;
+    top: 10px;
+  }
+  &::after {
+    left: 0;
+  }
+  &::before {
+    right: 0;
+  }
+}
+.registrationSocial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  &-item {
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #dde1e6;
+    border-radius: 0.25rem;
+    padding: 0.5rem 20px;
+    text-decoration-color: transparent;
+    font-size: 15px;
+    color: #878d96;
+    transition: border 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+      width: 16px;
+      height: 16px;
+      display: block;
+      object-fit: contain;
+    }
+    &:hover {
+      text-decoration-color: inherit;
+      border: 2px solid #00257a;
+    }
+  }
+}

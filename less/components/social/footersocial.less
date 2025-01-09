@@ -1,0 +1,60 @@
+/**
+ * Fotbal.cz - footer social
+ * author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+ * author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+**/
+
+.footersocial {
+	.m-reset-list;
+	.m-clearfix;
+	text-align: center;
+	padding: 25px 0;
+	@media @small {
+		padding: 15px 0 20px 0;
+	}
+	@media @medium {
+		padding: 30px 0 30px 0;
+	}
+
+
+	.footersocial-item {
+
+		box-sizing: border-box;
+		display: block;
+		width: 50%;
+		float: left;
+
+		@media @small {
+			.m-inline-block;
+			width: auto;
+			float: none;
+		}
+
+		@media @medium {
+			margin: 0 30px;	
+		}
+	}
+	.footersocial-item-link {
+		.f-20;
+		text-decoration: none;
+		color: #fff;
+		padding: 10px;
+		display: block;
+		&:hover {
+			.icon:before {
+				color: #fff!important;
+			}
+			text-decoration: underline;
+		}
+
+		@media @medium {
+			padding: 0;
+		}
+	}
+	.icon {
+		.f-28;
+		color: #445a66;
+		vertical-align: middle;
+		transition: 0.2s color ease-in-out;
+	}
+}

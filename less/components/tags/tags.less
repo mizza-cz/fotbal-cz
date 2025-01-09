@@ -1,0 +1,145 @@
+/**
+Tags
+
+Styl štítků
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Markup:
+<ul class="tags">
+	<li class="tag"><a href="" class="tag-link">Miroslav Pelta</a></li>
+	<li class="tag"><a href="" class="tag-link">Reprezentace</a></li>
+	<li class="tag"><a href="" class="tag-link">ČR</a></li>
+	<li class="tag"><a href="" class="tag-link">Derby</a></li>
+</ul>
+
+Styleguide 3.
+*/
+
+/**
+Barevné varianty
+
+.mod-blue		- <b>.mod-sec-1</b> - modrý štítek - REPREZENTACE
+.mod-red		- <b>.mod-sec-2</b> - červený štítek - FAČR	
+.mod-yellow		- <b>.mod-sec-3</b> - žlutý štítek - SOUTĚŽE
+.mod-orrange	- <b>.mod-sec-4</b> - oranžový štítek - MŮJ FOTBAL
+.mod-violet		- <b>.mod-sec-5</b> - fialový štítek - TRÉNINK
+.mod-grey		- <b>.mod-sec-6</b> - šedý štítek - ROZHODČÍ
+.mod-pink		- <b>.mod-sec-7</b> - růžový štítek - ŽENY
+.mod-gold		- <b>.mod-sec-8</b> - zlatý štítek - FUTSAL
+.mod-green		- <b>.mod-sec-9</b> - zelený štítek - TV
+.mod-white		- <b>.mod-sec-10</b> - bílý štítek - FANZONA
+
+Markup:
+<ul class="tags">
+	<li class="tag"><a href="" class="tag-link {{modifier_class}} {$modifier_class}">Barevný štítek</a></li>
+</ul>
+
+Styleguide 3.1
+*/
+
+/**
+Inline tagy
+
+Markup:
+<span class="m-r-5">Tagy: </span>
+<ul class="tags mod-inline">
+	<li class="tag"><a href="" class="tag-link mod-blue">Barevný štítek</a></li>
+</ul>
+
+Styleguide 3.2
+*/
+
+
+.tags {
+	.m-reset-list;
+	.tag {
+		display: inline-block;
+		.m-b(7px);
+	}
+
+	&.mod-inline {
+		display: inline;
+	}
+
+	.tag-link {
+		.f-condensed-bold;
+		.f-12;
+		line-height: 1;
+		display: inline-block;
+		.t-uppercase;
+		text-decoration: none;
+		color: #fff;
+		background-color: @tag;
+		padding: 9px 25px;
+		border-radius: 16px;
+		margin: 0 7px 0 0;
+		transition: 0.2s background-color linear;
+		&:hover {
+			background-color: darken( @tag, 10% );
+		}
+
+		&.mod-blue,
+		&.mod-sec-1 { 
+			background-color: @tag-blue; 
+			&:hover,
+			&:active { background-color: darken( @tag-blue, 10% ); }
+		}
+		&.mod-red,
+		&.mod-sec-2 { 
+			background: @tag-red; 
+			&:hover,
+			&:active { background-color: darken( @tag-red, 16% ); }
+		}
+		&.mod-yellow,
+		&.mod-sec-3 { 
+			background: @tag-yellow; 
+			&:hover,
+			&:active { background-color: darken( @tag-yellow, 10% ); }
+		}
+		&.mod-orrange,
+		&.mod-sec-4 { 
+			background-color: @tag-orrange; 
+			&:hover,
+			&:active { background-color: darken( @tag-orrange, 10% ); }
+		}
+		&.mod-violet,
+		&.mod-sec-5 { 
+			background: @tag-violet; 
+			&:hover,
+			&:active { background-color: darken( @tag-violet, 13% ); }
+		}
+		&.mod-grey,
+		&.mod-sec-6 { 
+			background: @tag-grey; 
+			&:hover,
+			&:active { background-color: darken( @tag-grey, 13% ); }
+		}
+		&.mod-pink,
+		&.mod-sec-7 { 
+			background: @tag-pink; 
+			&:hover,
+			&:active { background-color: darken( @tag-pink, 13% ); }
+		}
+		&.mod-gold,
+		&.mod-sec-8 { 
+			background: @tag-gold; 
+			&:hover,
+			&:active { background-color: darken( @tag-gold, 10% ); }
+		}
+		&.mod-green,
+		&.mod-sec-9 { 
+			background: @tag-green; 
+			&:hover,
+			&:active { background-color: darken( @tag-green, 10% ); }
+		}
+		&.mod-white,
+		&.mod-sec-10 { 
+			background: @tag-white;
+			color: #111; 
+			&:hover,
+			&:active { background-color: darken( @tag-white, 10% ); }
+		}
+	}
+}

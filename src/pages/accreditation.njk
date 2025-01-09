@@ -1,0 +1,47 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = 'Akreditace | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <h1 class="H3">Akreditace</h1>
+    <table class="Table u-mt-primary">
+      <thead>
+        <tr>
+          <th>Událost/Event</th>
+          <th>Datum události/Date</th>
+          <th>Místo/Place</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>25. řádná Valná hromada FAČR</td>
+          <td>23. 6. 2023</td>
+          <td>Praha - Čestlice</td>
+          <td class="u-ta-right">
+            <a href="#" class="Link Link--inverted">Vytvořit žádost</a>
+          </td>
+        </tr>
+        <tr>
+          <td>{event name}</td>
+          <td>{date}</td>
+          <td>{place}</td>
+          <td class="u-ta-right">
+            <a href="#" class="Link Link--inverted">Vytvořit žádost</a>
+          </td>
+        </tr>
+        <tr>
+          <td>{event name}</td>
+          <td>{date}</td>
+          <td>{place}</td>
+          <td class="u-ta-right">
+            <a href="#" class="Link Link--inverted">Vytvořit žádost</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+{% endblock %}

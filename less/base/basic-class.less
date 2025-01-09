@@ -1,0 +1,286 @@
+/**
+Basic class
+
+Základní třídy pro jednotný styl v komponentách
+- package: Fotbal.cz
+- author: eSports.cz, s.r.o. - Michal Kobelka michalkobelka@gmail.com
+- author: eSports.cz, s.r.o. - Petr Kysela petr@kysela.biz
+
+Styleguide 14.
+*/
+
+
+/**
+Responzivní obrázek
+
+Markup:
+<img class="img-responsive" src="http://satyr.io/900x75/16" title="" alt="">
+
+Styleguide 14.1.
+*/
+
+.img-responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+
+
+/**
+Odkaz s responzivním obrázkem
+
+Markup:
+<a href="#" class="img-link">
+	<img src="http://satyr.io/900x75/17" title="" alt="">
+</a>
+
+Styleguide 14.2.
+*/
+
+.img-link {
+	display: block;
+	.m-clearfix();
+	text-align: center;
+	margin: 0 auto;
+
+	img { 
+		.img-responsive; 
+		display: inline-block;
+		margin: 0 auto;
+		@media @mini { width: auto; }
+	}
+}
+
+
+/**
+Kulatý obrázek
+
+Markup:
+<img class="img-rounded" src="http://satyr.io/200x200/18">
+
+Styleguide 14.3.
+*/
+
+.img-rounded {
+	border-radius: 50%;
+    border: 1px solid @tbl-border;
+    margin: 0 auto 0 auto;
+    max-width: 100px;
+    max-height: 100px;
+
+    &.mod-200 {
+	    max-height: 200px;    	
+		max-width: 200px;
+    }
+
+    &.mod-150 {
+	    max-height: 150px;    	
+		max-width: 150px;
+    }
+}
+
+
+/**
+Čiara oddeľujúca obsah
+
+.mod-small	- čára s menším horním a dolním marginem
+.mod-tiny	- čára s malým horním a dolním marginem
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<div class="hr {{modifier_class}} {$modifier_class}"></div>
+</div>
+
+Styleguide 14.4.
+*/
+.hr {
+    background: @lightBlue;
+    height: 1px;
+    margin: 30px 0;
+    width: 100%;
+
+    &.mod-small { .m(20px 0); }
+    &.mod-small-bottom { .m(0 0 20px 0); }
+    &.mod-m-10 { .m(10px 0); }
+    &.mod-tiny { .m(0); }
+    &.mod-blue { background-color: lighten(@blue, 5%); }
+    &.mod-grey { background-color: lighten(@grey, 20%); }
+}
+
+/**
+Malá čiara oddeľujúca obsah
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<div class="hr-small"></div>
+</div>
+
+Styleguide 14.5.
+*/
+.hr-small {
+    height: 1px;
+    margin: 10px 0;
+}
+
+
+/**
+Pozicování text-align
+
+.txt-c		- na střed
+.txt-l		- na levo
+.txt-r		- na pravo
+.txt-s-c	- na střed od breakpointu small
+.txt-s-r	- na pravo od breakpointu small
+.txt-s-l	- na levo od breakpointu small
+
+Markup:
+<div style="padding: 10px; background: #fff"><!-- POUZE PRO VIZUÁLNÍ ODDĚLENÍ V DOKUMENTACI -->
+	<p class="{{modifier_class}}">Lorem ipsum dolor sit amet.</p>
+</div>
+
+Styleguide 14.6.
+*/
+.txt-c {
+    text-align: center;
+}
+
+.txt-r {
+    text-align: right;
+}
+
+.txt-l {
+    text-align: left;
+}
+
+.txt-s-c {
+	@media @small {
+		.txt-c;
+	}
+}
+.txt-s-r {
+	@media @small {
+		.txt-r;
+	}
+}
+.txt-s-l {
+	@media @small {
+		.txt-l;
+	}
+}
+.txt-m-l {
+	@media @medium {
+		.txt-l;
+	}
+}
+
+
+/**
+Třídy pro použití s JavaScriptem
+
+<strong>.js-hide</strong> - skryje obsah, pokud je na webu zapnutý JavaScript, jinak zobrazí
+<strong>.js-display</strong> - zobrazí obsah, pokud je na webu zapnutý JavaScript
+
+
+Styleguide 14.7.
+*/
+
+.no-js {
+	.js-display { display: none; }
+}
+.js {
+	.js-hide { display: none; }
+	.js-display { 
+		display: block; 
+		a.btn& { display: table; }
+	}
+}
+
+
+/**
+Rámečky
+
+Varianty lze kombinovat
+
+.b-r - napravo
+.b-l - nalevo
+.b-t - nahoře
+.b-b - dole
+
+Markup:
+<div style="padding: 20px; background: white;">
+	<div class="{$modifie_class} {{modifier_class}}" style="height: 30px; background: white;">
+</div>
+
+Styleguide 14.8.
+*/
+.b-r { border-right: 1px solid @tbl-border; }
+.b-l { border-left: 1px solid @tbl-border; }
+.b-t { border-top: 1px solid @tbl-border; }
+.b-b { border-bottom: 1px solid @tbl-border; }
+
+
+
+/**
+Vertikální zarovnání
+
+bez ukázky
+<strong>.vertical-sub</strong><br>
+<strong>.vertical-middle</strong>
+
+Styleguide 14.9.
+*/
+.vertical-sub { vertical-align: sub; }
+.vertical-middle { vertical-align: middle; }
+.vertical-top { vertical-align: top; }
+
+
+/**
+Minimální šířky
+
+Nejlépe se hodí jako roztažení dlouhých tabulek, které jsou deformované v kontejneru, 
+aby byly co nejkratší a pak dochází k nehezkému zalamování na více řádků.
+<strong>Funguje pouze pod breakpoint medium.</strong><br>
+<ul>
+	<li><strong>.mw-tuny</strong> - minimální šířka 500px</li>
+	<li><strong>.mw-small</strong> - minimální šířka 600px</li>
+	<li><strong>.mw-medium</strong> - minimální šířka 700px</li>
+	<li><strong>.mw-large</strong> - minimální šířka 800px</li>
+</ul>
+
+Styleguide 14.10.
+*/
+.min-width-generator() {
+	.mw-xs { min-width: 400px; }
+	.mw-tiny { min-width: 500px; }
+	.mw-small { min-width: 600px; }
+	.mw-medium { min-width: 700px; }
+	.mw-large { min-width: 800px; }
+}
+
+@media @tiny-only { .min-width-generator();}
+@media @mini-only { .min-width-generator();}
+@media @small-only { .min-width-generator();}
+
+
+
+
+
+/**
+Puntík
+
+Markup:
+<span class="dot"></span>
+
+Styleguide 14.11.
+*/
+
+.dot {
+	width:6px;
+	height: 6px;
+	display: block;
+	margin: 3px auto;
+	border-radius: 50%;
+	background-color: @grey;
+}

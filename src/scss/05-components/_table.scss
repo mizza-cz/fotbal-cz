@@ -1,0 +1,198 @@
+.Table {
+  width: 100%;
+
+  &--equalWidthCols {
+    table-layout: fixed;
+
+    @include respondTo(sm) {
+      table-layout: auto;
+    }
+  }
+
+  thead {
+    tr {
+      border-top: $borderPrimary;
+      border-bottom: $borderPrimary;
+    }
+
+    th {
+      vertical-align: middle;
+      @include text($colorText, $fontSizeSmall, $fontWeightSemiBold, 1.5);
+      text-align: left;
+      text-transform: uppercase;
+      white-space: nowrap;
+      background-color: $colorWhite;
+      padding: 0.5rem 1rem;
+
+      // &:first-child,
+      // &:last-child {
+      //   padding: 0.5rem;
+      // }
+
+      abbr {
+        text-decoration: none;
+      }
+
+      &.u-ta-center {
+        text-align: center !important;
+      }
+
+      &.u-width-dominate {
+        width: 100%;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        td {
+          background-color: $colorWhite;
+        }
+      }
+
+      &:nth-child(odd) {
+        td {
+          background-color: $colorGrey--80;
+        }
+      }
+
+      // &:last-child {
+      //   border-bottom: $borderPrimary;
+      // }
+
+      &.u-highlighted {
+        td {
+          font-weight: $fontWeightBold !important;
+        }
+      }
+    }
+
+    td {
+      vertical-align: middle;
+      @include text($colorText, $fontSizeNormal, $fontWeightNormal, 1.5);
+      text-align: left;
+      white-space: nowrap;
+      padding: 0.5rem 1rem;
+
+      // &:first-child,
+      // &:last-child {
+      //   padding: 0.5rem;
+      // }
+
+      &.u-width-fit {
+        width: 1px;
+        white-space: nowrap;
+
+        @include respondTo(xs) {
+          width: auto;
+          white-space: normal;
+        }
+      }
+
+      &.u-ta-center {
+        text-align: center !important;
+      }
+
+      &.u-ta-right {
+        text-align: right !important;
+      }
+
+      .Link {
+        font-size: $fontSizeSmall;
+        white-space: normal;
+      }
+
+      strong {
+        font-weight: $fontWeightSemiBold;
+      }
+    }
+  }
+
+  &--responsive {
+    thead {
+      @include respondTo(xs) {
+        @include srOnly();
+      }
+    }
+
+    tbody {
+      tr {
+        @include respondTo(xs) {
+          border-bottom: none;
+        }
+      }
+
+      td {
+        @include respondTo(xs) {
+          display: block;
+          border-bottom: 1px solid $colorWhite;
+          padding: 0.5rem 0;
+
+          &:empty {
+            display: none;
+          }
+
+          &::before {
+            content: attr(data-th);
+            display: block;
+            @include text($colorSecondary, $fontSizeNormal, $fontWeightBold, inherit);
+          }
+        }
+      }
+    }
+  }
+
+  &-teamLogo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+
+  &-actions {
+    a {
+      display: inline-block;
+      font-size: $fontSizeSmall;
+    }
+
+    a + a {
+      position: relative;
+      margin-left: rem(18px);
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.125rem;
+        height: 1rem;
+        position: absolute;
+        top: 50%;
+        left: rem(-10px);
+        background-color: $colorGrey--90;
+        border-radius: 0.0625rem;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+    }
+  }
+
+  &-playerName {
+    font-family: $fontFamilySecondary;
+    font-size: $fontSizeSmall !important;
+    font-weight: $fontWeightSemiBold !important;
+  }
+
+  .u-sticky-cell {
+    position: sticky;
+    left: 0;
+  }
+}
+
+// Imported external tables
+table[border="0"] {
+  td {
+    white-space: normal !important;
+  }
+}

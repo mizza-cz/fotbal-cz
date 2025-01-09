@@ -1,0 +1,57 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Jméno člena FAČR} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <article class="Member">
+      <header class="Member-header">
+        <!-- Zdroj ideálně čtverec 640 x 640 px, pokud nebude, nevadí, zobrazí se odshora jako čtverec -->
+        <img class="Member-img" src="./img/placeholder-member@2x.jpg" width="320" height="320" alt="{jméno člena FAČR}"/>
+        <h1 class="H2 u-mt-24">
+          <span class="H6 u-display-block">Petr</span>
+          Fousek
+        </h1>
+        <p class="H8 u-c-grey--100">Předseda VV FAČR</p>
+        <a href="mailto:fousek.petr@fotbal.cz" class="Link Link--invertedThin u-display-inline-flex u-align-items-center u-ff-primary u-fw-normal u-mt-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="u-flex-shrink-0 u-mr-6" width="24" height="24" focusable="false" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#address"></use>
+          </svg>
+          <span>fousek.petr@fotbal.cz</span>
+        </a>
+      </header>
+      <div class="Member-body u-mt-24">
+        <div class="Article-body u-mt-0">
+          <p>
+            <strong>Vzdělání:</strong>
+            Vysoká škola ekonomická v Praze</p>
+          <p>
+            <strong>Funkcionářská kariéra:</strong>
+            předseda futsalové komise ČMFS (1990-2001), tiskový mluvčí a vedoucí mezinárodního oddělení ČMFS (1995-96), generální sekretář ČMFS (2001-07), člen futsalových komisí UEFA (od 1994, byl i místopředsedou a předsedou) a FIFA (1998-2016), člen expertního týmu ČOV (2012-16), poradce předsedy FAČR (2011-17), šéf organizačního výboru mistrovství Evropy hráčů do 21 let na českém území (2015), krizový manažer FIFA v Řecku (2018 - 2020).</p>
+          <hr/>
+          <p>
+            <strong>VV FAČR:</strong>
+            Předseda VV FAČR</p>
+          <p>
+            <strong>Výkonný výbor:</strong>
+            Předseda VV FAČR</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Articles 6x -->
+    <section class="u-mt-24">
+      <h2 class="H6">Články</h2>
+      <div class="ArticlesSmallGrid u-mt-16">
+        {% for item in range(0, 6) %}
+          {% include "../templates/partials/_articleBoxSmall.njk" %}
+        {% endfor %}
+      </div>
+      <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-24">
+        <a href="#" class="Button">Další zprávy</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}

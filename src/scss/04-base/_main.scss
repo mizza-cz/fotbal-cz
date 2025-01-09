@@ -1,0 +1,8 @@
+.Main {
+  font-size: 0;
+  padding-bottom: 5rem;
+
+  @include respondTo(sm) {
+    padding-bottom: 2.5rem;
+  }
+}

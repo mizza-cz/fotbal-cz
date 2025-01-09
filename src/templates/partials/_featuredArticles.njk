@@ -1,0 +1,11 @@
+<!-- Featured articles -->
+<aside class="u-border-top-primary u-py-secondary">
+  <div class="Container">
+    <h4 class="H9 H9--stretched u-tt-uppercase">Doporučujeme</h4>
+    <div class="FeaturedArticlesGrid u-mt-16">
+      {% for item in range(0, 4) %}
+        {% include "./_articleBox.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</aside>
