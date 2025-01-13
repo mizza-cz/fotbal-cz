@@ -5,16 +5,29 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
   &:first-child {
     border-top: 2px solid #dde1e6;
   }
-
+  a:focus {
+    outline: none;
+  }
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+  }
   &__row {
     display: flex;
     gap: 16px;
     align-items: center;
     flex-wrap: wrap;
     width: calc(100% - 56px);
+    .ButtonNav-link {
+      z-index: 2;
+    }
   }
   .ToTopButton {
     transition: all 0.1s;

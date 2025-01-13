@@ -8633,9 +8633,20 @@ table[border="0"] td {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 .fotbaltvItem:first-child {
   border-top: 2px solid #dde1e6;
+}
+.fotbaltvItem a:focus {
+  outline: none;
+}
+.fotbaltvItem__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
 }
 .fotbaltvItem__row {
   display: -webkit-box;
@@ -8648,6 +8659,9 @@ table[border="0"] td {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: calc(100% - 56px);
+}
+.fotbaltvItem__row .ButtonNav-link {
+  z-index: 2;
 }
 .fotbaltvItem .ToTopButton {
   -webkit-transition: all 0.1s;
