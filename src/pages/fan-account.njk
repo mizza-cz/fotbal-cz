@@ -1,0 +1,183 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Repre - detail zápasu} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+
+    {% include "../templates/partials/_breadcrumbs.njk" %}
+
+    <article class="Article FanCard u-pt-8">
+      <div class="Grid u-width-100 u-justify-space-between">
+         <div class="Grid-col Grid-col--6 Grid-col--md-12">
+            <div class="FanCard-content">
+             <div class="FanCard-item--active FanCard-item">
+               FAN karta je aktivní
+             </div>
+              <a href="#" download class="Button u-mt-16 u-width-100 u-display-block">
+               Stáhnout FAN kartu
+               </a>
+               <div class="FanCard-boxes">
+                  <div class="FanCard-boxes-col">
+                       <div class="">
+                         <div class="FanCard-item FanCard-item--silver">
+                           SILVER
+                           <span class="u-c-grey--100">
+                              Úroveň
+                           </span>
+                        </div>
+                        <div class="u-pl-12 u-pt-4">
+                             <div class="u-fs-tiny u-lh-normal">
+                                 Do další úrovně zbývá <strong>5 bodů</strong>
+                              </div>
+                            <a class="u-fs-tiny u-lh-normal u-c-blue Link--inverted u-mb-32 u-display-block" href="#">Více informací</a>
+                        </div>
+                       </div>
+                         <a href="#"  class="Button  u-width-100 u-display-block">
+                              Načíst body za vstupenky
+                        </a>
+                  </div>
+                 <div class="FanCard-points ">
+                     <div class="FanCard-points-head u--ff-secondary u-fs-small u-lh-1 u-mb-16">
+                        Aktuální bodový stav
+                        <span class="u-bgc-grey--100"></span>
+                     </div>
+                     <div class="H4 u-mb-16">
+                        72 bodů
+                     </div>
+                     <div class="u--ff-secondary u-fs-small u-lh-1 u-fw-bold u-mb-4">FAN ID: 123456789</div>
+                     <div class="u--ff-secondary u-fs-small u-lh-1">Ing. Josef Novotný</div>
+                 </div>
+               </div>
+               <div class="FanCard-img">
+                   <img src="./img/dres.jpg" alt="" loading="lazy"/>
+                   <div class="FanCard-img__info">
+                     <div class="FanCard-img__name">
+                        Novotný
+                     </div>
+                     <div class="FanCard-img__num">
+                        72
+                     </div>
+                     <p>nasbíraných bodů</p>
+                   </div>
+               </div>
+            </div>
+         </div>
+         <div class="Grid-col Grid-col--5 Grid-col--md-12 ">
+            <h2 class="H8 u-mb-10">
+               Nadcházející utkání
+            </h2>
+             <div class="pointHistory-item future u-mb-32">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Albánie : Česko
+                     </div>
+                     <span class="u-c-grey">
+                           +4 body
+                     </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    Kvalifikace na MS 2026 1 
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                     6. 3. 2024, Air Albania Stadium, Tirana
+                  </p>
+                  <a href="#" class="Button u-mt-8">Koupit vstupenky</a>
+            </div>
+
+            <h3 class="H8 u-mb-16">
+               Bodová historie
+            </h3>
+            <div class="u-display-flex u-flex-column u-gap-24">
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Česko 2:0 Albánie
+                     </div>
+                     <span>
+                           +4 body
+                        </span>
+                  </div>
+                   <p class="u-fs-small u-lh-1_2 ">
+                     UEFA Liga národů B, skupina A  
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                      14. 10. 2024, Wrocław Stadium, Polsko
+                  </p>
+               </div>
+               <div class="pointHistory-item lose">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Ukrajina 1:1 Česko
+                     </div>
+                     <span>
+                        +0 bodů
+                     </span>
+                  </div>
+                   <p class="u-fs-small u-lh-1_2 ">
+                     UEFA Liga národů B, skupina A  
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                     11. 10. 2024, epet Arena, Praha
+                  </p>
+               </div>
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Česko 2:0 Albánie
+                     </div>
+                     <span>
+                           +4 body
+                        </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                     UEFA Liga národů B, skupina A  
+                  </p>
+                   <p class="u-fs-small u-lh-1_2 ">
+                       14. 10. 2024, Wrocław Stadium, Polsko
+                  </p>
+               </div>
+               <div class="pointHistory-item lose">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Ukrajina 1:1 Česko
+                     </div>
+                     <span>
+                        +0 bodů
+                     </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                     UEFA Liga národů B, skupina A  
+                  </p>
+                    <p class="u-fs-small u-lh-1_2 ">
+                     11. 10. 2024, epet Arena, Praha
+                  </p>
+               </div>
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                     <div class="u-lh-1_2 Text u-fw-bold">
+                        Česko 2:0 Albánie
+                     </div>
+                     <span>
+                           +4 body
+                        </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                   UEFA Liga národů B, skupina A  
+                  </p>
+                    <p class="u-fs-small u-lh-1_2 ">
+                    7. 9. 2024, Mikheil Meskhis sakhelobis Stadioni
+                  </p>
+               </div>
+               <a href="#" class="u-display-block u-pl-16 u--ff-secondary u-fw-bold u-fs-normal u-c-blue u-lh-1">Zobrazit vše</a>
+            </div>
+            
+         </div>
+      </div>
+
+      
+    </article>
+  </main>
+{% endblock %}

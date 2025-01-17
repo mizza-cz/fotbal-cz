@@ -52,6 +52,10 @@
       color: #4ad300;
     }
   }
+  &-item.future{
+    border: 2px solid $colorGrey--100;
+    
+  }
   &-item-head {
     display: flex;
     justify-content: space-between;

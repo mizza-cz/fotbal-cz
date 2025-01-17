@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Partneři | Fotbal.cz</title>
+  <title>{Repre - detail zápasu} | Fotbal.cz</title>
 
   <link rel="preload" href="./fonts/config/Config-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="./fonts/config/Config-Regular.woff" as="font" type="font/woff" crossorigin />
@@ -53,7 +53,6 @@
   <link rel="stylesheet" href="./css/flag-icons.min.css" />
   <link rel="stylesheet" href="./css/flatpickr.min.css" />
   <link rel="stylesheet" href="./css/swiper.min.css" />
-  <link rel="stylesheet" href="./css/select2.min.css" />
 
 
 
@@ -73,14 +72,19 @@
   </script>
 
 
+  <script src="./js/vendors/masonry.pkgd.min.js"></script>
+  <script src="./js/vendors/imagesloaded.pkgd.min.js"></script>
   <script src="./js/vendors/minilazyload.min.js" defer="defer"></script>
   <script src="./js/vendors/easydropdown.min.js" defer="defer"></script>
   <script src="./js/vendors/flatpickr.min.js" defer="defer"></script>
   <script src="./js/vendors/flatpickr-cs.js" defer="defer"></script>
+  <script src="./js/vendors/jquery-1.12.4.min.js"></script>
+  <script src="./js/vendors/jquery.event.swipe.js" defer="defer"></script>
+  <script src="./js/vendors/jquery.mousewheel.js" defer="defer"></script>
+  <script src="./js/vendors/jquery.tinyscrollbar.js" defer="defer"></script>
+  <script src="./js/vendors/spin.js" defer="defer"></script>
+  <script src="./js/vendors/jquery.esgallery.js" defer="defer"></script>
   <script src="./js/vendors/swiper-bundle.min.js" defer="defer"></script>
-  <script src="./js/vendors/jquery-1.12.4.min.js" defer="defer"></script>
-  <script src="./js/vendors/select2.min.js" defer="defer"></script>
-  <script src="./js/vendors/select2-cs.js" defer="defer"></script>
   <script src="./js/vendors/cookie-consent.min.js" defer="defer"></script>
 
 
@@ -109,7 +113,7 @@
   <link rel="manifest" href="./img/favicons/site.webmanifest" />
 
 
-  <meta property="og:title" content="Partneři | Fotbal.cz" />
+  <meta property="og:title" content="{Repre - detail zápasu} | Fotbal.cz" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <meta property="og:type" content="website" />
@@ -121,7 +125,7 @@
   <meta property="og:locale" content="cs_CZ" />
 
 
-  <meta name="twitter:title" content="Partneři | Fotbal.cz" />
+  <meta name="twitter:title" content="{Repre - detail zápasu} | Fotbal.cz" />
   <meta name="twitter:site" content="" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -130,7 +134,7 @@
   <meta name="twitter:image" content="./img/og_image.jpg" />
 </head>
 
-<body class="SubPage SubPage--withoutNav PartnersPage">
+<body class="SubPage">
   <!-- Header -->
   <header class="Header" id="js-header">
     <!-- Logo -->
@@ -373,226 +377,353 @@
       </div>
     </div>
   </header>
+  <div class="Container">
+    <div class="SubPage-grid">
 
-  <!-- Main content -->
-  <main class="Main" aria-label="Hlavní obsah">
-    <div class="Container">
-      <h1 class="H3">Partneři</h1>
-      <!-- Partners -->
-      <aside class="u-border-top-primary u-py-40 js-partners">
-        <div class="Container u-md-px-0">
-          <!-- Carousel -->
-          <div class="swiper swiper--partners" id="js-carousel--partners">
-            <div class="swiper-wrapper">
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Oficiální partneři reprezentace</h4>
+      <!-- Main content -->
+      <main class="Main" aria-label="Hlavní obsah">
+
+        <ul role="navigation" class="breadcrumbs">
+          <li>
+            <a href="/">
+              <svg width="22" height="22">
+                <use xlink:href="#home"></use>
+              </svg>
+              Domů
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Rozcestník soutěží
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Hradec Králové
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              CK VOTROK 3. třída západ
+            </a>
+          </li>
+        </ul>
+
+
+        <article class="Article FanCard u-pt-8">
+          <div class="Grid u-width-100 u-justify-space-between">
+            <div class="Grid-col Grid-col--6 Grid-col--md-12">
+              <div class="FanCard-content">
+                <div class="FanCard-item--active FanCard-item">
+                  FAN karta je aktivní
+                </div>
+                <a href="#" download class="Button u-mt-16 u-width-100 u-display-block">
+                  Stáhnout FAN kartu
+                </a>
+                <div class="FanCard-boxes">
+                  <div class="FanCard-boxes-col">
+                    <div class="">
+                      <div class="FanCard-item FanCard-item--silver">
+                        SILVER
+                        <span class="u-c-grey--100">
+                              Úroveň
+                           </span>
+                      </div>
+                      <div class="u-pl-12 u-pt-4">
+                        <div class="u-fs-tiny u-lh-normal">
+                          Do další úrovně zbývá <strong>5 bodů</strong>
+                        </div>
+                        <a class="u-fs-tiny u-lh-normal u-c-blue Link--inverted u-mb-32 u-display-block" href="#">Více informací</a>
+                      </div>
+                    </div>
+                    <a href="#" class="Button  u-width-100 u-display-block">
+                      Načíst body za vstupenky
+                    </a>
                   </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners">
-                      <li>
-                        <a href="https://eu.puma.com/cz/en/home" target="_blank" rel="noopener noreferrer" title="Puma">
-                          <img src="./img/partners/puma.png?v2" width="160" height="160" alt="logo Puma" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.hyundai.cz/" target="_blank" rel="noopener noreferrer" title="Hyundai">
-                          <img src="./img/partners/hyundai.png?v2" width="160" height="160" alt="logo Hyundai" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.pepsi.cz/" target="_blank" rel="noopener noreferrer" title="Pepsi">
-                          <img src="./img/partners/pepsi.png?v2" width="160" height="160" alt="logo Pepsi" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://staropramen.cz/" target="_blank" rel="noopener noreferrer" title="Staropramen">
-                          <img src="./img/partners/staropramen.png?v2" width="160" height="160" alt="logo Staropramen" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://lp.ifortuna.cz/fortuna-liga" target="_blank" rel="noopener noreferrer" title="Fortuna">
-                          <img src="./img/partners/fortuna.png?v2" width="160" height="160" alt="logo Fortuna" loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
+                  <div class="FanCard-points ">
+                    <div class="FanCard-points-head u--ff-secondary u-fs-small u-lh-1 u-mb-16">
+                      Aktuální bodový stav
+                      <span class="u-bgc-grey--100"></span>
+                    </div>
+                    <div class="H4 u-mb-16">
+                      72 bodů
+                    </div>
+                    <div class="u--ff-secondary u-fs-small u-lh-1 u-fw-bold u-mb-4">FAN ID: 123456789</div>
+                    <div class="u--ff-secondary u-fs-small u-lh-1">Ing. Josef Novotný</div>
                   </div>
-                </section>
-              </div>
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Premium partneři reprezentace</h4>
+                </div>
+                <div class="FanCard-img">
+                  <img src="./img/dres.jpg" alt="" loading="lazy" />
+                  <div class="FanCard-img__info">
+                    <div class="FanCard-img__name">
+                      Novotný
+                    </div>
+                    <div class="FanCard-img__num">
+                      72
+                    </div>
+                    <p>nasbíraných bodů</p>
                   </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners">
-                      <li>
-                        <a href="http://www.hormann.cz/" target="_blank" rel="noopener noreferrer" title="Hörmann">
-                          <img src="./img/partners/hormann.png?v2" width="160" height="160" alt="logo Hörmann" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.cpp.cz/" target="_blank" rel="noopener noreferrer" title="Česká podnikatelská pojišťovna">
-                          <img src="./img/partners/cpp.png?v2" width="160" height="160" alt="logo Česká podnikatelská pojišťovna" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.tcl.com/cz/cs" target="_blank" rel="noopener noreferrer" title="TCL">
-                          <img src="./img/partners/tcl.png?v2" width="160" height="160" alt="logo TCL" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.gitschberg-jochtal.com/cz" target="_blank" rel="noopener noreferrer" title="Gitschberg Jochtal">
-                          <img src="./img/partners/gitschberg_jochtal.png?v2" width="160" height="160" alt="logo Gitschberg Jochtal" loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Generální partner MOL Cupu</h4>
-                  </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners Partners--centered">
-                      <li>
-                        <a href="http://molcesko.cz/cz/" target="_blank" rel="noopener noreferrer" title="MOL Česká republika, s.r.o.">
-                          <img src="./img/partners/mol.png?v2" width="160" height="160" alt="logo MOL Česká republika, s.r.o." loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Mediální partneři</h4>
-                  </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners Partners--small">
-                      <li>
-                        <a href="http://www.ceskatelevize.cz/" target="_blank" rel="noopener noreferrer" title="Česká televize">
-                          <img src="./img/partners/ct.png" width="160" height="160" alt="logo Česká televize" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.mfdnes.cz/" target="_blank" rel="noopener noreferrer" title="MF Dnes">
-                          <img src="./img/partners/dnes.png" width="160" height="160" alt="logo MF Dnes" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.impuls.cz/" target="_blank" rel="noopener noreferrer" title="Rádio Impuls">
-                          <img src="./img/partners/impuls.png" width="160" height="160" alt="logo Rádio Impuls" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.denik.cz/" target="_blank" rel="noopener noreferrer" title="Deník">
-                          <img src="./img/partners/denik.png" width="160" height="160" alt="logo Deník" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.idnes.cz/" target="_blank" rel="noopener noreferrer" title="iDnes">
-                          <img src="./img/partners/idnes.png" width="160" height="160" alt="logo iDnes" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.gol.cz/" target="_blank" rel="noopener noreferrer" title="Gól">
-                          <img src="./img/partners/gol.png" width="160" height="160" alt="logo Gól" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://bigmedia.cz/" target="_blank" rel="noopener noreferrer" title="Big Media">
-                          <img src="./img/partners/bigmedia.png" width="160" height="160" alt="logo Big Media" loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Partneři / dodavatelé reprezentace</h4>
-                  </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners Partners--small">
-                      <li>
-                        <a href="https://www.tirextyre.com/" target="_blank" rel="noopener noreferrer" title="TirexTyre">
-                          <img src="./img/partners/tyres-imperial.png" width="160" height="160" alt="logo TirexTyre" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.alexandria.cz/" target="_blank" rel="noopener noreferrer" title="Alexandria">
-                          <img src="./img/partners/alexandria.png" width="160" height="160" alt="logo Alexandria" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://fotbalservis.cz/" target="_blank" rel="noopener noreferrer" title="FOTBALservis.cz ">
-                          <img src="./img/partners/fotbalservis.png" width="160" height="160" alt="logo FOTBALservis.cz " loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.vinofol.cz/" target="_blank" rel="noopener noreferrer" title="Vinofol">
-                          <img src="./img/partners/vinofol.png" width="160" height="160" alt="logo Vinofol" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="http://www.cateringmelodie.cz/" target="_blank" rel="noopener noreferrer" title="Catering Melodie">
-                          <img src="./img/partners/catering.png" width="160" height="160" alt="logo Catering Melodie" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.nh-collection.com/en" target="_blank" rel="noopener noreferrer" title="NH Collection Hotels">
-                          <img src="./img/partners/nh-collection.png" width="160" height="160" alt="logo NH Collection Hotels" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.sportboost.cz/" target="_blank" rel="noopener noreferrer" title="NAMEDSPORT">
-                          <img src="./img/partners/named-sport.png" width="160" height="160" alt="logo NAMEDSPORT" loading="lazy" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.sportisimo.cz/" target="_blank" rel="noopener noreferrer" title="Sportisimo">
-                          <img src="./img/partners/sportisimo.png" width="160" height="160" alt="logo Sportisimo" loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-              <!-- Carousel - item (block of partners) -->
-              <div class="swiper-slide">
-                <section class="Grid Grid--md-noGutters u-align-items-center">
-                  <div class="Grid-col Grid-col--2 Grid-col--md-12">
-                    <h4 class="H9 H9--partners H9--stretched u-tt-uppercase">Partner sociálních projektů</h4>
-                  </div>
-                  <div class="Grid-col Grid-col--10 Grid-col--md-12 u-md-mt-24">
-                    <ul class="Partners Partners--centered">
-                      <li>
-                        <a href="https://www.kapkanadeje.cz/" target="_blank" rel="noopener noreferrer" title="Kapka Naděje">
-                          <img src="./img/partners/kapka-nadeje.png" width="160" height="160" alt="logo Kapka Naděje" loading="lazy" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </main>
+            <div class="Grid-col Grid-col--5 Grid-col--md-12 ">
+              <h2 class="H8 u-mb-10">
+                Nadcházející utkání
+              </h2>
+              <div class="pointHistory-item future u-mb-32">
+                <div class="pointHistory-item-head">
+                  <div class="u-lh-1_2 Text u-fw-bold">
+                    Albánie : Česko
+                  </div>
+                  <span class="u-c-grey">
+                           +4 body
+                     </span>
+                </div>
+                <p class="u-fs-small u-lh-1_2 ">
+                  Kvalifikace na MS 2026 1
+                </p>
+                <p class="u-fs-small u-lh-1_2 ">
+                  6. 3. 2024, Air Albania Stadium, Tirana
+                </p>
+                <a href="#" class="Button u-mt-8">Koupit vstupenky</a>
+              </div>
 
+              <h3 class="H8 u-mb-16">
+                Bodová historie
+              </h3>
+              <div class="u-display-flex u-flex-column u-gap-24">
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                    <div class="u-lh-1_2 Text u-fw-bold">
+                      Česko 2:0 Albánie
+                    </div>
+                    <span>
+                           +4 body
+                        </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    UEFA Liga národů B, skupina A
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    14. 10. 2024, Wrocław Stadium, Polsko
+                  </p>
+                </div>
+                <div class="pointHistory-item lose">
+                  <div class="pointHistory-item-head">
+                    <div class="u-lh-1_2 Text u-fw-bold">
+                      Ukrajina 1:1 Česko
+                    </div>
+                    <span>
+                        +0 bodů
+                     </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    UEFA Liga národů B, skupina A
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    11. 10. 2024, epet Arena, Praha
+                  </p>
+                </div>
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                    <div class="u-lh-1_2 Text u-fw-bold">
+                      Česko 2:0 Albánie
+                    </div>
+                    <span>
+                           +4 body
+                        </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    UEFA Liga národů B, skupina A
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    14. 10. 2024, Wrocław Stadium, Polsko
+                  </p>
+                </div>
+                <div class="pointHistory-item lose">
+                  <div class="pointHistory-item-head">
+                    <div class="u-lh-1_2 Text u-fw-bold">
+                      Ukrajina 1:1 Česko
+                    </div>
+                    <span>
+                        +0 bodů
+                     </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    UEFA Liga národů B, skupina A
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    11. 10. 2024, epet Arena, Praha
+                  </p>
+                </div>
+                <div class="pointHistory-item win">
+                  <div class="pointHistory-item-head">
+                    <div class="u-lh-1_2 Text u-fw-bold">
+                      Česko 2:0 Albánie
+                    </div>
+                    <span>
+                           +4 body
+                        </span>
+                  </div>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    UEFA Liga národů B, skupina A
+                  </p>
+                  <p class="u-fs-small u-lh-1_2 ">
+                    7. 9. 2024, Mikheil Meskhis sakhelobis Stadioni
+                  </p>
+                </div>
+                <a href="#" class="u-display-block u-pl-16 u--ff-secondary u-fw-bold u-fs-normal u-c-blue u-lh-1">Zobrazit vše</a>
+              </div>
+
+            </div>
+          </div>
+
+
+        </article>
+      </main>
+
+      <!-- Side subnav -->
+      <aside class="SideNavContainer NotAnimOnLoad">
+        <nav class="SideNav" aria-label="Navigace - {Název kategorie}" id="js-sideNav">
+          <h4 class="H5 u-px-24">Název kategorie</h4>
+          <ul class="SideNav-menu">
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
+            </li>
+
+            <!-- Menu item with collapsible submenu -->
+            <li class="SideNav-item SideNav-item--hasSubMenu">
+              <a href="#" class="SideNav-link js-subMenu-toggle" role="button" aria-haspopup="true" aria-expanded="false">Položka menu kategorie</a>
+              <ul class="SubMenu">
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Menu item - active state -->
+            <li class="SideNav-item is-active">
+              <a href="#" class="SideNav-link Link--inverted is-active">Aktivní položka menu kategorie</a>
+            </li>
+
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
+            </li>
+
+            <!-- Menu item with collapsible submenu - active state -->
+            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
+              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
+              <ul class="SubMenu is-active">
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted is-active">Aktivní položka submenu</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Menu item with collapsible submenu - active state -->
+            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
+              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
+              <ul class="SubMenu is-active">
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <!-- Submenu item with collapsible submenu level 2 -->
+                <li class="SubMenu-item SubMenu-item--hasSubMenu">
+                  <a href="#" class="SubMenu-link Link--inverted js-subMenu-toggle" role="button" aria-haspopup="true" aria-expanded="false">Položka submenu se submenu 2.&nbsp;úrovně</a>
+                  <!-- Submenu level 2 -->
+                  <ul class="SubMenu">
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Menu item with collapsible submenu - active state -->
+            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
+              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
+              <ul class="SubMenu is-active">
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <li class="SubMenu-item">
+                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
+                </li>
+                <!-- Submenu item with collapsible submenu level 2 - active state -->
+                <li class="SubMenu-item SubMenu-item--hasSubMenu is-active">
+                  <a href="#" class="SubMenu-link Link--inverted js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka submenu se submenu 2.&nbsp;úrovně</a>
+                  <!-- Submenu level 2 -->
+                  <ul class="SubMenu is-active">
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                    <li class="SubMenu-item">
+                      <a href="#" class="SubMenu-link Link--inverted is-active">Aktivní položka submenu 2.&nbsp;úrovně</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
+            </li>
+
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
+            </li>
+          </ul>
+
+          <!-- Nav subheading -->
+          <h5 class="H7 u-c-grey--100 u-px-24 u-mt-16">Název podkategorie</h5>
+          <ul class="SideNav-menu u-mt-10">
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
+            </li>
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
+            </li>
+            <!-- Menu item -->
+            <li class="SideNav-item">
+              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
   <!-- Partners -->
   <aside class="u-border-top-primary u-py-40 js-partners">
     <div class="Container u-md-px-0">

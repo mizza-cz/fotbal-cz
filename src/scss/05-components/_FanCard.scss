@@ -1,0 +1,182 @@
+.FanCard {
+  &-points {
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 177px;
+    min-width: 177px;
+    max-width: 177px;
+    flex: 1;
+    @include respondTo(lg) {
+      max-width: 100%;
+      width: 100%;
+    }
+    &-head {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      span {
+        display: block;
+        border-radius: 100%;
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+  .pointHistory-item::before {
+    width: 51px;
+    height: 51px;
+  }
+  .pointHistory-item-head {
+    span,
+    .Text {
+      font-size: 1.25rem !important;
+    }
+  }
+  .Button {
+    border-width: 1px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 6px 17px 5px;
+  }
+}
+
+.FanCard-item {
+  padding: 6px 32px 6px;
+  position: relative;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: 'Maison Neue Extended', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.FanCard-item--active {
+  color: #4ad300;
+  border-color: #4ad300;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #4ad300;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/icons/check.svg);
+    background-size: 15px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.FanCard-item--silver {
+  border-color: $colorPlaceholder;
+  color: $colorPlaceholder;
+  span {
+    display: block;
+    background-color: #fff;
+    left: 6px;
+    padding: 0 4px;
+    top: -45%;
+    position: absolute;
+  }
+}
+
+.FanCard-boxes {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 72px;
+  gap: 40px;
+  justify-content: space-between;
+
+  @include respondTo(lg) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    gap: 32px;
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respondTo(lg) {
+      width: 100%;
+    }
+  }
+}
+.FanCard-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 470px;
+  margin: 0 auto;
+  .Button {
+    font-size: 15px;
+    line-height: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+.FanCard-img {
+  width: 100%;
+  position: relative;
+  height: 472px;
+  @include respondTo(lg) {
+    height: auto;
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__info {
+    position: absolute;
+    font-weight: 700;
+    top: 67px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    @include respondTo(md) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      color: #fff;
+      font-weight: 700;
+      max-width: 124px;
+      margin: 0 auto;
+    }
+  }
+  &__name {
+    font-size: 40px;
+    font-family: $fontFamilySecondary;
+    @include respondTo(sm) {
+      font-size: 24px;
+    }
+  }
+  &__num {
+    font-size: 120px;
+    line-height: 146px;
+    font-family: $fontFamilySecondary;
+    @include respondTo(sm) {
+      font-size: 60px;
+      line-height: 80px;
+    }
+  }
+}
