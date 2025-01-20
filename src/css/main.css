@@ -7616,6 +7616,130 @@ body.is-menuOpen .Header {
   border-radius: 0.0625rem;
 }
 
+.LoyaltyLevel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  padding: 0 12px;
+}
+@media (max-width: 992px) {
+  .LoyaltyLevel {
+    padding: 0;
+  }
+}
+.LoyaltyLevel li {
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 140px;
+  text-align: center;
+  height: 32px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Maison Neue Extended", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.LoyaltyLevel .active {
+  border-width: 2px;
+}
+.LoyaltyLevel-bronze {
+  color: #cd7f32;
+  border-color: #cd7f32;
+}
+.LoyaltyLevel-sivler {
+  color: #878d96;
+  border-color: #878d96;
+}
+.LoyaltyLevel-gold {
+  color: gold;
+  border-color: gold;
+}
+.LoyaltyLevel .hidden {
+  color: #dde1e6;
+  border-color: #dde1e6;
+}
+
+.LoyaltyLevel-slide {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 992px) {
+  .LoyaltyLevel-slide {
+    padding: 0 24px;
+  }
+}
+.LoyaltyLevel-slide .H9, .LoyaltyLevel-slide .Article-body h6:not(.Article-widget h6):not(.Box h6), .Article-body .LoyaltyLevel-slide h6:not(.Article-widget h6):not(.Box h6) {
+  margin-bottom: 10px;
+}
+
+.swiper-slide-next .LoyaltyLevel-slide {
+  border-left: 2px solid #878d96;
+  border-right: 2px solid #878d96;
+}
+
+@media (max-width: 992px) {
+  .swiper-slide.swiper-slide-active .LoyaltyLevel-slide {
+    padding-left: 40px;
+  }
+}
+
+.LoyaltyLevel-swiper {
+  position: relative;
+}
+.LoyaltyLevel-swiper .swiper-button-prev,
+.LoyaltyLevel-swiper .swiper-button-next {
+  position: absolute;
+  background-color: transparent;
+  z-index: 4;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.LoyaltyLevel-swiper .swiper-button-prev:hover, .LoyaltyLevel-swiper .swiper-button-prev:focus,
+.LoyaltyLevel-swiper .swiper-button-next:hover,
+.LoyaltyLevel-swiper .swiper-button-next:focus {
+  border: none;
+}
+.LoyaltyLevel-swiper .swiper-button-prev {
+  left: 0;
+}
+@media (max-width: 992px) {
+  .LoyaltyLevel-swiper .swiper-button-prev {
+    left: 8px;
+  }
+}
+.LoyaltyLevel-swiper .swiper-button-next {
+  right: 0;
+}
+@media (max-width: 992px) {
+  .LoyaltyLevel-swiper .swiper-button-next {
+    right: 8px;
+  }
+}
+
 .SideNav {
   width: 20rem;
   -ms-flex-negative: 0;
@@ -8666,6 +8790,31 @@ table[border="0"] td {
 .registrationSocial-item:hover {
   text-decoration-color: inherit;
   border: 2px solid #00257a;
+}
+
+.SideNavContainer .registration-content {
+  padding: 0 1.5rem;
+  margin-top: 60px;
+}
+@media (max-width: 992px) {
+  .SideNavContainer .registration-content {
+    margin-top: 40px;
+  }
+}
+.SideNavContainer .registration-links {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 32px;
+}
+.SideNavContainer .registration-decore {
+  text-align: left;
+}
+.SideNavContainer .registration-decore::before {
+  width: calc(100% - 48px);
+}
+.SideNavContainer .registration-decore::after {
+  display: none;
 }
 
 .fotbaltvItem {

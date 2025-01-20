@@ -1,0 +1,158 @@
+{% extends "../templates/layout-subPageLoginSide.njk" %}
+
+{% set pageTitle = '{Repre - Loyalty Program} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+
+    {% include "../templates/partials/_breadcrumbs.njk" %}
+   <h1 class="H5 u-mb-16">
+   O věrnostním programu
+   </h1>
+     <div class="Article-body u-mt-0">
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         </p>
+          <div class="Article-widget">
+            <ul class="EventsList">
+              <li class="EventsList-item">
+                <a href="#" class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/4568/finale-poharu-zen-2023-2x3.png" alt="" width="" height=""></a>
+              </li>
+              <li class="EventsList-item">
+                <a href="#" class="EventsList-item-imgContainer"><img src="https://www.fotbal.cz/files/images/8/2023-09-07-albanie.png" alt="" width="" height=""></a>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+             <!-- Desktop advert -->
+         <div class="Ad Ad--desktop u-mt-primary">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Reklama">
+               <img src="./img/placeholder-advert-homepage.jpg" width="1400" height="144" alt="" loading="lazy"/>
+            </a>
+         </div>
+         <h3>Nadpis</h3>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+         </p>
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         </p>
+   </div>
+  
+   <div class="Grid u-mt-64 u-xs-px-16  u-lg-justify-center u-justify-space-between u-lg-gap-40 u-gap-0">
+      <div class="Grid-col--7   Grid-col--md-8 Grid-col--sm-10 Grid-col--xs-12">
+            <h4 class="H1  ">
+               Úroveň členství
+            </h4>
+            <ul class="LoyaltyLevel">
+               <li class="LoyaltyLevel-bronze">
+                  BRONZE
+               </li>
+               <li class="LoyaltyLevel-silver active">
+                  silver
+               </li>
+               <li class="LoyaltyLevel-gold hidden">
+                  gold
+               </li>
+            </ul>
+            <div class="u-ta-center u-fs-tiny u-lh-1_5">
+               <p>
+                  Aktuální úroveň
+               </p>
+               <p>
+                  Do úrovně <strong>GOLD</strong> úrovně zbývá <strong>5 bodů</strong>
+               </p>
+               <p class="u-my-24">Benefity úrovně <strong>SILVER</strong></p>
+            </div>
+              
+            <div class="LoyaltyLevel-swiper">
+                  <div 
+              class="swiper-button-prev  " 
+              data-aria-label="Previous">
+                <svg width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xlink:href="#chevronLeft"></use>
+                  </svg>
+              </div>
+                <div 
+              class="swiper-button-next  " 
+              data-aria-label="Next">
+                  <svg width="24" height="24" focusable="false" aria-hidden="true">
+                    <use xlink:href="#chevronRight"></use>
+                  </svg>
+              </div>
+             <div class="swiper swiper--loyalty" id="js-carousel--loyalty">
+               <div class="swiper-wrapper">
+               
+               
+               <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                           Sleva merch
+                        </div>
+                        <div class="H5">5 %</div>
+                     </div>
+               </div>
+                <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                      Sleva vstupenky
+                        </div>
+                        <div class="H5">5 %</div>
+                     </div>
+               </div>
+                <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                         Nákup vstupenek
+                        </div>
+                        <div class="H5">1. vlna</div>
+                     </div>
+               </div>
+                 <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                           Sleva merch
+                        </div>
+                        <div class="H5">5 %</div>
+                     </div>
+               </div>
+                <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                      Sleva vstupenky
+                        </div>
+                        <div class="H5">5 %</div>
+                     </div>
+               </div>
+                <div class="swiper-slide">
+                     <div class="LoyaltyLevel-slide">
+                        <div class="H9">
+                         Nákup vstupenek
+                        </div>
+                        <div class="H5">1. vlna</div>
+                     </div>
+               </div>
+               
+               </div>
+            </div>
+            </div>
+      </div>
+       <div class="Grid-col--4 Grid-col--lg-6">
+            <div class="FanCard-img u-height-auto u-mb-16">
+               <img src="./img/dres.jpg" alt="" loading="lazy"/>
+                   
+            </div>
+            <p class="u-fs-tiny u-lh-1_5 u-display-block u-ta-center">
+               Domácí dres České fotbalové reprezentace 2023/2024 na úvodní obrazovku.
+            </p>
+       </div>
+   </div>
+  </main>
+{% endblock %}

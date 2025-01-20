@@ -481,3 +481,19 @@ if (newSlider) {
     },
   });
 }
+const sliderLoyality = document.querySelector('.swiper--loyalty');
+
+if (sliderLoyality) {
+  const loyalitySwiper = new Swiper(sliderLoyality, {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    speed: 1500,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}

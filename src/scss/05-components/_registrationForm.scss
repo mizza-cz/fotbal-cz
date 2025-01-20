@@ -2,6 +2,7 @@
   width: calc(100% - 2rem);
   max-width: 51.5rem;
 }
+
 .registration-modal {
   background-color: $colorGrey--70;
   border-radius: 1rem;
@@ -110,6 +111,29 @@
     &:hover {
       text-decoration-color: inherit;
       border: 2px solid #00257a;
+    }
+  }
+}
+
+.SideNavContainer {
+  .registration-content {
+    padding: 0 1.5rem;
+    margin-top: 60px;
+    @include respondTo(md) {
+      margin-top: 40px;
+    }
+  }
+  .registration-links {
+    justify-content: flex-start;
+    margin-top: 32px;
+  }
+  .registration-decore {
+    text-align: left;
+    &::before {
+      width: calc(100% - 48px);
+    }
+    &::after {
+      display: none;
     }
   }
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs-CZ" class="Preload CustomScrollbar" id="root">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>{{ pageTitle }}</title>
+
+    {% include "../templates/partials/_fonts.html" %}
+
+    {# CSS - vendors #}
+    <link rel="stylesheet" href="./css/cookie-consent-config.css">
+    <link rel="stylesheet" href="./css/cookie-consent.min.css">
+    <link rel="stylesheet" href="./css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="./css/flatpickr.min.css"/>
+    <link rel="stylesheet" href="./css/swiper.min.css"/>
+    {% block vendorsCSS %}{% endblock %}
+
+    {# CSS - custom #}
+    {#
+      V Latte si nalinkuj jen main.min.css z www/dist/css/
+      Níže smaž, slouží jen pro FE dev
+    #}
+    <!-- build:css -->
+    <link rel="stylesheet" href="./css/main.css"/>
+    <!-- endbuild -->
+
+    {# Preloads #}
+    {% block preloads %}{% endblock %}
+
+    {# JS - globals #}
+    <script>
+      const isLocalhost = window
+        .location
+        .hostname
+        .includes("localhost");
+    </script>
+
+    {# JS - async - vendors #}
+    <script src="./js/vendors/masonry.pkgd.min.js"></script>
+    <script src="./js/vendors/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/vendors/minilazyload.min.js" defer="defer"></script>
+    <script src="./js/vendors/easydropdown.min.js" defer="defer"></script>
+    <script src="./js/vendors/flatpickr.min.js" defer="defer"></script>
+    <script src="./js/vendors/flatpickr-cs.js" defer="defer"></script>
+    <script src="./js/vendors/jquery-1.12.4.min.js"></script>
+    <script src="./js/vendors/jquery.event.swipe.js" defer="defer"></script>
+    <script src="./js/vendors/jquery.mousewheel.js" defer="defer"></script>
+    <script src="./js/vendors/jquery.tinyscrollbar.js" defer="defer"></script>
+    <script src="./js/vendors/spin.js" defer="defer"></script>
+    <script src="./js/vendors/jquery.esgallery.js" defer="defer"></script>
+    <script src="./js/vendors/swiper-bundle.min.js" defer="defer"></script>
+    <script src="./js/vendors/cookie-consent.min.js" defer="defer"></script>
+    {% block vendorsJS %}{% endblock %}
+
+    {# JS - async - others #}
+    {% include "../templates/partials/_othersJS.njk" %}
+
+    {# JS - async - custom #}
+    {#
+      V Latte si nalinkuj jen main.min.js z www/dist/js/
+      Níže smaž, slouží jen pro FE dev
+    #}
+    <!-- build:js -->
+    {% include "../templates/partials/_customJS.njk" %}
+    <!-- endbuild -->
+
+    {# JS - vendors - "late" #}
+    {% block lateVendorsJS %}{% endblock %}
+
+    {# Meta #}
+    <meta name="author" content="eSports.cz, s.r.o. - www.esportsmedia.cz"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="robots" content="index,follow"/>
+
+    {% include "../templates/partials/_favicons.njk" %}
+
+    {# Facebook / Open Graph #}
+    <meta property="og:title" content="{{ pageTitle }}"/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content="./img/og_image.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content=""/>
+    <meta property="og:locale" content="cs_CZ"/>
+
+    {# Twitter #}
+    <meta name="twitter:title" content="{{ pageTitle }}"/>
+    <meta name="twitter:site" content=""/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:image" content="./img/og_image.jpg"/>
+  </head>
+  <body class="{{ bodyClass }}">
+    {% include "./partials/_header.njk" %}
+    <div class="Container">
+      <div class="SubPage-grid">
+        {% block main %}{% endblock %}
+        {% include "../templates/partials/_sideSubNavLogin.njk" %}
+      </div>
+    </div>
+    {% include "./partials/_partners.njk" %}
+    {% include "./partials/_footer.njk" %}
+    {% block modals %}{% endblock %}
+    {% block alerts %}{% endblock %}
+    {% include "./partials/_svgs.njk" %}
+  </body>
+</html>
