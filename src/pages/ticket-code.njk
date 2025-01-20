@@ -1,0 +1,47 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Repre - Kód vstupenek} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+
+    {% include "../templates/partials/_breadcrumbs.njk" %}
+
+    <article class="Article u-pt-8">
+      
+      <div class="Grid u-width-100 u-justify-space-between  u-md-gap-32">
+         <div class="Grid-col Grid-col--5 Grid-col--md-12">
+           <h1 class="H5 u-mb-16">
+               Kód vstupenek
+           </h1>
+           <p class="u-mb-24 u-fs-tiny u-lh-normal">
+            - Kód naleznete v horní části na pravé straně vstupenky, viz obrázek. <br>
+             - Vždy můžete zadat nebo načíst pouze jeden kód na jedno domácí utkání. 
+            <br>
+            - V případě utkání na hřišti soupeře, obdržíte kód na e-mail, který jste zadali při registraci do věrnostního programu.
+           </з>
+           <h2 class="H7">
+               Zadejte kód ze vstupenky
+           </h2>
+           <form class="Form Form--ticketCode">
+               <div class="Form-item">
+                     <input type="text" maxlength="50" class="Form-input" required placeholder="Zadejte kód">
+               </div>
+               <p class="u-fs-tiny u-mb-16 u-lh-normal u-c-green--dark">Kód vstupenky byl úspěšně zadán, body Vám byli připsány.</p>
+               <button class="Button u-px-48">Získat body</button>
+           </form>
+         </div>
+         <div class="Grid-col Grid-col--7 Grid-col--md-12">
+            <div class="ticketCode__img">
+               <img src="./img/ticket-code.jpg" alt="">
+            </div>
+         </div>
+     
+      </div>
+
+      
+    </article>
+  </main>
+{% endblock %}

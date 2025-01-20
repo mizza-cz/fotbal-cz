@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{Reprezentace - Turnaj / kvalifikace} | Fotbal.cz</title>
+  <title>{Repre - Kód vstupenek} | Fotbal.cz</title>
 
   <link rel="preload" href="./fonts/config/Config-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="./fonts/config/Config-Regular.woff" as="font" type="font/woff" crossorigin />
@@ -57,8 +57,9 @@
 
 
 
-  <link rel="stylesheet" href="./css/main-379f784946.min.css">
-
+  <!-- build:css -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- endbuild -->
 
 
 
@@ -95,8 +96,16 @@
 
 
 
-  <script src="./js/main-0d5a7be9f4.min.js" defer></script>
+  <!-- build:js -->
+  <script src="./js/components/map.js" defer="defer"></script>
+  <script src="./js/components/nav.js" defer="defer"></script>
+  <script src="./js/components/topStories.js" defer="defer"></script>
+  <script src="./js/components/autoComplete.js" defer="defer"></script>
+  <script src="./js/components/modal.js" defer="defer"></script>
+  <script src="./js/features/fetchAnnouncement.js" defer="defer"></script>
+  <script src="./js/main.js" defer="defer"></script>
 
+  <!-- endbuild -->
 
 
 
@@ -113,7 +122,7 @@
   <link rel="manifest" href="./img/favicons/site.webmanifest" />
 
 
-  <meta property="og:title" content="{Reprezentace - Turnaj / kvalifikace} | Fotbal.cz" />
+  <meta property="og:title" content="{Repre - Kód vstupenek} | Fotbal.cz" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <meta property="og:type" content="website" />
@@ -125,7 +134,7 @@
   <meta property="og:locale" content="cs_CZ" />
 
 
-  <meta name="twitter:title" content="{Reprezentace - Turnaj / kvalifikace} | Fotbal.cz" />
+  <meta name="twitter:title" content="{Repre - Kód vstupenek} | Fotbal.cz" />
   <meta name="twitter:site" content="" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -382,437 +391,68 @@
 
       <!-- Main content -->
       <main class="Main" aria-label="Hlavní obsah">
-        <div class="Article">
-          <a href="#" class="Badge u-mb-8">A-tým Česko</a>
-          <h1 class="H3">Kvalifikace EURO 2024</h1>
-          <!-- Pozn. od Aleše: U záložky "Nominace" bychom měli rozlišovat, zda jde o typ "turnaj" nebo "kvalifikace". U turnaje ala Euro by zde byla tabulka nominovaných (BEZ zápasů). U kvalifikace by zde byl přehled nominací na jednotlivé související (dvoj, troj) zápasy https://esports.webista.cz/fotbal.cz/dist/repre-nominations.html a pak teprve proklik do detailu (VČETNĚ souvisejících zápasů ke konkrétní nominaci) -->
 
-          <nav class="MainContentNav u-mt-24 u-sm-mt-16">
-
-            <ul class="MainContentNav-menu">
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link  is-active ">Přehled</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Články</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Rozpis zápasů</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Nominace</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Statistiky</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Tabulky</a>
-              </li>
-
-              <li class="MainContentNav-item">
-                <a href="#" class="MainContentNav-link ">Info o kvalifikaci</a>
-              </li>
-
-            </ul>
-
-          </nav>
+        <ul role="navigation" class="breadcrumbs">
+          <li>
+            <a href="/">
+              <svg width="22" height="22">
+                <use xlink:href="#home"></use>
+              </svg>
+              Domů
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Rozcestník soutěží
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Hradec Králové
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              CK VOTROK 3. třída západ
+            </a>
+          </li>
+        </ul>
 
 
-          <!-- Pozn. od Aleše: Na přehledu bychom zobrazovali jeden odehraný / jeden nadcházející zápas -->
-          <section class="u-mt-primary js-matchRoundSection">
-            <div class="u-display-flex u-flex-wrap u-align-items-center u-justify-space-between u-gap-16">
-              <h2 class="H6">Zápasy</h2>
-              <button type="button" class="ToggleButton ToggleButton--collapse js-matchRoundDetails-toggle" aria-expanded="false">
-                <span class="js-matchRoundDetails-toggle-text-show">Zobrazit podrobnosti</span>
-                <span class="js-matchRoundDetails-toggle-text-hide u-display-none">Skrýt podrobnosti</span>
-                <svg width="10" height="6" focusable="false" aria-hidden="true">
-                  <use xlink:href="#chevron-down"></use>
-                </svg>
-              </button>
+        <article class="Article u-pt-8">
+
+          <div class="Grid u-width-100 u-justify-space-between  u-md-gap-32">
+            <div class="Grid-col Grid-col--5 Grid-col--md-12">
+              <h1 class="H5 u-mb-16">
+                Kód vstupenek
+              </h1>
+              <p class="u-mb-24 u-fs-tiny u-lh-normal">
+                - Kód naleznete v horní části na pravé straně vstupenky, viz obrázek. <br>
+             - Vždy můžete zadat nebo načíst pouze jeden kód na jedno domácí utkání.
+                <br>
+            - V případě utkání na hřišti soupeře, obdržíte kód na e-mail, který jste zadali při registraci do věrnostního programu.
+                </з>
+              <h2 class="H7">
+                Zadejte kód ze vstupenky
+              </h2>
+              <form class="Form Form--ticketCode Form--ticketCode-red">
+                <div class="Form-item">
+                  <input type="text" maxlength="50" class="Form-input" required placeholder="Zadejte kód">
+                </div>
+                <p class="u-fs-tiny u-mb-16 u-lh-normal u-c-red">Neplatný kód vstupenky. / Vámi zadaný kód již byl zadán.</p>
+                <button class="Button u-px-48">Získat body</button>
+              </form>
+            </div>
+            <div class="Grid-col Grid-col--7 Grid-col--md-12">
+              <div class="ticketCode__img">
+                <img src="./img/ticket-code.jpg" alt="">
+              </div>
             </div>
 
-            <!-- Matches -->
-            <ul class="u-mt-8">
-              <!-- Match - over -->
-              <li class="MatchRound js-matchRound">
-                <div class="MatchRound-mainInfoContainer">
-                  <a href="#" class="MatchRound-match">
-                    <!-- Teams -->
-                    <ul class="MatchItem-teams">
-                      <li>
-                        <span class="Flag fi fi-cz fis"></span>
-                        <span class="H7 MatchItem-teamName">Česko</span>
-                      </li>
-                      <li>
-                        <span class="Flag fi fi-es fis"></span>
-                        <span class="H7 MatchItem-teamName">Španělsko</span>
-                      </li>
-                    </ul>
-                    <!-- Result -->
-                    <!-- <strong class="H4 MatchItem-result MatchItem-result--win">3:0</strong> -->
-                    <!-- <strong class="H4 MatchItem-result MatchItem-result--loss">0:3</strong> -->
-                    <strong class="H4 MatchItem-result MatchItem-result--tie">3:3</strong>
-                  </a>
-                  <!-- Actions collapsible -->
-                  <div class="MatchRound-actions js-matchRoundDetails u-display-none">
-                    <a href="#" class="Button">Video</a>
-                    <a href="#" class="Button">Online</a>
-                    <!-- optional note -->
-                    <p class="u-my-4">Poznámka: ev. UMT</p>
-                  </div>
-                </div>
-                <div class="MatchRound-detailsContainer">
-                  <!-- Meta -->
-                  <ul class="MatchRound-meta">
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
-                      </svg>
-                      <p>
-                        <strong>Datum:</strong>
-                        pátek 3. 6. 2022, 18:00
-                      </p>
-                      <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy" />
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
-                      </svg>
-                      <p>
-                        <strong>Turnaj:</strong>
-                        <a href="#" class="Link--inverted u-c-tertiary">Kvalifikace EURO 2024</a>
-                      </p>
-                    </li>
-                  </ul>
-                  <!-- Details collapsible -->
-                  <ul class="MatchRound-details u-mt-4 js-matchRoundDetails u-display-none">
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#referee"></use>
-                      </svg>
-                      <p>
-                        <strong>Rozhodčí:</strong>
-                        Všetečka Jan - Pečenka Jiří, Líkař Petr
-                      </p>
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#delegate"></use>
-                      </svg>
-                      <p>
-                        <strong>Delegát:</strong>
-                        Lhoták Luděk, Bajer Josef
-                      </p>
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
-                      </svg>
-                      <p>
-                        <strong>VAR:</strong>
-                        Zelinka Miroslav
-                      </p>
-                      <p>
-                        <strong>AVAR:</strong>
-                        Křepský Michal
-                      </p>
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#playground"></use>
-                      </svg>
-                      <p>
-                        <strong>Hřiště:</strong>
-                        Andrův stadion, Olomouc
-                      </p>
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spectators"></use>
-                      </svg>
-                      <p>
-                        <strong>Diváků:</strong>
-                        4660
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <!-- Match - upcoming -->
-              <li class="MatchRound js-matchRound">
-                <div class="MatchRound-mainInfoContainer">
-                  <a href="#" class="MatchRound-match">
-                    <!-- Teams -->
-                    <ul class="MatchItem-teams">
-                      <li>
-                        <span class="Flag fi fi-cz fis"></span>
-                        <span class="H7 MatchItem-teamName">Česko</span>
-                      </li>
-                      <li>
-                        <span class="Flag fi fi-es fis"></span>
-                        <span class="H7 MatchItem-teamName">Španělsko</span>
-                      </li>
-                    </ul>
-                    <!-- Result -->
-                    <strong class="H4 MatchItem-result">-:-</strong>
-                  </a>
-                </div>
-                <div class="MatchRound-detailsContainer">
-                  <!-- Meta -->
-                  <ul class="MatchRound-meta">
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"></use>
-                      </svg>
-                      <p>
-                        <strong>Datum:</strong>
-                        pátek 3. 6. 2022, 18:00
-                      </p>
-                      <img src="./img/logo-o2_tv_sport@3x.png" width="76" height="12" alt="logo O2 TV Sport" loading="lazy" />
-                    </li>
-                    <li>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cup"></use>
-                      </svg>
-                      <p>
-                        <strong>Turnaj:</strong>
-                        <a href="#" class="Link--inverted u-c-tertiary">Kvalifikace EURO 2024</a>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+          </div>
 
-            <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
-              <a href="#" class="Button">Rozpis zápasů</a>
-            </div>
-          </section>
 
-          <!-- Pozn. od Aleše: Pokud bude tabulka, tak i tu (divné je, že u kvalifikací se nyní tabulky negenerují, u turnajů ano) -->
-          <section class="u-mt-primary">
-            <h2 class="H6">Tabulka kvalifikace EURO 2024</h2>
-            <table class="Table u-mt-16">
-              <thead>
-                <tr>
-                  <th class="u-sticky-cell">
-                    <abbr title="Pořadí">#</abbr>
-                  </th>
-                  <th class="u-width-dominate u-sticky-cell">Klub</th>
-                  <th class="u-ta-center">
-                    <abbr title="Zápasy">Z</abbr>
-                  </th>
-                  <th class="u-ta-center">
-                    <abbr title="Výhry">V</abbr>
-                  </th>
-                  <th class="u-ta-center">
-                    <abbr title="Remízy">R</abbr>
-                  </th>
-                  <th class="u-ta-center">
-                    <abbr title="Prohry">P</abbr>
-                  </th>
-                  <th class="u-ta-center">Skóre</th>
-                  <th>
-                    <abbr title="Body">B</abbr>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="u-sticky-cell">1.</td>
-                  <td class="u-sticky-cell">
-                    <a href="#" class="Link Link--inverted">Česko</a>
-                  </td>
-                  <td class="u-ta-center">17</td>
-                  <td class="u-ta-center">12</td>
-                  <td class="u-ta-center">4</td>
-                  <td class="u-ta-center">1</td>
-                  <td class="u-ta-center">49:20</td>
-                  <td>
-                    <strong>40</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="u-sticky-cell">2.</td>
-                  <td class="u-sticky-cell">
-                    <a href="#" class="Link Link--inverted">Moldavsko</a>
-                  </td>
-                  <td class="u-ta-center">17</td>
-                  <td class="u-ta-center">12</td>
-                  <td class="u-ta-center">2</td>
-                  <td class="u-ta-center">3</td>
-                  <td class="u-ta-center">40:22</td>
-                  <td>
-                    <strong>38</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="u-sticky-cell">3.</td>
-                  <td class="u-sticky-cell">
-                    <a href="#" class="Link Link--inverted">Polsko</a>
-                  </td>
-                  <td class="u-ta-center">1</td>
-                  <td class="u-ta-center">1</td>
-                  <td class="u-ta-center">1</td>
-                  <td class="u-ta-center">1</td>
-                  <td class="u-ta-center">100:100</td>
-                  <td>
-                    <strong>0</strong>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-16">
-              <a href="#" class="Button">Podrobné tabulky</a>
-            </div>
-          </section>
-
-          <!-- Pozn. od Aleše: Přehled posledních souvisejících článků k danému typu turnaje / kvalifikace -->
-          <section class="u-mt-primary">
-            <h2 class="H6">Články</h2>
-            <div class="ArticlesSmallGrid u-mt-16">
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-            </div>
-            <div class="u-display-flex u-justify-flex-end u-sm-justify-center u-mt-24">
-              <a href="#" class="Button">Další zprávy</a>
-            </div>
-          </section>
-        </div>
+        </article>
       </main>
 
       <!-- Side subnav -->

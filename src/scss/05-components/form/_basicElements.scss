@@ -242,3 +242,24 @@
     padding: 0.5rem 1rem;
   }
 }
+
+.Form--ticketCode {
+  input {
+    margin-bottom: 12px;
+    margin-top: 16px;
+    max-width: 264px;
+  }
+  input::placeholder,
+  input {
+    color: #000;
+    border-color: #000;
+  }
+  &-red {
+    input::placeholder {
+      color: $colorRed;
+    }
+    input {
+      border-color: $colorRed;
+    }
+  }
+}
