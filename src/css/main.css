@@ -8674,6 +8674,18 @@ table[border="0"] td {
 .registrationForm {
   --gridGutter: 10px;
 }
+.registrationForm .Select {
+  border: 2px solid #dde1e6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.registrationForm .Button--gray {
+  border-color: #878d96;
+  color: #878d96;
+  display: block;
+  width: 100%;
+  margin-top: 60px;
+}
 
 .registrationForm-password {
   position: relative;
@@ -8815,6 +8827,29 @@ table[border="0"] td {
 }
 .SideNavContainer .registration-decore::after {
   display: none;
+}
+
+.registrationForm__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 32px auto;
+  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.registrationForm__links a {
+  text-decoration-color: transparent;
+  font-size: 12px;
+}
+.registrationForm__links .active {
+  text-decoration-color: inherit;
 }
 
 .fotbaltvItem {

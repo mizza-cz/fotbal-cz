@@ -418,9 +418,180 @@
           </li>
         </ul>
 
-        <h1 class="H3">
+        <h1 class="H3 u-mb-24 u-mt-32">
           Osobní údaje
         </h1>
+        <form action="" class="Form Grid registrationForm" style="max-width:464px">
+          <div class="Grid-col Grid-col--3 u-mb-12">
+            <div class="Form-item">
+              <input type="text" maxlength="10" class="Form-input" placeholder="Titul">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--9 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" required class="Form-input" required placeholder="Jméno*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="Prostřední jméno*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="Příjmení*">
+            </div>
+          </div>
+          <div class="Grid-col--12">
+            <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Datum narození</div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+            <div class="Form-item required">
+              <select class="Select js-select2 u-width-100p u-bgc-white">
+                <option>Den*</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>...</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+            <div class="Form-item required">
+              <select class="Select js-select2 u-width-100p u-bgc-white">
+                <option>Měsíc*</option>
+                <option>Leden</option>
+                <option>Únor</option>
+                <option>Březen</option>
+                <option>Květen</option>
+                <option>...</option>
+              </select>
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+            <div class="Form-item required">
+              <select class="Select js-select2 u-width-100p u-bgc-white">
+                <option>Rok*</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>...</option>
+              </select>
+            </div>
+          </div>
+          <div class="Grid-col--12">
+            <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Adresa trvalého bydliště</div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--8 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="Ulice*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--4 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="Číslo popisné*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="Město*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" required placeholder="PSČ*">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item">
+              <select class="Select js-select2 u-width-100p u-bgc-white">
+                <option>Oblíbený reprezentant</option>
+                <option>Oblíbený reprezentant</option>
+                <option>Oblíbený reprezentant</option>
+                <option>Oblíbený reprezentant</option>
+                <option>Oblíbený reprezentant</option>
+              </select>
+            </div>
+          </div>
+          <div class="Grid-col--12">
+            <div class="u-fs-extraSmall u-lh-1 u-pl-24 u-mb-8 u-mt-4">Telefonní číslo </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+            <div class="Form-item required">
+              <input type="text" maxlength="50" class="Form-input" placeholder="+420">
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--xs-12 Grid-col--6 u-mb-12">
+            <div class="Form-item required">
+              <input type="tel" maxlength="50" class="Form-input" placeholder="Telefonní číslo">
+            </div>
+          </div>
+          <div class="Grid-col--12 Grid-col">
+            <ul class="registrationForm__links">
+              <li>
+                <a href="#" class="Link active">
+                  Změna hesla
+                </a>
+              </li>
+              <li>
+                <a href="#" class="Link  ">
+                  Změna e-mailu
+                </a>
+              </li>
+              <li>
+                <a href="#" class="Link  ">
+                  Data a soukromí
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item required registrationForm-password">
+              <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Zadejte staré heslo*">
+              <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item required registrationForm-password">
+              <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Zadejte nové heslo*">
+              <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+            </div>
+          </div>
+          <div class="Grid-col Grid-col--12 u-mb-12">
+            <div class="Form-item required registrationForm-password">
+              <input type="password" maxlength="50" class="Form-input password-field" required placeholder="Potvrďte heslo*">
+              <span toggle=".password-field" class="toggle-password">
+                               <svg width="18" height="12" focusable="false" aria-hidden="true">
+                                 <use xlink:href="#eye"></use>
+                              </svg>
+                           </span>
+            </div>
+          </div>
+
+          <div class="Grid-col Grid-col--12">
+            <div class="Form-item">
+              <input type="submit" class="Button" value="Uložit změny">
+            </div>
+          </div>
+
+          <div class="Grid-col--12 Grid-col">
+            <a href="#" class="Button Button--gray u-width-100">Ukončit členství</a>
+            <p class="u-fs-tiny u-mt-12 u-ta-center">UPOZORNĚNÍ: Zrušením účtu přijdete o veškeré výhody spojené s členstvím..</p>
+          </div>
+        </form>
+
 
       </main>
 

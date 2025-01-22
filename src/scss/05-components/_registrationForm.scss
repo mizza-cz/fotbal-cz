@@ -16,6 +16,17 @@
 }
 .registrationForm {
   --gridGutter: 10px;
+  .Select {
+    border: 2px solid #dde1e6;
+    box-shadow: none;
+  }
+  .Button--gray {
+    border-color: #878d96;
+    color: #878d96;
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+  }
 }
 
 .registrationForm-password {
@@ -135,5 +146,21 @@
     &::after {
       display: none;
     }
+  }
+}
+
+.registrationForm__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px auto;
+  gap: 12px;
+  flex-wrap: wrap;
+  a {
+    text-decoration-color: transparent;
+    font-size: 12px;
+  }
+  .active {
+    text-decoration-color: inherit;
   }
 }
