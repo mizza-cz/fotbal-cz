@@ -1,0 +1,122 @@
+{% extends "../templates/layout-subPageWithoutNav.njk" %}
+
+{% set pageTitle = '{Archiv aktualit} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage SubPage--withoutNav' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
+
+      {% include "../templates/partials/_breadcrumbs.njk" %}
+      <h1 class="H3">Aktuality</h1>
+      <div class="Box u-mt-primary">
+          <form action="/clanky/" method="post" id="frm-articlesList-sectionFilter-form" class="Form Form--archive   ">
+            <div class="Form--4inputs u-mb-24">
+               <div class="Form-item">
+                  <label for="frm-articlesList-sectionFilter-form-section" class="Form-label">
+                     Sekce
+                  </label>
+                  <select name="section" id="frm-articlesList-sectionFilter-form-section" 
+                     class="Select" onChange="this.form.submit();">
+                     <option value="">
+                        všechny sekce
+                     </option>
+                     <option value="2">Reprezentace</option>
+                     <option value="3">FAČR</option><option value="4">Média</option>
+                     <option value="5">Soutěže</option>
+                     <option value="7">Náš fotbal</option>
+                     <option value="8">Trenéři</option>
+                     <option value="9">Rozhodčí</option
+                     ><option value="10">Ženy</option>
+                     <option value="14">Futsal</option><option value="16">Síň slávy</option><option value="17">Akademie</option><option value="20">XPS</option><option value="25">Turnaj Václava Ježka</option>
+                     <option value="28">EURO 2024</option>
+                     <option value="29">Fanoušek</option>
+                  </select>
+               </div>
+               <div class="Form-item">
+                  <label class="Form-label" for="">Dle kategorie</label>
+                  <select class="Select" name="" id="">
+                     <option value="">—Všechny kategorie—</option>
+                     <option value="">Muži</option>
+                     <option value="">Děti (mládež)</option>
+                     <option value="">Ženy</option>
+                     <option value="">Futsal</option>
+                     <option value="">Plážový fotbal</option>
+                  </select>
+               </div>
+               <div class="Form-item">
+                  <label class="Form-label" for="">Dle obsahu</label>
+                  <select class="Select" name="" id="">
+                     <option value="">—Všechny kategorie—</option>
+                     <option value="">Muži</option>
+                     <option value="">Děti (mládež)</option>
+                     <option value="">Ženy</option>
+                     <option value="">Futsal</option>
+                     <option value="">Plážový fotbal</option>
+                  </select>
+               </div>
+                 
+            </div>
+             
+            <div class="Form--4inputs">
+               <div class="Form-item">
+                  <label for="frm-officialBoardFilter-form-from" class="Form-label">
+                     Platnost od
+                  </label>
+                  <input type="text" name="from" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-from" placeholder="Zadejte datum od" readonly="readonly">
+               </div>
+        
+               <div class="Form-item">
+                  <label for="frm-officialBoardFilter-form-to" class="Form-label">
+                     Platnost do
+                  </label>
+                  <input type="text" name="to" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-to" placeholder="Zadejte datum do" readonly="readonly">
+               </div>
+               <div class="Form-item">
+                  <input type="submit" name="select" value="Vybrat" class="Button  u-width-100p">
+               </div>
+            </div>
+             
+            
+            <input type="hidden" name="_do" value="articlesList-sectionFilter-form-submit">
+         </form>
+      </div>
+      <div data-ajax-append id="snippet-articlesList-reload">
+         <div class="ArticlesGrid u-mt-primary">
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            {% include "../templates/partials/_articleBox.njk" %}
+            
+         </div>
+      </div>
+      <div class="m-t-15 m-b-15" id="snippet-articlesList-reloadButton">
+         <div class="Pagination Pagination--classic u-mt-24">
+            <a href="/clanky/" class="Button ajax Button--disabled" tabindex="-1">
+               &lt;
+            </a>
+            <a href="/clanky/" class="Button ajax" aria-current="page">1</a>
+            <a href="/clanky/?articlesList-offset=20" class="Button ajax">2</a>
+            <a href="/clanky/?articlesList-offset=40" class="Button ajax">3</a>
+            <strong>…</strong>
+            <a href="/clanky/?articlesList-offset=19380" class="Button ajax">970</a>
+            <a href="/clanky/?articlesList-offset=20" class="Button ajax">&gt;</a>
+         </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+
+   

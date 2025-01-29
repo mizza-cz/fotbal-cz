@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{Repre - detail zápasu} | Fotbal.cz</title>
+  <title>{Archiv aktualit} | Fotbal.cz</title>
 
   <link rel="preload" href="./fonts/config/Config-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="./fonts/config/Config-Regular.woff" as="font" type="font/woff" crossorigin />
@@ -53,12 +53,14 @@
   <link rel="stylesheet" href="./css/flag-icons.min.css" />
   <link rel="stylesheet" href="./css/flatpickr.min.css" />
   <link rel="stylesheet" href="./css/swiper.min.css" />
+  <link rel="stylesheet" href="./css/select2.min.css" />
 
 
 
 
-  <link rel="stylesheet" href="./css/main-6951718041.min.css">
-
+  <!-- build:css -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- endbuild -->
 
 
 
@@ -72,19 +74,14 @@
   </script>
 
 
-  <script src="./js/vendors/masonry.pkgd.min.js"></script>
-  <script src="./js/vendors/imagesloaded.pkgd.min.js"></script>
   <script src="./js/vendors/minilazyload.min.js" defer="defer"></script>
   <script src="./js/vendors/easydropdown.min.js" defer="defer"></script>
   <script src="./js/vendors/flatpickr.min.js" defer="defer"></script>
   <script src="./js/vendors/flatpickr-cs.js" defer="defer"></script>
-  <script src="./js/vendors/jquery-1.12.4.min.js"></script>
-  <script src="./js/vendors/jquery.event.swipe.js" defer="defer"></script>
-  <script src="./js/vendors/jquery.mousewheel.js" defer="defer"></script>
-  <script src="./js/vendors/jquery.tinyscrollbar.js" defer="defer"></script>
-  <script src="./js/vendors/spin.js" defer="defer"></script>
-  <script src="./js/vendors/jquery.esgallery.js" defer="defer"></script>
   <script src="./js/vendors/swiper-bundle.min.js" defer="defer"></script>
+  <script src="./js/vendors/jquery-1.12.4.min.js" defer="defer"></script>
+  <script src="./js/vendors/select2.min.js" defer="defer"></script>
+  <script src="./js/vendors/select2-cs.js" defer="defer"></script>
   <script src="./js/vendors/cookie-consent.min.js" defer="defer"></script>
 
 
@@ -95,8 +92,16 @@
 
 
 
-  <script src="./js/main-d4d6763f8d.min.js" defer></script>
+  <!-- build:js -->
+  <script src="./js/components/map.js" defer="defer"></script>
+  <script src="./js/components/nav.js" defer="defer"></script>
+  <script src="./js/components/topStories.js" defer="defer"></script>
+  <script src="./js/components/autoComplete.js" defer="defer"></script>
+  <script src="./js/components/modal.js" defer="defer"></script>
+  <script src="./js/features/fetchAnnouncement.js" defer="defer"></script>
+  <script src="./js/main.js" defer="defer"></script>
 
+  <!-- endbuild -->
 
 
 
@@ -113,7 +118,7 @@
   <link rel="manifest" href="./img/favicons/site.webmanifest" />
 
 
-  <meta property="og:title" content="{Repre - detail zápasu} | Fotbal.cz" />
+  <meta property="og:title" content="{Archiv aktualit} | Fotbal.cz" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <meta property="og:type" content="website" />
@@ -125,7 +130,7 @@
   <meta property="og:locale" content="cs_CZ" />
 
 
-  <meta name="twitter:title" content="{Repre - detail zápasu} | Fotbal.cz" />
+  <meta name="twitter:title" content="{Archiv aktualit} | Fotbal.cz" />
   <meta name="twitter:site" content="" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -134,7 +139,7 @@
   <meta name="twitter:image" content="./img/og_image.jpg" />
 </head>
 
-<body class="SubPage">
+<body class="SubPage SubPage--withoutNav">
   <!-- Header -->
   <header class="Header" id="js-header">
     <!-- Logo -->
@@ -377,602 +382,345 @@
       </div>
     </div>
   </header>
-  <div class="Container">
-    <div class="SubPage-grid">
 
-      <!-- Main content -->
-      <main class="Main" aria-label="Hlavní obsah">
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+    <div class="Container">
 
-        <ul role="navigation" class="breadcrumbs">
-          <li>
-            <a href="/">
-              <svg width="22" height="22">
-                <use xlink:href="#home"></use>
-              </svg>
-              Domů
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Rozcestník soutěží
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Hradec Králové
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              CK VOTROK 3. třída západ
-            </a>
-          </li>
-        </ul>
+      <ul role="navigation" class="breadcrumbs">
+        <li>
+          <a href="/">
+            <svg width="22" height="22">
+              <use xlink:href="#home"></use>
+            </svg>
+            Domů
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Rozcestník soutěží
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Hradec Králové
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            CK VOTROK 3. třída západ
+          </a>
+        </li>
+      </ul>
 
-
-        <article class="Article Match">
-          <h1 class="H8 Match-meta">
-            6. 8. 2022 16:30, Reprezentační turnaje,
-            <a href="#" class="Link Link--inverted">Liga národů 2022/2023</a>, Generali Česká pojišťovna Arena, Praha - Česká republika
-          </h1>
-
-          <div class="Match-mainInfoContainer">
-            <div class="Match-teams">
-              <div class="Match-team">
-                <span class="Flag fi fi-cz fis"></span>
-                <strong class="H6">Česká republika</strong>
-              </div>
-              <div class="Match-team">
-                <span class="Flag fi fi-es fis"></span>
-                <strong class="H6">Španělsko</strong>
-              </div>
+      <h1 class="H3">Aktuality</h1>
+      <div class="Box u-mt-primary">
+        <form action="/clanky/" method="post" id="frm-articlesList-sectionFilter-form" class="Form Form--archive   ">
+          <div class="Form--4inputs u-mb-24">
+            <div class="Form-item">
+              <label for="frm-articlesList-sectionFilter-form-section" class="Form-label">
+                Sekce
+              </label>
+              <select name="section" id="frm-articlesList-sectionFilter-form-section" class="Select" onChange="this.form.submit();">
+                <option value="">
+                  všechny sekce
+                </option>
+                <option value="2">Reprezentace</option>
+                <option value="3">FAČR</option>
+                <option value="4">Média</option>
+                <option value="5">Soutěže</option>
+                <option value="7">Náš fotbal</option>
+                <option value="8">Trenéři</option>
+                <option value="9">Rozhodčí</option>
+                <option value="10">Ženy</option>
+                <option value="14">Futsal</option>
+                <option value="16">Síň slávy</option>
+                <option value="17">Akademie</option>
+                <option value="20">XPS</option>
+                <option value="25">Turnaj Václava Ježka</option>
+                <option value="28">EURO 2024</option>
+                <option value="29">Fanoušek</option>
+              </select>
             </div>
-            <div class="Match-result">
-              <strong class="H3">4:1</strong>
-              <p class="H8 u-c-grey--100">(2:0)</p>
+            <div class="Form-item">
+              <label class="Form-label" for="">Dle kategorie</label>
+              <select class="Select" name="" id="">
+                <option value="">—Všechny kategorie—</option>
+                <option value="">Muži</option>
+                <option value="">Děti (mládež)</option>
+                <option value="">Ženy</option>
+                <option value="">Futsal</option>
+                <option value="">Plážový fotbal</option>
+              </select>
+            </div>
+            <div class="Form-item">
+              <label class="Form-label" for="">Dle obsahu</label>
+              <select class="Select" name="" id="">
+                <option value="">—Všechny kategorie—</option>
+                <option value="">Muži</option>
+                <option value="">Děti (mládež)</option>
+                <option value="">Ženy</option>
+                <option value="">Futsal</option>
+                <option value="">Plážový fotbal</option>
+              </select>
             </div>
 
-            <!-- Actions -->
-            <div class="Match-actions">
-              <div class="u-display-flex u-justify-center u-gap-8 u-width-100p u-mb-8">
-                <a href="#" class="Button">Nominace</a>
-                <a href="#" class="Button">Kvalifikace</a>
-              </div>
-              <a href="https://ticketportal.cz/" class="Match-action Link--inverted">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ticket"></use>
-                </svg>
-                <span>Vstupenky</span>
-              </a>
-              <a href="https://facr.tv/" class="Match-action Link--inverted">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#var"></use>
-                </svg>
-                <span>Video</span>
-              </a>
-              <a href="https://onlajny.com/" class="Match-action Link--inverted">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#exchange"></use>
-                </svg>
-                <span>Online</span>
-              </a>
+          </div>
+
+          <div class="Form--4inputs">
+            <div class="Form-item">
+              <label for="frm-officialBoardFilter-form-from" class="Form-label">
+                Platnost od
+              </label>
+              <input type="text" name="from" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-from" placeholder="Zadejte datum od" readonly="readonly">
+            </div>
+
+            <div class="Form-item">
+              <label for="frm-officialBoardFilter-form-to" class="Form-label">
+                Platnost do
+              </label>
+              <input type="text" name="to" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-to" placeholder="Zadejte datum do" readonly="readonly">
+            </div>
+            <div class="Form-item">
+              <input type="submit" name="select" value="Vybrat" class="Button  u-width-100p">
             </div>
           </div>
 
-          <ol class="MatchTimeline">
-            <!-- Home team item -> class mod MatchTimeline-item--home -->
-            <li class="MatchTimeline-item MatchTimeline-item--home">
-              <p>Krečman Tomáš
-                <span class="u-c-grey--100">(1:0)</span>
-              </p>
-              <strong>8.</strong>
-            </li>
-            <!-- Home team item -> class mod MatchTimeline-item--home -->
-            <li class="MatchTimeline-item MatchTimeline-item--home">
-              <p>Pecina Marek, PK
-                <span class="u-c-grey--100">(2:0)</span>
-              </p>
-              <strong>16.</strong>
-            </li>
-            <!-- Home team item -> class mod MatchTimeline-item--home -->
-            <li class="MatchTimeline-item MatchTimeline-item--home">
-              <p>Voráč Daniel
-                <span class="u-c-grey--100">(3:0)</span>
-              </p>
-              <strong>66.</strong>
-            </li>
-            <!-- Home team item -> class mod MatchTimeline-item--visitor -->
-            <li class="MatchTimeline-item MatchTimeline-item--visitor">
-              <p>Hadrava Tadeáš
-                <span class="u-c-grey--100">(3:1)</span>
-              </p>
-              <strong>68.</strong>
-            </li>
-            <!-- Home team item -> class mod MatchTimeline-item--home -->
-            <li class="MatchTimeline-item MatchTimeline-item--home">
-              <p>Apfelthaler Adam
-                <span class="u-c-grey--100">(4:1)</span>
-              </p>
-              <strong>89.</strong>
-            </li>
-          </ol>
 
-          <div class="Match-embed">
-            <!-- <iframe data-cookiecategory="social" data-placeholder  data-src="//embed.tvcom.cz/ad8d3237-e8b6-4006-9165-c79881be228f/" class=""></iframe> -->
-            <iframe data-cookiecategory="social" data-placeholder data-src="//www.youtube.com/embed/0PKbBStvkqc?si=udeGYTIsqMYKtCvX" class="" allow="fullscreen"></iframe>
-          </div>
-
-          <div class="Match-detailsContainer Match-detailsContainer--repre">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eligendi! Odio doloribus deleniti aspernatur neque exercitationem accusantium tempora aut recusandae, eos, reprehenderit maxime quos alias eius consequuntur minima quis voluptate sequi! Ut facilis optio beatae repellendus quasi, voluptates incidunt recusandae.</p>
-            <p>
-              <strong>Rozhodčí:</strong>
-              Všetečka Jan - Pečenka Jiří, Líkař Petr,
-              <strong>ŽK:</strong>
-              Masopust, Kopic - Paskotsi, Kreida, Kuusk,
-              <strong>Diváci:</strong>
-              12 068
-            </p>
-          </div>
-
-          <div class="Match-rostersGrid">
-            <div class="Box Box--roster">
-              <span class="Flag fi fi-cz fis"></span>
-              <strong class="u-fs-small u-tt-uppercase">Česká republika</strong>
-              <p>Vaclík - Coufal, Zima, Brabec, Novák - Král (60. Kuchta), Sadílek (69. Pavelka) - Masopust (60. Krmenčík), Barák, Pešek (28. Sýkora) - Vydra (69. Kopic).
-                <strong>Trenér:</strong>
-                Jiří Chytrý.
-              </p>
+          <input type="hidden" name="_do" value="articlesList-sectionFilter-form-submit">
+        </form>
+      </div>
+      <div data-ajax-append id="snippet-articlesList-reload">
+        <div class="ArticlesGrid u-mt-primary">
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
             </div>
-            <div class="Box Box--roster">
-              <span class="Flag fi fi-es fis"></span>
-              <strong class="u-fs-small u-tt-uppercase">Španělsko</strong>
-              <p>Igonen - Paskotsi (86. Kirss), Kuusk, Tamm, Mets, Sinyavskiy (61. Ojamaa) - Poom, Kreida, Vassiljev - Sappinen (76. Zenjov), Sorga (61. Anier).
-                <strong>Trenér:</strong>
-                Thomas Häberli
-              </p>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
             </div>
-          </div>
-
-          <table class="Table u-mt-primary">
-            <thead>
-              <tr>
-                <th>
-                  <abbr title="Číslo dresu">#</abbr>
-                </th>
-                <th>
-                  <abbr title="Pozice">P</abbr>
-                </th>
-                <th class="u-width-dominate">Jméno</th>
-                <th class="u-ta-center">
-                  <abbr title="Žlutá karta">ŽK</abbr>
-                </th>
-                <th class="u-ta-center">
-                  <abbr title="Červená karta">ČK</abbr>
-                </th>
-                <th class="u-ta-center">
-                  <abbr title="Střídání" class="u-display-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
-                    </svg>
-                  </abbr>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>B</td>
-                <td class="Table-playerName">Tomáš Marcinko</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center"></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>O</td>
-                <td class="Table-playerName">Patrik Koch</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center">57'</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Z</td>
-                <td class="Table-playerName">Tomáš Klimenta</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center">55'</td>
-                <td class="u-ta-center"></td>
-              </tr>
-            </tbody>
-            <thead>
-              <tr>
-                <th>
-                  <abbr title="Číslo dresu" class="u-sr-only">#</abbr>
-                </th>
-                <th>
-                  <abbr title="Pozice" class="u-sr-only">P</abbr>
-                </th>
-                <th class="u-width-dominate">Náhradníci</th>
-                <th class="u-ta-center u-sr-only">
-                  <abbr title="Žlutá karta">ŽK</abbr>
-                </th>
-                <th class="u-ta-center u-sr-only">
-                  <abbr title="Červená karta">ČK</abbr>
-                </th>
-                <th class="u-ta-center u-sr-only">
-                  <abbr title="Střídání" class="u-display-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" aria-hidden="true">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#rotation"></use>
-                    </svg>
-                  </abbr>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>B</td>
-                <td class="Table-playerName">Ondřej Bláha</td>
-                <td class="u-ta-center">23'</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center"></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>O</td>
-                <td class="Table-playerName">Erik Hrňa</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center">57'</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Z</td>
-                <td class="Table-playerName">Juraj Mikuš</td>
-                <td class="u-ta-center"></td>
-                <td class="u-ta-center">55'</td>
-                <td class="u-ta-center"></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="Article-body">
-            <h3>Fotogalerie</h3>
-            <figure class="Article-widget Box">
-              <figcaption class="H7 u-mb-8">ČR U21 - trénink</figcaption>
-              <div class="GalleryArticle js-esgallery">
-                <a class="GalleryArticle-item js-esgallery-open" href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%231" title="ČR U21 - trénink" onclick="window.location.hash = '1';">
-                  <picture>
-                    <!-- 960 x 640 -->
-                    <source media="(max-width: 576px)" srcset="./img/placeholder-gallery-article-thumb-mobile.jpg" />
-                    <!-- 460 x 304 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" loading="lazy" />
-                  </picture>
-                </a>
-                <a class="GalleryArticle-item js-esgallery-open" href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%232" title="ČR U21 - trénink" onclick="window.location.hash = '2';">
-                  <picture>
-                    <!-- 960 x 640 -->
-                    <source media="(max-width: 576px)" srcset="./img/placeholder-gallery-article-thumb-mobile.jpg" />
-                    <!-- 460 x 304 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" loading="lazy" />
-                  </picture>
-                </a>
-                <a class="GalleryArticle-item js-esgallery-open" href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%233" title="ČR U21 - trénink" onclick="window.location.hash = '3';">
-                  <picture>
-                    <!-- 960 x 640 -->
-                    <source media="(max-width: 576px)" srcset="./img/placeholder-gallery-article-thumb-mobile.jpg" />
-                    <!-- 460 x 304 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" loading="lazy" />
-                  </picture>
-                </a>
-                <a class="GalleryArticle-item js-esgallery-open" href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%234" title="ČR U21 - trénink" onclick="window.location.hash = '4';">
-                  <picture>
-                    <!-- 960 x 640 -->
-                    <source media="(max-width: 576px)" srcset="./img/placeholder-gallery-article-thumb-mobile.jpg" />
-                    <!-- 460 x 304 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" loading="lazy" />
-                  </picture>
-                  <span>
-        <strong>+5</strong>
-        dalších fotek
-      </span>
-                </a>
-              </div>
-            </figure>
-
-            <div id="media-top">
-              <div id="media-title">
-                <h1 class="h2">ČR U21 - trénink</h1>
-              </div>
-              <div id="media-back">
-                <a href="#" class="js-esgallery-close">
-                  <span class="u-mr-8">Zavřít</span>
-                  <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="#FFF">
-                      <path d="M11 0c6.052 0 11 4.948 11 11s-4.948 11-11 11S0 17.052 0 11 4.948 0 11 0Zm0 2c-4.948 0-9 4.052-9 9s4.052 9 9 9 9-4.052 9-9-4.052-9-9-9Z" />
-                      <path d="M13.123 7.463a1 1 0 1 1 1.414 1.414l-5.66 5.66a1 1 0 1 1-1.414-1.414l5.66-5.66Z" />
-                      <path d="M7.463 7.463a1 1 0 0 1 1.414 0l5.66 5.66a1 1 0 1 1-1.414 1.414l-5.66-5.66a1 1 0 0 1 0-1.414Z" />
-                    </g>
-                  </svg>
-                </a>
-              </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
             </div>
-
-            <div id="media-list">
-              <ul>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%231">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%232">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%233">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%234">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%235">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%236">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%237">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%238">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://placehold.jp/f2f4f8/121619/2048x1536.jpg?text=fotografie%20%239">
-                    <!-- 240 x 160 -->
-                    <img src="./img/placeholder-gallery-article-thumb@2x.jpg" alt="" />
-                  </a>
-                </li>
-              </ul>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
             </div>
-
-
-            <h3>Články</h3>
-            <div class="ArticlesSmallGrid Article-widget u-mt-16">
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
-              <!-- Article box - small -->
-              <article class="ArticleBoxSmall">
-                <picture class="ArticleBoxSmall-imgContainer">
-                  <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-small-mobile.jpg" />
-                  <source srcset="./img/placeholder-article-thumb-small.jpg 1x, ./img/placeholder-article-thumb-small@1.5x.jpg 1.5x, ./img/placeholder-article-thumb-small@2x.jpg 2x" />
-                  <img class="ArticleBoxSmall-img" src="./img/placeholder-article-thumb-small.jpg" width="200" height="133" alt="" loading="lazy" />
-                  <a href="#" class="Badge">Reprezentace U21</a>
-                </picture>
-                <div class="ArticleBoxSmall-textContainer">
-                  <h3 class="H6 ArticleBoxSmall-title">
-                    <a class="Link--stretched Link--inverted" href="#">Reprezentace letos odehraje přípravné zápasy v Černé Hoře a Maďarsku</a>
-                  </h3>
-                  <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
-                </div>
-              </article>
-
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
             </div>
-          </div>
-        </article>
-      </main>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
+          <!-- Article box -->
+          <article class="ArticleBox">
+            <picture class="ArticleBox-imgContainer">
+              <source media="(max-width: 576px)" srcset="./img/placeholder-article-thumb-mobile.jpg" />
+              <source srcset="./img/placeholder-article-thumb.jpg 1x, ./img/placeholder-article-thumb@1.5x.jpg 1.5x, ./img/placeholder-article-thumb@2x.jpg 2x" />
+              <img class="ArticleBox-img" src="./img/placeholder-article-thumb.jpg" width="320" height="213" alt="" loading="lazy" />
+              <a href="#" class="Badge">Reprezentace</a>
+            </picture>
+            <div class="ArticleBox-textContainer">
+              <h5 class="H6 ArticleBox-title">
+                <a class="Link--stretched Link--inverted" href="#">Poslední zápas i výzva kalendářního roku. Češi vyzvou Turecko</a>
+              </h5>
+              <time class="Date" datetime="2022-11-23">23. 11. 2022</time>
+            </div>
+          </article>
 
-      <!-- Side subnav -->
-      <aside class="SideNavContainer NotAnimOnLoad">
-        <nav class="SideNav" aria-label="Navigace - {Název kategorie}" id="js-sideNav">
-          <h4 class="H5 u-px-24">Název kategorie</h4>
-          <ul class="SideNav-menu">
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
-            </li>
-
-            <!-- Menu item with collapsible submenu -->
-            <li class="SideNav-item SideNav-item--hasSubMenu">
-              <a href="#" class="SideNav-link js-subMenu-toggle" role="button" aria-haspopup="true" aria-expanded="false">Položka menu kategorie</a>
-              <ul class="SubMenu">
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Menu item - active state -->
-            <li class="SideNav-item is-active">
-              <a href="#" class="SideNav-link Link--inverted is-active">Aktivní položka menu kategorie</a>
-            </li>
-
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
-            </li>
-
-            <!-- Menu item with collapsible submenu - active state -->
-            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
-              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
-              <ul class="SubMenu is-active">
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted is-active">Aktivní položka submenu</a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Menu item with collapsible submenu - active state -->
-            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
-              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
-              <ul class="SubMenu is-active">
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <!-- Submenu item with collapsible submenu level 2 -->
-                <li class="SubMenu-item SubMenu-item--hasSubMenu">
-                  <a href="#" class="SubMenu-link Link--inverted js-subMenu-toggle" role="button" aria-haspopup="true" aria-expanded="false">Položka submenu se submenu 2.&nbsp;úrovně</a>
-                  <!-- Submenu level 2 -->
-                  <ul class="SubMenu">
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Menu item with collapsible submenu - active state -->
-            <li class="SideNav-item SideNav-item--hasSubMenu is-active">
-              <a href="#" class="SideNav-link js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka menu kategorie se submenu</a>
-              <ul class="SubMenu is-active">
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <li class="SubMenu-item">
-                  <a href="#" class="SubMenu-link Link--inverted">Položka submenu</a>
-                </li>
-                <!-- Submenu item with collapsible submenu level 2 - active state -->
-                <li class="SubMenu-item SubMenu-item--hasSubMenu is-active">
-                  <a href="#" class="SubMenu-link Link--inverted js-subMenu-toggle is-active" role="button" aria-haspopup="true" aria-expanded="true">Aktivní položka submenu se submenu 2.&nbsp;úrovně</a>
-                  <!-- Submenu level 2 -->
-                  <ul class="SubMenu is-active">
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted">Položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                    <li class="SubMenu-item">
-                      <a href="#" class="SubMenu-link Link--inverted is-active">Aktivní položka submenu 2.&nbsp;úrovně</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
-            </li>
-
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu kategorie</a>
-            </li>
-          </ul>
-
-          <!-- Nav subheading -->
-          <h5 class="H7 u-c-grey--100 u-px-24 u-mt-16">Název podkategorie</h5>
-          <ul class="SideNav-menu u-mt-10">
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
-            </li>
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
-            </li>
-            <!-- Menu item -->
-            <li class="SideNav-item">
-              <a href="#" class="SideNav-link Link--inverted">Položka menu podkategorie</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
+        </div>
+      </div>
+      <div class="m-t-15 m-b-15" id="snippet-articlesList-reloadButton">
+        <div class="Pagination Pagination--classic u-mt-24">
+          <a href="/clanky/" class="Button ajax Button--disabled" tabindex="-1">
+            &lt;
+          </a>
+          <a href="/clanky/" class="Button ajax" aria-current="page">1</a>
+          <a href="/clanky/?articlesList-offset=20" class="Button ajax">2</a>
+          <a href="/clanky/?articlesList-offset=40" class="Button ajax">3</a>
+          <strong>…</strong>
+          <a href="/clanky/?articlesList-offset=19380" class="Button ajax">970</a>
+          <a href="/clanky/?articlesList-offset=20" class="Button ajax">&gt;</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
+
   <!-- Partners -->
   <aside class="u-border-top-primary u-py-40 js-partners">
     <div class="Container u-md-px-0">

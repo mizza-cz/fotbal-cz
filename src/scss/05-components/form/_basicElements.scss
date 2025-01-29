@@ -7,7 +7,9 @@
       right: rem(6px);
     }
   }
-
+  .Button.u-width-100p {
+    width: 100%;
+  }
   &--4inputs {
     display: grid;
     align-items: end;
@@ -42,6 +44,21 @@
           grid-column: auto;
           justify-self: auto;
         }
+      }
+    }
+  }
+  &--archive {
+    .Form--4inputs {
+      @include respondFrom(sm) {
+        .Form-item {
+          &:last-child,
+          &:last-of-type {
+            justify-self: auto;
+          }
+        }
+      }
+      @include respondFrom(xl) {
+        grid-template-columns: 1fr 1fr 1fr auto;
       }
     }
   }

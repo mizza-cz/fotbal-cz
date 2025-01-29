@@ -25,7 +25,9 @@
     color: #878d96;
     display: block;
     width: 100%;
-    margin-top: 60px;
+  }
+  input:disabled {
+    background-color: $colorGrey--70;
   }
 }
 

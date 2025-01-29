@@ -1,0 +1,41 @@
+{% extends "../templates/layout-subPage.njk" %}
+
+{% set pageTitle = '{Repre - account cancelled} | Fotbal.cz' %}
+{% set bodyClass = 'SubPage' %}
+
+{% block main %}
+  <!-- Main content -->
+  <main class="Main" aria-label="Hlavní obsah">
+
+    {% include "../templates/partials/_breadcrumbs.njk" %}
+   <h1 class="H3 u-mb-24 u-mt-32">
+    Úprava kontaktních údajů
+   </h1>
+              <form action="" class="Form Grid registrationForm u-justify-center"   >
+                  <div class="Grid-col--12">
+                     <div class="u-fs-small u-lh-1 u-mb-32 u-mt-8 u-ta-center">
+                        Opravdu chcete zrušit účet? Akci nelze vzít zpět. 
+                     </div>
+                  </div>
+                  
+                  
+                   
+                
+ 
+                    
+                    <div class="Grid-col">
+                     <div class="Form-item">
+                        <input type="submit" class="Button" value="Ano">
+                     </div>
+                  </div>
+                    <div class="Grid-col">
+                     <div class="Form-item">
+                        <input type="submit" class="Button Button--gray u-mt-0"   value="Ne">
+                     </div>
+                  </div>
+                  
+            </form>   
+            
+   
+  </main>
+{% endblock %}

@@ -42,8 +42,8 @@ $colorBorderPrimary: $colorGrey--90;
 $colorBorderSecondary: $colorGrey--90;
 
 // Font families
-$fontFamilyPrimary: "Config", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$fontFamilySecondary: "Maison Neue Extended", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$fontFamilyPrimary: 'Config', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$fontFamilySecondary: 'Maison Neue Extended', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 // Font sizes
 $fontSizeZero: 0;
@@ -76,7 +76,8 @@ $borderRadiusBig: 1.5rem;
 // Shadows
 $boxShadowPrimary: inset 0 0.125rem 0 0 $colorGrey--90;
 $boxShadowPrimaryFocused: inset 0 0.125rem 0 0 $colorTertiary;
-$boxShadowBig: 0 0.125rem 0.25rem 0 rgba(25, 25, 25, 0.05), 0 0.25rem 2.5rem 0 rgba(25, 25, 25, 0.15);
+$boxShadowBig: 0 0.125rem 0.25rem 0 rgba(25, 25, 25, 0.05),
+  0 0.25rem 2.5rem 0 rgba(25, 25, 25, 0.15);
 
 // Easing
 
