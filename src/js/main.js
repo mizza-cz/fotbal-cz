@@ -446,9 +446,7 @@ if (newSlider) {
     slidesPerView: 7,
     slidesPerGroup: 7,
     speed: 1500,
-    autoplay: {
-      delay: 5000,
-    },
+    
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

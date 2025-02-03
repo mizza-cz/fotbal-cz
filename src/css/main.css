@@ -9140,6 +9140,19 @@ table[border="0"] td {
   right: 0px;
 }
 
+.fotbaltv-calendar {
+  position: relative;
+}
+.fotbaltv-calendar .ToTopButton {
+  cursor: pointer;
+}
+.fotbaltv-calendar input {
+  border: none;
+  width: 0;
+  padding: 0;
+  height: 0;
+}
+
 .FanCard-points {
   border-radius: 5px;
   border: 1px solid #000;

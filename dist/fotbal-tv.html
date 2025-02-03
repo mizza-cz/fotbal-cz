@@ -58,7 +58,7 @@
 
 
 
-  <link rel="stylesheet" href="./css/main-6951718041.min.css">
+  <link rel="stylesheet" href="./css/main-335b934c7a.min.css">
 
 
 
@@ -93,7 +93,7 @@
 
 
 
-  <script src="./js/main-d4d6763f8d.min.js" defer></script>
+  <script src="./js/main-9c880d7eac.min.js" defer></script>
 
 
 
@@ -382,13 +382,19 @@
       <div class="u-display-flex u-align-items-center  u-flex-center u-justify-space-between u-mb-24">
         <h1 class="H2">FotbalTV </h1>
 
-        <a href="#" class="ToTopButton">
-          <svg width="24" height="24" focusable="false" aria-hidden="true">
-            <use xlink:href="#calendartv"></use>
-          </svg>
-        </a>
+        <div class="fotbaltv-calendar">
+          <label for="frm-officialBoardFilter-form-from" class="Form-label">
+            <div class="ToTopButton">
+              <svg width="24" height="24" focusable="false" aria-hidden="true">
+                <use xlink:href="#calendartv"></use>
+              </svg>
+            </div>
+          </label>
+          <input type="text" name="from" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-from" readonly="readonly">
+        </div>
+
       </div>
-      <div class="fotbaltv-slider">
+      <div class="fotbaltv-slider u-mb-40">
         <div class="swiper-button-prev ToTopButton" data-aria-label="Previous">
           <svg width="24" height="24" focusable="false" aria-hidden="true">
             <use xlink:href="#arrow-left"></use>
@@ -651,11 +657,11 @@
         </div>
       </div>
 
-      <div class="Banner   u-my-40">
+      <!-- <div class="Banner   u-my-40">
         <a href="#" target="_blank" rel="noopener noreferrer">
           <img class="u-mx-auto" src="./img/placeholder-banner-wide@3x.jpg" width="1040" height="88" alt="{Popis obrázku / Název banneru}" loading="lazy" />
         </a>
-      </div>
+      </div> -->
 
 
       <h2 class="H6 u-mb-16">

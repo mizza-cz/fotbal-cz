@@ -14,13 +14,19 @@
        <div class="u-display-flex u-align-items-center  u-flex-center u-justify-space-between u-mb-24">
         <h1 class="H2">FotbalTV  </h1>
          
-        <a href="#" class="ToTopButton">
-          <svg width="24" height="24" focusable="false" aria-hidden="true">
-            <use xlink:href="#calendartv"></use>
-          </svg>
-        </a>
+          <div class="fotbaltv-calendar">
+            <label for="frm-officialBoardFilter-form-from" class="Form-label">
+                       <div class="ToTopButton">
+                        <svg width="24" height="24" focusable="false" aria-hidden="true">
+                          <use xlink:href="#calendartv"></use>
+                        </svg>
+                      </div>
+            </label>
+            <input type="text" name="from" data-dateinput-type="date" class="Form-input js-datePicker flatpickr-input" id="frm-officialBoardFilter-form-from" readonly="readonly">
+          </div>
+       
       </div>
-        <div class="fotbaltv-slider">
+        <div class="fotbaltv-slider u-mb-40">
            <div 
               class="swiper-button-prev ToTopButton" 
               data-aria-label="Previous">

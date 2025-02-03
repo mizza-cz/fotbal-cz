@@ -212,3 +212,16 @@
     right: -0px;
   }
 }
+
+.fotbaltv-calendar {
+  position: relative;
+  .ToTopButton {
+    cursor: pointer;
+  }
+  input {
+    border: none;
+    width: 0;
+    padding: 0;
+    height: 0;
+  }
+}
