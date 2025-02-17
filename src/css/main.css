@@ -8627,7 +8627,7 @@ table[border="0"] td {
 }
 .pointHistory-item.lose::before {
   background-color: #e92b1e;
-  background-image: url("../img/icons/close.svg");
+  background-image: url("../img/icons/closee.svg");
   background-size: 24px 24px;
 }
 .pointHistory-item.lose span {
@@ -8638,7 +8638,7 @@ table[border="0"] td {
 }
 .pointHistory-item.win::before {
   background-color: #4ad300;
-  background-image: url("../img/icons/check.svg");
+  background-image: url("../img/icons/checkk.svg");
   background-size: 24px 29px;
 }
 .pointHistory-item.win span {
