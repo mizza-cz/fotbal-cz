@@ -56,6 +56,14 @@
   font-size: 15px;
   line-height: 18px;
   font-family: 'Maison Neue Extended', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  span {
+    display: block;
+    background-color: #fff;
+    left: 6px;
+    padding: 0 4px;
+    top: -45%;
+    position: absolute;
+  }
 }
 .FanCard-item--active {
   color: #4ad300;
@@ -76,17 +84,17 @@
     transform: translateY(-50%);
   }
 }
-.FanCard-item--silver {
-  border-color: $colorPlaceholder;
-  color: $colorPlaceholder;
-  span {
-    display: block;
-    background-color: #fff;
-    left: 6px;
-    padding: 0 4px;
-    top: -45%;
-    position: absolute;
-  }
+.FanCard-item--novice {
+  border-color: $colorGreen--50;
+  color: $colorGreen--50;
+}
+.FanCard-item--support {
+  border-color: $colorBlue--70;
+  color: $colorBlue--70;
+}
+.FanCard-item--star {
+  border-color: $colorOrange--100;
+  color: $colorOrange--100;
 }
 
 .FanCard-boxes {
@@ -144,7 +152,7 @@
   &__info {
     position: absolute;
     font-weight: 700;
-    top: 67px;
+    top: 20%;
     left: 0;
     right: 0;
     text-align: center;
