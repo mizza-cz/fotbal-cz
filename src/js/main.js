@@ -437,48 +437,188 @@ document.querySelectorAll('.toggle-password').forEach(function (toggleButton) {
   });
 });
 
+// const newSlider = document.querySelector('.fotbaltv-slider .swiper');
+
+// if (newSlider) {
+//   const swiperNew = new Swiper(newSlider, {
+//     direction: 'horizontal',
+//     loop: true,
+//     slidesPerView: 7,
+//     slidesPerGroup: 7,
+//     speed: 1500,
+
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     breakpoints: {
+//       320: {
+//         slidesPerView: 1,
+//         slidesPerGroup: 1,
+//       },
+//       440: {
+//         slidesPerView: 2,
+//         slidesPerGroup: 2,
+//       },
+//       640: {
+//         slidesPerView: 3,
+//         slidesPerGroup: 3,
+//       },
+//       840: {
+//         slidesPerView: 4,
+//         slidesPerGroup: 4,
+//       },
+//       920: {
+//         slidesPerView: 5,
+//         slidesPerGroup: 5,
+//       },
+//       1100: {
+//         slidesPerView: 7,
+//         slidesPerGroup: 7,
+//       },
+//     },
+//   });
+// }
 const newSlider = document.querySelector('.fotbaltv-slider .swiper');
 
+// Объявляем swiperNew в самом начале
+let swiperNew;
+
 if (newSlider) {
-  const swiperNew = new Swiper(newSlider, {
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 7,
-    slidesPerGroup: 7,
-    speed: 1500,
-    
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
+  // Получаем текущую дату
+  const today = new Date();
+  const currentDay = today.getDate();
+  const currentMonth = today.getMonth(); // Январь = 0
+  const currentYear = today.getFullYear();
+
+  // Функция для расчёта номера недели в месяце
+  const getWeekNumber = (date) => {
+    const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+    const dayOfWeek = startOfMonth.getDay() || 7; // Воскресенье = 0, делаем его = 7
+    const adjustedDate = date.getDate() + (dayOfWeek - 1); // Смещение для правильного расчёта
+    return Math.ceil(adjustedDate / 7);
+  };
+
+  // Определяем номер текущей недели
+  const currentWeek = getWeekNumber(today);
+
+  // Определяем количество недель в текущем месяце
+  const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+  const startOfMonth = new Date(currentYear, currentMonth, 1);
+  const startDay = startOfMonth.getDay() || 7;
+  const weeksInMonth = Math.ceil((daysInMonth + startDay - 1) / 7);
+
+  // Функция для расчёта слайдов на экране
+  const calculateSlidesPerView = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 440) return 1;
+    if (windowWidth < 640) return 2;
+    if (windowWidth < 840) return 3;
+    if (windowWidth < 920) return 4;
+    if (windowWidth < 1100) return 5;
+    return 7;
+  };
+
+  // Определяем сколько слайдов видно на экране
+  const slidesPerView = calculateSlidesPerView();
+
+  // Корректируем initialSlideIndex для показа текущей недели
+  const initialSlideIndex = (currentWeek - 1) * 7; // Каждая неделя — это 7 дней
+
+  // Инициализируем Swiper только после загрузки контента
+  document.addEventListener('DOMContentLoaded', function () {
+    swiperNew = new Swiper(newSlider, {
+      direction: 'horizontal',
+      loop: false, // Отключаем бесконечный цикл
+      slidesPerView: slidesPerView,
+      slidesPerGroup: slidesPerView,
+      speed: 800,
+      initialSlide: initialSlideIndex, // Начинаем с начала текущей недели
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      440: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        440: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        640: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        840: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+        920: {
+          slidesPerView: 5,
+          slidesPerGroup: 5,
+        },
+        1100: {
+          slidesPerView: 7,
+          slidesPerGroup: 7,
+        },
       },
-      640: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
+
+      on: {
+        init: function () {
+          // Обновляем состояние кнопок после инициализации
+          updateNavigation();
+        },
+        slideChange: function () {
+          // Обновляем состояние кнопок при смене слайда
+          updateNavigation();
+        },
       },
-      840: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-      },
-      920: {
-        slidesPerView: 5,
-        slidesPerGroup: 5,
-      },
-      1100: {
-        slidesPerView: 7,
-        slidesPerGroup: 7,
-      },
-    },
+    });
+  });
+
+  // Функция обновления состояния кнопок навигации
+  function updateNavigation() {
+    // Проверяем, что swiperNew существует и инициализирован
+    if (!swiperNew || typeof swiperNew.activeIndex === 'undefined') return;
+
+    const activeIndex = swiperNew.activeIndex;
+    const activeWeek = Math.ceil((activeIndex + 1) / slidesPerView);
+
+    // Блокируем кнопку "prev", если находимся на первой неделе
+    if (activeWeek === 1) {
+      swiperNew.allowSlidePrev = false;
+      swiperNew.navigation.prevEl.classList.add('swiper-button-disabled');
+    } else {
+      swiperNew.allowSlidePrev = true;
+      swiperNew.navigation.prevEl.classList.remove('swiper-button-disabled');
+    }
+
+    // Блокируем кнопку "next", если находимся на последней неделе месяца
+    if (activeWeek === weeksInMonth) {
+      swiperNew.allowSlideNext = false;
+      swiperNew.navigation.nextEl.classList.add('swiper-button-disabled');
+    } else {
+      swiperNew.allowSlideNext = true;
+      swiperNew.navigation.nextEl.classList.remove('swiper-button-disabled');
+    }
+
+    // Обновляем Swiper после изменения настроек
+    swiperNew.update();
+  }
+
+  // Обновляем слайдер при изменении размера экрана
+  window.addEventListener('resize', () => {
+    if (swiperNew) {
+      swiperNew.params.slidesPerView = calculateSlidesPerView();
+      swiperNew.update();
+    }
   });
 }
+
 const sliderLoyality = document.querySelector('.swiper--loyalty');
 
 if (sliderLoyality) {

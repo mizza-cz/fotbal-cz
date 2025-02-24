@@ -4265,7 +4265,8 @@ body.is-menuOpen .Header {
 }
 .ButtonNav-link--grey {
   border-color: #878d96;
-  color: #878d96;
+  color: #fff;
+  background-color: #878d96;
 }
 .ButtonNav-link--red {
   border-color: #e92b1e;

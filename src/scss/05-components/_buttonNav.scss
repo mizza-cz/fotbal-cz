@@ -48,7 +48,8 @@
   }
   &-link--grey {
     border-color: $colorGrey--100;
-    color: $colorGrey--100;
+    color: #fff;
+    background-color: $colorGrey--100;
   }
   &-link--red {
     border-color: $colorRed;
