@@ -280,3 +280,19 @@
     }
   }
 }
+
+
+.Form--3inputs.Form--secondary {
+  .Form-item {
+    &:last-child {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      a.Button {
+        padding-left: 16px;
+        padding-right: 16px;
+        min-width: fit-content;
+      }
+    }
+  }
+}
